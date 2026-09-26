@@ -1,0 +1,85 @@
+Often web applications collect data
+from the user through a HTML form and it's sent to the server for processing. You create a HTML form using
+various form elements such as input elements Radio buttons,
+Drop-down lists, and Checkboxes. In this video, you will learn how to use form fields
+to store correct data types in Django. Suppose the manager of Little Lemon
+has asked you to build a customer form containing a customer's name and age. First, you build a HTML form that
+contains three input elements, one for the name, one for age,
+and one for the submit button. Previously, you learned
+that Django creates and processes forms using the Form class. This class defines all the expected
+attributes that will construct and process the form. Once you lay out the structure of the
+form, Form fields are the building blocks that help build the form while fields
+are an integral part of models. They are especially important
+while using forms as they help define the visual element of the form. The custom logic behind the fields
+is defined in the Fields class used inside the Form class in Django. When defining attributes,
+you can choose from various field types. Let's explore some of these briefly now. First is CharField which
+accepts any string input and is equivalent to the text
+input element in HTML. Next is EmailField which accepts
+input that follows email format. It's equivalent to the email
+input element in HTML. IntegerField accepts only integers and is equivalent to the number
+type input element in HTML. MultipleChoiceField offers
+the choice of multiple options. It's equivalent to the select and
+option elements in HTML. Finally, FileField allows you
+to choose a file for upload and is equivalent to the file
+type input element in HTML. Additionally, these form fields have
+different arguments that can be passed to them while specific arguments that can
+be passed vary according to the field and use. There are a few core arguments that are
+accepted in common among all the fields. These are required, label,
+initial, and help-text. Let's explore each of them
+now in a little more detail. Required, each field assumes
+the value is required by default. You can change this by setting
+required equal to false. Label, the argument helps
+specify a label for the field. Initial, initial values can be set for
+specific fields. Help-text, specify descriptive text for
+the field. It's important to remember that every form
+that you build will have different data requirements. For example, a customer feedback form or
+a survey-style form for a customer's favorite menu items. Knowing what field type to use is
+essential to building effective forms. Let's open VS code now and explore
+the different fields that can be used to create a form and
+the customization options available. The Django project is set up with
+a file called forms dot py created. And notice that the file
+imports the forms package. Now let's begin by creating a form and exploring the different form
+fields available with it. First, you create a demo form
+that will contain a CharField. Let's explore this form in the browser and notice that Django creates
+the label name in the form. This name comes from the value of
+the attribute that is defined. If you change this,
+it will update on the form. You can edit the form further
+by passing a parameter such as a widget with the value
+forms dot Textarea. This Textarea will override
+the default widget for it, which is the equivalent of rendering
+the input field present in HTML code. If you refresh the page again
+notice the form is updated. Okay, so the code works but suppose you
+want a smaller Textarea to display. You can pass a parameter inside the
+Textarea such as attributes with a certain number of rows, apply this update,
+save the file, and refresh the browser. Notice that the Textarea is
+smaller with space for five rows. Next let's explore the Email Form Field,
+replace this code with email equal to forms dot Email Field,
+and save the file. Refresh the page and
+notice the form updates with an input for the email form field. It's also important to note that Django
+Form Fields have basic validation applied by default. For example, suppose I enter an invalid
+email address and try to submit the form, notice that an error is displayed stating
+that you must enter a valid email address. If you add a valid email address and
+press the submit button again, notice that the form does
+not display an error. To help the user know what
+to add in each form field, you can use the label parameter. For example, add a label
+parameter with the text to enter an email address, save the code,
+and refresh the page. Notice that the label now
+displays in the form and replaces the default attribute value. Let's now explore another example. Using the Date Field, inside the code you
+can use a widget called number input. That requires additional
+input from forms dot widget. Suppose you want the customer to
+enter a date in the date field for a reservation date at Little Lemon. If you save the file and refresh the page,
+notice that the reservation date displays. You can click on it to open a calendar and
+select a specific date. One last example that you can
+explore is the ChoiceField. This example uses a constant to be passed
+as a parameter inside the ChoiceField. The values saved in the constant allow
+customers to select their favorite dish at Little Lemon. Once again save the file and
+refresh the page in the browser. Notice that there is a drop-down menu for
+the choices. However, suppose you want to display
+all three choices simultaneously. You can achieve this by using another
+widget option with the value of RadioSelect. Save and refresh and
+notice that the choices are now visible as Radio buttons that the user can select. It's important to know that these examples
+showcase just some of the available form fields and
+parameters you can use in Django. Exploring the Django documentation for all available options to help
+you create forms is a good idea. And you can do this from the link in
+the additional reading at the end of this lesson. In this video, you learned how to use Form Fields to
+store correct data types in Django.

@@ -1,0 +1,35 @@
+The Little Lemon Restaurant has asked me
+to add a new blog page to their website. They've told me that the page will
+contain several blog posts, and that it must use semantic html so
+that search engines and accessibility software can understand
+the semantics of the page. I've set up my basic html document
+structure in a file named blog.html. I'll start off by adding my
+basic semantic structure. First I add the header element. Followed by the nav element, Followed by the main element. Followed by the footer element. Remember this structure describes
+the semantics of this html document. Specifically the header element will be
+used to display the Little Lemon logo, and the nav element will be used to describe
+the navigational structure of the website. The main element will feature
+the main content of the web page, and the footer will be used to
+display copyright information. When a search engine or accessibility
+software reads this document, the semantic tags will help
+the software understand the purpose and meaning of different
+sections of the document. I will now add the details
+to each element. Inside the header element, I add
+the Little Lemon logo using the image tag. Inside the nav element, I add the navigation links in an a ordered
+list element using the ul tag. I then add three list item
+elements using the li tag. Inside the list items, I add the hyperlinks for index.html, location.html and blog.html using the anchor tag. In the main element,
+I add an h1 tag for the blog heading. The restaurant told me that there will
+be two blog posts for their website. So I add two article elements
+after the h1 element. Inside the first article element, I add
+an h2 tag for the title of the blog post. The title is 20% off this weekend. I then add a paragraph
+element below the title which contains the blog post text. Inside the second article element,
+I add an h2 tag for the title which is our new menu. Again I add a paragraph element below the
+title which contains the blog post text. Finally, I add a paragraph
+element to the footer element. In this paragraph element,
+I add the copyright notice. The blog pages now semantically
+described through the html document. I now save the file by pressing
+Control and S or Command and S on Mac. I then right click the blog.html file and
+select live preview to preview the file. The blog page looks good and
+all thanks to proper semantic design that ensures accessibility and
+search engine optimization. I'm sure that the Little Lemon Restaurant
+will get lots of business through their blog, and their customers with disabilities will be
+able to access the blog with no problems

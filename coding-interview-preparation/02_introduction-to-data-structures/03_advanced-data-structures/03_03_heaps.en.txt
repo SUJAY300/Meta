@@ -1,0 +1,69 @@
+A heap may not sound like a particularly
+promising name for a data structure. However, it is a very important
+organizational tool and combines some features and
+benefits of other data structures. In this video, you will learn about
+the structure and features of heaps. You will also discover how heaps can
+be used to organize elements from least to most important. And how by limiting the functionality
+of heaps productivity can be increased. So let's get started with heaps. A heap is a specialized data structure
+that is modeled like a tree but behaves in a similar way to
+a queue though with a notable difference of assigning
+priority to some elements. Each element in a heap has a key value and the priority can either be the smallest or
+the largest key value. Heaps that place priority on the lowest
+valued key are called min heaps and ones that place the priority on
+the maximum value are called max heaps. Heaps were first introduced as a means of
+storing and searching data efficiently. But since then it has been recognized
+that there are a number of very useful operations that
+a heap can be applied to. A heap has a few select core
+operations that it can perform. Insert, find_min, and
+delete_min for a min-heap and insert, find_max and
+delete_max for a max heap. For the rest of this video, the discussion
+will revolve around min heaps but you can reverse everything said and
+it will apply to a max heap. The only difference between the two
+is where the priority is placed, as with many of the data structures
+discussed on this course. These methods are the fundamental
+elements that constitute a heap. Different implementations in
+different languages could have additional methods added. An instance of which may be decreased
+key this is where the value of a key is changed. The motivation for which would lie with the priority of
+the key in real-world instance changes. When discussing trees it was
+mentioned that binary trees sought values in order of size. If the value is less than
+the node go down the left path, if the value is greater than
+the node go down the right path. Because of this underlying architecture, heaps are often built using binary
+trees though another approach would be to make an array act in a way that
+mimics the behavior of a binary tree. The minimum value is placed
+on the root node and each subsequent value is placed on
+the hierarchy where their value dictates. This means that to retrieve
+the minimum value from a heap is O of one because it will be
+stored always at the root. Unlike a stack, retrieving a value does
+not cause it to be moved from the tree. Instead, a delete_min method
+exists that can be called if the intent is to remove
+items as they are processed. Typically a heap would not support
+operations such as deleting items other than the priority element. The reason being that a heap is built for
+specialized purpose, that involves identifying
+the most important item and returning this in
+the shortest time possible. Then queuing up the next
+item of importance. Deleting items in the tree would
+require restructuring the tree and this would lead to
+a degradation in performance. If you are looking for
+a data structure that can act in this way, then you might consider
+structures other than a heap. insertion into a min-heap is
+done through propagation. Each item is inserted at the root, a comparison is then
+made with the left value. If this is less than the newly
+inserted item, they are swapped, this continues until the newly inserted
+item has no greater value above it and the value below is lower. Insertion in a heap can be
+achieved in O of log n time. Having examined the underlying
+mechanisms that power heap, you may now have some idea of how
+this data structure can be applied. Considering that its inherent structure
+prioritizes a particular value from a group of elements, the natural
+application would be for scheduling. This can apply to CPUs routers or
+packet handling. Additionally, one could imagine that
+such a structure would be useful in prioritizing certain tasks like interview
+scheduling where the key used to store the candidate may relate to what stage
+of the interview process they lie at or what priority the role has
+within the organization. Having a process that
+automatically applies schedules based on importance can be
+a huge time saving device. In this video, you have gained
+a greater understanding of heaps and how they can be used to organize
+elements from least to most important. You have been shown that
+by limiting functionality, productivity can be increased. As with the selection
+of any data structure, it is important to find the right tool for
+the right job.

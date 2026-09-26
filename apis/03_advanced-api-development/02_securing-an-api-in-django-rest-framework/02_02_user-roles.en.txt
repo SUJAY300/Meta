@@ -1,0 +1,54 @@
+You have already learnt how to protect
+api endpoints by using token based authentication and
+permission classes in D R F. But even after proper authentication,
+there could be some issues. What if an authenticated user makes a http
+delete call to one of the menu items? Or what if an authenticated customer
+submits a http patch request to an order item and changes the data? Relying only on the authentication check, will not be sufficient to protect your
+data, you must also check privileges, like if the authenticated user has
+authorization to perform this action. This video will demonstrate how to take
+advantage of django's built in user group system, and create a solid
+authorization layer for your APIs. Open the django admin panel
+from the local host URL, forward slash admin, forward slash and
+log in as the super user. Let's create some groups. Click on the add button beside groups,
+it will take you to a new screen, type the name manager, and
+click on the save button, no need to select the permissions for
+this role. Now create two users from the user
+section, one is John Doe who will be our manager, and the other user
+Jimmy Doe who will be the customer. Go back to the user section, you'll note
+these two users, click on John Doe and add his first name, last name and
+an email address you can create for him, scroll down until you see
+the groups section, click on manager and then click on the right arrow
+button next to this box. After you click, the manager group will
+go to the right box, it means that the manager group has been assigned to
+the user, John Doe, save it, excellent. You have created the foundation
+of your authorization layer. Let's go back to the coding
+to make this work, open the views dot pi file and
+create a new method called manager view, just like the secret method you
+created earlier, add the API view and permission classes decorator, and
+map this method in the URL S dot pi file. Let's log in as John Doe and
+create a token. Like you learned earlier,
+send a http post call to the api token off end point with
+John Doe's user name and password. You will get the token in return,
+save it somewhere for now. Similarly, get the token for
+Jimmy Doe and save it for later use. Now, send a get request to the manager
+view endpoint with John Doe's token, nice. It displays the message only,
+Manager should see this, but what if you send another request to
+this endpoint with Jimmy Doe's token? DRF still shows the message that only
+managers are supposed to see it, let's fix it. Go back to the views dot pi file, to
+the manager view method, you need to check if the currently authenticated user
+belongs to the manager group, if yes, then display the message, otherwise
+send an error with a 403 status code. Rewrite the method manager view to
+check if the currently authenticated user belongs to some group,
+using this line, the A P I developer can check which groups
+the current authenticated user belongs to, and then check if the manager
+group exists in that list. If exists returns true, it means that the
+current user belongs to the manager group. Now send the http, get request to the Manager view
+endpoint with John Doe's token. What message comes up? D R F displays this message because
+John Doe is in the manager group, send another call with jimmy Does token,
+this time you see the error. Nice, your authorization
+layer is working perfectly. In this way, you can protect any api endpoint
+from unauthorized access in D R F. In this video,
+you learned a very important lesson, how to protect your api endpoints
+from unauthorized access, by implementing an authorization
+layer using django's user groups. You also learned how to create users,
+groups, and assign these groups to a user

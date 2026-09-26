@@ -1,0 +1,48 @@
+Congratulations on
+making it this far. You've learned all the basics
+of REST API development, the good, the bad, the do's and don'ts. Finally, you are here
+to use that knowledge to build an API project for
+the little lemon restaurant, this will be fun and a little challenging
+at the same time. Let's dive into a demonstration of what you're going to do. In this project you will deal
+with three types of users, managers, customers,
+and the delivery crew. You can use the knowledge of user roles you learned
+earlier in this course. You'll start with the
+user registration and authentication process
+that each user will use, then you will create API
+endpoints that can be used to assign users to a group like manager or a
+delivery person. This endpoint can be used to remove them from the groups too. You will need to
+think carefully about what type of token is
+required for this endpoint. Now, first is the manager role. Only managers can use some
+API endpoints to add, edit, and remove menu items. Managers should also be able to update any user to
+a delivery person. Next up is the customer rule, if a user doesn't belong to any specific group you should
+consider them a customer. Customers should be able
+to browse menu items, filter them by categories, and price ranges, and
+search menu items. You need to create APIs that
+will allow customers to add menu items to their
+cart and place an order. But here's the catch, the cart must be emptied when the order is
+successfully created. Does this sound a
+little bit tricky? Don't worry you can do it. You can also add
+an API endpoints to flush the cart at any point. One customer should only be able to have one cart at a time, and one cart should be able to contain multiple menu items. Last, there are APIs related
+to the delivery process. First, you need
+API endpoints for the managers to browse the orders and assign them
+to a delivery person. Managers should also be able to filter orders by their status, like delivered and
+not delivered. After successful authentication, delivery people
+should be able to browse orders assigned to them by using your API endpoints
+and mark them as delivered. Customers can always come to the orders endpoint
+to see their orders, including the status of that
+order and the total price. Finally, you will need to implement some throttling
+for the APIs you built, limit it to five API
+calls per minute. While working on this project, please ensure that
+your API endpoints support only the
+required HTTP methods, and always return the appropriate status
+code with the response. Let's discuss the
+tools you'll need. You should use VS Code
+for writing the code, you will need to use Django with Django REST framework or DRF, and everything should work
+in a virtual environment. For testing and debugging
+you can use insomnia, use only the packages
+and libraries you learned about
+earlier in this course. Just one last thing, if you use a session
+authentication class during the development, make sure to comment that
+out before submission. The finished project should only support token-based
+authentication. It's time to implement
+the knowledge you gained in this video. Good luck.

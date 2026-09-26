@@ -1,0 +1,80 @@
+You've already learned
+that Django projects can get quite large. I understand that for
+an aspiring developer, it's easy to get intimidated as Django projects can
+have many moving parts. In this video, I'll give
+you a broad overview and demonstrate how Django organizes
+a project using models, views, and templates, commonly known as the MVT architecture. Don't worry if you don't fully understand all the
+concepts in this video, as you'll be learning
+all about them soon. Instead, please focus
+on the concept that the data logic and display are separated in the
+Django framework. You can even think of this video as a sneak peek into the future of how developers use the Django framework in
+back-end development. Previously, I created a
+folder called building MVT. If I expand it, notice
+that I've created a virtual environment
+called tutorial EMV. I also created a project called chefsTable and install
+Django in that project. Inside the chefsTable
+project notice that I created an app
+called littleLemon. I notice that Django has
+automatically created the associated files for
+the project and the app. Before I demonstrate the files
+of the MVT architecture, I first need to update
+the URLs dot py file in two places so that Django can match the different URLs
+to the correct view. In these files have added the URLs that will invoke
+the view functions. Now I will demonstrate
+the concept of the MVT architecture by
+using three examples. The first example will
+contain only views. Next will be an example
+containing models and views. Finally, there'll be an example with models, views,
+and templates. Let's begin with
+the first example that only contains the view. If you open the file views.py. Notice it contains
+a Python function that sends some data to a webpage that runs on the development server
+on a local host. In this example, the data returned is the text
+''Hello World.'' Let me demonstrate this now by launching the
+development server. I open the URL in the browser and notice the text
+''Hello World'' displays. Let me close the browser
+window and quit the server. For the second example, I've made some code
+changes to demonstrate how views can work with the models. Notice that I created another function in
+the views.py file. This function
+communicates with a model to retrieve data stored
+in a database table, and then dynamically returns
+it to the web browser. Let's now explore how a
+model communicates with the database and open
+the models.py file. Notice that this code contains a Python class which represents
+a table in the database. Each of the variables created acts like a column
+in that table. If you're familiar
+with the concept of relational databases, you might wonder how
+this is possible. For now, just know that
+Django maps the code in the class to a
+corresponding table stored in the database. Let me run the server again. This time, when I go to the URL, the output will
+display the text, ''Pasta: Type of
+Italian cuisine.'' Django dynamically
+fetch the texts from a database table based on the numerical value,
+certainly URL. This corresponds to some
+entry in the table. At the moment it has
+the value of one. If I change this from 1-2, notice that different texts
+is output to the browser. This is possible
+because of the logic created in the views.py file. For the final example, I need to modify
+the view to return a template I created
+inside the app folder. Notice that if I
+expand this folder, it consists of a file
+called menu_card.html. The file contains
+three HTML elements with some basic styling. In this final example, I have not made any other
+changes except adding a template and modifying
+the views.py file. If I open the webpage again
+and refresh the page, the output will display with
+the HTML and CSS applied. The format and style
+will be applied to all the pages where
+I've made the changes. It's important to note that while this output
+may seem basic, the concept is very powerful. By splitting the data, logic, and display into M, V, and T developers can rapidly create large-scale
+data-driven applications. The MVT architecture allows developers to easily
+update the database, logical code, presentation, and styling to create
+dynamic web applications. While the number of
+files present and sign your project folder
+may seem intimidating. You'll explore these
+files when you need them throughout the
+remainder of this course. As I said at the
+start of this video, you will soon explore this MVT
+concept in greater detail. It's also worth remembering
+you're already familiar with the code you'll be dealing
+with as it's primarily Python. In this video, you learned how Django influence the model, view, and template
+or MVT architecture.

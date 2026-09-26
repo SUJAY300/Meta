@@ -1,0 +1,25 @@
+By now you should know how
+to build a basic webpage but how do you build a website? Remember, websites consists of
+multiple webpages linked together. To link pages together. You use the anchor tag anchor
+tag create hyperlinks or links as they are commonly known. In this video, you will learn how to link different web
+pages together to create your own website. In my project folder. I now create a second webpage for Little Lemon that will contain
+the address of the restaurant. I right click in the explorer
+panel to create a new file and name it location.html. I use the same file structure
+created in my index  file but add new content I add a new H1 tag for
+the heading and type our location. Next I add a paragraph tag and
+insert the address 123 Home Road,
+Main Districts, Capital city. I press control and S to save the file or
+command and S on Mac. Now that my new file with
+the restaurant location is created. Let's navigate back to index.html to
+add a link from there to location.html file. Below the last paragraph
+tag I add the anchor or a tag followed by the href tribute or
+hypertext reference. Now I need to specify where the hypertext reference should link to. I typed the file name, location.html so
+that my index.html file will link to it. Within a tag I can also add
+a descriptive text that is displayed as a link name on my web page. So I type our location. The text our location will now display
+on the web page in the browser as a clickable link. Let's test see if it works. I saved the file to update it with the
+changes and open it in my web browser by right clicking on the index.html file and
+selecting Reveal in File Explorer. If you're not on Windows,
+this may be called Reveal in Finder or Reveal in File Browser. I then double click on the index file. The words are location are displayed
+in blue by the web browser, success. If I click on the blue link,
+the browser opens the location.html file. You can now link different HTML files
+together to create your website. Best of luck.

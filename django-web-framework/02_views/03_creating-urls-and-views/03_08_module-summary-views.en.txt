@@ -1,0 +1,78 @@
+Congratulations, you've reached the end
+of this module on views. In this module, you've
+learned to create Views and View logic that can process basic HTTP requests, use the request and response objects for common operations, differentiate
+parameters and how they associate with HTTP methods, such as Get, Put, Post, and Delete. You also learned
+to exercise using regular expressions to create
+different URL patterns, map URLs to Views, and handle errors at the HTTP
+View logic and view levels. It's now time to
+recap the key points. You began the module with
+an overview of Views. Following the completion
+of this first lesson, you should now be able to
+define what a view is and know that it handles web requests and
+returns web responses. You know that it is just the logic that a view
+calls inside a method. You familiarized yourself
+with examples of this, such as using Views to
+develop a dynamic website. In Django, you learned to create a View function
+and map it to a URL by what is known as routing so that you can make
+a request response work. In addition, you can also perform either programming logic inside of View functions such as processing data
+for emails and forms, retrieving data from a database, transforming data, and
+rendering templates. You explored the URL
+configuration file, URLs.py, and learned
+why it exists. You are familiar with creating
+a view and mapping it to both the project and APP levels
+with the use of VS Code. You explored the importance
+of using best practices through code re-usability
+and dry principles, which are fundamental to the building blocks
+of Django projects. You concluded this lesson by creating a View and
+adding logic to handle common use cases with
+HTTP requests and responses. Following views, you
+explored requests and URLs. You started by discovering the HTTP request
+object and can now demonstrate how it can
+be used to map to URLs, map to common crud operations, and get information by
+calling the client. You delved deeper into creating more detailed
+requests and how to use both request and response objects for common operations. Next, you explored how URLs are constructed and how they
+can be mapped to a View. You unpacked URL name
+spacing and Views, which are just how URLs can be mapped to a name and
+its subsequent View. You understand that
+the resource will point to the corresponding
+UI to render. Then you learned about
+the different options for using parameters in
+a web application. You can demonstrate
+how parameters relate to operations
+such as Get, Put, Post, and Delete. You can differentiate
+between path, query, and body params, and their association to the different HTTP
+methods such as Get, Push, Post, and Delete. You also exercised setting up URL configurations using the URL dispatcher
+with parameters. Finally, you learned about
+creating URLs and Views. You learned about regular
+expressions in URLs. You practiced how to create
+different URL patterns and map a URL to a View
+via the View function. Following on from this, you explored how to
+handle errors such as dealing with HTTP
+status responses, such as 100, 200, and 400 messages. You also discovered
+how to deal with error responses from the server. Furthermore, you learned
+to apply error handling in Views when working with body requests in Put
+and Post operations. Finally, you concluded
+by learning more about class-based Views in Django and how to reuse them
+across a project. Class based Views allow
+you to use Views as objects and offer an alternative
+to function based Views. You also explored how
+developers can simplify their Views by using object
+oriented techniques, such as the concept
+of inheritance to create Views from
+inherited classes. You also explored different
+class instance methods for HTTP requests in place of
+writing conditional branches, such as using if else statements inside the same function. It also removes the
+conditional logic and this simplifies the code and
+separates the logic, making it easy to understand. You are now familiar
+with Views and can use this to create
+a logic to present data to end-users by processing HTTP requests and
+returning a HTTP response. You understand the different
+parameters and how they associate
+with HTTP methods. You can use regular
+expressions to create different URL patterns
+and map URLs to Views. To route your
+development process, you are prepared to
+handle errors at the HTTP View logic
+and Views levels. Finally, you can also
+use class based Views in Django and reuse them across
+a project. Well done.

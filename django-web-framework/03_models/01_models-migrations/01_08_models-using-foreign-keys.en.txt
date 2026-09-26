@@ -1,0 +1,51 @@
+By now, you are familiar with
+the basics of creating a model and performing migrations. Let's build upon your understanding of
+models by connecting to another model using a one to many relationship. In this video, you will explore an example of using
+foreign keys as a field inside the model. In Django, foreign key is an ORM field
+representing a database table column. You use it to create the relationships
+between tables in your database. Imagine the scenario of building an online
+menu for the Little Lemon restaurant. The solution begins with creating a table
+to add the menu items for the web page. Now, Little Lemon is a restaurant
+that offers many cuisines. In placing each cuisine item in its
+correct category requires some skill. To do this successfully, start by
+creating another model for categories and assign the different categories
+to each of the menu items. Now, let's explore how to do
+this by using a one to many relationship through
+foreign keys in Django. Let's begin by selecting
+the models.py file. Here, you need to create two models. The first model is for the menu category
+and the second model is for the menu. Later you will add subcategories
+in the menu category and use the foreign key to
+reference these categories. It's important to know that adding both
+models is done the same way as adding models independently. Now, for the first model add an attribute
+called MenuCategory name and save the file. Next create a second model called menu. Within this model, add the menu_item,
+name, price and category_id. The next step is to assign
+a Charfield to the menu item and an Integerfield to the price. Let's explore where to
+add the foreign key. Write the models.ForeignKey
+command in the category_id. Inside the foreign key
+are two required fields. The first field is the class for
+the model to connect to. And the second field is the settings
+that enables on delete. So it's defined as on delete
+equal to models.PROTECT. Additionally, add another
+argument called default=none. The next step includes updating
+the admin.py file by actioning the required imports. Next, it's time to register the models. Note, that the utility becomes more
+evident later in the Django admin lesson. For now, ensure that the settings.py file
+in the app configuration is updated. Go ahead and run the server,
+followed by performing the migrations. Notice that the output includes
+two models that are migrated. Finally, run the command
+python3 manage.py migrate. The next step is to check the database. So go to db.sqlite3, Right Click and select Open Database, scroll down to SQLITE EXPLORER and select myapp_menu. For this example, assume that there
+are entries added to the database. Now, open the database again
+under myapp_menu categories, the ID lists 1, 2, and
+3 as Italian, Greek, and Turkish. Now, visit myapp_menu and
+notice that there is a fourth field called category_id_id. This field has ID numbers that
+match the respective categories in the myapp_menu table. For example,
+Greek salad is listed as id2 and in the myapp_menu category,
+the category name is Greek. The idea of the menu is referenced and corresponds with the ID
+listed in the menu category. Now, let's make this more intuitive
+by adding another attribute called related_name= and assign it
+the valued labeled category_name. This means that the myapp_menu now lists the category name instead
+of category_id_id. This is noticeable when
+running migrations again, the failed category on
+the menu is altered. Notice that with
+delete.=models.protect selected. No menu items will be removed with
+any category that is deleted in the category table. In this video, you learned how to
+implement a one to many relationship using foreign keys in Django models.

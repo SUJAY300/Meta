@@ -1,0 +1,228 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  Solution code
+ </h2>
+ <pre evaluatorid="7kTMv4EESmeEzL-BBMpnTQ" language="python"># Sample Solution code
+class MyFirstClass():
+    print("Who wrote this?")
+    index = "Author-Book"
+
+    def hand_list(self, philosopher, book):
+        print(MyFirstClass.index)
+        print(philosopher + " wrote the book: " + book)
+
+whodunnit = MyFirstClass()
+whodunnit.hand_list("Sun Tzu", "The Art of War")</pre>
+ <p variant="body1">
+ </p>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  The solution some people may have will be:
+ </p>
+ <p variant="body1">
+  <strong>
+   Who wrote this?
+  </strong>
+ </p>
+ <p variant="body1">
+  <strong>
+   Author-Book
+  </strong>
+ </p>
+ <p variant="body1">
+  <strong>
+   Sun Tzu wrote the book: The Art of War
+  </strong>
+ </p>
+ <p variant="body1">
+ </p>
+ <p variant="body1">
+  But if you run the code below, you will see an output such as:
+ </p>
+ <p variant="body1">
+  <strong>
+   Who wrote this?
+  </strong>
+ </p>
+ <p variant="body1">
+  <strong>
+   Author-Book
+  </strong>
+ </p>
+ <p variant="body1">
+  <strong>
+   Sun Tzu wrote the book: The Art of War
+  </strong>
+ </p>
+ <p variant="body1">
+  <strong>
+   Author-Book
+  </strong>
+ </p>
+ <p variant="body1">
+  <strong>
+   Sun Tzu wrote the book: The Art of War
+  </strong>
+ </p>
+ <p variant="body1">
+  <strong>
+   None
+  </strong>
+ </p>
+ <p variant="body1">
+  Why does this happen?
+ </p>
+ <p variant="body1">
+  <strong>
+   Explanation:
+  </strong>
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    When the class is defined, the
+    <var>
+     print
+    </var>
+    statement
+    <var>
+     print("Who wrote this?")
+    </var>
+    executes as part of the class definition.
+   </p>
+  </li>
+  <li>
+   <p>
+    This causes the output
+    <strong>
+     "Who wrote this?"
+    </strong>
+    to appear every time the class is loaded or reloaded.
+   </p>
+  </li>
+  <li>
+   <p>
+    After you instantiate the
+    <var>
+     class (whodunnit = MyFirstClass())
+    </var>
+    , the method
+    <var>
+     hand_list()
+    </var>
+    is called, which produces the output twice:
+   </p>
+   <ol bullettype="numbers">
+    <li>
+     <p>
+      First, it prints
+      <var>
+       MyFirstClass.index
+      </var>
+      and the concatenated string.
+     </p>
+    </li>
+    <li>
+     <p>
+      The method call prints the output again because the class body is evaluated once more when the class instance is created.
+     </p>
+    </li>
+   </ol>
+  </li>
+ </ul>
+ <p variant="body1">
+  To avoid this behavior, move the
+  <var>
+   print("Who wrote this?")
+  </var>
+  statement into the constructor
+  <var>
+   (__init__)
+  </var>
+  of the class, so that it runs only once when the class is instantiated.
+ </p>
+ <p variant="body1">
+  The new code will look like:
+ </p>
+ <pre evaluatorid="EdANFERxROeQDRREccTnCQ" language="python">class MyFirstClass:
+    index = "Author-Book"
+
+    def __init__(self):
+        print("Who wrote this?")  # Move the print statement into the constructor
+
+    def hand_list(self, philosopher, book):
+        print(MyFirstClass.index)
+        print(philosopher + " wrote the book: " + book)
+
+# Instantiate the class
+whodunnit = MyFirstClass()
+# Call the method with parameters
+whodunnit.hand_list("Sun Tzu", "The Art of War")</pre>
+ <p variant="body1">
+  Now,
+  <strong>
+   "Who wrote this?"
+  </strong>
+  will only be printed once, during the instantiation of the class, and the
+  <var>
+   hand_list()
+  </var>
+  method will produce the correct output without duplication.
+ </p>
+ <p variant="body1">
+  The use of constructor is an important component in learning Python and takes some practice.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

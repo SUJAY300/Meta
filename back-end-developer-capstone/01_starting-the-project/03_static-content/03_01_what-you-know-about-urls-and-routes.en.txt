@@ -1,0 +1,50 @@
+In this video, you will
+recap the concepts of URLs, routes, and views in Django. Modern web frameworks
+such as Django use route-based URLs instead of
+classical file-based URLs. Recall that the part
+of the URL after the domain name is
+called the URL path. The URL path may contain
+path and query parameters. For example, suppose you enter the URL
+littlelemon.com/menu/2. In this example, menu is the path and two is
+the path parameter. The HTTP client, such as the browser or any HTTP
+client utility like cURL, sends the URL requests
+with HTTP GET, POST, PUT, or DELETE methods. Now, let's explore how a Django web application handles a request
+from any client. A Django project uses the
+URLConf for this purpose. Usually the Python
+module is referred to by the ROOT_URLConf variable in the project settings.py file. When you create a Django project with a start project command, this variable is set to URLs dot py in the project
+package folder. The URLs module in the project package acts
+as the URL dispatcher. It defines a URL
+patterns variable, a list of routes created
+by the path function found in django.urls module. When you use the
+startup command to create an app inside
+the Django project, you create another urls.py
+file inside the app folder, and define a URL patterns list. Each item in the
+list is a routes and the path function binds a
+URL path to a view function. You must also add the app to the installed apps list
+in the settings.py file. The URL configuration
+of an app is included in the project's
+URL configuration. When a URL is received
+from the client, Django matches it with a URL patterns defined
+in the URLConf. When the first instance of the matching URL
+pattern is found, Django imports the
+associated view. Recall that a view is either a Python function
+or a view class conventionally defined in the views.py file inside
+the app folder. The view receives the
+HTTP request object from the URL dispatcher and any path parameters captured by the URL pattern definitions. The view function processes
+the request along with the data that comes
+in in the form of path, query or body parameters. If required, it interacts
+with a model and returns its HTTP response directly
+or by rendering a template. If the URL doesn't match any of the patterns available
+with the URLConf, Django invokes the corresponding
+error handling view. Recall that the
+route based URL's in a web application
+render dynamic content. Many times, web
+applications need to render certain static content
+in the form of images, JavaScript code or CSS styles. These static assets are placed in the designated static folder. The settings.py file defines
+a static URL variable, usually set to static. It refers to a directory named static in the projects
+based directory. Additionally, there is a
+variable defined called static files DIRS to tell Django where to look
+for the static assets. You use the load
+static template tag to fetch the URL of the static asset rendered
+by the template. In this video, you recapped
+the key concepts of URLs, routes, and views in Django.

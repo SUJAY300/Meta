@@ -1,0 +1,41 @@
+In this video, you'll learn
+about errors and exceptions, two very important aspects of learning Python
+as a new developer. You'll cover the difference between errors and exceptions, and explore what happens when something goes
+wrong with your code. Errors are repulsive coding and they happen for many reasons. Let's start by exploring
+two types of errors. Syntax errors, which are
+caused by human error, and exceptions which are known errors that
+need to be handled. Syntax errors are usually
+caused by the developer. It could be the result of a misspelling or a
+typo in the code. Generally, these
+types of errors have minimal impact
+because most IDEs, like Visual Studio code, will warn the developer and give clues about
+how to fix them. A common error for
+new developers learning in Python is not adding the colon at the end
+of conditions or statements. If you're using a code
+editor with syntax checking, errors like this may be highlighted at the
+point of the error. For example, a missing colon will be highlighted in the code. The output will indicate the filename and the line
+where the error occurred with, a caret character (^) pointing
+to the error. Running the code will result in an invalid syntax error in forming that there
+is a syntax problem. Other common mistakes include
+indentation problems, which are also Syntax Errors. For example, if there is
+an indentation problem, the error code will
+be indentation error. The more you learn Python, the less you'll have to deal
+with these types of errors because you'll become better at creating and
+analyzing your code. Now let's move on to
+Exception Errors. They happen during
+code execution and they can easily go
+unnoticed by the untrained eye, but exceptions needs to be
+handled by the developer. They need to deal with any
+potential issues and the CodeBase to keep the
+application from failing. Let's explore an
+exception being thrown. As an example, your code can
+be syntactically correct, but if it attempts to
+divide five by zero, it doesn't make
+mathematical sense. Therefore, when you
+run this program, ZeroDivisionError
+exception is thrown. Luckily, by default, Python includes many
+exception errors that you can use to pick up potential
+issues in your code. In this video, you explored the basics of errors
+and exceptions, which is a step in the
+right direction to becoming a better
+Python programmer.

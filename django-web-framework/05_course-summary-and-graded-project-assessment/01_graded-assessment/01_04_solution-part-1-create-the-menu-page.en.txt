@@ -1,0 +1,79 @@
+Congratulations on completing
+the graded assessment, one of your final steps to test your skills and understanding
+of the Django framework. Let's walk through the solution. The first part is to
+create the menu page, open the file models.py, and create a model
+classes for the menu. Make sure to define a Dunder method inside
+the model class. The name will be visible
+in Django admin. The next step is to open the admin.py file and
+register both models. It's important to
+ensure that both models are imported from
+the models.py file. Now that the models
+are in place, run the commands make
+and perform migrations. Once the migrations
+are completed, open the project level
+and app level URLs.py files to ensure the URL path
+configurations are in place. The next step is to
+add content inside the models you created using
+the Django admin panel. First, create a
+superuser by running the command in the command prompt with the
+following details. Username, bestroadmin, email; admin@littlelemon.com,
+and password, lemon@786! Once the super user is created, add the command to run
+the development server, open the browser with the
+browser preview button and paste the local host URL
+generated in the terminal. Add the admin path to the URL to access the
+admin login page, enter the credentials for
+the super user you created, and login to the
+Django admin panel. Inside the Django admin panel, locate the menu model
+under restaurant, which is the app's name. Next, open the menu, click on the Add Menu button. A new page will display and
+enter the details provided inside the zip file containing the text
+for the menu items. Staying inside the
+Django admin panel, click the menu under restaurant. Notice that a page displays
+the list of menu items. Once the menu items
+have been added, open the views.py file. Notice that the code for
+the view functions for home about and booking
+are already in place. Now, create a view
+function for the menu page called menu and pass the
+request object as an argument. Inside the function body, create a variable
+called menu data and assign it the
+value of objects.all, which is called over
+the menu model class. Create a variable called
+main data and assign a dictionary that contains the
+following key value pairs. They key of menu as a string and the value of the menu_data
+as the variable. The final part of
+the view function is to return the render
+function from the view, making sure to pass the
+following arguments to it. The request object, the template
+name menu.HTML passed as a string and the
+dictionary object with a string value
+menu as the key, and a variable main
+data as its value. Open the app level URLs.py, and add the path function
+for the menu view. That should be all the
+code required to complete the model and view function
+for the menu items. The next step is to add
+the code for the template, expand the app level
+directory templates, and create a file called menu.html and add the
+starter code to it. After you insert
+the starter code, replace the comments with the appropriate Django
+template language code. First create a for loop that will iterate
+over the menu object. Use a temporary variable
+called item as an iterator. Remember that menu is the key
+of the dictionary object, you passed to the template from inside the
+menu view function. You must use the dot operators inside the template
+while accessing any objects and variables
+from the object passed to the template
+from the view function. Between the enclosing
+paragraph tags, print the menu name
+from the item variable. Next, between the
+enclosing HTML span tags, print the price from
+the item variable, to add the currency symbol and the price formatting prefix the opening curly bracket
+with the dollar symbol, and suffix the closing
+curly brackets of the DTL variable with.00. Finally, insert the template
+tag to end the for-loop. The first part of the
+project is complete. Let's run the development
+server to test it. Open the terminal and add the
+command to run the server, copy the URL generated, and click the browser
+preview button, then paste the URL into the browser address
+bar and press Enter. Notice that the homepage of the little lemon
+website loads. Now it's time to move
+to the second part of the project and create
+the menu item page.

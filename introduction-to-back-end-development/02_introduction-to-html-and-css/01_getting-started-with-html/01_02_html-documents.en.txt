@@ -1,0 +1,58 @@
+In this video, I
+will guide you  through the blueprints of
+a HTML document. I will create a
+very simple webpage for a restaurant
+called Little Lemon. The great thing
+about HTML documents is that you don't need
+the web to view them. Yes, they don't have
+to be hosted on a web server for you to view
+them in your web browser. You can save HTML files on your computer and view them locally with your web browser, almost like eating
+takeaways at home. By the end of this
+video, you'll be able to identify the structure of a HTML document and
+create a basic webpage,. To create a HTML file
+and Visual Studio Code. Right-click in the Explorer
+panel and select New File. I'll name it index.html. By now you know
+that HTML documents are made up of
+elements and tags. But before I can add
+elements or tags, I first need to create a standard HTML structure which starts with the
+DOCTYPE declaration tag. This notifies the web browser
+that is a HTML documents. Next, I create the HTML tag, which is also known as
+the HTML root element. Inside the HTML tag, I add two main elements. The head and the body elements. Is important to note
+that nothing inside the head element is displayed on the webpage in
+the web browser. In the head element,
+you add information or metadata about the
+HTML documents. It is not part of the
+content of the webpage. For example, inside
+the head tag, you always create
+the title elements. This is the title
+that is displayed in the web browser tab. I can also link to CSS files and define Meta tags in
+the head section. Meta tags can, for instance, specify the description
+of the web page, keywords for search engines and the author of the web page. Next up, I add the content of the webpage inside the body tag. The body can contain
+elements such as headings, paragraphs, images, and videos. Let me start by adding
+a main heading on the webpage by using the H1 tag. Inside the H1 tag, I typed the heading, Our Menu. That's good. Now I need to
+start creating my menu. I want to add two items. To do that, I add
+two subheadings. For this, I use the H2 tag. The menu items in
+the subheadings are falafel and pasta salad. But first I need to save
+the file by pressing But first, I need to save the file by pressing the keys Control and S
+or if you're on a Mac, Command and S. Now, I right-click on my
+index.html file in the explorer panel and select
+Reveal in File Explorer. If you're not using Windows operating system, , this may be called reveal in finder or reveal
+in file browser. Now the file browser
+opens and lists the file. I double-click on index.html and it opens in the web browser. Great, it's all there. The title that displays
+in the browser tab matches the title that I
+added to the head section and the content is displayed in the browser window but
+it is still a bit empty. I go back to Visual Studio Code and add a short
+description for each dish. I do this by adding a paragraph tag below
+each subheading H2. Let's imagine a nice falafel. I type chickpea,
+herbs, and spices. What goes into the
+pasta salad again? Lettuce, vegetables,
+and mozzarella. Yummy. I save the file again
+to update the changes. and open it in my web browser again There you go. Now
+the ingredients are also included in the menu. Some of the best websites
+are websites about food. Whenever you need
+some inspiration, search for food
+website ideas online, you will be fascinated. Now that you know
+some basic HTML tags, try to identify where they
+were using those websites. There are many HTML tags that you can use
+in your webpages. But now you're familiar with the few elementary ones and I encourage you to
+start practicing with them. Best of luck.

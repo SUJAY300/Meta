@@ -1,0 +1,74 @@
+Imagine you're running a database for
+a soccer club. As a database engineer, there's a lot of
+work required to manage this database. For example, you might need to categorize players
+into groups according to their ages. How can you complete this kind of task? You can use SQL comparison operators.
+Over the next few minutes, you'll learn how to explain the concept
+of SQL comparison operators and utilize SQL comparison operators
+in a database. So what are SQL comparison operators? Comparison operators are used to compare
+two values or expressions where the outcome result can be
+either true or false. They can be used to filter data
+and to include and exclude data. So how are these operators used in SQL? SQL uses common mathematical comparison
+operators by means of the symbols equal to, less than,
+and greater than. It also uses less than or equal to,
+greater than or equal to, and not equal to. Now let's explore how to use these
+comparison operators and relevant symbols in a practical way using a database. To demonstrate the use of SQL comparison
+operators, I'll use the example of an employee table
+from a company database. This table includes information on each
+employee's ID, name, and salary. Now, let's assume the employer wants to
+extract relevant data from the employee table about the
+employees' salaries for different purposes. Each instance of data extraction will
+require a different comparison operator. So in the first example, the employer
+wants to identify all employees receiving a salary equal to
+$18,000 per year. I can identify these employees
+using the equal to operator. First, I click the SQL tab
+in the main menu. Then I write SELECT * FROM employee WHERE salary = 18000. Let's break this SQL statement down. The SELECT command is used
+to retrieve data. The asterisk denotes that I am selecting
+data from all columns. The FROM keyword and the table name
+specify where the data will come from, and then I define the condition
+using the WHERE clause. In this case, the condition uses
+the equal to symbol to check if the salary value in each record
+of the table is equal to $18,000. If the result is true,
+then the data is retrieved. So I run the query
+and generate an output. The output result of this query is that
+the employees Carl and John earn $18,000 per year. You can apply the other comparison
+operators in a similar way to perform different functions. Let's take another example
+to find out more. In this next example, the employer needs
+to know which employees are receiving a salary that is
+less than $24,000 per year. This task requires
+a different operator. To find this information,
+I can write SELECT * FROM employee
+WHERE salary < 24000. This SQL statement utilizes the less than
+symbol to check whether the value stored in each field of the salary column
+is less than $24,000. Once again, I select the Go button
+to execute the query and generate an output. The output of this query is that
+the employees Carl and John earn less than $24,000. Let's take another example where the
+employer needs to determine which employees receive a salary that is
+less than or equal to $24,000 per year. In this case, I need to write
+the following query: SELECT * FROM employee
+WHERE salary <= 24000. The only thing in this statement that
+has changed from the previous example is the operator symbol. This less than or equal to symbol
+tells the SQL statement to check whether the value stored in each field
+of the salary column is less than or equal to $24,000. I click the Go button
+to execute the query. The output results show that there are
+four employees who earn less than or equal to
+$24,000 per year. What if the employer wants to know which
+employees receive a salary that is greater than or equal to
+$24,000 per year? To generate these results, I can use the
+greater than or equal to operator in my SQL statement. So I write the following SQL query: SELECT * FROM employee
+WHERE salary >= 24000. This time, the greater than or equal to
+symbol is used to check whether the value stored in each field
+of the salary column is greater than or equal to $24,000. I click Go to execute the query, and the output shows that there are
+three employees who earn $24,000 or more per year. The final comparison operator available
+in SQL is the not equal to operator. In this final example, the employer
+wants to know which employees receive a salary that is not equal
+to $24,000 per year. I can determine this using
+the following SQL code: SELECT * FROM employee
+WHERE salary Then I type the less than and greater
+than symbols to denote the not equal to operation, and then I type 24000. As with the previous operators,
+the SQL statement utilizes the operator to check the value stored in each field
+of the salary column. In this case, it checks for values
+that do not equate to $24,000. The output results of this query show
+that there are three employees whose salaries are not equal to
+$24,000 per year. You should now be able to describe
+comparison operators and use them in a database in SQL. Congratulations on building another
+important database skill.

@@ -1,0 +1,58 @@
+So far you've learned about built-in token-based
+authentication in DRF, Djoser, JWT, and many more. In this video, you'll learn how to register new users using this API endpoints
+and you'll also create a new API for
+super admin only, which will be used to assign users to group or
+to remove them. You will not be using
+JWT in this video, so it's best to clean up
+JWT specific settings and URL patterns from
+settings.py and urls.py. Let's start with the user
+registration system. This can be a little complex
+with the plane tariff. But wait, you have included Djoser and the library will
+make things easier for you. Djoser has introduced
+a few URLs, but you are only interested
+in odd users endpoint. If you login as a super user in the Django admin and then
+browse this endpoint, all the users will
+be visible to you, but other people cannot browse this endpoint without
+a valid token. If they make an HTTP GET call to this endpoint with a token, only their username and email
+will be visible to them. But with the super admin token, they're all available to you. This endpoint can accept public HTTP post
+calls with email, username, and password
+without any token. The user will be created if
+the username is not taken. Open insomnia, and create a HTTP post request to
+this old users endpoint. Click on the body tab, select form URL encoded, and add three post fields named username, email, and password. Hit the ''Send'' button and URL sends a 200 Okay response. With a new username
+and email address, so your user
+registration endpoint is fully functioning
+without any changes to your code at all. You need a particular
+endpoint for the super admin, which will be used
+to assign a user to the manager group or
+remove them from it. Open the views.py file and
+create a new function called managers with the APA view and permission
+classes decorator. This endpoint can only be accessed with a
+super admin token, so you need a special type of permission called is admin user. Import it from rest underscore framework
+dot permissions important is admin user and add this is admin user class to the
+permission classes decorator. Now met this function
+in the little lemon API for /urls.py file to
+the URLs buttons array. Test this endpoint with
+a normal user token and super admin token
+at four slash API, four slash groups, four slash manager, four slash users to the
+end of the localhost URL. For a normal user token,
+you'll note the error. When you call it with
+the super admin token, you'll note the DRF
+display messages. This endpoint should accept one post filled, the username. If the username is present, find the user and
+add it to the group. For this, you must import the
+user and group class like this from django.contrib.auth.models
+import user, group. Now add some code
+inner function. If the username is present
+in the HTTP post call, you will find the user with the
+gets_object_or_404 method. Then find the manager group and add this user to that group. Otherwise, return an error
+with a 400 status code. Now open insomnia and make a post call to this
+endpoint with a username. Use a super admin
+token for this call. If everything is fine an
+Okay message will display. Check what happens if you call this method with a user token. You also need to add support for delete calls to remove
+user from this endpoint. You can do it with slight
+changes to your code. Let's modify the Add to
+Group function like this. After checking if the client
+supplied the username, you should check
+the method type. If the method type is posed, add this user to the group. If the method type is delete, remove the user from the group. Now you have a fully
+functional API endpoint for the super admin to add and remove users from the groups. In this video, you'll learn how to register new users using the Djoser package
+and how to enable the super admin to add users to a group or remove
+them from one.

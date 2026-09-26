@@ -1,0 +1,69 @@
+In this video you will learn how to use
+templates to return a web page with dynamic data to display a menu for
+little lemon. You will explore how to
+create templates and use them to get data from a dictionary and
+display it on a web page. You will also learn to display data using
+a four loop with a dictionary inside a template. First I open my apps,
+fused that high file. Next I create a view function that takes
+the request object as a parameter. I create a dictionary inside the function
+by adding open and closed curly braces. Then I define name as the key and
+give it the value of greek salad. I now need to assign the dictionary to
+a variable which I'll call menu item. Okay so the code for
+the dictionary is complete but this time instead of returning an http
+response I will use the render function. So inside the parentheses
+of the render function, I passed three parameters
+first the request object and then the name of the html file and finally
+the variable that holds the dictionary. It's helpful to think that
+a python dictionary is similar to a Jason object commonly
+used in web development. So my code is set up to work with
+the template file, menu dot html. So I need to create this now back in
+the project directory I create a new folder called templates and inside it
+create a new file called menu dot html. I open this file and now I want to
+write the code to dynamically display the dictionary object to do this. I start by creating double
+curly braces and inside them. I passed the key of the dictionary
+which in this example is name. I then saved the file to ensure that
+Django finds the menu dot html file. I need to open the settings file and add the name of the templates
+folder inside the templates list. I also need to make sure that I have
+registered the app in the installed apps list. The final step I need to perform is
+to open the U R L S dot pi file and inside the U R L patterns
+list I add the path function. I then passed the U R L. I want to map to so
+I type menu forward, slash and then the name of the view
+function to be called. And this is views dot menu. Okay, so I'm happy with my code. Let me run the server and
+open the URL in the browser. I navigate to the menu page and notice that the value stored in the
+dictionary is displayed in the browser. It's important to know that the values
+held in the dictionary are the content that will display on the web page. And this is the logic I create in
+the code bypassing the dictionary key and the html template. And this is an example of returning
+dynamic content to a web page if the value in the dictionary updates. So will the value displayed
+on the web page and I can add as many key value pairs inside
+the dictionary as I want to I can even wrap this content inside html tags and
+you'll learn more about this soon. By now you know that in django developers
+can use templates to make a static page dynamic. The layout of the page can
+be structured with html and the dynamic data is then placed
+inside the double curly braces. The double curly braces imply
+the dynamic content and it's something that is called
+mangoes template language. Let me expand on this concept a little
+more Now back in the views dot py file I will replace the dictionary with
+an object containing some more values. This is a little more complex
+notice that manes is the key and then a list of dictionaries is the value. Inside each dictionary are two key
+value pairs with name and price. As the keys notice that I have assigned
+this to a variable called new menu which is passed inside
+the render function. So to display this in the browser,
+I will have to update the code and logic in the menu dot html file. Inside menu dot html. I removed the existing code next
+inside a set of single curly braces with a double percentage symbols. I need to loop over each item in
+the dictionary using a for loop. So I type four and then item and
+Mainz which is the dictionary's name. Next inside a set of double curly braces. I type item dot name and
+then add item dot price. Finally I need to close the for loop. Okay so my code looks good. I save the file and then open
+the browser and refresh the page. Notice that the items from the dictionary
+are displayed while the code works. I want each menu item to be
+displayed on a new line to do this. I can add some html. So back in menu dot html. I pay some html table tags
+with in line styling applied. Now when I refresh the page notice
+that the menu displays inside a table. So now I should be able to
+add another dictionary and the content will update on the web
+page back in the views dot pi file. I add another item with a price of five. I saved the file and refresh the page. Notice that the values are updated
+dynamically on the web page. This is how you can create
+programming logic and apply it to templates to render dynamic
+data on a web page using Django. In these examples I demonstrated
+the rendering of dynamic data using a dictionary as the data source. It's important to know that this data
+source can be other things like a database or an API. And you'll learn how to do
+that soon in this video. You learned how to return a web page
+with dynamic data using templates

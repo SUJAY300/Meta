@@ -1,0 +1,59 @@
+At this point in this course, you've already used the API
+View Decorator a few times. Of course, there are benefits to using it in your regular
+function based views. It certainly makes a
+difference when it comes to API
+development in Django. Let's examine some of the benefits of this
+API View Decorator a little closer now by using this decorator in your DRF apps. Open the views by file from the bookless project you
+created in the previous video. Do you notice the
+API View Decorator before the books function? To use this API view decorator, you must add at API
+underscore view, open and close brackets before
+the function definition. To use the API view decorator, input the APA view function from the rest underscore framework
+dot decorators module. You should also import
+the response class from the rest underscore
+framework dot response module because it comes with benefits over triangles
+native HTTP response. The API view decorator
+allows you to use this response
+class from the DRF. One of the most
+significant benefits of using the API view
+decorator is that it turns your standard AP output into a nice brow
+sable API interface. But you must use the response
+class to get this view. Open the views. by file and
+change the boot function. Remove that at API decorator and replace the response with the HTTP response and browse the books endpoint for
+slash API, slash books. The AP output is
+there as plain text. Now, go to the API
+decorator back and return the response
+instead of HTTP response, then revisit the endpoint. Now you have a
+polished interface. This is the browsable API
+view coming from the DRF. Another great benefit of using this decorator
+is that you can specify which HTTP methods
+your function should support. Just pass all those
+HTTP method names as an array to the API
+view decorator function. Now the books endpoint
+supports HTTP post methods. Let's revisit the
+books and point. Did you notice the change? Now, the post methods is showing in the
+allowed method list. There is another change
+in this view after you've passed the post in the API
+view decorator function. A new content area is now showing at the
+bottom of this page from where you can pass a json object and make a postcard
+to this endpoint. You can do this right from
+the browser without using any external tool like
+Postman or insomnia. There are two blue buttons in the upper right corner
+labeled options and get. By clicking on the
+Options button, you can view helpful information about the current API endpoint, such as which rendered DRF
+users to dispel the API put, what types of data this
+API accepts, and so on. Clicking on the gear button
+refreshes the whole page. You can also display
+Rogers and output by selecting json from the drop down beside this gate button. The API view decorator
+also allows you to implement Throttling
+or Rate-limiting, by which you can define
+how many times someone can access this API in
+a given period. You'll learn more about
+throttling later in this course. The API view decorator also
+helps you to authentic your endpoints so that only authenticated users can call this API endpoints,
+isn't that neat? In this video, you
+learned how to convert the standard APA output
+to something more useful, a browsable API interface
+with the help of the API view decorator
+function in DRF. You'll also learn about other benefits of
+using this decorator, like authenticated API
+endpoints and read limiting.

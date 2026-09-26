@@ -1,0 +1,71 @@
+I'd like you to think of a physical
+building and its structure, interior, exterior and
+decorations in a similar fashion. When it comes to websites and web apps you
+can think of html as being the frame and structure. CSS, however, is the paint,
+wallpaper, fixtures, artwork and overall style or look and feel. In other words, CSS tells the web browser
+how to display html elements on screen. When using CSS, there are five
+elements you need to understand. A declaration block starts
+with a left curly bracket and ends with the matching
+right curly bracket. In between these curly brackets
+are the style declarations. Let's cover these elements one by one. The first element of the CSS
+rule is the selector. This indicates which html element or
+elements we want to style. For example, you can create a rule that
+uses the h1 selector to change the color of all heading one tags
+in a web page to gray. In this case, hi is the selector. Color is property and
+gray is the value of the property. Now let's focus on the structure
+of the declaration block. Each declaration is made up of
+two parts a property and a value. For example, in this case the properties
+that you want to change are the color and the background color of the header or
+selector. Once you have decided which
+properties you want to define, then you must assign
+each property of value. The color property gets
+a value of blue and the background color property
+gets a value of gray. This will result in all heading one tags
+displaying blue text on a gray background in the browser. By now, you have learned that CSS
+tells the web browser how to display html elements on screen. Now, let's work through
+an example to change a set of heading elements using
+different CSS rules. I will share a pro tip
+demonstrating how to install and use the VS code extension live
+preview to speed up your workflow. Okay, so
+I'm back in visual studio code here. Did you know that you can add additional
+functionality by using extensions. If you click on the extensions tab, you can install the live
+preview extension by Microsoft. If you are running VS code locally,
+you can install and use this extension. Once installed, right click on your
+html file in the explorer panel and select live preview, show preview. When you update an html file, you immediately notice the changes
+in visual studio code. In this video, I will demonstrate
+how to create a CSS file and style some html elements. Before I start styling elements, let's create a simple html
+document named index.html. To demonstrate how CSS works,
+I will use an example created previously. Next I create a file named style.CSS. For my web page to use the CSS file, I need to link it to the head
+element of the html file. To link to a style sheet, you use the link tag which must be
+assigned to attributes rel and h ref. The rel attribute is
+assigned to style sheet and the href attribute is assigned to
+the name of the style sheet file. In this example, it's style.CSS. I am now ready to apply CSS to
+the index.html file using style rules that I will write
+in the style.CSS file. The selector I'm creating applies
+the CSS rule to all h1 elements. This type of selector is
+called an html type selector. The properties in the declaration
+block allow me to change how the selected elements are displayed. For example, I'm setting the color property of all the
+h1 elements to display text and purple. I save the file using Ctrl nd S, notice
+that this change occurs immediately, and there is no need to
+refresh the webpage. So now what if I want to only
+style a single h1 element? I can add an ID attribute to
+the tag h1 that I want to style. And in my CSS file,
+I create a rule for that ID. Let's do that now. First, I create an ID rule using the hash
+symbol and then the name header one. Then I define the CSS properties of that
+rule to change the color value to green. I apply the rule and
+save the file using Ctrl and S. Notice that the text for the heading,
+chapter one on the web page turns green. You may be wondering, why does the first CSS rule not
+apply to the h1 element with the ID? This is because of something called
+CSS precedents and specificity. This is a complex statement, but basically the browser will use the most
+precise selector for an html element. CSS has a set of hierarchy rules
+which dictate which rule will apply to an element. In this example, the ID rule takes precedence over
+the html type selector rule. You can learn more about
+CSS selector rules and precedents from the additional
+reading at the end of this lesson. Congratulations, you have now learned
+about the selection and styling in CSS. Let's quickly recap. After choosing a selector for your styles, you create a declaration block using
+opening and closing curly brackets. Inside of the code block,
+you write a declaration which consists of a property value pair
+ending in a semi colon. And all these parts together. The selector code block and
+declaration make up a CSS rule. I encourage you to add some
+CSS rules to your html documents to practice selecting and
+styling.

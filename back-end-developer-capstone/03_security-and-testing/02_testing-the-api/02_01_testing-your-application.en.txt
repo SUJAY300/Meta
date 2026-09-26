@@ -1,0 +1,48 @@
+Testing is essential to the software development
+life cycle and is required to validate that
+your code works as expected. While working with
+existing code, you can use test to
+ensure your changes haven't affected your
+application's behavior. Testing a web application
+can be difficult, as it involves action
+at several layers, such as request handling, form validation and processing
+and template rendering. In this video, you will
+recap the concept of testing using the unit test
+framework to test an API. Let's explore the
+steps involved. First, install the
+djangoresframework in the current Python environment and start a Django project, with little lemon as the name. Inside the project, create
+a Django app called LittlelemonAPI at the rest_ framework and LittlelemonAPI to the installed apps inside
+the settings.py file. Next, create a model called menu item and run
+the migrations. Create an admin super user and log into the Django
+administration interface. Once logged in, populate the menu items table
+with some data, then open the file serializers dot py and create the
+necessary serialization code. The next step is
+creating the views from menu items
+and single items. Once you create the views, create the appropriate
+URL routing in the URLs dot py
+file of the app. Additionally, make sure to
+include the URL patterns of the app in the URLs dot
+py file of the project. Once the code is setup, run the command to launch
+the development server. The Django rest
+framework provides a browsable API that generates HTML output for
+different resources. It facilitates interaction with a RESTful web service
+through any web browser. Open the browser at the
+default localhost URL and add forward slash API, forward slash menu
+items to the URL. An interface loads and you can send HTTP requests through it. It's important to know
+that you can also use the insomnia rest client to interact with the API
+and test the routes. Open the insomnia rest extension for your browser and
+create a new request. Send a get request
+to the required URL. Choose the post request
+option and enter the body parameters for the menu item model
+in JSON format. Press the pause button
+and notice that a new instance of the model
+is added to the table. The final step is to
+create the unit test. Create a test folder inside the
+Littlelemonpackage folder, and create the file test
+underscore models dot py. Add the model test code,
+and save the file. Run the test command
+to perform the test. Notice that the console
+displays the result with the test information and that
+the test run successfully. In this video, you learn to test the RESTful API with
+the browsable API, insomnia client and
+with unit test.

@@ -1,0 +1,75 @@
+Throttling is a very
+efficient technique to prevent API abuse. Computing power and bandwidth are involved with every request. If you don't monitor it, your API infrastructure
+will be at risk. With throttling, you
+can control how often API can be accessed in a
+certain amount of time. In this video, you'll
+learn how to do that. Throttling clusters
+are built into DRF. There are two major
+type of throttling. One is for anonymous or
+unauthenticated users, and the second one is
+for authenticated users. An anonymous throttling
+rate will be used when there is no token in the API header and user throttling will be used when
+there are valid tokens. In addition to this, you can also create a custom throttling rules, for example, instead of limiting all
+anonymous API calls to five calls per minute, you can allow 50 calls per
+minute for some endpoints. Let's create a new
+function in the views.py file called
+throttle_check. When someone acts
+as this endpoint, it will simply display a
+message saying successful, and met this function
+so that it can be accessed as forward slash API, forward slash throttle check. Now, you will limit
+this endpoint for anonymous users to
+two calls per minute. Import AnonRateThrottle
+class from the rest framework
+throttling module. Also import the throttle_classes
+decorator function from the rest framework
+decorators module. Then in the views.py
+file add a throttle plus decorator and pass the
+AnonRateThrottle to it. After the API view decorator for the throttle check
+function throttle_clusters ([AnonRateThrottle]). This line instructs DRF to use the anonymous throttling
+policy for this function. Open the settings.py file
+and add a new section called Default_Authentication_Throttle rates in the rest
+framework section, then type anon:2/minute. Instead of using minute, you can also use
+second, hour or day. Now, visit the endpoint
+API/throttle-check and you can see the message. Then refresh the end
+point two more times. Notice that this time
+DRF blocks the call and displays a message saying
+detail request was throttled, expected available
+in 59 seconds. After 59 seconds, you can make two calls
+to the endpoint again, and you can do
+this every minute. That was straightforward. What do you will the throttling
+setting be if you want to throttle and endpoint for an anonymous users
+to 20 calls per day? Yes, it'll be anon 20/day. How can you throttle
+some endpoints for the authenticated users
+to 10 calls per minute? Input the UserRateThrottle class from the rest framework
+throttling module. Then create a new function only for the
+authenticated users. This time, use UserRateThrottle as the throttling class
+and map this function so that it can be accessed
+as API/throttle_check_outh. Finally, add this line
+in the settings.py file just after that anonthrottle
+setting, user:5/minute. Now, using Insomnia, send an HTTP get call with a valid user token
+to this endpoint. After five successful calls, DRF will display the
+same message to you that you've seen earlier when a throttle limit was reached. Excellent. Everything
+is working just fine but let's explore
+one more example. With the current setting, when you use throttling classes, all API endpoints will be limited to two calls
+per minute for the anonymous users and five calls per minute for
+the authenticated users. But say you want another policy for some
+API endpoints so that authenticated users
+can call them 10 times per minute.
+Let's do that. Create a new file called throttles.py in
+your app directory and add the following code. Close 10 calls per minute, UserRateThrottle, and
+then scope equals 10. This code creates a
+new throttle policy with unnamed scope. This is scope will be used
+in the settings.py file to establish the throttling
+or 10 calls per minute. Now open the settings.py file and add this line of code after the user setting in the Default_Throttle_Rate
+Section, ten:10/minute. Now import this 10 calls per minute class in our
+views.py file like this and use this class as a throttle class for any
+authenticated function calls. That's it. Now, authenticated users can
+access this endpoint 10 times per minute and DRF will
+block any extra goals. Let's test this in Insomnia. Here, I'm making 10 calls to this endpoint
+api/throttle-check auth, but it blocks me
+on my 11th call. In this video, you'll
+learn how to prevent abuse of your API
+endpoints by implementing, rate-limiting or throttling
+using DRFs clusters. You also learn how to change the settings for anonymous
+and authenticated users and allow them APIs to be called by accustomed rate using
+throttling scopes.

@@ -1,0 +1,31 @@
+You've reached the
+end of this module on basic programming
+with Python. During this module,
+you've received an introduction to
+Python functions and data structures and explored how Python
+deals with errors, exceptions, and file handling. Now it's time to recap the
+key points of this module. As with most
+programming languages, functions are the basis for
+creating actions in Python. By completing the first
+lesson in this module, you should now be able to, declare a function in Python, pass data into a function, return data from a function, and explain scoping
+at a basic level. In order to use functions
+efficiently across a project, it's important to determine their accessibility across
+different levels of code. In this lesson, you
+also learned how to identify the four scopes, describe how functions controls scope at different levels, explain data structures, and describe the concept
+of lists in Python. Python has several built-in
+data structures to help you to organize and store
+your data for easy access, and you've learned about
+the most common ones. On successfully completing
+the second lesson, you should now be able to, identify list methods, explain what types can
+be stored in a list, describe how to
+iterate over a list, and explain the main
+uses of tuples, sets, dictionaries, and kwargs. Python file handling
+an exception with topics in the final
+lesson in this module. Having completed this lesson, you should be able to, identify how to create and manipulate files with
+the open function, describe how to read
+files in Python, and demonstrate how to
+output different formats and store file contents
+in data structures. This module gave you
+the opportunity to get started with basic
+Python programming. Well done. That's one more step towards becoming a
+Python developer.

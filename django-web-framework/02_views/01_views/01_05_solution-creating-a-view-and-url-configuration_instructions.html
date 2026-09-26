@@ -1,0 +1,101 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  Here is the completed solution code for the
+  <strong>
+   views.py
+  </strong>
+ </p>
+ <pre language="python">from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+def home(request):
+    return HttpResponse("&lt;h1&gt;Welcome to Little Lemon!&lt;/h1&gt;")</pre>
+ <p>
+  urls.py - App-level
+ </p>
+ <pre language="python">from django.urls import path
+from . import views
+
+urlpatterns = [
+        path('', views.home, name="home"),
+] </pre>
+ <p>
+  You can add either 'myapp' or 'myapp.apps.MyappConfig'. They are equivalent here; the AppConfig form is more explicit and allows app configuration.
+ </p>
+ <p>
+  urls.py - Project-level
+ </p>
+ <pre language="python">from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('myapp.urls')),
+]</pre>
+ <p>
+  settings.py - INSTALLED_APPS
+ </p>
+ <pre language="python">INSTALLED_APPS = [
+    'myapp.apps.MyappConfig', # string added. 
+    # Note: This is effectively the location of MyappConfig class inside the app-level apps.py file
+    # Relative path of the app needs to be added. This means, alternatively you could have also added simply the name of the app which is 'myapp' 
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]</pre>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

@@ -1,0 +1,75 @@
+Have you ever come across
+a song that you like so much you want to listen to it again and
+again? You select the loop option so
+that you can listen to it repeatedly. This action of repetition is known as
+looping, and also exists in Python. In this video you'll learn to use
+looping constructs when the same set of steps must be carried out many times. Python has two different types
+of looping constructs for iterating over sequences,
+the For loop and the While loop. Looping is used to iterate
+through the sequence and access each item inside the sequence. Let's start with a basic example
+of looping using a string. First, you declare a variable called str,
+which is of type string, recall that a string in
+Python is a sequence, which means you can iterate over
+each character in the string. A sequence is just an ordered set. Now, let's break apart the for
+loop and discover how it works. The variable item is a placeholder
+that will store the current letter in the sequence. You may also recall that you
+can access any character in the sequence by its index. The For
+loop is accessing it in the same way and assigning the current value
+to the item variable. This allows us to access the current
+character to print it for output. When the code has run, the output will
+be the letters of the word, looping, each letter on its own line. Now that you know about looping constructs
+in Python, let me demonstrate how these work further using some code examples
+to output an array of tasty desserts. Python offers us multiple
+ways to do loops or looping. You'll now cover the For
+loop as well as the While loop. Let's start with the basics
+of a simple For loop. To declare a For loop,
+I used the for key word. I now need a variable
+to put the value into. In this case I am using i, I also use the in keyword to
+specify where I want to loop over. I add a new function called range to
+specify the number of items in a range. In this case, I'm using 10 as an example. Next, I do a simple print statement
+by pressing the enter key to move to a new line. I select the print function,
+and within the brackets, I enter the name looping and the value
+of i, then I click on the run button. The output indicates the iteration
+loop through the range of 0 to 9. It's important to note
+the three main points. The iteration starts 0 based on
+the index of the item itself. Every for loop usually starts with 0. Most arrays starts at 0. The reason for that is that it's
+the first item in an array or the first item in the index. In this case, the last item in
+the array or index will be 9. Now, I want to change what I look through. As an example, I will enter a simple
+array above and call it favorites. To do this, I start by removing
+the hash sign in front of favorites. Next, I replaced the range
+function in the current for loop with favorites to look through. The i that I declared as part of the for
+loop can change to any value, and in this case I'm using item. I now change my print statements
+to include item in my print loop. I also changed the text,
+I like this dessert. I click on the run button
+to print the value stream. In this case, item calls each of
+the five dessert titles in turn and our print statement combines
+them into a sentence. The next looping option I'm
+discussing is the While loop. The While loop differs
+Slightly from the For loop. To demonstrate this type of loop, I first
+comment out the for loop on my screen. Let's start by using the while keyword. As in the for loop, I need to specify
+a condition to make the loop over n times, depending on the value itself. First, I need to declare a counter. I do this by typing count = 0
+above my looping statement. Next, I enter count after the while
+keyword followed by the < sign and the word favorites. Now I insert the function len to
+provide the length of favorites. This means the loop will run while
+the count is less than the length of favorites. In other words,
+while it is less than five. To print the value of
+the looping statement, I press the enter key
+to move to a new line. Then I select the print function, and
+within brackets I enter the text, I like this dessert. The key difference here is that I need to
+use the index to access the items within the favorite array. To do this, I type favorites and
+add count to represent the index. It's important that I
+now increment count so that it will essentially
+match the loop statement. If I do not increment count, I'll end up
+with what is called an infinite loop. This means it will just keep looping and looping until the compiler stops
+it from running out of memory. To increment the count, I press enter to
+move to a new line and add count += 1. I clear my screen and
+click the run button. I get the same print output as the for
+loop. It's important to note that
+In a standard for loop, I don't have access to the index, but I
+can use the enumerate function to do that. So I changed my current for
+loop statement by adding idx, and it becomes for idx Item in. Then I call the enumerate function
+with favorites in parenthesis. On the next line, to print the output,
+I replace the text, I like this dessert with idx and
+click the run button. The results display the index and
+the value of the item within the array. Congratulations, in this video you learned
+about looping constructs in Python using the For loop.

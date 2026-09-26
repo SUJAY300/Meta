@@ -1,0 +1,24 @@
+In this course, you were introduced to
+the foundations of Python development. Let's do a brief recap
+of what you've covered, Module 1 was getting started with Python. In this first module you learned about
+the different ways developers used Python in the real world, and discovered
+the rationale for the existence of Python. You checked out your hardware and software
+by running visual studio code, and carrying out operating
+system environmental checks, identifying any required dependencies. You explored variables and data types, and worked with strings casting and
+data files. This led you to the section on control
+flow and conditionals, where you've got to use Python operators and build looping and
+flow controls into your code. In Module 2, you moved on to some
+core programming skills with Python, including exploring functions and
+data structures, scopes, lists, tuples, sets and
+dictionaries and kwargs. With all that coding built,
+it was time to check for errors. You finished Module 2 by examining errors,
+exceptions and file handling and considering approaches to error handling. Nearly halfway through
+the course on Module 3, you discovered all about
+the paradigms of functional and object oriented programming, and
+associated logical concepts. You also had an introduction to algorithms
+and to Python classes and instances. Nearly at the course end in Module 4, you
+learned how you could boost your coding environment by using modules,
+libraries and tools in Python. You also learned about the different
+types of testing and how to write a test. Well done on completing this course recap, it's almost time to put your knowledge
+to the test in the greater assessment. Are you ready to display
+all your Python abilities?

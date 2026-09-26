@@ -1,0 +1,85 @@
+By now you know that HTTP stands for Hypertext
+Transfer Protocol, and that it's one of the most widely used
+communication protocols for transferring data
+across the Internet. Let's briefly refresh
+your memory of HTTP and HTTPS before diving into
+more complex topics. In this video, you
+will learn about how HTTP and HTTPS work, HTTP methods, HTTP
+requests and responses, and finally HTTP status codes. When you browse webpages, view images, or submit a form, your data is transmitted using HTTP or a secured version of it, which is called HTTPS. But how does that
+transmission work for HTTP and HTTPS respectively? Communicating over HTTP requires at least two parts:
+the client who requests some information
+and the server who responds to this request
+and serves the content. HTTPS is the secured
+version of HTTP, which makes it better suited to instances where
+security is a concern. But let's find out
+how this works. With HTTPS, the client's computer
+encrypts data before it starts its
+journey to the server. The server then decrypts this client-side data
+and processes it. But the web server also encrypts the response data and sends the encrypted content
+back to your browser. Your browser then decrypts
+the response and displays it. Since the content is encrypted, it is more secure and
+very difficult to steal or retrieve
+information from it. For submitting sensitive data, like credit card information, it is always preferable to use HTTPS to make sure
+the data is secure. Now, let's move on to
+some common HTTP methods. HTTP methods are also
+called HTTP verbs. There are five methods
+commonly used when accessing content over HTTP. They are: GET, which retrieves a resource; POST, used to send data to the server and then
+create a record; PUT, which updates the
+whole resource; PATCH, which are used to partially
+update a resource; and DELETE, which
+deletes a resource. Next are HTTP requests, which contain different
+types of information that a user's browser sends
+as encoded data. A typical HTTP request
+includes the following, HTTP version type, for example, 1.1 or 2.0, URL or path, HTTP method, HTTP
+request headers, and an optional HTTP body. But what are the HTTP request
+headers and body again? Well, when you
+submit a form like your username and password
+to sign into a website, that data is passed
+to the web server as the HTTP body as either a raw JSON string or
+a form URL encoded string. HTTP headers, on the other hand, are a core part of every
+HTTP request and may contain extra information
+that helps the server make some decisions on how
+to present the content. Examples of HTTP request
+headers are cookies, user agents, and referrers. After an HTTP request, comes the HTTP response, which consists of
+information that the browser uses to properly display the content and
+the response body. The response contains the
+resource that was requested. It also contains information like the length of the content, the content type, and
+headers like cookies. It also contains ETags, the time when the
+content was last modified, and finally, the response also contains some special numerical codes
+called HTTP status codes. You've surely seen these
+HTTP status codes, but you might not have
+known what they are for. Well, they are not really messages addressed
+to you, the user. They actually provide
+extra information to your browser
+about the resource. For example, if
+everything is okay, the server sends 200. You will not be aware
+of this because it doesn't even display
+in your browser. Or if the requested
+content can't be found, the server responds with
+the 404 error code, which usually displays in the browser because there
+was nothing else to show. Here is a range of error
+codes and their meanings. 100-199 are used for
+informational messages. The codes 200-299 are
+successful responses, 300-399 provides
+redirection information, 400-499 are client
+error responses, and 500-599 are
+server error codes. Server errors are
+usually raised when the server-side code lacks proper error checks in the code, configuration mismatch, incorrect package
+dependencies, and so on. The client-side errors
+usually occur when the client makes a
+bad API request with insufficient information in
+the request body or when the client requests a resource that is not present
+on the server. But take note that sometimes
+the same status codes can convey different messages
+in different contexts. For example, a 200
+status code for a GET request means
+the content was found. The same 200 code for a
+PUT request means that the data transmission and
+update process was successful. Similarly, for a DELETE request, this 200 status code means that the resource
+was successfully deleted. Some of the most used status
+codes are 200 and 201, 303 and 304, 400, 401, 403, and 404, as well as 500. You will learn more about what these status codes mean as
+you move through the course. That brings you to the end of this HTTP recap video that refreshed your
+memory about HTTPS, HTTP methods, requests,
+responses, and status codes. These are the fundamental
+concepts that you will use to develop sustainable
+and manageable APIs.

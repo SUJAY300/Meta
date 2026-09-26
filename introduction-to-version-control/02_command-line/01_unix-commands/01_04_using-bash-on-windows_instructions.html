@@ -1,0 +1,154 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p variant="body1">
+  If you are using a macOS or Linux machine, your computer natively understands Unix commands. However, if you are using a Windows machine, you need to take a few extra steps before you can follow along with the upcoming demonstrations.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  The Problem with CMD and PowerShell
+ </h2>
+ <p variant="body1">
+  Windows comes with two default command-line tools:
+  <strong>
+   Command Prompt (CMD)
+  </strong>
+  and
+  <strong>
+   PowerShell
+  </strong>
+  . These tools use a different language than Unix.
+ </p>
+ <p variant="body1">
+  If you try to type Unix commands like ls -la, pwd, or chmod into standard Windows CMD, you will receive a frustrating "Command Not Found" error.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  The Solution: Git Bash
+ </h2>
+ <p variant="body1">
+  To run Unix commands on a Windows machine, you must install a "terminal emulator." For software developers, the absolute industry standard is a free tool called
+  <strong>
+   Git Bash
+  </strong>
+  .
+ </p>
+ <p variant="body1">
+  Git Bash provides you with a Unix-style terminal on your Windows machine, allowing you to use all the commands taught in this course.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  How to Install and Open Git Bash
+ </h2>
+ <p variant="body1">
+  If you do not already have Git Bash installed, please follow these steps:
+ </p>
+ <ol bullettype="numbers">
+  <li>
+   <p>
+    Navigate to the official Git for Windows website:
+    <a href="https://gitforwindows.org/" title="">
+     https://gitforwindows.org/
+    </a>
+   </p>
+  </li>
+  <li>
+   <p>
+    Click the
+    <strong>
+     Download
+    </strong>
+    button.
+   </p>
+  </li>
+  <li>
+   <p>
+    Open the downloaded installer file.
+   </p>
+  </li>
+  <li>
+   <p>
+    Click
+    <strong>
+     Next
+    </strong>
+    through the installation prompts. (The default settings are perfectly fine for this course, so you do not need to change any checkboxes).
+   </p>
+  </li>
+  <li>
+   <p>
+    Once the installation is complete, click your Windows Start Menu and search for
+    <strong>
+     Git Bash
+    </strong>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Open the Git Bash application.
+   </p>
+  </li>
+ </ol>
+ <p variant="body1">
+  You should now see a black terminal window with a blinking cursor.
+  <strong>
+   You will use this specific Git Bash window for all command-line and version control exercises in this course.
+  </strong>
+ </p>
+ <p variant="body1">
+  Whenever the upcoming videos or labs ask you to "open your terminal," please remember to open
+  <strong>
+   Git Bash
+  </strong>
+  ,
+  <em>
+   not
+  </em>
+  Windows Command Prompt.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

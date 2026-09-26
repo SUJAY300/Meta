@@ -1,0 +1,109 @@
+Debugging is the process of identifying and
+isolating an error, finding the source, and deploying measures to
+solve the problem. While making mistakes is
+a part of programming, correcting errors
+inside a web framework, such as Django can be
+particularly difficult. Unlike errors occurring in a standalone file that
+can be easily spotted, web projects consists of several interlinked files and dependencies that can make
+troubleshooting challenging. While debugging takes patience, it also helps build a better understanding of the internal working
+of an application. In this video, you
+will learn more about debugging
+Django applications. Mistakes can happen in many forms and at any stage
+of the development process. These can include
+missing adding a view, creating incorrect templates,
+missing import statements, inaccessible resources
+such as model data, or even missing a comma in some attributes passed
+inside a function. As a beginner, seeing
+the errors and having to troubleshoot
+can be intimidating. While observation and
+hands-on practice with web applications
+are the best means to overcome errors
+in Django projects, there are tools available
+that can speed up the process of getting a
+project up and running. You already know how to raise a few errors using provided
+internal implementations. But there are
+unforeseen errors that occur that also needs
+to be attended to. Django has a distinct
+debugger that appears in the form of
+a yellow page arrow. You may recall seeing
+the debug equals true flag on the homepage of the local host after
+running the server. The Django debugger
+is enabled by default and settings
+for it can be found and modified inside the settings.py file
+of your project. While it is a useful
+component of development, the developers of Django
+recommend that it should never be used in the
+production environment. This is because it may
+expose internal file parts, as well as database and
+project configuration details to the end user
+using your website. This can be prevented
+by changing the setting to
+debug equals false. Other than the default debugger provided by Django, Django, as you know is written
+in Python and can easily integrate third party libraries
+that help in debugging. Let's now examine a
+few ways in which you can debug Django
+applications. This example uses the creating forms project
+demonstrated area. Begin by launching the
+development server. Immediately, you'll notice
+there is a 404 page not found error and this is
+because you haven't configured the URL
+for the local host. Also, notice that this displays in the
+console in the logger. It's important to know that the default Django
+implementation enlists all the steps
+that Django has performed after you
+run the command. Let's now go to the correct URL. Notice that the logs update at the bottom
+inside the console. Now, open the forms.py file. Python specific errors will most likely occur in the console log. For example, if you comment out the shifts constant
+and save the file, notice an error log displays
+inside the console. The name error displays
+with the text, name shift is not defined. If you try to refresh the
+local host URL in the browser, notice that the
+page will not load. However, some other errors
+are not that obvious. For example, remove
+the import you passed inside the log
+form and save the file. Notice that you do not
+get any error in the log. However, if you
+refresh the web page, notice that the template for the form disappears except for the submit button
+that was rendered using static HTML markup. To prevent this from happening, always ensure you have
+the right imports and that you pass the correct
+arguments inside functions. Let's say you open the file,
+my template home.html. Inside the file,
+remove the code for the CSRF token and
+save the file. If you go to the local host
+URL and reload the page, notice that the forms
+render correctly. Fill out the form and
+press the submit button. Notice that an error
+displays stating, forbidden CSRF
+verification failed. This error specifies that
+the CSRF token is missing, which is helpful for
+troubleshooting. You can broadly say the
+yellow page errors are more specific to problems inside
+Django than Python code. Now, let's say you go
+to the files.py file again and misconfigure
+the template you are trying to render. Let's say you call this
+home_page.html and save it again. Once you go to a template page, you get an error
+such as template does not exist in
+the particular path. Let's examine this page
+in a little more detail. First, it specifies the
+exception location, and you can get a hint
+from get template and how it is raised
+during form view. Next, if you keep scrolling, you get a stack, which is called the
+trace back stack. It contains Python code in sequential order with a
+particular line highlighted, which will likely be
+the place of the error. You can also convert this to switch to copy
+and paste view. When you change this, you get a much
+cleaner interface, mentioning all the details. You can additionally click on, share this trace back
+on a public website, which when clicked, will
+take you to debase.com. This page displays
+convenient clipboard content that you can share
+on different forums. If you scroll down further, there's information about
+the dictionary containing all available HTTP header
+information called meta. On further scrolling, you
+can find details inside the settings and all of these
+are potentially helpful. Regarding debugging, you can never apply a one rule
+for all approach. With practice, the
+number of errors you encounter will
+slowly decrease. A systematic and
+patient approach in dealing with these projects
+is the best way forward. In this video, you learned how to debug Django applications, which will help
+you in the future when you have to
+troubleshoot errors.

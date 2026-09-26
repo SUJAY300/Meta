@@ -1,0 +1,46 @@
+Now that you know the scope of this
+project and you have read about database schema, it's time to create the models for
+this final project. Let's start, you need a few models to implement
+all the features in your project. Django already comes with the user model. So you don't need to worry about that. Now, open the model start by file and
+start with the category model. This model only recourse to field
+a slug and the title for the slug. You'll use the slug field type. The title will be char filled
+with a maximum length of 255. The client application will search against
+this title field so you must index it. Next, a menu item Model is required. A menu item can have a title and
+price which will be char field and decimal field respectively. It also needs a boolean field that
+indicates if this menu item is set as featured. And finally a menu item will
+always belong to a category. So you need a category
+field as a foreign key. Now, let's start with a curved model
+occurred Model is a temporary storage for users who can add menu items
+before placing an order. Remember in the project scope it was
+mentioned that a user can only have one card at a time. This model needs a user field which
+will be a foreign key to the user model. You need to import this model from
+the django dot contract dot dot dot models module. The card model also needs a menu
+item field which will be a foreign key to the men White model. And finally you need a quantity field and
+to price fields. For easier calculation. One is the unit price of the main item and the other is the price which multiplies
+the quantity with the unit price and saves the result when someone places
+the order, two things will happen. An order will be created that holds some
+important information about this order. So where will the menu items related
+to that order go from the curd. As soon as the order is placed,
+all the items will move from the curd to an order item table and
+link those main items with the ordinary. Let's create these two models. The order model needs a user field linking
+to the user stable as a foreign key and the bullying field called status to mark. If the order is delivered or not, the default value of this
+field will be set to zero. Then there is a total field continuing
+the price of all the menu items in this order and a dead field to mark. When this order was placed in this model,
+you need another field called a delivery crew which will
+link to the user model in Django. You cannot create two foreign keys
+referring to the same field in a foreign table. You must set a related name for it. So the related name of this field was
+said to delivery underscore crew because both user and the delivery crew were
+referring the user ID in the user table. And here comes the last model. The order item, all the items from
+the curd will be moved here with a link to the newly created order ID. And then those card
+items will be delighted. So after placing the order,
+the curd will be empty and the user can start adding new items for
+a new order you need a foreign key order referencing the order model in
+this model then comes the menu item. Again, another foreign key for
+the menu item model. You also need a quantity field because
+someone can add multiple items for a menu item and just like the card model. This model also requires a unit price and
+price field for easier calculation noted. The use of two meta classes in
+the card and order item model for two unique indexes In the court model. This line means that there can be only
+one menu item entry for a specific user. You can only change the quantity of
+the menu item And in the order item model this unique index means that
+one order can have only one entry for a specific menu item but the quantity can
+vary now that you have your models ready. It's time to start writing code

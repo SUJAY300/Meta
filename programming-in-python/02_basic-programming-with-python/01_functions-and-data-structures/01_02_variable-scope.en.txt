@@ -1,0 +1,71 @@
+The concept of scoping
+and Python allows for greater control over
+elements in your code, which reduces the chances of accidental or unwanted changes. By the end of this video, you'll be able to understand
+the basics of scoping in Python and identify the
+four types of scope. Before you explore scope
+and its intricacies, It's important to know that Python has different
+types of scope. You'll examine
+each one in detail and I'll demonstrate them
+with coding examples. In order of ascending coverage, the fourth scopes are local, enclosing, global, and built-in. Together, they're
+referred to as LEGB. Variables within the
+built-in and global scope are accessible from
+anywhere in the code. For example, if there's a
+variable a in the global scope, it can be called encode
+at the local level. The purpose of scope is
+to protect the variable, so it does not get changed
+by other parts of the code. For instance, let's
+say you've declared a variable b in the enclosed scope and
+variable c locally. While b can be called
+in local code, it doesn't work the
+other way round. As a rule, global scope is
+generally discouraged in applications as this increases the possibility of
+mistakes in outputs. Now, I'll explore using the four different types of Python scopes in this
+practical demonstration. The first one I want to
+use is global scope. I declare a variable called my global and then give
+it a value of 10, so the next thing
+I do is declare a function and I call it fn1, and inside this function, I will declare another variable, which I'll call local
+variables or local_v, and give it a value of five. To show that my global variable is accessible from anywhere, I can do a print statement, say access to global, and then print out the value
+of the my_global variable, and if I want to
+run that function, I need to specifically call it, so fn1, click on ''Run'' and then
+the value of 10 is printed out for the
+global variable. But if I try and print
+out the local variable inside f and one
+outside the function, it will return an error, so I access to local
+and then puts out local underscore v. I've
+been clever console, click on ''Run'' and I get
+an error saying name error, name local underscored
+v is not defined. That's because it's only
+accessible from within the local scope of
+the function fn1. Next, to illustrate
+an enclosing scope, I'm going to declare
+a second function inside fn1 called fn2. I then declare an
+enclosed variable, which I call enclosed fee, and assign it the
+value of eight. The local v will be
+local to the fn2. I'll now explain how
+enclosed scope works. Within fn2, I've got
+access to the enclosed_v, which I can demonstrate by doing another print statement and printing out the
+enclosed_v variable. I'll just test that
+this will works by calling the fn1 function and then making sure that I call our fn2 function inside fn1, I must physically call a
+function to make it run, so I clear the
+console, click on Run, and then prints out
+access to global 10 and access to
+enclosure eight. The way scoping works is that the innermost function has access to almost everything
+from the outside. You can access the enclosed
+variable at this level and then also access the global variable at
+the outer level. The same rules still
+apply from the outside, so if I try and access the
+variable of enclosed_v, or trying to access the
+variable of local v, I get the same error that the variable enclosed_v
+is not defined. The nested items have
+access to both the global and the enclosed,
+but from the outside, it can't be accessed from a
+nested or an enclosed scope, both the local and enclosed. The last globe is
+built-in scope, which you've been using when
+writing code in Python. Built-in scope refers to what's called the reserve keywords, such as print and def. Built-in scope covers all
+the language of Python, which means you
+can access it from the outermost scopes or the innermost scopes in
+the function classes. That's a brief demonstration
+of scope in Python, including examples of global, local, enclosed and built-in. By completing this video, you've gained a broad
+understanding of why scoping is important
+in Python programming, and you are now able to identify
+the four types of scope.

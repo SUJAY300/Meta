@@ -1,0 +1,29 @@
+Let's talk about some useful tools
+in your browser's developer console. This is Chrome, but you can find
+a developer console and similar tools for every browser. Open the developer console,
+in the Chrome browser, you can do that by pressing control and
+shift and the I key in Windows and Linux. And command and option and I in MacOS. The developer console is helpful
+when debugging the API calls met from JavaScript on your website. If you come to the network tab,
+you can see many options, but you should focus on the fetch XHR filter. Click on the console's tab and
+paste this single line of code to initiate a HTTP GET call to your API and
+press enter. You can use any valid URL inside
+the fetch function to test this. Now, go to the network tab and
+see that the API call has been recorded. It shows menu items on the left side,
+click on it and then click on the header step. You can see all the request response
+headers involved in this call. The preview tab displays the output. The response tab does the same, but the
+preview tab renders the output in a more formatted style and the response tab
+shows the raw output of your API call. The initiator is a very handy tab, it shows the line in your JavaScript
+from where this API call was initiated. At the top of this developer console, just below the network tab is
+a checkbox called divisible cache. If you want to avoid
+climb site caching and you expect a fresh output from your APIs,
+then you should keep it checked. All the API calls from your JavaScript
+will be recorded in this network tab and you can inspect one after another. You can also delete all those recorded
+calls by clicking on the clear option next to this red
+button at any time. Let us visit any API
+endpoint in your browser. For example, this public API https://restcountries.com/v3.1/all. It displays a list of countries but
+the JSON output is not formatted and it looks messy. You can install a JSON formatter extension
+available for all major browsers. Go to the Chrome extension store, search
+for the JSON formatter and install any JSON formatter extension of your choice,
+they all work mostly the same. After installing and
+enabling a JSON formatter extension, revisit the REST countries API and note
+how the output is now nicely formatted.

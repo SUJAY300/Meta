@@ -1,0 +1,99 @@
+In this course,
+you have learned a range of concepts and skills as you prepare for
+a coding interview. Let's take a few moments to recap
+the key topics that you learned about. In the first module, you started by
+discovering what a coding interview is, what it can consist of and the types of
+coding interview that you might encounter. Your first lesson focused on the technical
+coding interview, primarily to determine that you are technically
+capable of the roles responsibilities. You learned about the steps
+that you must keep in mind when this interview is conducted. You were taught that using the appropriate
+tools is always important and that you have to keep
+time constraints in mind. You also explored how you can prepare
+yourself for a coding interview and the importance of first impressions,
+including a focus on communication such as explaining your thought
+processes and handling mistakes. You learned about the star method and how to use it to your benefit when
+communicating with interviewers. You also learned about how to work with
+pseudocode to demonstrate how you might reach a solution. Some important tips for practical solution
+design and how to test your solutions. In the next lesson, you've got
+an introduction to computer science. Starting with an overview of binary, where you learned about the difference
+between base 10 and base 2. You then discovered positional notation, the use of the position of the number to
+denote a progressive increase in value. You then moved on to explore key
+components of computer memory and how it works. You should know by now that to better
+understand the various layers of memory and should be able to
+describe the differences. You learned about the transfer rate or the speed at which a computer can transfer
+memory into the cache for processing. You then moved on to time complexity,
+where you learned how to evaluate time efficiency or gauge performance
+by the time taken to complete a task. You discovered Big-O notation,
+which is a metric for determining an algorithms efficiency. You explored space complexity, which is essentially the space
+required to compute a result. And that any decisions around space
+complexity are not just based on the speed of an algorithm, but also on how much
+memory capacity a given solution will use. There will always be a choice to
+prioritize speed or compactness. In the second module,
+you learned about data structures. This ranged from basic data structures
+like strings, Boolean or arrays, to more advanced data structures like
+collections, graphs and heaps, and how each one comes with certain
+benefits and limitations. You explored all the types
+of data structures and how they are classified into two
+main branches, linear and nonlinear. Next, you were introduced to stacks and
+queues, abstract data structures that both have specific characteristics around
+how elements are added and removed. When you visited queue, you learned that
+a queue is very similar to a stack in that it tends to have the same methods. It can create, insert, remove and
+check the state of the queue. Unlike a stack, a queue works on
+a first in first out or FIFO basis. Finally, you found out that trees
+are a powerful data structure that give you great flexibility in adding and
+searching values. Following this, you went on to
+examine some advanced data structures namely hash tables, heaps and graphs. Next, you explored heaps. You discovered how heaps can be used
+to organize elements from least to most important and how,
+by limiting the functionality of heaps, productivity can be increased. Finally, you examined graphs. This structure illustration is a graph
+that is made up of nodes to denote destinations and edges that show
+how each note relates to another. The presence of values between the nodes
+mean that this is a weighted graph, there are no arrows present, which
+means that it is an undirected graph. In contrast to a directed graph, an undirected graph has
+no order of precedence. And you learned that a connection
+in a directed graph is considered weakly connected
+if the edge is only one way. However, if there are two connections
+going either way between two nodes, then it is said to be strongly connected. In the third module, you had
+an introduction to algorithms including the types of algorithms available to you
+and how best to work with them to sort and search your data. You started by exploring
+sorting algorithms and how working with sorted data or having the ability to sort your own data
+can result in significant time savings. You discovered why sorting is important
+and explored the three main methods for sorting, selection,
+insertion and quick sort. Next, you went on to discover
+searching algorithms and how each type provides its own
+framework for problem solving. You explored two core approaches
+to searching, linear and binary. Linear searches progress
+through every item in a given data structure until
+a specific item is found, whereas binary search is half
+the search space at each iteration. You also gained insight into time and
+space complexity in both searching and sorting algorithms. You then moved on to the final
+lesson where you were introduced to working with algorithms. Here, you learned about different
+approaches to working with algorithms. First, you explored the divide and
+conquer paradigm. You learned that in the divide step, the input is split into smaller
+segments and processed individually. In the conquer step, every task associated
+with a given segment is solved and the optional last step combine is
+combining all the solved segments. Next, you explored another
+important algorithmic approach. Recursion, recursion is when
+a function calls itself with a smaller instance of a problem repeatedly
+until some exit condition is met. And you learned that there
+are three requirements for implementing a recursive solution,
+namely, the base case, the diminishing structure and
+the recursive call. You would then introduced to dynamic
+programming, which is a programming paradigm that promotes solving problems
+by breaking them into smaller problems. And you examined the process involved to
+compute a dynamic programming solution. Essentially, this can be outlined as
+first determining the objective function. That is the description of what
+the optimum outcome is to be. Next, breaking the problem into
+smaller steps and then deciding which approach you would like to apply
+to achieve your desired outcome. Finally, you learned about greedy
+algorithms in comparison to the dynamic programming approach. A greedy approach would look
+at the list of solutions and implement a local optimization. Usually, the current most rewarding option
+is chosen and you looked at an example of how a greedy algorithm approach could
+be implemented to reach a solution. While the overhead for
+a greedy algorithm is low and coding a solution is
+quite straightforward, it will not always guarantee that
+the best option is returned. So, there is a trade off when choosing
+a greedy approach over a dynamic one. Well done, you have covered so
+many important concepts and approaches throughout this course. It is a real achievement, but
+it should also serve to prepare you for any potential coding interviews
+that you may go on to attend. All you have left to do is to take
+the final course quiz before wrapping up the course. Good luck.

@@ -1,0 +1,52 @@
+You've reached the end of
+another week. Well done. Let's take a quick tour
+of what you covered in this section of the
+course about searching, ordering, and filtering data, and also how to control
+access to your APIs. In the first lesson, you were introduced to the
+concepts of filtering, ordering, searching,
+and paginating. This included learning why
+filtering is important, and how it is usually performed by passing
+query strings, and you learned how
+to order API results in both ascending and
+descending order, as well as how to perform
+multiple ordering. You learned about
+data sanitization, and why it is important
+from a security perspective because unsanitized data
+can cause vulnerabilities. Next, you learned
+how to paginate your restaurant menu items by specifying how many
+items you want per page, and then you got the results for a specific page by providing
+a page number to the API. Pagination helps the
+server to perform better by consuming
+less resources. After this, you learned about the benefits of caching
+in an API project, and how it can help
+overall performance, and you learned how to
+cache an API result in DRF. In the first lesson's
+ungraded lab, you implemented what you
+learned in your own project by adding a category type and adding it to
+your menu items, filtering foods by category, ordering food by price, ordering food by price
+in a specific category, and paginating the menu items. In the second lesson, you learned all about
+securing an API in Django REST
+framework; therefore, you learned more about
+token-based authentication in DRF by creating a
+simple registration and login API that uses the generator tokens to
+authenticate API calls. When it comes to security, user roles are pretty important, which is why you
+learned how to create different types of
+user roles in DRF. You also learned
+how to set up API throttling and learned
+what its advantages are. Next, you learned about Djoser library and
+what the benefits are of using this library over DRF's built-in
+authentication system. You also learned about new
+authentication endpoints introduced by Djoser library for the registration and
+sign-in process, as well as how to add Djosers
+to your existing project. Finally, you used the
+knowledge you gained about Djoser's to create a food
+rating API with throttling. Overall, after
+completing this week, you should be able to implement searching,
+filtering, ordering, and pagination to optimize
+the output of your APIs, explain how caching works on different layers in
+an API architecture, use built-in token-based
+authentication in DRF, create user roles, and implement throttling to
+control access to your APIs. Lastly, you should
+know how to use JSON Web Tokens to protect
+your API endpoints. Only one more week
+to go before you've completed the course. Good luck.

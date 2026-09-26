@@ -1,0 +1,69 @@
+When building web applications,
+developers use databases to store data and write sequel queries to fetch and manipulate that data as applications
+grow in size and complexity. So too can the amount and complexity of
+the SQL queries to assist developers, Django provides a feature known as
+object relational mapping, ORM. That automatically creates the required
+SQL queries in this video, you will learn about object
+relational mapping and how Django uses it to create SQL
+queries against the database. You will also explore
+the QuerySet API and how developers use it to save and
+retrieve data in the database. One of the earlier challenges of object
+oriented programming languages used in web development included
+the complexity of working with databases. Object relational mapping is
+an abstraction layer created to facilitate interaction between the programming
+language and databases. This allows programmers to use
+the SQL databases without needing to write SQL queries, a structured
+map is created internally by ORM. That generates SQL code for
+a given relational database, by observing the changes
+made to the data objects, ORM can be accessed by
+using the shell command. Previously you may have noticed
+how each row entry added for a given model creates an object,
+you may recall the output had the prefects QuerySet, a QuerySet
+is a collection of such objects. For a given model used in Django and
+Django uses a QuerySet to retrieve and manipulate these objects from
+the database, for example, suppose you have a model called customers. You can access the contents of this
+model by running the command customer dot objects dot all this command
+returns the output as a QuerySet. The list will contain the entries for the
+different objects corresponding to the row entries in a database, for every
+SQL query that can be constructed, there is a corresponding command. These commands are a part of
+the QuerySet API, so for example, if you want to join multiple parameters
+using the wear or limit clauses in SQL you can use the filter function and
+pass the conditions to it as arguments. This will select the entry for customers
+who have reserved a table for four people. Considering the variety of complex queries
+that can be constructed in SQL, Django has several functions
+that support these operations. They can be categorized as follows
+based on the required logic to run on the QuerySet methods that
+return new QuerySets, operators that return new QuerySets and
+methods that do not return QuerySets. Let's now open V S code and explore
+an example to interact with the database. Using these methods to return QuerySets, suppose the management staff at Little
+Lemon wants to keep track of customers visiting the restaurant in the models.py file there is a model called customer. That consists of attributes such as name,
+reservation day and the number of seats that
+the customer has requested. This model has already been migrated and
+the database contains some entries. To view the contents of the database,
+click the SQL, Light Explorer and
+select the customer table. Notice that the data is displayed
+once the database has entries open the shell by typing python3
+manage.py shell in the terminal, you may recall that once inside the shell. You first have to import the customer
+class from the models.py file, so type from myapp.models import customer. Now let's explore an example of methods
+that do not run a query string, let's use the customer dot
+objects dot get method. Inside the parenthesis enter an i d,
+value such as four, notice that the customer name is returned
+corresponding to the I D of four. This method is similar to the select
+statement that you use in SQL, next let's explore methods
+that return new QuerySets. Using a filter function,
+suppose you want to find reservations for a Saturday, use the method customer
+dot objects dot filter and pass the reservation
+day equal to Saturday. Make sure to use double quotes as
+you are working with a string value, press enter and notice that the QuerySets
+for James and Jacqueline are returned. The filter method is similar to the where
+clause in SQL, let's say you change the day to friday and add another filter
+method with a different condition set. The condition two seats equal four and
+press enter, notice that only one
+QuerySet is returned and this is because that is the only
+QuerySet that meets both conditions. The AND operator used is similar to
+the AND operator used in SQL, this operator is part of the QuerySets A P I that returns new QuerySets it's important to know that
+the QuerySets API is a broad topic. If you would like to learn more about it,
+there is a link to an additional reading at the end of this lesson, in this video,
+you learned about object relational mapping and how Django uses it to create
+SQL queries against the database. You also explored the QuerySet API and
+how developers use it to save and retrieve data in the database.

@@ -1,0 +1,76 @@
+In this video, you'll explore how to handle
+exceptions in Python. You will learn how to change
+error messages and how to wrap your code within try
+and Except statements. As an example, I will write
+a simple math function. I define a new function
+called divide by and allow it to accept
+two parameters, A and B. The purpose of this
+function is to return the value of the division
+of both numbers. In the next line, I'll type
+return a divided by b. Now, I add a print statement
+for the divide by function. Inside the print statement. I'll also add a new set of parentheses with a
+value of 40 and 4. These are the values that will be divided by the function. I click on "Run" and the
+value returned is 10 which is correct because four
+goes into 40, 10 times. Now, let's test what
+will happen if I pass in the values of 40 and 0. Now, when I click on "Run", I get an error or an exception. The exception in this case says zero division error,
+division by zero. It gives this error
+because in math you can't divide
+a number by zero. You might agree that getting cryptic errors
+could upset users, so the question is, how can you handle errors in
+a more user-friendly way? How can you prevent
+a user from seeing the actual exception
+being printed out? You do this with Python's
+try and except statements. Simply type try, colon, and then the next
+line except, colon. You add the code that you want to run within the try statement, so I delete the prints they met the bottom and cut the
+divide by zero function. Within the try
+statement, I type A, and S equals, and paste the function. Now, in the except statement, I will add my own
+error statement. I add a print statement
+for the string , something went wrong. Let me just clear the terminal, so you can focus on the output. I click on "Run" and now the
+error statement is printed. So what's happening? The try statement
+will try and execute the code that you
+added inside it. If an exception occurs, it will trigger the
+except line and execute any code added underneath
+the except statement, but Python allows you to make the except
+statement more specific. If you want to trap the
+exception itself you could add the base class exception
+right after except. The base class
+exception is used for all exceptions that are
+written within Python. You can gain access to the
+exception information by using the as E after exception. The E variable acts as an
+alias for the exception. I can use E to print out the exception in
+the print statement, so let's edit the
+print statement. I add E at the end of
+the error message, I press "Run" and what happens? Our custom message
+is printed out, but the contents of
+E are also printed, so this time it reads something went wrong,
+division by zero. In Python, you can
+also get access to the actual type or class of
+exception that's occurred. To do this, I add another
+print statement of E.underscore class, underscore. I run this statement
+one more time. This time the output includes
+the class of error as well namely class
+zero division error. Let me clear the terminal again. Let's take this one
+step further to provide even more specific
+feedback to the end user. In the except statement, I replaced the base
+class exception with the actual error
+that was printed out namely zero division error. I will change the print statement
+so that at first prints the actual error by adding E at the start
+of this statement, and now I'll add some user-friendly text saying
+we cannot divide by zero. I click on "Run" and now the
+output is division by zero, we cannot divide by zero. Up to this point, you've
+covered how to wrap your code with the try,
+and except statements, and how to optimize the
+message that a user sees, but how can you handle more than one exception without knowing what
+they are ahead of time? Fortunately, you can chain the except statement by adding
+another except statement. Say the code doesn't trip the zero division error and
+the first except statement. You could add another
+except statement that tests for a
+generic exception. Now, add the base
+class exception. Again, I add a print
+statement with E and a message with some
+general information. I'll click on "Run"
+and in this case because there is
+still a math error, the function will still trip at the first except statement, but this gives you a good idea of how you can test
+for more exceptions. Congratulations. You now know how to wrap
+code in the try and except statements to handle all potential exceptions
+in your code.

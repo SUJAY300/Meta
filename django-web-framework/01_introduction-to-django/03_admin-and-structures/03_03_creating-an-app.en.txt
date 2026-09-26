@@ -1,0 +1,102 @@
+Far you've learned that a project represents the
+entire web application. An app acts like a sub-module of the project to provide
+specific functionality. Previously you set up
+the project folder and created the virtual
+environment inside it. In this video, you'll
+learn how to create an app inside an existing
+Django project. The apple contain
+a view to output some texts to the homepage
+of the web application. I'm in VS Code with
+the project open. First, I need to create a
+Django app for my project. For this, I use this
+startapp command. I type Python dash
+m, Django, startapp. Then I need to give
+this app a unique name. I'll call it something
+like my app. Before we move on, let's
+explore the structure of the startup command
+in a little more detail. The startup command has a default syntax where
+you need to provide the app label and then you have the option to specify
+the destination. Suppose you do not
+specify any destination, like in this example. In that case, the
+default destination of the current working
+directory is used. My command looks good. I
+press "Enter" to execute it. Notice that a folder
+called my app is created inside
+the project folder. If I expand the folder, you will notice that it
+contains some files for init, admin, models, tests, and views. If you're new to web
+frameworks and Django, I know that this can
+seem a bit intimidating. Already the project
+contains folders with many different files and I haven't even started coding it. Don't worry if you
+don't understand fully what every file
+and folder does. It's more important to focus
+on the concept that you need to create apps to add different features to a project. As this project has
+just one feature to print some text to a webpage, I've created one app to do this. Now that I've created an app, I want to output some
+text to the homepage. To do this, I need to work with Django elements called
+routes and views. When a user visits the
+applications homepage, I want to display some text. In Django, when a user
+navigates to a URL, the URL is routed to something called a view or controller. For now you can just
+think of views as Python functions that generate the content that
+makes up the webpage. They can receive a request
+and return a response. Because this request and response will take
+place over the web, it'll use two objects called HTTP request and HTTP response. Once again, don't worry if you don't understand all of this. You'll learn more
+about routes, views, HTTP requests, and
+responses later. For now, just know this is
+what you need to use for Django to display some
+dynamic text on a webpage. First I want to create
+the view function. I open the file views.py,
+and the app folder. Notice that it already
+contains some code. It's a good idea for
+now not to modify the code that's automatically
+created by Django. I just need to add to it. I've added three lines of code. Let's explore it now.
+The first line is an import statement which is required for the request
+response to work. Then the code to create
+a function named home. This function returns
+an HTTP response object containing the text Hello World. It's important to know that
+creating a function that returns an HTTP response will
+not do anything on its own. This is just the logic
+that will be executed when a user goes to the
+project's homepage. To make this work, I need to map the view function to a URL. The URL you will use in your
+Django project are stored as a URL configuration in
+a file called URLs.py, which is located in
+the project directory. The Django documentation or your fellow developers may also refer to this as URL config. You will also explore the
+concept of URL configuration, and its code in
+more detail later. For now just know
+that it acts like a mapping chart
+the Django uses to determine which view functions are associated with
+a specific URL. If I open this file,
+I noticed already contains some code by default. For example, some
+import statements from the core Django package and
+a list labeled URL patterns. It's in this file that I
+need to add the code to map the URL of the homepage to its corresponding view function. First, I import the
+view file by typing for my app import and then
+views file from that app. Next I need to add the
+file path to the list. Let me copy and paste
+line 2022 and edit it. I want the view function to execute on the homepage so I can just replace the word admin
+with an empty string. Next, I need to specify
+the view function, so let's change
+this to views.home. Add a name such as home. You can think of name as an
+attribute used for naming the URL patterns which
+can be useful sometimes. My code looks good now
+all I need to do now is save my changes and run
+the development server. Recall that I use the
+command run server to run the development server. You type the command Python
+manage.py runserver. Notice that the development
+server starts at the default IP address
+which can also be called local host
+on your device. You will also likely
+receive a warning message stating that you have
+unemployed migrations. Django gives you a command
+to run the VIX this morning. I'm not going to do that
+right now, but don't worry, you'll learn how to do
+this when you explore migrations later in this course. Success. If I open the webpage
+at the default address, notice that the text
+Hello World displays. This text is returned as an
+HTTP response from the view. If I change this,
+let's say remove the word world and re-save, check the web page, refresh it. Notice that the page
+gets updated again. It's important to
+know that while the content of the
+view is quite basic, this is the process by which every webpage uses Django to
+create and update content. In this video, you learned
+how to create an app inside an existing Django
+project containing a view to output some
+text to your webpage.

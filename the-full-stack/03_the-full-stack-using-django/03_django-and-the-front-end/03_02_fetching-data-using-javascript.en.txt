@@ -1,0 +1,93 @@
+JavaScript, as you have learned,
+is a scripting language that dynamically updates data, multimedia and
+other components on a website. While you can use JavaScript and Django in the infinite number of ways
+to develop a full stack application, developers primarily follow
+one of two major approaches. Client-first or server-first. In-client first architecture,
+front end is the highest priority. When following this architecture,
+you first build applications using JavaScript and
+other frameworks such as React and processes such as templating and
+URL routing. Django is then later used primarily for
+coding the interaction with the database and
+utilizing utility apps such as the DRF. On the other hand, with server-first architecture,
+you start by building the components of an application using Django APIs
+before you work with the front end. Fortunately, Django makes it possible
+to add JavaScript components inside HTML templates. The missing gaps can then be
+filled using JavaScript, AJAX, and simple event handling mechanisms to build
+a solid foundation for web applications. A back end developer will prefer
+taking a server-first approach. While there are several supportive
+libraries for JavaScript, you can build a simple form by just using
+the native JavaScript functionalities. This video will demonstrate how
+to use JavaScript inside a Django application to process a form. By now, you should know that the comments
+users add on websites are effectively done using a form. So this example will walk you through
+the steps to create a comment section for the Little Lemon food blog following
+the server-first approach. Let's briefly outline what
+the process will involve. The form will be updated by
+an API endpoint which uses a post method to send a request
+to the Django view. The entered user data or
+comment is then added to a MySQL database which was created earlier
+using models in Django. So, using the dom event type in
+JavaScript called addEventListener and fetch API in JavaScript, you make
+a POST request to the forms action URL before converting it into JSON data and
+sending it to the database. Let's get started. You have created your Django project
+an app and configured the URLs. Additionally, you have already
+updated database settings for MySQL inside the settings.pi file with
+blog underscore db as your database name. You have set the user name and
+password to root for simplicity. It is not good practice to assign them
+the root value in production environments. Next, let's open the models.pi file. The model user comments
+consists of three attributes. The first and last names and comment
+with char field as their form field. Next go to forms.pi file to
+create a model form called comment form from the user comments model. This will be the form you'll
+use in your Django template, then go to the views.pi file and add
+the required imports such as the model, model form and JSON response class. Now create the view function
+called form view and pass the request object as an argument. You're going to use this view function for
+two things, rendering and processing the form data and
+then sending it to your model. First, create a form object from
+the comment form model form. Create a condition so that it updates the form object with its
+contents if the request method is POST. In other words,
+the form data that the user has entered. If the form data is in a valid format,
+you create a new variable called CD. That is assigned the result of a clean
+data function on the form object. Clean data is a form function in Django
+that helps with data normalization. Now you need to send this data
+to the user comments model. Do this by creating an object
+variable called UC and assign it the user comments model class. Individually assign the values that
+you received from the POST method to the attributes in the model. Finally, call the save function on
+the UC object to update the model data. To complete the code of the view,
+return the render function from it and pass the arguments request blog.html and
+the form data as a dictionary. Note that the dictionary object that was
+passed will be used to render the model form in the template. Moving on, create a template
+called blog.html inside the app, matching the name you have passed
+inside the render function. Open the file and make sure the basic
+HTML tags such as title and heading are updated. Next, add the form that you passed using
+render function inside the template. Use the Django template language
+as a paragraph denoted by dot as underscore P which must be
+added inside the html form tag. Now create an html script tag to
+add the JavaScript functionality. Create a constant called Form and assign the get element by ID
+function with form passed inside it. This helps access the specific
+form element from the html code. Next, add an event listener function
+called addEventListener and pass a function inside
+it call submit handler. Submit handler is where you'll be adding
+the form handling mechanism next. First, add a failsafe mechanism by
+calling the prevent default function. Call the fetch function and
+pass some arguments inside it. This line makes a POST request
+to the form's action URL. The dot that follows is a promise
+made by the fetch function that represents an eventual completion of
+an operation that may be a synchronous. Inside it, pass the response object
+that is first converted into JSON. In the next dot then function
+the JSON data gets processed. If the processing is completed, JavaScript
+will send a successful submission alert. Finally, add a line to reset
+the form after submission. Close the html and body tags to
+complete the code and save the file. To keep the alert in sync with the code
+and Django, open the view.pi file once again and return to JSON response class
+that will post the success message. Let's save this file again and
+perform the migrations. Note that the user comments model created
+from the model will also render as a form. Time to test it. Add a command to run the server and go to
+the specified URL by adding the suffix quotation mark forward/blog closed
+quotation mark to the code. Notice the form that you have created
+contains the first and last name and a text field for adding a comment. Enter some details and
+press the submit button. When you press the submit button, notice how JavaScript sends
+a text alert displaying success. Let's close this alert and
+add another comment. Let's review what's happening. The couple of entries you have added will
+be updated in a table called My app user comments. Inside the book DB,
+MySQL database and that's it. Now you know how JavaScript with the help
+of functionalities such as fetch API and event handler can be used for updating form data without refreshing
+web pages inside a Django project.

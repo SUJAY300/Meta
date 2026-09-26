@@ -1,0 +1,71 @@
+Django is a robust python framework for
+developing web applications and APIs. Since you are already
+familiar with Django, it's time to start your first API project. This is going to be a simple API project
+to keep track of books in a bookstore. Remember CRUD stands for
+create, read, update and delete. You will follow the standard API
+conventions you have learned including http methods and status codes. Hope you're excited. Let's get started. A bookstore contacted you
+because they need a website and mobile application to streamline
+the management of their books. From the website and mobile app
+managers should be able to add and edit books quickly. And visitors should be able to browse the
+available book collection with no problem. So for this project you will develop
+APIs that support these features. First, to store the books in the database,
+you need a storage space or table. And you need a Django
+model to manipulate and define how the data will
+be stored in a table. Django models work like a bridge between
+the data and your business logic. For this project, you need to create
+a Django model with the following fields. Title, which will be a car
+field with a max length of 255. Author, which we have the same
+specs as the title field. Price, which will be a decimal field
+with a maximum of five digits and two decimal places. And inventory which is
+an optional positive small integer field to indicate if
+a book is in stock or not. Next you need two API endpoints to
+allow users to browse a single book or the whole collection. Following the conventions for rest API, you decide to create
+the following endpoints. Forward slash api forward slash books and
+forward slash api forward slash books and
+book id which is wrapped in curly braces. The first endpoint api books will
+deliver all the books in your database. This enables you to list books
+that are available to purchase or you can list books that are out of stock. This is where the inventory field
+of your book model comes in. The second endpoint which is api books and
+book id will show only a particular book. So if someone requests
+a book that doesn't exist, they should get an error message with
+the appropriate status code of 404. Otherwise for successful requests,
+the status code should be 200. However, although the results of
+a single book contain different fields such as the id title, author and price, you are still accessing a single item,
+not an element in an array or a list. Therefore the results should
+not be between square brackets, because it is not an element
+in an array or list. Next let's focus on how to
+create a new book by making a http post request to
+the endpoint api books. On insomnia, you can send a http post request with
+essential data like in this screenshot. For a successful request, it should return the newly created
+book with a status code 201. If any required data is missing for
+example, the author's name It should return an
+error message with http status code 400. By now, you know how to create a Django
+model, how to create API endpoints and how to create a new book
+with an API post request. But the results of an API request
+are usually delivered as JSON or xml data. Here is a quick tip for converting
+a single model to a JSON response. First, import the model to dict
+function from the Django dot forms dot models module and the JSON response
+class from the Django dot http module. Now you can retrieve a single
+book record for the book id and convert it to a JSON object. Next up, you will learn how to edit and
+delete a single book. To edit an existing book, you have to accept a http PUT
+request to the second endpoint. To delete an existing book,
+you'll send a http DELETE request. For deleting and editing,
+you can create a URL pattern for this endpoint in your Django
+project as api books, open angle brace colon
+pk close angle brace. Previously you learned that data
+is passed to the web server in the http body as either a raw JSON string. Or a form URL encoded string
+which is also called a payload. Here is an example JSON payload with
+a book's title and author data. But you need to parse this string to
+access these individual data elements. To do this, use the QueryDict
+class from the Django dot http module to parse the request
+body to a python dictionary. After this, you can access
+the individual elements of the http request body from this dictionary. In this video, you unpacked the scope
+of your first API project for a simple book list. Let's recap the steps. First you learned how to create a model
+to represent your database table. Then how to create endpoints to request
+all the books and specific books. Next, you explored the responses
+to these requests and how to convert a model to a JSON response. You also explored how to create,
+edit, delete and soft, delete requests and how to parse the http
+body to access the data elements. When you plan before coding, you will always get a good result
+with minimum effort in debugging. Now that you have the concepts and
+quick tips, writing the actual working
+code should be straightforward

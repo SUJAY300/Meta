@@ -1,0 +1,31 @@
+While you've made it to
+the end of the course, why don't you take a moment
+to congratulate yourself? After all, you've
+learned a lot in this course. Let's recap. In the first module, you revised starting
+the project. You started your preparation for the capstone project
+by revising topics such as composing a back-end application
+using multiple skills, using Django to serve
+static HTML content, and committing the project
+to a Git repository. Throughout the first module, you had an opportunity to complete some
+hands-on exercises. They included setting
+up the repository, setting up the Django project, committing the project,
+setting up the static routes, and serving the static content. In the next module, you
+covered project functionality. In this module, you revised topics such as connecting
+the backend to the database and implementing the menu and table booking APIs. This module's
+exercises included the following: setting up
+the MySQL connection, setting up the models, querying the stored procedures, setting up the menu API, and setting up the
+table booking API. In the third module, you
+covered security and testing. In this module, you recapped the main topics
+such as setting up user registration and
+authentication and testing the application with
+unit tests and Insomnia. In this module, you completed hands-on exercises such as
+adding the registration page, adding the login page, adding the log out
+functionality, securing the table booking API, adding unit tests, and testing the API
+using Insomnia. You've covered a
+lot in this course, and you can be very proud of yourself for how much
+you've already learned and accomplished on your journey to becoming a
+back-end developer. You are now ready to take the final graded
+assessment. Thank you. It's been a pleasure
+to embark on this journey of
+exploration with you. Best of luck in the future
+as a back-end developer.

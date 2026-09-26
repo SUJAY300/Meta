@@ -1,0 +1,36 @@
+In this course, you learned about
+the principles of the Django framework. Let's take a few moments to recap
+the key topics that you learned about. In the opening lesson, you covered
+an introduction to the Django framework. During this introduction, you learned how developers use
+the dry principles to organize code. You explored the use of the MVT
+framework to ensure reusability of code. Then you learned how to create an app
+inside an existing Django project using the correct structure. Next, you learn to use some of the basic
+commands with Django admin and manage.py. And finally, differentiate between
+an app and the project structure. You then moved on to explore
+the view part of the MVT framework. In this topic,
+you learned how to create views and view logic that can process
+basic HTTP requests. Then you learned about URL configuration
+and how to map URLs to views. You also examined the use of
+the request and response objects for common operations. After that, you learned how to use regular expressions
+to create different URL patterns. Then, you learned how to
+differentiate parameters and how they associate with HTTP methods
+such as get, put, post and delete. Finally, you explored how to handle errors
+at the HTTP view logic and view levels. You then progressed to learn about
+the model part of the MVT framework. In this topic,
+you learned how to create models. Then you learned about
+the concept of migrations, and how to apply them using
+a best practice approach. You also examined how to use the QuerySet
+API To interact with the database. After that,
+you learned how to create a form and use the form API to bind data to objects. Then you learned how to use
+the Django admin panel to add and control the permissions of users and
+groups. Finally, you explored how to set up
+a MySQL database for your Django app. Next, you moved on to explore
+the template part of the MVT framework. Here, you learned how to
+work with templates and use templating to generate HTML. You also learned how to
+create templates and use the Django template
+language to create markup. Finally, you expanded on this
+knowledge to create rich templates using template inheritance. Are you confident that you have
+mastered these skills from this course? If the answer is yes, you are now ready
+to put in practice what you learned. For the graded courses assessment, you are required to create the menu
+pages for the Little Lemon website. It's time to demonstrate your skills, and
+showcase what you learned in the course. Good luck.

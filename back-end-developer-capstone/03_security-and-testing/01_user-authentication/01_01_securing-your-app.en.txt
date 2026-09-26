@@ -1,0 +1,56 @@
+No matter what type
+of app you build, it's always important to secure your app's
+users from threats. For example,
+unauthenticated users must be prohibited
+from using the app. In this video, you will recap the process of securing
+your app in Django. Recall that the
+authentication system of the core Django framework
+is session-based. Furthermore, Django's
+off backends authenticate requests as they
+pass through middleware. The Django rest
+framework allows you to employ different
+authentication schemes, such as remote user
+authentication, session authentication, and
+token-based authentication. Let's explore these in a
+little more detail now. The basic authentication
+scheme uses HTTP, basic authentication
+signed against a user's username and password. Basic authentication
+is generally only appropriate for testing. If successfully authenticated, basic authentication provides
+the following credentials. Request.user will be a
+Django user instance. Request.auth will be none unauthenticated responses
+that are denied permission will result in an HTTP 401
+unauthorized response. The session authentication
+scheme uses Django default session
+back-end for authentication. Session authentication
+is appropriate for AJAX clients that
+are running in the same session contexts
+as your website. Finally, token authentication
+is appropriate for client-server setups such as native desktop and
+mobile clients. To use token authentication
+start by adding rest_framework.authtoken
+in the installed_appslist in the settings.py file and
+run the migrate command. This will create the
+necessary table structure to hold the generated tokens. It's important to
+remember that a token is a string of random
+alphanumeric characters. You can generate a token for any user through the
+Django admin panel, or tokens can be generated
+programmatically. Usually any route defined in the URL conf of the project
+can be accessed by anybody. To secure a view at the permission classes
+decorator above it in the code. The decorator requires the is authenticated attribute defined
+in the permissions model. Now open the
+settings.py file again, go to the rest_framework
+configuration section and set token authentication as the default
+authentication class. While you can create a token for the user from inside
+the admin panel, you can also generate it
+from an API endpoint. Open the urls.py file
+of your app and add the import statement to
+obtain the authtoken. Next are the roots in the
+URL patterns list to set the root for obtain
+_auth, _token view. Once the code is set up, send a post request from
+a HTTP clients such as Postman or Insomnia to
+the auth token endpoint. Then you'll be prompted to
+enter a username and password. Once entered, you'll get a token in response
+that you can use to make HTTP calls to
+the protected URLs. In this video, you recap the
+process of securing your app in Django using basic session
+and token authentication.

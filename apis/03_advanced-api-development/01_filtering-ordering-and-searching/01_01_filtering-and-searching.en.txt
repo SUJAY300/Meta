@@ -1,0 +1,102 @@
+Almost all modern apps and websites provide users
+with a search function. This is one of the
+most basic ways users interact
+with the Internet. But in order to make
+this possible for the Little Lemon
+website and app, you need to adjust
+your API endpoints. In this video, you
+will learn about implementing searching and
+filtering in your API. Remember the menu item endpoint you developed in the
+Little Lemon project, it displays all available
+menu items at once. When a client application makes an HTTP call to the
+menu items endpoint, it will display all items
+along with their categories. But what if a visitor only
+wants to view items from the appetizers category
+or only the main dishes, rather than everything at once? Perhaps a visitor prefers to view only items
+that are within a specific price
+range, such as $7-$15. Similarly, a visitor may want
+to search for menu items containing the word pizza or drinks with the word mojito, and this is where the
+filtering feature comes in. Filtering is a
+process that allows the client applications to get a subset of the results from your API based on some criteria. You have two options when client applications want
+a subset of the result, for example, all
+the menu items from the appetizers or
+desserts category. First, you can do nothing and to display all the items with
+their category names. The client application
+then processes this data and managers all
+filtering on its end. Or as an API developer, you process those
+conditions in the server and deliver results
+matching those criteria. There are pros and cons
+to both approaches. Using the first approach, you need less time
+to develop your API, but it comes with a price. First, you have to pull all the records from the
+database every time. For hundreds of records, this might not be an issue, but when there are
+thousands of records or 10,000 or even
+millions of records, then this is not sustainable. It will create a
+significant load on the server and fetching 10,000 records from the
+database does not make any sense when you
+need only 10 or 20. The second approach will
+take some extra time to develop but the
+benefits are huge. For example, you are putting less load on the
+server and reducing the development time for the client applications because all the filtering is
+done on the server side. Let's open VS Code and
+explore how to adapt your API endpoints for
+searching and filtering. You are going to
+filter the menu items by category, name, and price. Let's go to the menu items
+function in the views.py file. This is where we will
+implement the filtering. Client applications can
+pass a query string to the menu items endpoint
+with the query string, question mark,
+category, equal sign, and then the item they
+are searching for, such as main or ice cream. They can also filter
+menu items by price, by adding question mark, to, underscore, price, equal sign, and three
+to the API endpoint. Or they can use both criteria with an ampersand in-between. Check the menu item model. The category model
+is linked inside the menu item and it
+has a title field. You will use this field when
+you are filtering records. To filter the items, come back to the
+menu items function. You will now add parameters after the line where
+you fetched the items, retrieve the category and price query parameters
+as follows. Category name equals
+request query params, get, and in-between parenthesis and quotation
+marks add category. Do the same for the price. Now you should check
+if the API user supplied some value
+for these parameters. This can be done with a
+simple if else block. To do this, add the following two lines before
+the serialization happens. If the category name is present, filter the items with this code, items.filter, open
+parenthesis, category. Now very important,
+add two underscores, title, equals, category name,
+close parenthesis. This title field belongs to the category model and is
+linked to the menu item model. You need to use a
+double underscore between the model and the field to filter a linked model like a category
+inside the menu item. For a regular field like price, you use the field
+name like this. Start with items.filter and
+a set of parenthesis again. But this time at price, two underscores, lte, equals, to price,
+in the parenthesis. What is this lte added
+after the price? This is a conditional
+operator or fields lookup and the price double underscore lte means price is less than
+or equal to a value. You can find a list of
+these fields lookups and the additional resources
+at the end of this lesson. To filter for an exact price, you can use price equals sign to underscore price.
+Time to test it. Visit the menu
+items endpoint with the filter values you set up
+and notice the difference. Now the result is
+properly filtered based on the
+criteria you passed. Next, let's implement searching. If a client application supplies a search parameter followed
+by some characters, you will perform a
+search and return those menu items whose names
+start with those characters. You do this by adding
+question mark, search, equals chocolate at the
+end of the localhost URL. This should return
+all menu items starting with chocolate, like chocolate cake and
+chocolate ice cream. Just like before, get the query string
+parameter search by typing search at the start
+and in the parenthesis. To check if there is a value, filter the items with
+an if statement. This time you will use this startswith fields
+lookup condition. What if you want to search if those characters are present
+anywhere in the title? You just change the field
+lookup condition to contains. Lastly, how about making those searches case insensitive? The field lookup
+condition will be icontains instead of contains. There is also a case
+insensitive version of startswith, which
+is istartswith. Now you know how to optimize
+your API results and perform search and filtering
+in your DRF projects. You also learned
+about field lookups, which work as
+comparison operators during this process. Well done.

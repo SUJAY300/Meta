@@ -1,0 +1,68 @@
+Pseudo-class selectors
+give developers great control over what
+they select and style. By knowing how to
+use these selectors, you will not only improve the interactivity
+of your web pages, but you will also be able to add advanced styling without
+too much effort. These selectors are also often referred to as just
+pseudo-classes. Previously, you were briefly introduced to the
+pseudo-class invalid. Remember, pseudo-classes
+are state-based selectors, which means that they
+allow you to select elements based on their state. For example, the hover state. You use pseudo-class selectors to improve the interactivity of web pages by styling elements
+in response to user input. In this video, you will explore practical examples
+of how to do this. There are many types
+of pseudo-classes. Other than the hover state, examples include
+selecting an element when it is active or in-focus, or when a link has
+already been visited. Pseudo-classes are also very effective to target
+specific elements such as, let's say, the fifth
+item in a list, bold items, empty
+elements, and so on. Let's review the general syntax that you use for
+various pseudo-classes. You add the selector, a colon, the pseudo-class, and
+then the properties. Well, there isn't a broadly accepted classification
+for pseudo-classes, you can group them in terms of general similarities
+and their purpose. Let's explore a few of these
+general classifications. The first group you need to know about is user action states, which include the
+hover pseudo-class, which changes the style of an element when a
+cursor hovers over it. The active pseudo-class, which styles an
+element only while a user actively presses and
+holds the mouse button, and the focus pseudo-class, which focuses styling on the
+element that you use it for. These pseudo-classes have
+an effect while a user is actively engaging
+with a HTML element. Let's explore an example
+of how the hover and active pseudo-classes
+can be used. Say you have a HTML
+file with an a tag inside a paragraph and a button element
+inside a div element. The paragraph element
+has a class defined as "mypage" and the button class
+is defined as "mybutton." Now, let's explore the CSS. First it contains
+basically styling for the mypage and mybutton
+class elements. Then to make the link change its appearance when a
+user hovers over it, you use the hover
+pseudo-class to target a tag. To change the mybutton class, you use the active pseudo-class. The active pseudo-class
+changes the properties of an element when the state
+of that element is active. In this case, the styling
+properties will be applied only when a user presses and holds
+the mouse button. In this example, the
+pseudo-class selectors target HTML elements, but you can also use them to target HTML class attributes. Next, let's focus
+on Form states. Previously, when discussing
+form validation you were introduced to the invalid
+pseudo-class selector. But there are more
+pseudo-classes that are specifically used
+for HTML forms. They usually come
+in pairs and target the different states
+that elements can have. Form state pseudo-classes
+include disabled and enabled, generally used for buttons, checked and indeterminate,
+that are used for checkboxes, and valid and invalid used in case of fields like
+emails and phone numbers. Another pseudo-class type
+that you should know about is specific
+position-based states. They allow you to
+target specific items, for instance, a specific list item among the list elements. Some examples of
+this type include, first-of-type, last-of-type, nth-of-type, and
+nth-last-of-type. Let's explore an example
+of first-of-type. Say you have two list items in an HTML page, Adrian and Mario. With the first-of-type
+pseudo-class, you can style the first item of its type while the remaining
+items will not be affected. In this video, you explored a few examples of
+how you can use pseudo-classes to improve the interactivity
+of your web pages. There are plenty of other pseudo-classes and some of them are more
+popular than others. You're encouraged to follow
+your own style and explore the creative possibilities
+that pseudo-classes offer.

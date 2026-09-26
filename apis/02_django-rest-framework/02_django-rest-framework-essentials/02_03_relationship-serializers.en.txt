@@ -1,0 +1,53 @@
+In almost every Django project, you'll have related data in your database spread out
+across multiple tables. To establish these
+relationships in a project, you write models and
+connect them one by one. You're already familiar
+with DRF serializers and have worked with models
+serializers but in this video, I'll show you how
+to use a new type of serializer called
+a relationship serializer to convert
+related modals to Json and display
+them correctly. Let's have a look at
+the models dot py file, where you created a
+new category model and connected to the
+menu item model. While creating the foreign key, you have to ensure that
+the category cannot be deleted before all the related
+menu items are deleted first and this is done using on underscore delete equals
+models dot protect. Make sure you created
+the migrations in your terminal and migrated them before proceeding further. Now, you can visit the
+menu items endpoint. You'll notice that the category is not present in the APA result because we did not add
+this category field to the menu item serial
+ledgers field list. Let's do that and revisit
+the menu items endpoint. Now, we can see the category ID but what if you want to
+do something special, like display the category name using the relationships
+serializer in DRF. Let's go back to the
+serializers dot py file and import this new
+category model at the top. All the category names
+should be displayed, so you're going to
+add this line in the menu items serializer
+above the Metaclass. When you visit the
+menu items endpoint, it is clear that nothing
+has changed. Why is that? Because you did not specify in the category model how to convert the category
+model to a string. Let's go back to the
+models dot py file and add this method to
+the string conversion. In this case, when you are converting a connected
+model to string, you also need to change
+your view files to load the related model
+in a single SQL code. This will make your API more
+efficient by not running a separate SQL query for every item to load to
+the relative data. Visit the menu
+items endpoint and there's the category
+and the APA result. Now let's use a separate
+serializer for the category. To make it even more detailed, open the surreal
+serializer dot py file, add a new category serializer above the menu item serializer, and add this new
+category serializer in the menu items
+serializer as a category, remove the previous
+category field above the Metaclass and
+add this line there. Now, revisit the
+menu items endpoint, and note how the
+category field is displayed with every menu item. This is how you create
+relationships serializers in DRF. In this video, you
+will learn how to create relationships
+serializers in the Django rest framework and properly display
+all the related data. You also learn how to tweak the views file to load the
+related data more efficiently.

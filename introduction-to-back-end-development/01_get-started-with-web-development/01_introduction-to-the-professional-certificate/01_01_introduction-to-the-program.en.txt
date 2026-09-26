@@ -1,0 +1,48 @@
+A digital space is a world of
+connection and opportunity. Take this moment, for example. The web has made it
+possible for you to enroll in this
+program where you will learn from the
+personal stories of developers at Meta.
+Isn't that exciting? By the time you have completed this professional certificate, you can become a creator
+of digital experiences. Connection is evolving,
+and so are you. You might not have
+a background in tech at all, and that's okay. Even if you have no experience, this program can get you job
+ready within a single year. How can this
+professional certificate prepare you for a job at
+an organization like Meta? The backend developer
+professional certificate will help you build job ready skills for a backend development role while earning a
+credential from Meta. From Meta engineers, you will learn about how
+they collaborate to create and test high performance websites
+and applications. We'll also discuss
+interesting topics with other aspiring backend
+developers and complete a range of coding exercises to improve
+your skills. It's important to complete all the courses in the
+certificate in order, as each course will
+build on your skills. Although we have a recommended
+schedule for each course, the program is
+entirely self-paced, which means your time
+is your own to manage. As you make your way through the courses in this certificate, you'll learn how to
+program in Python, which is one of the most popular programming languages
+in the world. You'll also learn how to query a database and surface
+its data on an interface, build APIs that connect applications to one
+another securely, and use a Django web
+framework to connect the front end and backend
+of your web application. For your final project, you will create a
+web application with a functional integration
+designed and developed with best practice backend
+architecture to showcase as part of your portfolio during
+your job search. You'll also be ready to collaborate with
+other developers, as you will have learned to use Git and GitHub for
+version control. If you're hoping to operate independently or in a
+smaller team, not to worry. We've also got you
+covered when it comes to the basics
+of cloud computing. In the final course, you'll prepare for the
+coding interview. You'll practice your interview skills, refine your resume, and tackle some common
+coding challenges that typically form part of
+technical job interviews. Once you complete the program, you'll get access to the Meta
+Career Programs Job Board, a job search platform
+that connects you with over 200 employers
+who have committed to sourcing talent through
+Meta certificate programs. Who knows where you'll end up? Whatever the future of
+connection looks like, you'll be part of its
+creation. Let's get started.

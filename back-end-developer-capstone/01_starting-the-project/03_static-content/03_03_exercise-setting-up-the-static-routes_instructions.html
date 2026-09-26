@@ -1,0 +1,309 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Overview
+  </strong>
+ </h2>
+ <p variant="body1">
+  With Django’s powerful Templating language, you can render the HTML pages as the response to a client.
+ </p>
+ <p variant="body1">
+  The default Django project template installs the
+  <var>
+   staticfiles
+  </var>
+  app. It provides the functionality for including static assets such as images, JavaScript and CSS files on the web page.
+ </p>
+ <p variant="body1">
+  In this exercise, you will define a URL route whose mapped view renders a web page. You will also include an image in the HTML script of the web page.
+ </p>
+ <p variant="body1">
+  You can find the resources for these static assets from the link below.
+ </p>
+ <asset assettype="generic" extension="zip" id="_ozfC8MeRya4iwepjfZtXg" name="Static routes assets">
+ </asset>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Scenario
+  </strong>
+ </h2>
+ <p variant="body1">
+  You will be displaying the home page of your web app for your Capstone project application.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Prerequisites
+  </strong>
+ </h2>
+ <p variant="body1">
+  You have already installed the Django framework in a Python virtual environment. You have also created a Django project with
+  <var>
+   LittleLemon
+  </var>
+  as its name, and it has a Django app called
+  <var>
+   restaurant
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 1: Create a templates directory
+  </strong>
+ </p>
+ <p variant="body1">
+  The project package folder and the app package folder both are created inside the outer folder which is identified as
+  <var>
+   BASE_DIR
+  </var>
+  . Inside this
+  <var>
+   BASE_DIR
+  </var>
+  create a template directory/folder named
+  <var>
+   templates
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 2: Include the templates directory in settings.py
+  </strong>
+ </p>
+ <p variant="body1">
+  In VS Code, go to the
+  <var>
+   TEMPLATES
+  </var>
+  section in the
+  <strong>
+   settings.py
+  </strong>
+  file and ensure that the templates directory created in the above step is in the list of the
+  <var>
+   DIRS
+  </var>
+  attribute.
+ </p>
+ <pre language="python">#Include 'templates' in 'DIRS' attribute
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+</pre>
+ <p variant="body1">
+  <strong>
+   Step 3: Create index.html
+  </strong>
+ </p>
+ <p variant="body1">
+  Inside the templates folder, create a new file called
+  <strong>
+   index.html
+  </strong>
+  and put the following script in it.
+ </p>
+ <pre language="html">&lt;html&gt;
+   &lt;head&gt;
+      &lt;title&gt;Capstone Project&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1 style="text-align:center;"&gt;Welcome ToLittleLemon Restaurant&lt;/h1&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</pre>
+ <p variant="body1">
+  <strong>
+   Step 4: Define index view
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the
+  <strong>
+   views.py
+  </strong>
+  file from the
+  <var>
+   restaurant
+  </var>
+  folder. Add the following function:
+ </p>
+ <pre language="python">from django.shortcuts import render
+
+# Create your views here.
+def index(request):
+    return render(request, 'index.html', {})</pre>
+ <p variant="body1">
+  <strong>
+   Step 5: Add the URL route
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the urls.py file from the
+  <var>
+   restaurant
+  </var>
+  folder. Make sure that the following path is added to the
+  <var>
+   urlpatterns
+  </var>
+  list.
+ </p>
+ <pre language="python">#define URL route for index() view
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    . . . ,
+    path('', views.index, name='index')
+]
+</pre>
+ <p variant="body1">
+  <strong>
+   Step 6: Update URLConf
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the
+  <strong>
+   urls.py
+  </strong>
+  file from the
+  <var>
+   Littlelemon
+  </var>
+  folder. Include the URL patterns of the
+  <var>
+   restaurant
+  </var>
+  app in it.
+ </p>
+ <pre language="python">#update URLConf by including URL patterns of restaurant app
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+   path('admin/', admin.site.urls),
+   path(restaurant/', include(restaurant.urls'))
+]
+</pre>
+ <p variant="body1">
+  <strong>
+   Step 7: Visit the home page
+  </strong>
+ </p>
+ <p variant="body1">
+  Run the Django server with the
+  <var>
+   manage.py
+  </var>
+  script and visit the
+  <var>
+   http://localhost:8000/restaurant/
+  </var>
+  URL.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 8: Save the LittleLemon.png image
+  </strong>
+ </p>
+ <p variant="body1">
+  All the static assets must be placed in the
+  <strong>
+   restaurant/static/restaurant
+  </strong>
+  folder. Put the littlelemon.png file here.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 9: add the static tag in index.html
+  </strong>
+ </p>
+ <p variant="body1">
+  Modify the
+  <strong>
+   index.html
+  </strong>
+  file to include the following statements.
+ </p>
+ <pre language="html">&lt;!--add this template tag--&gt;
+{% load static %}
+&lt;img src="{% static 'restaurant/littlelemon.png' %}"&gt;</pre>
+ <p variant="body1">
+  <strong>
+   Step 10: Refresh the home page
+  </strong>
+ </p>
+ <p variant="body1">
+  You should see the image rendered on the browser.
+ </p>
+ <p variant="body1">
+  <strong>
+   Conclusion
+  </strong>
+ </p>
+ <p variant="body1">
+  In this exercise, you successfully rendered a web page with a static image file.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

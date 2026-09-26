@@ -1,0 +1,66 @@
+Python is one of the best
+languages to use for various data science
+projects and applications. In this video, you'll
+learn about some of the commonly used
+Python libraries in data analysis
+and data science. The last decade has seen exponential growth in
+all data science areas. The demand for data analysis and scientists is
+continually increasing, as it's a requirement that
+developers to incorporate scientific and data
+analysis into their code. Python has emerged as one of the most popular languages
+with data scientists. One of the main reasons
+for its popularity is the large number of different
+open source packages. These have been developed by
+thousands of contributors collaborating to provide
+free, usable resources. Many packages are
+top-rated because they are efficient and provide
+outstanding functionality. In no particular
+order of preference, these packages include NumPy, Scipy, Matplotlib,
+and Scikit-learn. As an example, Scikit-learn is used for predictive learning, and is built on top of
+other popular packages. It consists of various
+supervised and unsupervised machine
+learning algorithms for classification, regression, and SVMs. Modelling data is the primary
+focus of this library, and it provides popular
+models such as clustering, feature extraction
+and selection, validation and
+dimensionality reduction. Pandas is an acronym for
+Python data analysis, and this is a data analysis
+and manipulation tool. It's used primarily
+for working with datasets and provides
+functions for cleaning, analyzing, and
+manipulating data. Using it, I can compare different columns and
+find the arithmetic mean, max and min values. The primary data
+structures used in pandas or series and Dataframes. While series or
+single-dimensional and can be compared to
+a column in a table, dataframes are
+multi-dimensional and can potentially store
+tables efficiently. They are agnostic to the
+datatypes being stored. Pandas most common applications
+are reading CSV files and JSON objects and using them within Python code
+for faster retrieval. Pandas are known
+to bring speed and flexibility to data analysis. Pandas library is
+normally imported by the code import pandas as pd. NumPy stands for
+numerical Python and it's a powerful library
+forming the base for libraries such
+as Scikit-learn, Scipy, Plotly, and Matplotlib. Python scientists use
+the abilities of NumPy, especially when working in scientific domains
+such as signal, image processing, statistical computing,
+and quantum computing. NumPy carries out the
+calculations needed for algebraic areas such as Fourier
+transforms and matrices. The backbone data
+structure in NumPy is called ND array or
+N-dimensional array, which substitutes
+the conventional use of lists in Python, and is a much faster
+solution than lists. The dimensions in
+NumPy are called axes and the number of such
+axes is called a rank. Conventionally,
+NumPy is imported with import NumPy as np. Matplotlib is the visualization
+library used in Python. It can be used to create static, interactive and animated
+visualizations. Many third-party
+tools such as ggplot and seaborn extends the
+functions of matplotlib. These functions are located inside the pyplot stub package. Matplotlib is imported with import matplotlib.pyplot as plt. An example such as libraries to0 uses the matplotlib and NumPy
+libraries to for instance, display a graphical
+representation of students in a class or the distribution
+of their scores. To recap what you've
+learned in this video, you should now know about the most commonly used
+Python data analysis and data science packages.

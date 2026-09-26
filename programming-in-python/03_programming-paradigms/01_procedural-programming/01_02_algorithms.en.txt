@@ -1,0 +1,79 @@
+In this video, you'll
+learn about algorithms. An algorithm is a
+series of steps to complete a given task
+or solve a problem. On a day-to-day basis, you use algorithms all the
+time to complete tasks. One such example is following a recipe to make an egg omelet. First, you have the list of ingredients to
+using your omelets. This can be called your inputs. Next is the method or
+the instructions to follow step-by-step
+to create your dish. Finally, you complete
+your omelet, your output. The steps to make the omelets
+are the same every time. An algorithm in programming
+works in a similar way. In programming, algorithms
+are used to solve a multitude of
+problems that range from simple to very complex. The key to understanding
+and creating an algorithm is to break the
+problem into smaller parts, just like the egg omelet recipe. That way, you build up
+the steps to complete the algorithm that will
+resolve the overall problem. Now, let's explore a practical application
+of algorithms in coding. I'm going to demonstrate
+a particular algorithm that checks if a word
+is a palindrome. A palindrome is a word that
+can be spelled the same, both backwards and forwards. For example, the word race car is a palindrome
+because I can spell it forward as R-A-C-E-C-A-R
+and backwards, it's still the same R-A-C-E-C-A-R. To be able to check if a word
+is a palindrome, I need to use an algorithm. As mentioned earlier,
+an algorithm is a series of steps
+to solve a problem. Let me break down the problem. I know the string in
+my example, racecar, has an index and I need
+to check if the index at the front of the string is equal to the index at
+the end of the string. In this way, I can compare the
+two values of the indexes. I print str0 because
+that's the first index, and I also print str6 because
+that's the last index. I can just count this
+up to double-check 0, 1, 2, 3, 4, 5, 6. Then I click on Run. The output is the two
+values I need to compare. Both of which are the letter r at the beginning and
+at the end of racecar. Now I'm going to break down our problem into smaller steps. First, I need to check
+if the value of Index 0 is equal to the value
+of the last Index 6, which in this case is r. Then I need to check that the
+next or second character, which is Index 1, is equal to the second
+last character, which is Index 5. Finally, I need to check if Character 2 is equal
+to Character 4. What I need to do is to check if these conditions
+are true or false. Let's check how I can write
+this out in some code. I begin by creating a
+function def is palindrome. I know that it will accept a single parameter called
+string, which I've entered. Now I want to get
+the starting index as well as the end index. I put the start index into a
+variable that equals zero. Every string will always
+start at the Index 0 and then the end index is going to be the
+length of the string. I enter end index equals len function str
+and then minus 1. This is because a string
+always starts at zero, and I have to think
+about the last index. Next, what I want to do is iterate through the
+string itself and compare the starting index with the end index characters to validate that they are the same. To do this, I create
+a for loop by typing 4x in str and I'll make the comparison
+within the for loop. I can check if the first index is equal to the last index. Since the two characters
+r and r are the same, it will continue to be true, but it would be quicker for
+me to check if it's false because then I'll know straight away if it's not a palindrome. I do an if statement and I use the string being passed
+in as the parameter. Then I use the start index
+to get the character. Then I check if
+it's not equal to the string within the end index. If this condition is met, it will return false, which confirms that
+it's not a palindrome. But if the condition is never
+met outside the for loop, then it returns true, which confirms that
+it's a palindrome. I've done all the checks across the starting index
+and the end index, and it returns back
+to the condition of true to confirm that
+it's a palindrome. Now I'm going to
+test the algorithm to verify that it works. I'll use a print statement. I call the is
+palindrome function and I pass in racecar because I
+know that it's a palindrome. I click on Run, and it
+returns the value of true. If I change racecar to
+racecars and I run it again, the condition of
+false is returned. This is an example of creating an algorithm inc ode
+to solve a problem. It has a series of steps that have to be followed to
+resolve the problem in code to give back the condition of is the string a
+palindrome or not? Now you know how useful
+algorithms can be as a step-by-step way to solve
+a problem with coding. An algorithm can be used to solve problems whether
+smaller or complex. Once the steps of an
+algorithm are created, they will then execute the same way each time
+the algorithm is used.

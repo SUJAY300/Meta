@@ -1,0 +1,47 @@
+Now that you've been
+introduced to the course, it's time to start setting
+up for the Capstone Project. In this video, you'll revise several concepts related to
+setting up a Django project. First, you will need to
+make sure that you have your coding environment
+ready for work. As per the objective
+of this course, you will build a
+Django application for the Little Lemon restaurant. On your local machine, you will perform the
+following tasks and checks to install Python, installed VS Code, create and activate a
+virtual environment, and install the
+Django framework. If you don't have Python
+installed locally, download the Python
+installer for your operating system and architecture from the
+official website, then perform the installation by following the
+installation wizard. Likewise, carry
+out similar steps to download and install VS Code. You can find links to these official websites from the additional reading at
+the end of this lesson. Once Python and VS
+Code is set up, Python recommends using separate
+virtual environments for each Django application so that the dependencies
+do not conflict. For example, use
+the venv module in Python standard
+library to create a virtual environment
+named Little Lemon. Once you create the
+virtual environment, you must activate it and install the Django framework library using the pip installer utility. Recall that once
+Django is installed, a command line
+utility named Django admin is made available
+in the scripts directory. It's important to know that the location of this script and it's associated folders is different depending on
+your operating system, so please refer to the additional reading at
+the end of this lesson. To create a Django project, run the Start Project command, then step inside the
+project directory and run the command to start
+the development server. Recall that the Django
+development server will run, and you can load the localhost
+URL from your web browser. Next, you must
+create an app inside the project using the
+Start Up command. It's important to remember
+that you add the app to the settings.py file in the
+installed apps list. Once your Django
+project is set up, it's time to push the code
+to your GitHub repository. The steps are as follows. In your browser, visit
+the GitHub website, sign up and create a new
+repository named Little Lemon. Back in your local machine, opened the Git Bash terminal and navigate to the Django
+project folder. Next, initialize the
+local repository with Git init command, then add the project to
+the repository and commit. Finally, push the
+local repository to the GitHub repository
+you have created. In this video, you revised the key concepts related to
+setting up a Django project.

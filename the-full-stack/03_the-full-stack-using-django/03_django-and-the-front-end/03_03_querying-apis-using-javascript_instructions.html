@@ -1,0 +1,305 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  Introduction
+ </h2>
+ <p>
+  After the lesson on JavaScript you know you can do exciting things with it. You can use it for client-side programming, to make a web application interactive or to send and receive data from the server. JavaScript really is the default choice when it comes to front-end programming.
+ </p>
+ <p>
+  But it can also be used for back-end purposes and in this reading you will learn how to use JavaScript to fetch and send data to an API using the native fetch function.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Native solution versus third-party libraries
+ </h2>
+ <p>
+  When it comes to fetching data from APIs you might ask yourself, should I use the native fetch function
+  <var>
+   XMLHttpRequest
+  </var>
+  object, or should I go with libraries like jQuery or Axios? Let’s contextualize the question with some background information.
+ </p>
+ <p>
+  Previously, fetching data from APIs with
+  <var>
+   XMLHttpRequest
+  </var>
+  object was difficult because you have to write quite a lot of code to make a simple request. But, at the time, there was no alternative option. Then came third-party libraries that work as a wrapper around
+  <var>
+   XMLHttpRequest
+  </var>
+  and which provide a simpler interface. These libraries quickly became popular. Later versions of JavaScript came with another native API called fetch, which is powerful, simple and easy to use.
+ </p>
+ <p>
+  Though using the fetch API is easy, you still have to manually adjust a few things and write extra code for error checking and header processing. This is why libraries like Axios are still popular because they provide a simpler interface and automatically take care of a lot of issues so that you don’t have to write so much code. Ultimately, you can use either the native fetch API or Axios library. Both are viable options since both solve the problem of fetching data from APIs in a straightforward manner.
+ </p>
+ <p>
+  Now let’s explore how you can make
+  <var>
+   GET
+  </var>
+  ,
+  <var>
+   POST
+  </var>
+  ,
+  <var>
+   PUT
+  </var>
+  ,
+  <var>
+   PATCH
+  </var>
+  and
+  <var>
+   DELETE
+  </var>
+  calls using the fetch API and how to make authenticated calls using tokens.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Making a GET call
+ </h2>
+ <p>
+  Placing a
+  <var>
+   GET
+  </var>
+  call using fetch is simple. All you have to do is make the call, convert the response to JSON or text and then process it any way you want. Here is the output from the
+  <strong>
+   menu-items
+  </strong>
+  endpoint of the Little Lemon restaurant app that was used in the course on APIs. Use the following code to make a
+  <var>
+   GET
+  </var>
+  call to this endpoint:
+ </p>
+ <pre language="python">fetch('http://127.0.0.1:8000/api/menu-items')
+    .then(response =&gt; response.json())
+    .then(data =&gt; {
+        console.log(data)
+    })
+</pre>
+ <h2 level="2" variant="h2semibold">
+  POST, PUT and PATCH Calls
+ </h2>
+ <p variant="body1">
+  How do you make a
+  <var>
+   POST
+  </var>
+  call with data using the fetch API? You have to convert the JSON payload that contains all the data to a string using the
+  <var>
+   JSON.stringify()
+  </var>
+  function and pass it as body in the second argument to the fetch function. It’s also a good practice to add
+  <strong>
+   Accept
+  </strong>
+  and
+  <strong>
+   Content
+  </strong>
+  type headers while making the API calls.
+ </p>
+ <p variant="body1">
+  Here is the sample code that creates a new menu item by making a
+  <var>
+   POST
+  </var>
+  call to the
+  <var>
+   http://127.0.0.1:8000/api/menu-items
+  </var>
+  endpoint.
+ </p>
+ <pre language="python">const payload = {
+    "title": "Ambrosia Ice cream",
+    "price": 5.00,
+    "inventory": 100
+}
+const endpoint = 'http://127.0.0.1:8000/api/menu-items'
+fetch(endpoint,
+    {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(response =&gt; response.json())
+    .then(data =&gt; {
+        console.log(data)
+    })
+</pre>
+ <p variant="body1">
+  For
+  <var>
+   PUT
+  </var>
+  and
+  <var>
+   PATCH
+  </var>
+  calls, you just change the method from
+  <var>
+   POST
+  </var>
+  to
+  <var>
+   PUT
+  </var>
+  or
+  <var>
+   PATCH
+  </var>
+  . These requests typically operate on a single resource, which is identified by including an ID in the URL. Everything else remains the same.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  DELETE calls
+ </h2>
+ <p variant="body1">
+  For
+  <var>
+   DELETE
+  </var>
+  calls, change the method to
+  <var>
+   DELETE
+  </var>
+  and that’s all. In most cases, there is no body passed to a
+  <var>
+   DELETE
+  </var>
+  call. Here’s the code for a sample
+  <var>
+   DELETE
+  </var>
+  call to the
+  <strong>
+   menu-items
+  </strong>
+  endpoint:
+ </p>
+ <pre language="python">const endpoint = 'http://127.0.0.1:8000/api/menu-items/17'
+fetch(endpoint,
+    {
+        method: 'DELETE',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response =&gt; response.json())
+    .then(data =&gt; {
+        console.log(data)
+    })
+</pre>
+ <h2 level="2" variant="h2semibold">
+  Making authenticated calls with tokens
+ </h2>
+ <p variant="body1">
+  If you want to make authenticated API calls using bearer tokens, pass the
+  <strong>
+   Authentication
+  </strong>
+  header in the second argument in the fetch function. Here is an authenticated
+  <var>
+   POST
+  </var>
+  call. Note how the bearer token is passed in the header section.
+ </p>
+ <pre language="python">const endpoint = 'http://127.0.0.1:8000/api/menu-items/17'
+const token = “Some token”
+fetch(endpoint,
+    {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authentication': 'Bearer ' + token
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(response =&gt; response.json())
+    .then(data =&gt; {
+        console.log(data)
+    })
+</pre>
+ <p>
+  You can do the same for
+  <var>
+   GET
+  </var>
+  calls as well.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Conclusion
+ </h2>
+ <p variant="body1">
+  In this reading, you learned about making API calls in JavaScript using the native fetch function and how to process the response. You also learned how to send a JSON payload to make
+  <var>
+   POST
+  </var>
+  ,
+  <var>
+   PUT
+  </var>
+  and
+  <var>
+   PATCH
+  </var>
+  calls.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

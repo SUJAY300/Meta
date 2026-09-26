@@ -1,0 +1,91 @@
+Previously you learned that APIs are the gateway
+to your back-end data. By using APIs, third
+parties can access your data which poses the risk of data breaches, or corruption. Some APIs are meant to
+be used by anyone and some APIs especially
+those that modify data, are meant to be accessed only
+by authenticated clients. In this video, you will learn how to implement
+authentication and DRF and then protect your API endpoints
+from public access. Previously, you learned that in password based
+authentication the client, or the API user
+sends their username and password with
+every API call, then you can verify these credentials and deliver
+the appropriate response. However, sending a username and password every time
+is frustrating, and it is also not secure, that's why Token-based
+authentication is the most popular method when it comes to API authentication. In this approach, users send their usernames and
+passwords once. If the credentials are okayed, the server generates a
+unique piece of string. This token is long, hard to read and contains alphanumerical
+characters and symbols. The server can decide
+for how long a token will be valid and
+when it expires. The client sends
+new API requests and includes this
+token in the header. Server-side scripts then
+check if the token is valid, or if it has expired, then it finds which user
+this token belongs to. This token is validated
+with the help of token authentication class in the auth token app
+provided by DRF. If everything is okay, the API will run on
+behalf of that user. The authentication process
+is now done using the token, and you avoid sending the username and
+password every time. Let's explore a practical
+example of how to implement a token-based
+authentication in DRF. Open settings.py and add rest_framework.authtoken in
+your installed app section. Now open your terminal and
+go to the project directory. Make sure you have the
+virtual environment act of using pipenv shell. Run the necessary migrations
+from the auth token app. Now let's create
+an admin user to access the Django
+admin panel using the command python
+manage.py createsuperuser, and then supply the
+username and password. Access the admin panel from the local host url/admin
+and login as the admin, or super user you just created. All previously created tokens for all users are
+displayed here. You can also create tokens
+for new users here. Click on the "Plus", or "Add" button and create the token. You can come back to
+the token section and check these tokens anytime. But now it's time to create
+a protected API endpoint. Opened the views.py file
+and add the following code, @api_view, def secret request. For the return at the
+response message, some secret message, and map it to the /api/secret endpoint. Now, any client can
+access this endpoint. Not secret and not
+secure at all. Let's protect it so that only token verified users
+can access it. Import the isauthenticated
+class from permissions, and the permission
+underscore classes decorator from the decorators
+module in DRF. Now it's time to add some
+magic to our secret method. Add the permission
+classes decorator. This code snippet will return a secret message for the
+authenticated users only. Next, let's visit the API secret endpoint and insomnia to test how it works. Great. Currently you
+are not authenticated, so DRF doesn't
+allow you to pass. It shows authentication
+credentials were not provided, so the API endpoint
+is now secure. You need to tell DRF to use the token-based
+authentication. Simply set token
+authentication as the default authentication class in the settings.py file, and these lines in the
+rest framework section. Now go back to the Django
+admin and copy the token. Come back to insomnia and
+click on the "Auth" tab next to body and
+select bearer token. Paste the token
+you just copied in the token field and right
+token and the prefix field. Authentication
+tokens are sent as authorization colon token, the actual token in the header and this is what
+you just did using Insomnia. Send the request and that's it. The secret message is there, token authentication now works. You can create another user from the Django admin panel and
+use that user's token. But how can you generate these tokens from
+an API endpoint? Don't worry, DRF has
+everything ready for you. Open the LittleLemon app, url.py file and import the obtain_auth_tokenclass from the rest_framework.token.views
+module, and add this URL pattern
+for token generation. This endpoint only
+accept HTTP post calls. Send a post call to this end
+point /api/api-token-auth. DRF tells you that you need to supply the username
+and password. Add the username and password of a user
+that you created from Django admin and insomnia
+as form URL encoded data, and send the post request again. If they're credentials
+are valid, DRF sends the user
+token in a response. If you create a new user from the Django admin
+panel, or via code, you can always use the endpoint /api/api-token-auth
+to authenticate them and generate a token. Then use this token to make HTTP calls to the
+protected URLs. In this video, you learned about password and token-based
+authentication and DRF. You should now know
+how to protect an API endpoint by using
+the built-in decorators and classes and you also
+learned how to generate user tokens to
+authenticate API calls. Back-end developers
+should always try to optimize the security
+of their systems. This knowledge will
+serve you well in your future API projects.

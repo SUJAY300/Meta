@@ -1,0 +1,16 @@
+Congratulations on reaching the end
+of control flows and conditionals and the end of the module on
+getting started with Python. Let's recap what you've learned. So now you know how to explain
+the history of programming and how it works in a general sense. Describe the benefits of Python and
+where it's used. Evaluate if your system is set up
+correctly for Python development. Identify the differences of running
+code from the command line via the IDE. Explain the importance of syntax and
+space in Python. Describe what variables are and
+how they are used. Identify data types in Python. Explain how to declare and use strings. Describe the two types of casting and
+how to apply them. Describe the basics of user inputs and
+console outputs. Recognize math and
+logical operators in Python. Use conditional statements to
+control the flow of programs. Use match case statement as
+an alternative to if statements. Explain looping constructs and
+how to use them and explain nested loops and how they work. You've learned a lot about the structure
+and rules that guide Python and now you're ready to create programs. Great work, see you next time.

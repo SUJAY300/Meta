@@ -1,0 +1,576 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="dmxAppConnect/dmxAppConnect.js"></script>
+    <meta charset="UTF-8">
+    <title>History of UNIX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Explore the rich history of the UNIX operating system, from its origins at Bell Labs to the UNIX Wars, the rise of open systems, and its unification under The Open Group. Includes a detailed timeline of key milestones.">
+    <meta name="keywords" content="UNIX history, history of UNIX, Bell Labs, Ken Thompson, Dennis Ritchie, System V, BSD, UNIX Wars, X/Open, The Open Group, Single UNIX Specification, operating system history, computing timeline">
+    <meta name="author" content="Brian Selves">
+
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap & Font Awesome -->
+    <link rel="stylesheet" href="bootstrap/5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="dmxAppConnect/dmxBootstrap5Navigation/dmxBootstrap5Navigation.js" defer></script>
+    <script src="dmxAppConnect/dmxBootstrap5Alert/dmxBootstrap5Alert.js" defer></script>
+    <link rel="stylesheet" href="dmxAppConnect/dmxAnimateCSS/animate.min.css" />
+    <script src="dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js" defer></script>
+</head>
+
+<body is="dmx-app" id="unix_history" class="bg-white">
+    <!-- ===== HEADER (Collapsible Navbar) ===== -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo_unix.svg" alt="UNIX Logo" height="60">
+            </a>
+            <!-- Toggler button (Hamburger Icon) for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapsible menu -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="unix_history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fun_facts.html">Facts</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="overview.html">Single UNIX Specification</a></li>
+                    <li class="nav-item"><a class="nav-link" href="license-plate.html">License Plate</a></li>
+                    <li class="nav-item mt-2 mt-lg-0 ms-lg-3"><a class="nav-link" href="https://www.linkedin.com/company/the-open-group/"><i class="fab fa-linkedin fs-5"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/user/theopengroup"><i class="fab fa-youtube fs-5"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ===== HERO / INTRO SECTION (Now on white background) ===== -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h1 class="display-4 text-start" style="color:var(--color-primary)">UNIX Past</h1>
+                <p class="lead text-muted text-start">A look at the key moments and history behind the UNIX operating system.</p>
+                <div class="row mt-4 g-4 justify-content-center">
+                    <!-- Cards will now stand out on the white background -->
+                    <div class="col-lg-4 d-flex">
+                        <div class="card quote-card w-100 shadow-sm">
+                            <div class="card-body">
+                                <i class="fas fa-quote-left fa-2x mb-3"></i>
+                                <blockquote class="blockquote">
+                                    <p>...a punning colleague called UNICS... an 'emasculated Multics'.</p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer mb-0">A Brief Look at the Early History</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ... other two cards are the same ... -->
+                    <div class="col-lg-4 d-flex">
+                        <div class="card quote-card w-100 shadow-sm">
+                            <div class="card-body">
+                                <i class="fas fa-quote-left fa-2x mb-3"></i>
+                                <blockquote class="blockquote">
+                                    <p>Unix was born in 1969... this paper presents a technical and social history of the evolution of the system.</p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer mb-0">Dennis M. Ritchie</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex">
+                        <div class="card quote-card w-100 shadow-sm">
+                            <div class="card-body">
+                                <i class="fas fa-quote-left fa-2x mb-3"></i>
+                                <blockquote class="blockquote">
+                                    <p>...the number of UNIX installations has grown to 10, with more expected...</p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer mb-0">Ritchie &amp; Thompson, 1972</figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FINAL REDESIGNED STORY SECTION ===== -->
+        <div class="container py-5">
+            <div class="col-lg-12 mx-auto">
+                <!-- Introduction -->
+                <p class="lead">Since escaping AT&T's Bell Laboratories in the early 1970s, the UNIX system's influence has been immense. Universities, research institutes, and companies used it to pioneer technologies that are now essential—from CAD and lab simulations to the very foundation of the Internet.</p>
+                <hr class="my-5">
+
+                <!-- Stage 1: Fragmentation -->
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-3 text-center">
+                        <i class="bi bi-git display-3 text-danger"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <h4>A Fragmented Landscape</h4>
+                        <p>By the late 1970s, graduates who had used UNIX systems in university labs entered the workforce and demanded it. In response, vendors marketed their own diverging, incompatible versions of the system. The UNIX® trademark was ubiquitous, but it was applied to a multitude of different products that couldn't work together.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 2: Open Systems -->
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-3 text-center">
+                        <i class="bi bi-globe display-3 text-success"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <h4>The Rise of Open Systems</h4>
+                        <p>Concerned by market fragmentation, a group of vendors formed X/Open in 1984 to define a comprehensive "open systems" environment based on agreed-upon standards. They chose the UNIX system as the foundation, creating a clear industry need for a single, standard version. The question was: which one?</p>
+                    </div>
+                </div>
+
+                <!-- Full-width Blockquote -->
+                <figure class="my-5">
+                    <blockquote class="blockquote pull-quote">
+                        <p class="ps-2">Open systems were those that would meet agreed specifications or standards. This resulted in the formation of X/Open Company Ltd whose remit was, and today in the guise of The Open Group remains, to define a comprehensive open systems environment.</p>
+                    </blockquote>
+                </figure>
+
+                <!-- Stage 3: The UNIX Wars -->
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-3 text-center">
+                        <i class="bi bi-shield-slash-fill display-3" style="color: var(--color-accent);"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <h4>The UNIX Wars</h4>
+                        <p>In 1987, AT&amp;T and Sun Microsystems formed a pact to unify the market around their version. Fearing this alliance, the rest of the industry formed the competing Open Software Foundation (OSF). The resulting "UNIX Wars" divided the community between AT&amp;T's UNIX System V and the OSF's OSF/1, while X/Open held the neutral center ground.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 4: Unification -->
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-center">
+                        <i class="bi bi-patch-check-fill display-3 text-primary"></i>
+                    </div>
+                    <div class="col-md-9">
+                        <h4>Towards a Unified Standard</h4>
+                        <p>In a pivotal move, Novell (which had acquired AT&amp;T's UNIX System Laboratories) transferred the rights to the UNIX trademark to the vendor-neutral X/Open in 1993. This separated the brand from any single company's code. By 1995, X/Open introduced the UNIX 95 brand, guaranteeing that certified systems met the Single UNIX Specification—a mission The Open Group continues today.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== TIMELINE SECTION (Now on a light gray background) ===== -->
+        <div class="timeline-section"> <!-- This outer div now just provides the background and padding -->
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5" style="color:var(--color-primary)">Timeline of a Revolution</h2>
+                    <p class="lead text-muted">Key milestones in the history of the UNIX system.</p>
+                </div>
+
+                <!-- NEW: This div will contain the actual timeline and its pseudo-element line -->
+                <div class="timeline-container">
+
+                    <!-- All of your .timeline-item divs go inside here -->
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1969</span>The Beginning</div>
+                            <div class="card-body">UNIX history starts back in 1969, when Ken Thompson, Dennis Ritchie and others started working on the "little-used PDP-7 in a corner" at Bell Labs.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1971</span>First Edition</div>
+                            <div class="card-body">It had an assembler for a PDP-11/20, file system, fork(), roff and ed. It was used for text processing of patent documents.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1973</span>Fourth Edition</div>
+                            <div class="card-body">It was rewritten in C. This made it portable and changed the history of OS's.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1975</span>Sixth Edition</div>
+                            <div class="card-body">Also known as Version 6, this is the first to be widely available out side of Bell Labs. The first BSD version (1.x) was derived from V6.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1979</span>Seventh Edition</div>
+                            <div class="card-body">It was a "improvement over all preceding and following Unices" [Bourne]. It had C, UUCP and the Bourne shell. It was ported to the VAX.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1980</span>Xenix</div>
+                            <div class="card-body">Microsoft introduces Xenix. 32V and 4BSD introduced.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1982</span>System III</div>
+                            <div class="card-body">AT&T's UNIX System Group (USG) release System III, the first public release outside Bell Laboratories. SunOS 1.0 ships. HP-UX introduced.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1983</span>System V</div>
+                            <div class="card-body">AT&T announces UNIX System V, the first supported release. Installed base 45,000.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1984</span>4.2BSD</div>
+                            <div class="card-body">University of California at Berkeley releases 4.2BSD, includes TCP/IP, new signals and much more. X/Open formed.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1984</span>SVR2</div>
+                            <div class="card-body">System V Release 2 introduced. At this time there are 100,000 UNIX installations around the world.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1986</span>4.3BSD</div>
+                            <div class="card-body">4.3BSD released, including internet name server. SVID introduced. NFS shipped. AIX announced. Installed base 250,000.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1987</span>SVR3</div>
+                            <div class="card-body">System V Release 3 including STREAMS, TLI, RFS. At this time there are 750,000 UNIX installations around the world.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1988</span>POSIX.1</div>
+                            <div class="card-body">POSIX.1 published. Open Software Foundation (OSF) and UNIX International (UI) formed.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1989</span>System V</div>
+                            <div class="card-body">AT&T UNIX Software Operation formed in preparation for spinoff of USL.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1989</span>SVR4</div>
+                            <div class="card-body">UNIX System V Release 4 ships, unifying System V, BSD and Xenix. Installed base 1.2 million.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1990</span>XPG3</div>
+                            <div class="card-body">X/Open launches XPG3 Brand. OSF/1 debuts. Plan 9 from Bell Labs ships.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1991</span>Linux</div>
+                            <div class="card-body">UNIX System Laboratories (USL) becomes a company. Linus Torvalds commences Linux development. Solaris 1.0 debuts.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1992</span>SVR4.2</div>
+                            <div class="card-body">USL releases UNIX System V Release 4.2 (Destiny). XPG4 Brand launched. Novell announces intent to acquire USL.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1993</span>4.4BSD</div>
+                            <div class="card-body">4.4BSD the final release from Berkeley. Novell acquires USL.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">Late 1993</span>SVR4.2MP</div>
+                            <div class="card-body">Novell transfers rights to the "UNIX" trademark and the Single UNIX Specification to X/Open. COSE initiative delivers "Spec 1170".</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1994</span>Single UNIX Spec</div>
+                            <div class="card-body">X/Open introduces the Single UNIX Specification (formerly Spec 1170), separating the trademark from any code stream.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1995</span>UNIX 95</div>
+                            <div class="card-body">X/Open introduces the UNIX 95 branding programme. Novell sells UnixWare business line to SCO.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1996</span>The Open Group</div>
+                            <div class="card-body">The Open Group forms as a merger of OSF and X/Open.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1997</span>Version 2</div>
+                            <div class="card-body">Version 2 of the Single UNIX Specification is released, adding support for realtime, threads and 64-bit processors.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1998</span>UNIX 98</div>
+                            <div class="card-body">The Open Group introduces the UNIX 98 family of brands (Base, Workstation, Server).</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">1999</span>UNIX at 30</div>
+                            <div class="card-body">The UNIX system reaches its 30th anniversary. Joint development of a revision to POSIX and the Single UNIX Spec begins.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2001</span>Version 3</div>
+                            <div class="card-body">Version 3 of the Single UNIX Specification unites IEEE POSIX, The Open Group and the industry efforts.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2003</span>ISO/IEC 9945:2003</div>
+                            <div class="card-body">The core volumes of Version 3 are approved as an international standard.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2007</span>Mac OS X Certified</div>
+                            <div class="card-body">Apple Mac OS X is certified to UNIX 03.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2008</span>ISO/IEC 9945:2008</div>
+                            <div class="card-body">The latest revision of the UNIX API set is formally standardized at ISO/IEC, IEEE and The Open Group.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2009</span>UNIX at 40</div>
+                            <div class="card-body">IDC reports the UNIX market at $69 billion in 2008, predicting $74 billion in 2013.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2010</span>Desktop Dominance</div>
+                            <div class="card-body">Apple reports 50 million desktops and growing—all Certified UNIX systems.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2015</span>Version 4</div>
+                            <div class="card-body">The Single UNIX Specification Version 4 (SUSv4) is published, forming the basis for the UNIX V7 Certification program.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2018</span>First UNIX V7 Cert</div>
+                            <div class="card-body">Oracle Solaris 11.4 becomes the first product to be certified as conforming to the latest UNIX V7 standard.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2019</span>UNIX at 50</div>
+                            <div class="card-body">Happy 50th Birthday, UNIX!</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2020</span>IBM certifies AIX to the UNIX V7 standard</div>
+                            <div class="card-body">Increased reliance on POSIX and UNIX systems during the shift to remote working during the pandemic.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2022</span>Apple certifies macOS 12 Monterey</div>
+                            <div class="card-body">Apple continues its long-standing commitment by certifying its annual release for the 15th year. Estimated sales of Mac computers exceed 200 million units.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2024</span>25 Years of the Austin Group</div>
+                            <div class="card-body">25 years of joint development of the POSIX and Single UNIX Spec. The Single UNIX Specification Version 5 (SUSv5) is published.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2025</span>Apple certifies the macOS Tahoe release</div>
+                            <div class="card-body">macOS continues as the largest installed base of any certified UNIX platform - estimated at tens of millions of active systems.</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="card shadow-sm timeline-card">
+                            <div class="card-header"><span class="fw-bold me-3">2026</span>ISO/IEC 9945-2026 Published</div>
+                            <div class="card-body">The core volumes of the Single UNIX Specification Version 5 are published by ISO/IEC.</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div> <!-- End of .timeline-section -->
+        <!-- ===== "SPEC WITH NO NAME" SECTION ===== -->
+        <section class="py-5" id="spec-story">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5" style="font-weight: 200;">A Spec with No Name</h2>
+                    <p class="lead text-muted">How a cowboy legend helped unify the UNIX world.</p>
+                </div>
+                <div class="row g-4">
+
+                    <!-- Card 1: The Problem -->
+                    <div class="col-lg-6 d-flex" dmx-animate-css:="fadeInUp" dmx-animate-css-onshow>
+                        <div class="card quote-card w-100 shadow-sm">
+                            <div class="card-body">
+                                <i class="fas fa-code-branch fa-2x mb-3"></i>
+                                <h5 class="card-title">The Problem: Fragmentation</h5>
+                                <p class="card-text">In the early 1990s, major vendors like Sun, HP, and IBM had developed incompatible versions of UNIX, making it hard for software to be portable across platforms.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: The Solution -->
+                    <div class="col-lg-6 d-flex" dmx-animate-css:="fadeInUp" dmx-animate-css-onshow>
+                        <div class="card quote-card w-100 shadow-sm">
+                            <div class="card-body">
+                                <i class="fas fa-scroll fa-2x mb-3"></i>
+                                <h5 class="card-title">A Spec with No Name</h5>
+                                <p class="card-text">A unified standard was needed, but the effort was politically sensitive. As a result, it was informally called "The Spec with No Name," later known as Spec 1170.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: The Joke -->
+                    <div class="col-lg-6 d-flex" dmx-animate-css:="fadeInUp" dmx-animate-css-onshow>
+                        <div class="card quote-card w-100 shadow-sm" style="border-left-color: var(--color-accent);">
+                            <div class="card-body">
+                                <i class="fas fa-hat-cowboy fa-2x mb-3" style="color: var(--color-accent);"></i>
+                                <h5 class="card-title">Enter: Eastwood</h5>
+                                <p class="card-text">To ensure vendors implemented the spec correctly, a conformance test suite was nicknamed "Eastwood"— an inside joke referencing Clint Eastwood’s character, “The Man with No Name.”</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: The Legacy -->
+                    <div class="col-lg-6 d-flex" dmx-animate-css:="fadeInUp" dmx-animate-css-onshow>
+                        <div class="card quote-card w-100 shadow-sm">
+                            <div class="card-body">
+                                <i class="fas fa-stamp fa-2x mb-3"></i>
+                                <h5 class="card-title">A Lasting Legacy</h5>
+                                <p class="card-text">This effort laid the foundation for The Single UNIX Specification and was a key part of the UNIX brand consolidation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ===== END OF SECTION ===== -->
+
+        <!-- ===== CONCLUSION SECTION ===== -->
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <figure>
+                        <blockquote class="blockquote pull-quote">
+                            <p class="ps-2">"This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface."</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer text-end">Attributed to <cite title="Doug McIlroy">Doug McIlroy</cite></figcaption>
+                    </figure>
+                    <hr class="my-5">
+                    <h3 class="text-center">An Enduring Legacy</h3>
+                    <p class="lead text-center text-muted">While the corporate battles have faded, the core philosophy and UNIX technical innovations are more relevant than ever. They form the bedrock of nearly all modern computing, from the servers that run the internet (Linux), to the phones in our pockets (Android/iOS), to the computers on our desks (macOS, Windows Subsystem for Linux).</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Main Footer Area -->
+    <footer class="text-secondary py-4 bg-dark"> <!-- 'py-4' controls the height. Change to py-3 for less padding. -->
+        <div class="container">
+            <!-- The row for the link columns -->
+            <div class="row">
+                <!-- Column 1: The Open Group Logo and Info -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <a href="https://www.opengroup.org" target="_blank">
+                        <img src="assets/images/tog-horizontal-registered-white.svg" alt="The Open Group Logo" style="max-width: 200px; height: auto; margin-bottom: 1rem;">
+                    </a>
+                    <p class="small text-light">The Open Group is a global consortium that enables the achievement of business objectives through technology standards and open source initiatives by fostering a culture of collaboration, inclusivity, and mutual respect among our diverse group of 900+ memberships.</p>
+                </div>
+
+                <!-- Column 2: Spacer -->
+                <div class="col-lg-1"></div>
+
+                <!-- Column 3: The Link Lists -->
+                <div class="col-lg-7">
+                    <div class="row">
+                        <!-- Link List A -->
+                        <div class="col-md-6">
+                            <h6 class="text-uppercase fw-bold text-white mb-3">The Open Group</h6>
+                            <ul class="footer-links">
+                                <li class="mb-2"><a href="https://www.opengroup.org/about-us" target="_blank">About Us</a></li>
+                                <li class="mb-2"><a href="https://www.opengroup.org/offices-contacts" target="_blank">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <!-- Link List B -->
+                        <div class="col-md-6">
+                            <h6 class="text-uppercase fw-bold text-white mb-3">Resources</h6>
+                            <ul class="footer-links">
+                                <li class="mb-2"><a href="https://www.opengroup.org/certifications/unix" target="_blank">Certification Program</a></li>
+                                <li class="mb-2"><a href="the_brand.html">UNIX Certification Brand</a></li>
+                                <li class="mb-2"><a href="https://www.opengroup.org/openbrand/register/" target="_blank">Certified Products</a></li>
+                                <li class="mb-2"><a href="https://publications.opengroup.org/standards/unix" target="_blank">Publications Library</a></li>
+                                <li class="mb-2"><a href="https://www.opengroup.org/austin/" target="_blank">Get Involved</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sub-Footer Area (Copyright) -->
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <p class="small text-light mb-0">
+                        © Copyright <script>
+                            document.write(new Date().getFullYear())
+                        </script> The Open Group. All Rights Reserved. |
+                        UNIX® is a registered trademark of The Open Group.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap/5/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

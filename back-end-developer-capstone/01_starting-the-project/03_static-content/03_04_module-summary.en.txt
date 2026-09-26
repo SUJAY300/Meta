@@ -1,0 +1,19 @@
+In this module, you prepared to build the
+Django application with the functionality to reserve a table. You began with an introduction to
+the course content and the syllabus and had an opportunity to meet your peers. Finding success in web development means
+using the right tools to make your code as effective and efficient as possible. So, you have set up your
+coding environment Python and the Django framework to bill
+the elements of the web application. You have the correct version of Python and
+Django installed on your local machine and can now work with the database and
+development server, allowing you to interact and
+test the little Lemon web application. You have an IDE or a code editor
+installed and set up to work with Django. Git is installed on your machine and your GitHub account is set up allowing you
+to add a remote repository for your code. The principles of setting up a project
+with the Django framework were revisited and your development process of working
+with static content has been established. The scope and the project's purpose have been defined by
+gathering the user's objectives and goals. Throughout this module, you had an opportunity to
+complete some hands on exercises. They included setting up the repository,
+setting up the Django project, committing the project, setting up the static
+routes and serving the static content. Having set up your coding environment
+repository and framework, you are in a fantastic position
+to begin coding the project. Well done

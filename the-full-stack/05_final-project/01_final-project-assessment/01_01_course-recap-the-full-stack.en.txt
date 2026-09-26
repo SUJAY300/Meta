@@ -1,0 +1,112 @@
+You've almost reached the end
+of the full stack course. What's left now is to demonstrate the skills
+you've learned in the course in a project comprised of three separate but
+connected labs. Then you will complete the
+final graded assessment quiz. The labs will assess
+whether you are able to connect the back-end
+of an app to MySQL, set up a booking API and have an app display
+available booking times. But before you get to that, let's recap what you've
+learned up to this point to help orientate you for the
+final project and quiz. The labs and graded quiz will test everything you've
+learned in the course. Use this recap to check which parts of the
+course you're unsure about and have to review again before you continue with
+the rest of the module. If you think back, you'll
+recall that Module 1 was an introduction
+to the full stack and what a full-stack
+developer does. To be a full-stack developer, you must learn everything
+that is required to create and deliver a
+functioning application. Thus, you learned about
+the different stacks, front-end, back-end,
+and data stacks. A full-stack developer
+needs to be comfortable with all three parts of
+development to be successful. Such a developer should have some essential DevOps skills to build and deploy an
+application to production, staging, and
+development servers, as well as be familiar with a version control
+system like Git. Next, you learned about
+N-tier architecture. This is when an
+applications architecture is split into multiple tiers. The benefits of
+N-tier architecture are that it is easier to secure and scale
+an application and fix problems or
+add new features. Fixing and adding features
+are more manageable because each tier is separate
+and works independently. Finally, you reviewed what you know about client-server
+architecture, which included learning
+about the components of a client-server architecture and the role of clients and servers. In Module 2, you learned about
+front-end technologies, which include HTML,
+CSS, and JavaScript. In the HTML section, you learned how to create
+a well-formed web page, as well as form submissions
+and perform validation. You also learned about the
+different input types that are validated by the web
+browser on the client side. In the CSS section, you delved into CSS layouts and how to create them with
+grids and flexboxs. Layouts, for example are
+critical to designing a good webpage because they divide a page into
+different parts, making what the user
+sees more presentable. The lesson also covered how
+to work with CSS selectors, pseudo-classes, and
+pseudo elements. Lastly, in this module, you'll learn more
+about JavaScript, which builds interactivity
+into web pages. When you use JavaScript, updates are displayed in
+real-time on users devices. You also learned
+about data types like string and number and
+when you should use them. You learned about
+event handling, which is a function in JavaScript that
+enables you to capture user input and process it to manipulate what's
+displayed to the user. Finally, you learned
+about front-end libraries and frameworks you can use
+to streamline your coding. In Module 3, you reviewed a lot of content from previous courses to make sure that you
+are well-placed to succeed in this
+full stack course. Thus, you had a recap
+of Django, APIs, Database and MySQL and models and migrations
+to refresh your memory. You also learned about the
+tools you need to create an API project using
+Django and DRF, as well as how to
+fetch data using JavaScript and using
+it to query APIs. There were two important
+labs in this module. One about configuring Django
+to connect it to MySQL, and another one about submitting
+a form with JavaScript. These are important to review
+for the final project. The last module before the final project was about
+production environments. This included learning about web server environments and
+the concept of deployment, which is the process of uploading code and
+data to servers. Here you learned about
+two important concepts, CI or continuous integration, which imitates the production
+environment and runs tests and CD or
+continuous delivery, which is the uploading process. You also learned about
+server and serverless. Server means there is
+a dedicated server or virtual servers that you can access to make use
+of idle resources. But it has to be
+managed manually. While serverless is when
+everything is provided and managed by the provider and you don't have to
+configure anything. Next, you learned about virtual machines
+and how you can use a Type 1 or Type 2 hypervisor to split a dedicated server
+into multiple virtual ones. Following this, you learned
+about containerization, which allows you to pack
+applications and dependencies in container image
+files that can run anywhere regardless of
+operating system or hardware. Following this, you
+learned about PaaS, which is a platform
+as a service that gives you everything you
+need to run an application, much like Cloud
+service providers. You also learned about SaaS, which is software
+as a service that solves a particular problem and provides an API to use it. DBass is a database
+as a service and provides only
+database solutions. Lastly, you learned
+about IaaS or infrastructure as a service for creating an infrastructure
+with servers. You also learned about
+the different types of Cloud infrastructure and how they give you access
+to high-powered machines. A key element of a Cloud
+computing is a computing unit, which is a set of
+virtual machines that are available for
+on-demand deployment. You also learned about
+the storage options you have where you can buy
+giga or terabytes, use objects storage, or use Cloud provider services
+that scale automatically. Then you learned about
+networking in the Cloud, scaling in the Cloud,
+and load balancing. Lastly, you learned
+about content delivery networks or
+CDNs and how they can improve scaling by caching
+and serving static assets in the Cloud as well as determine the nearest
+point of presence. This is a server where
+static assets are stored. That's it for this review of the courses first four modules. Hopefully you now have a
+better idea of what you feel confident about and what content you should perhaps review again. Good luck with the
+final labs and quiz.

@@ -1,0 +1,92 @@
+Django is so popular because it's open source with a rich set of tools that allow for easy scalability and
+rapid development. MySQL is one of the many
+databases which Django supports. Recall that database has
+helped store data from different sources that can be used for different purposes, such as adding
+content to a webpage. The Django development
+framework has internal support for connecting
+with different databases. Previously, you learned that
+Django uses something called an object-relational
+mapper or ORM. ORM facilitates the mapping
+of data between databases and the application
+model without the need to write
+any SQL queries. MySQL is a popular
+database management system and can be used with Django when there is a heavy data load. Let's quickly recap some
+of the features of MySQL. It's open source and
+well-documented. It's reliable and quick as data storage is done
+efficiently in memory. It's scalable and can work with small to vast amounts of data. Finally, it's secure and provides a layer
+of security with encrypted password
+protection that is flexible and verification based. It's important to know that before you begin
+working with models, you need to have a
+database installed. Django provides the
+SQLite database by default and no
+pre-installation is required. However, if you want to
+use another database, you must install
+and configure it. Let's now explore the
+steps to install and configure MySQL within
+a Django project. Before you can begin
+using MySQL with Django, ensure that MySQL is
+installed on your computer. Depending on the
+operating system in use, you can use the
+different site packages that are available on
+the MySQL website. The examples in this
+video refer to macOS. You can find
+command-specific too in their operating systems from the additional reading at
+the end of this lesson. For macOS, you can use a package manager such as Homebrew to manage
+your installation. Begin by typing the command
+brew install MySQL. This installs the
+MySQL database. Next, go into MySQL to
+access the databases. Note that there are specific
+commands when using macOS. Now type the command
+MySQL dash u root dash p. Dash u
+refers to the username, whereas root dash
+p is the password. Now press "Enter" to
+action a password request. Notice that the password
+entered here matches the password set for the root
+inside the MySQL database. Inside the shell, go ahead
+and type the command, show databases, and end your
+query with a semicolon. This generates a list of all the MySQL databases
+on your MySQL server. For example, create a
+database called Feedback. To do this, type the command create database
+feedback semicolon. Now run the show
+databases command again. Now your list includes the new feedback database
+you've just created. The next step is to create a
+user for the Django project. Run a command
+labeled create user, apostrophe, admin Django, apostrophe, identified by, apostrophe, password,
+apostrophe, semicolon. The password is
+the word password. Note that there may be variations to this
+particular command, but this is one of the
+simplified versions. Now press "Enter". Next, you enter the command to grant
+permissions to the user. The final command here
+is flush privileges. Now, the database
+is ready to use. The next step is to install
+a database connector. This is used to allow the MySQL database to
+interact with the Django ORM. In this example, you'll
+use MySQL client library. There are alternative
+options you can use, such as any of the Python three database
+connector libraries, that are compatible with Django. For now, exit the
+MySQL shell and type the command pip3
+install mysqlclient. Note that you may need to
+install extra files that allow this specific library to work on this
+operating system. Once the database and the database connector
+are in place, go to the settings.py file
+inside the My Project folder. Here, Django will reference information about the
+database connection. To use MySQL, the database needs to be
+in a specific format. Replace the database code
+with that of the settings for MySQL and replace the
+database name with feedback. It's important to know
+that in this example, the database name is feedback. Always check the name of the database that you
+want to connect to. Next, replace the user with admindjango and the
+password with password. The final step
+before you can use the database is to
+run the migrations. Let's run the following
+two commands. First, type the query Python3 manage.py make migrations,
+and press "Enter". Next, type Python3
+manage.py migrate. Notice the list of migrations
+you've just performed. However, your view of this is limited because there are no
+entries inside the database. In the absence of using MySQL database for the
+majority of the course, it is always good
+to know that there are alternatives available to the SQLite database
+and these are installed by default
+inside Django. In this video, you
+learned how to set up a MySQL database
+connection in Django.

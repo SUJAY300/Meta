@@ -1,0 +1,221 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  Introduction
+ </h2>
+ <p variant="body1">
+  Testing is a vital part of the software development process.
+ </p>
+ <p variant="body1">
+  Before pushing the application to the production stage, validating it against the expected output is essential.
+ </p>
+ <p variant="body1">
+  Before you commit any change to the source code, it must be verified that your changes don't affect the application's behavior.
+ </p>
+ <p variant="body1">
+  A developer is always well advised to adopt an approach of test-driven development.
+ </p>
+ <p variant="body1">
+  Django's testing framework provides the API to test your code and check if it is doing as expected.
+ </p>
+ <p variant="body1">
+  The test framework of Django is built upon the unit test package bundled with Python's standard library.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Prerequisites
+ </h2>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    Install Django and Django REST Framework in the current Python environment
+   </p>
+  </li>
+  <li>
+   <p>
+    Create a Django project named
+    <var>
+     LittleLemon
+    </var>
+    with
+    <var>
+     django-admin
+    </var>
+    command
+   </p>
+  </li>
+  <li>
+   <p>
+    Inside it, create a Django app with the name
+    <var>
+     LittleLemonAPI
+    </var>
+   </p>
+  </li>
+  <li>
+   <p>
+    Add the
+    <var>
+     'rest_framework'
+    </var>
+    and
+    <var>
+     'LittleLemonAPI'
+    </var>
+    to the
+    <var>
+     INSTALLED_APPS
+    </var>
+    list
+   </p>
+  </li>
+  <li>
+   <p>
+    Run the
+    <var>
+     migrate
+    </var>
+    command
+   </p>
+  </li>
+ </ul>
+ <h2 level="2" variant="h2semibold">
+  Model
+ </h2>
+ <p variant="body1">
+  Define the
+  <var>
+   MenuItem
+  </var>
+  model in
+  <strong>
+   LittleLemonAPI/models.py
+  </strong>
+  file using the following code:
+ </p>
+ <pre language="python">from django.db import models  
+
+# Create your models here.  
+
+class MenuItem(models.Model):  
+
+    title = models.CharField(max_length=255)  
+    price = models.DecimalField(max_digits=6, decimal_places=2)  
+    inventory = models.SmallIntegerField()  
+
+    def get_item(self):  
+        return f'{self.title} : {str(self.price)}' </pre>
+ <h2 level="2" variant="h2semibold">
+  Serializer
+ </h2>
+ <p variant="body1">
+  Serialization is crucial in building an API with the Django REST Framework. It serializes the model instances into JSON format.
+ </p>
+ <p variant="body1">
+  Use the
+  <var>
+   ModelSerializer
+  </var>
+  class to declare a
+  <var>
+   serializer
+  </var>
+  for the
+  <var>
+   MenuItem
+  </var>
+  model. Add the following code in the
+  <strong>
+   LittleLemonAPI/serializers.py
+  </strong>
+  file.
+ </p>
+ <pre language="python">from rest_framework import serializers 
+from .models import MenuItem  
+
+class MenuItemSerializer(serializers.ModelSerializer): 
+
+    class Meta: 
+        model = MenuItem 
+        fields = ['id','title','price','inventory'] </pre>
+ <h2 level="2" variant="h2semibold">
+  Views
+ </h2>
+ <p variant="body1">
+  The next step is to provide the app with the view definitions.
+  <strong>
+   DRF
+  </strong>
+  has generic view classes. The
+  <strong>
+   ListCreateAPIView
+  </strong>
+  handles the POST and GET methods to add a model instance and retrieve all instances. Use it as a base for
+  <var>
+   MenuItemsView
+  </var>
+  class.
+ </p>
+ <p variant="body1">
+  <strong>
+   LittleLemonAPI/views.py
+  </strong>
+ </p>
+ <pre language="python">from rest_framework import generics 
+from .models import MenuItem 
+from .serializers import MenuItemSerializer 
+
+# Create your views here. 
+class MenuItemsView(generics.ListCreateAPIView): 
+    queryset = MenuItem.objects.all() 
+    serializer_class = MenuItemSerializer </pre>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

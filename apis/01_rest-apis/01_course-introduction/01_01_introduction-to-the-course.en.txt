@@ -1,0 +1,70 @@
+Hello and welcome to this
+course on API development. Nearly all of us have
+interacted with an API before, even if we don't know it. If you've checked the weather on your phone or if you've
+ordered food online, then you relied on an API
+to give you access to another app's functionality or to retrieve information for you. In fact, most of today's web applications
+rely on APIs to work. An API or Application Programming
+Interface is a gateway to back-end data. APIs allow different
+apps and services to exchange information or allow
+access to functionality, and as the use of mobile and other
+technologies increases, so too does the demand for APIs. This means that learning
+how to create and use APIs may be invaluable to you
+and your developer journey. In this course, you'll
+learn about the tools and resources available to you
+to create and use APIs. To start off, you'll
+learn more about how APIs are used
+in the real-world. Then you'll have an opportunity to reflect on what
+you hope to learn. The course syllabus, and how to be successful
+in this course. After this, there's
+a short refresher on how HTTP and HTTPS work, including HTTP
+methods, requests, responses, and status codes. Before moving on to rest APIs. You will learn how to set up Visual Studio Code and configure it with all the
+necessary extensions, and you'll also learn how to use a packaging tool like pip envy. When it comes to rest APIs, you will learn about their
+key characteristics, benefits, states,
+and resource types, as well as the API
+requests to life cycle. You'll also learn about
+the principles of authentication in a rest API, and what the differences between authentication and
+authorization, and you'll have an opportunity
+to create routes with the correct naming
+conventions when you create your own API and
+organize an API project. In the second week,
+you will learn how to install and set up Django Rest framework, or DRF. Following this, you
+will also learn how to use function and class based views to create
+API endpoints efficiently. You will enrich your
+knowledge of serialized and gain insight into how to
+convert and validate your data. You'll learn how to
+map user input to database models using
+deserialization, as well as how to
+use throttling and caching to optimize
+and protect your API. In the third week,
+you will learn how to control access to your APIs and put systems in place to ensure you
+maintain their health. Lastly, you'll have an opportunity to complete
+the graded assessment, which is the little lemon
+restaurant API project. You'll get an opportunity
+to provide feedback on your classmates'
+projects as well since this is a
+peer-reviewed assignment. If you've encountered new
+technical words and this video, don't worry if you don't
+fully understand them now. Everything you need will be
+covered during your learning with each lesson made
+up a video content, readings, and quizzes. There are many videos
+in the course that will gradually guide you towards your goal of becoming
+a developer. Watch, pause, rewind, and re-watch the videos until you are confident
+in your skills. Then consolidate your
+knowledge by consulting the course readings and
+putting your skills into practice during
+the course exercises. Along the way, you'll
+encounter several knowledge quizzes where you can
+self-check your progress. Remember, you're not alone and considering a career
+as a developer, which is why you'll also
+work with course discussion prompts that help you to
+connect with your classmates. It's a great way to
+share knowledge, discuss difficulties, and grow a network of contacts and
+the development world. To be successful in this course, it is helpful to commit to a regular and disciplined
+approach to learning. Although it is an online
+self-paced course, you need to be serious about your studies and, if possible, map out a study
+schedule with dates and times that you can devote
+to attending the course. In summary, this course
+provides you with a complete introduction
+to API development and will set you on your way toward professional certification and a career in API development. Be sure to also check out the other courses in
+this learning path. Looking forward to working with you on your
+learning journey.

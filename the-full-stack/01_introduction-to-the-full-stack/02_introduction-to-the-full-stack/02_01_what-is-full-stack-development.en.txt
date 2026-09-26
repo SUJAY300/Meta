@@ -1,0 +1,62 @@
+Welcome to the full stack course. In this video, you'll learn what full
+stack development is, what a full stack developer does, and why it's an in
+demand role in today's job market. You might find yourself
+wondering what stacks are. They are a combination of software
+applications and components you use to fix a problem or create a project
+with a certain development focus. For example, there's the front end stack that's
+mostly focused on the user interface. Developers use different tools and
+programming languages like HTML, CSS, and JavaScript to build the front
+end of Web and mobile applications, and together they are the front-end stack. On the other hand, you build the back
+end of a Web application which is mainly the apps core with another set
+of programming languages and tools which include Python,
+Django, and DRF. And these comprise your back-end stack. The back-end stack also includes
+a data management system that consists of database applications to process data. This is generally referred to as the data
+stack and is part of the back-end stack. Let's examine these three
+stacks in more detail. The back-end stack has everything
+you need to create the back end of an application's core that deals with
+business logic, workflows, and data. Back-end development includes
+programming languages like Python or JavaScript frameworks like Django and
+utilities like DRF. And also builds tools, databases,
+and caching applications. Let's shift the focus to the front end,
+which has two distinct parts web and mobile. This stack includes everything you need
+to create a functional user interface of a web or mobile application that
+can communicate with the back end. To build the front end
+of a web application, you need to learn HTML,
+CSS, and CSS frameworks. You also need to know about client side
+programming languages like JavaScript or TypeScript and
+JavaScript frameworks like react. And lastly, you also have to
+be familiar with either iOS or Android development tools for both for
+mobile application development. Now, let's move onto the data stack. One of the most crucial parts of every
+application is the data stack or tools you use to successfully store,
+process, and retrieve data. This stack contains SQL or
+no SQL database engines, caching tools, and everything required to process data. In fact, MySQL, MariaDB, and
+PostgreSQL are some of the most widely used database engines you
+can learn to use for data stack. For caching, Redis is a popular and
+widely used solution. Finally, let's discuss the full stack
+which is the end to end solution for an application. It contains everything you need to
+create the applications core or the back-end process the data presented
+by APIs on web or mobile applications. A full stack developer is equally
+skilled in the back-end, front-end, and database stacks. Such a developer should have some
+essential DevOps skills to build and deploy an application to production,
+staging, and development servers. To be a full stack developer, you must
+learn everything that is required to create and
+deliver a functioning application. And you must also be familiar with
+a version control system like git for full stack development. It takes time to be a successful
+full stack developer, so you'll have to be a little
+patient with yourself. But what exactly are a full stack
+developers responsibilities? A typical full stack developer
+performs the following tasks, understand the complete project and
+take full ownership. Select a pro create tools for developing
+the front-end, back-end, and database, create effective user interfaces for
+web and mobile applications. Develop APIs, develop the back-end
+of applications, store, process, and retrieve data from databases,
+create servers and manage them for development, staging,
+and production access. Integrate with the CI/Cd workflows, ensure
+the responsiveness of web applications, work together with the graphics
+team to bring their ideas to life. Optimize applications for maximum
+performance and make sure applications follow the best security practices,
+that's quite a lot of responsibilities. So you now understand why some patience
+is needed to learn all of these skills. But don't worry with hard work and
+dedication you'll get there. In this video, you learned about different stacks in
+the application development process. You also learned about
+full stack development and the role of a full stack developer.

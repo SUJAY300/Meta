@@ -1,0 +1,395 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2">
+  Introduction
+ </h2>
+ <p variant="body1">
+  Creating a good API project can be challenging. You need to stick to the conventions, write proper error checks in your code, perform security checks, and make sure that your APIs are using processing power and bandwidth optimally. This all takes time and proper planning. But what happens if you don’t properly plan and execute your APIs?
+ </p>
+ <p variant="body1">
+  Let’s examine some of the consequences of a poorly designed API project.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Data breach
+ </h2>
+ <table columns="2" rows="2">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Reasons
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Consequences
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Poor security checks in the code, no authentication or authorization checks, improper file permission, and not using SSL
+    </p>
+   </td>
+   <td>
+    <p>
+     The most significant risk of a poorly designed API project is a data breach. Sensitive data can leak if you don’t have proper security checks in your code or if you didn’t implement proper permissions for the files stored on the server.
+    </p>
+    <p>
+     Also, if you are not using SSL for your API endpoints, attackers can steal user data before it reaches your API web server.
+    </p>
+    <p>
+     Such mistakes can cause severe financial damage and trust issues.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  <strong>
+   Fix
+  </strong>
+  : Add proper security checks in your code and create a solid authorization layer to prevent unauthorized access to your data. Always double-check these sensitive API endpoints before deploying them to production.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Data corruption
+ </h2>
+ <table columns="2" rows="2">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Reasons
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Consequences
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Poor security, no authentication or authorization checks, absence of data validation and sanitization of input data
+    </p>
+   </td>
+   <td>
+    <p>
+     Improper security checks and lack of a solid authorization layer can let any user with a valid authentication token access sensitive APIs and modify the data unexpectedly. Also, creating resources without proper validation checks can create malformed data in the database.
+    </p>
+    <p>
+     Such mistakes can cause severe data corruption and data loss beyond repair.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  <strong>
+   Fix
+  </strong>
+  : Besides security checks and a solid authorization layer, an API developer must validate and sanitize user data before processing and saving it.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Wastage of computing power and memory
+ </h2>
+ <table columns="2" rows="2">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Reasons
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Consequences
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Unoptimized code, improper business logic, lack of data validation, unoptimized SQL queries or model relationships, lack of database indexes, and no caching.
+    </p>
+   </td>
+   <td>
+    <p>
+     Poorly written API code can consume unnecessary computing power and memory with unoptimized code, algorithms and business logic. Unoptimized code, lack of proper database indexing and absence of caching can cause a huge load on the database server by running redundant SQL queries, which slows the whole system down.
+    </p>
+    <p>
+     Such mistakes can end up increasing the cost of your API infrastructure.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  <strong>
+   Fix
+  </strong>
+  : To avoid this, always spend time optimizing the code and double-checking your database-related code before deploying your APIs to production.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Wastage of bandwidth
+ </h2>
+ <table columns="2" rows="2">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Reasons
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Consequences
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Absence of necessary caching header API code, lack of caching policy on the reverse proxy and on the web server, and lack of pagination and filtering.
+    </p>
+   </td>
+   <td>
+    <p>
+     If your API project doesn’t follow good API development practices like implementing caching, filtering and pagination can cause your APIs to deliver unnecessary data more times than what is required.
+    </p>
+    <p>
+     Such mistakes can cause bandwidth wasting and end up charging extra bills in your monthly invoice, as well as poor performance from your API endpoints. Besides, the client applications need to spend more resources and time filtering unnecessary data every time.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  <strong>
+   Fix
+  </strong>
+  : To avoid this, always send proper caching headers with your API responses and implement filtering and pagination features so that the client application can request and receive only what they need.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Bad user experience
+ </h2>
+ <table columns="2" rows="2">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Reasons
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Consequences
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Not following the proper naming convention, not sending proper HTTP codes, not accepting
+     <var>
+      Accept
+     </var>
+     headers, absence of pagination, sorting, searching and filtering, and lack of proper error checking in code.
+    </p>
+   </td>
+   <td>
+    <p>
+     It creates a bad user experience. The client application developers must go through extra processing of the API data, extra code to create the final output, and a steeper learning curve to use your API, which was not necessary if the API was designed by following the standard conventions and best practices.
+    </p>
+    <p>
+     Not accepting the
+     <var>
+      Accept
+     </var>
+     headers means that the API client is not getting the API output in its required format. That will cause bad experiences because clients need extra time and unnecessary code to process the data on their end.
+    </p>
+    <p>
+     Also, sending wrong HTTP status codes can cause unexpected errors on the client applications and a bad experience for the users who will use those applications.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  <strong>
+   Fix
+  </strong>
+  : To avoid this, always follow the proper naming convention and implement data filtering, searching, sorting, searching and pagination features for your API endpoints. Always keep proper error checking in the code and write tests so that it doesn’t create unexpected 5XX errors on the server side.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Breaking client applications
+ </h2>
+ <table columns="2" rows="2">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Reasons
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Consequences
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Not following the proper versioning system
+    </p>
+   </td>
+   <td>
+    <p>
+     If you don't maintain the proper versioning system for your API project, it can immediately break backward compatibility, and the client application can stop working instantaneously.
+    </p>
+    <p>
+     The API can cause failure in the current client applications because your new API requires new request data and delivers new responses. So, their old code will not work anymore. They must refactor it and release a new version of their application as soon as possible.
+    </p>
+    <p>
+     Such disruption can cause a bad reputation and financial damage for both the API and client application developers.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Failure to manage the app
+ </h2>
+ <table columns="2" rows="2">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Reasons
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Consequences
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     Keeping everything in one big Django app, adding all business logic in the views.
+    </p>
+   </td>
+   <td>
+    <p>
+     Django apps can become big and become unmanageable over time if you keep adding functionalities in one single app. And then, adding new features or debugging an error will be painful and take extra time and effort.
+    </p>
+    <p>
+     Also, adding all business logic in the views file can lead to writing redundant code across multiple classes and function-based views.
+    </p>
+    <p>
+     Failure to manage an app over time leads to bad coding, patching of errors without test coverage and ultimately, poor performance from the APIs.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  <strong>
+   Fix
+  </strong>
+  : Distribute the features and functionalities to multiple smaller Django apps in a decoupled way. Additionally, put some business logic in the models which can be reused by the other parts of your API project.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Conclusion
+ </h2>
+ <p variant="body1">
+  Taking the time to properly design an API project from the start will save you time and effort over the course of a project. The consequences of a poorly designed API affect everyone who uses your API, including the API developers and client application developers.
+ </p>
+ <p variant="body1">
+  The knowledge you gained in this reading will hopefully remind you of everything you need to keep in mind to make your future API projects successful.
+ </p>
+ <p>
+ </p>
+ <h3 level="3" variant="h3semibold">
+ </h3>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

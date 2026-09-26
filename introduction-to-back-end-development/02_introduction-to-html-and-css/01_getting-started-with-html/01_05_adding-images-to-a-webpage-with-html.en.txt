@@ -1,0 +1,34 @@
+A picture is worth 1000 words as they say. I think you will agree that a website
+without pictures wouldn't provide a very good user experience. Especially websites about food. My example website about Little Lemon
+could certainly use a few images. In this video you will learn how to add
+images to HTML documents using the image or IMG tag as it is commonly known. I have to image files
+in my project folder, one name falafel.jpeg and
+another named salad.jpeg. Similar to what I did with document links, I have to specify the link to
+the image file using the image tag. Images are not inserted into web pages. Instead we use image tags in
+HTML to link to image files. The image tag then creates a placeholder
+for the image on the web page. To add an image tag,
+I type img and inside it I add the src attribute or
+source attribute as it is known. I type falafel.jpeg As a source for one image, And salad.jpeg, As a source for the other image. Let's save the file and
+open it in the web browser. The images are displayed but
+they are way too big. Luckily there are several ways
+to set the size of an image but in this video I will just
+demonstrate how to do this in HTML. Right after the sourcing in the image tag, you can specify
+the dimensions of an image. I first add the width attribute,
+And set it to 240 pixels. Then I add the height attribute and set it to 135 pixels. I'll set the other image
+to the same dimensions. Let's save and
+view it in the browser again. Much better, the images are smaller. But there is one important attribute that
+you should always include with image tags. It is good practice to add
+a short description for images. It helps improve accessibility for
+people using assistive technologies and it can also improve
+search engine rankings. You can add image descriptions with the
+alternative text attribute also known as the alt attribute. Still within the image tag after
+the dimensions attributes you can add the alt attribute. I will type a short description,
+A falafel and for the other image I will type,
+A pasta salad. I will save the Html file again and
+open it in the web browser. The all text is not displayed
+anywhere on the site but will be read by assistive
+technologies such as screen readers. Screen readers and other accessibility
+tools use the altar tribute to provide information to their users. Now you know how to add images
+to websites with the image tag. Little Lemon website is now ready for
+everyone who uses the web. Have fun while you make your
+sites colorful by adding images

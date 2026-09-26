@@ -1,0 +1,93 @@
+Upfront planning
+and organizing are crucial if you want a
+project to be maintainable. Putting in the initial work
+will save you effort down the road when you need
+to extend the project, add new features
+or debug errors. In this video, you will
+learn how to organize your API project
+with multiple apps. You can use that knowledge
+throughout this course and in all your future projects to make them more organized
+and efficient. First, it's necessary
+to split a big app into multiple apps to make sure that all
+your goals are met. Splitting a big app into multiple apps means
+it's as decoupled as possible with each app dealing with a particular set
+of relevant problems. Such splitting is
+an essential step to being productive with Django. Instead of creating an
+app that does everything, you should plan it properly, break down the overall
+aim into smaller aims, and then create
+multiple apps for each. Otherwise, what happens
+is that you add features to an app until you realize that it has become unmanageable. At that point, adding more features takes
+more time than usual, finding the cause of a
+bug becomes frustrating, and it takes so much time to
+deal with those issues that you eventually end up with
+a huge production block. Creating multiple apps for different aims can
+prevent such a block. But creating multiple
+apps also means that there are some other things that you have to pay attention to. Let's examine some of those now. You shouldn't use the
+global environment for your project dependencies. That's because not every project
+uses the same version of a package and not every
+project needs all of them. Using the global environment
+will create conflicts for the packages and create
+more issues than solutions. Always use a virtual environment
+to avoid such conflicts. That's exactly why
+you're using pipnv to isolate the dependencies in a virtual environment
+for your projects. By doing this, you avoid any
+potential conflicts and can ensure that your
+dependencies are exactly what you need
+for your project. Next, when you upgrade an API, it may break the existing
+app because the result of the new API might not be
+the same as the old one. For such upgrades,
+you should always use versioning and keep
+the old working API intact and launch
+the updated version so that the developers of the client app have
+enough time to update their apps to work properly
+with the new APIs. For the newer version, always create a separate app
+instead of adding everything in the old app because it will be hard to manage over time. Another thing you should do is always save your packages and their version numbers in a separate requirements
+dot text file. This is to ensure
+your app does not break when you deploy
+it to the production, or when someone else picks up your project and
+starts working on us. If you are using Pip, you can do is using
+the command pip3, freeze greater than sign
+requirements dot text. This is an example of a
+requirements dot text file, which contains a list
+of the packages with their version numbers
+used in your project. But if you are using
+pipnv, things are easier. It uses the piplock
+file to keep track of dependencies and complex inter-dependencies
+between the packages. You don't need a
+requirements.txt file with pipnv, however, when setting up your
+project for the first time, pipnv can process
+your dependencies from the requirements.txt file. Next, when it comes
+to your resources, it's much better to have separate resource folders
+for each of your apps. That way, you can
+avoid conflicts and efficiently manage
+your files when required. Plus, keeping your
+app-specific static files inside the app itself, just like your templates, is a smart way to
+stay organized. Something else to
+consider is that instead of creating a
+combined settings file, you may split the
+relevant settings into separate files and include them all from the main settings. Not only does this
+process prevent a single long file
+that is hard to edit, it also helps you to manage your settings and easily find the ones you
+are looking for. You can use Django splits
+settings for this purpose. The website link is in the additional resources
+at the end of this lesson. Last, instead of putting all the business
+logic interviews, take them to the related models. Doing so will help you
+write manageable code and organize the necessary
+pieces in one place. Placing all the essential
+business logic in the models will make
+them more powerful, decoupled, and reusable so you can write less code
+throughout your project. Let's briefly recap all the ways you can keep your
+project organized. You can split your app
+into multiple apps, use a virtual
+environment rather than a global environment for
+Python dependencies, create a new version of an
+app when upgrading an API, list your dependencies
+in a requirements file, have a separate resource
+folder for each app, split your settings into
+multiple settings files, and place business logic and
+models instead of in views. In this video, you
+learned how to keep your project more organized
+for better productivity, reusability, and
+easier deployments. You have also discovered
+some crucial points to keep your project manageable
+overtime. Well done.

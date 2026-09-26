@@ -1,0 +1,64 @@
+Cloud computing is an
+on-demand solution that hosts applications on the Internet and makes them
+accessible to everyone. It also enables people to
+use the computing resources hosted by a cloud provider and generate solutions quickly. In this video you'll learn
+more about cloud computing. Imagine you create an
+application that takes a single computer eight hours to process. That's a long time. To save some time you
+can either purchase a more powerful computer
+or you can purchase more than one computer
+and distribute the task across multiple computers
+to solve it even quicker. But what will happen after
+the solution is generated? Most likely the computers will sit idle until you
+need them again. This kind of expense can
+be very unrealistic, and you can avoid it by
+leveraging cloud computing. That's because you can use the computing units in a
+cloud provider on-demand. You use them for a
+specified amount of time and you only have
+to pay for what you use. This way you can use extremely powerful computers
+with the latest CPUs, GPUs, massive
+memory, and storage without needing to purchase physical computers that
+are very expensive. Cloud computing providers offer different
+computing resources that can be used to host applications or solve
+a problem on-demand. There are different types
+of cloud infrastructure that are used to deal with
+different kinds of problems. Let's examine three of them. First is the public cloud,
+which is for everyone. You can create an account and start using the service anytime. This cloud infrastructure works
+in a pay as you go style. The public cloud providers host the servers and create
+and maintain the network. You can use these
+computing resources anytime and discard them
+when your work is done, you will only be charged
+for what you use. There are several benefits
+to using the public cloud. Since these are mostly
+managed services, you can spend more time creating and running
+your application. It also has on-demand pricing
+and quick availability. And another benefit
+is scalability. You can quickly add
+a computing unit or nodes to your infrastructure
+to balance the loads. Some cloud providers even
+support auto-scaling. This means they will automatically deploy
+extra nodes when the traffic spikes
+and then remove these nodes under average load. Starting an application on the
+public cloud can be cheap. However, as your usage grows it can become
+expensive over time. Second is the private cloud. Unlike public clouds which
+are accessible to everyone, private clouds are not. It's a privately hosted
+cloud infrastructure used by applications that deal with sensitive data that
+require more security. A private cloud ensures that only authorized people
+can access the system. At the same time it offers
+everything necessary for internal applications to
+scale and perform properly. A private cloud is for the most part a
+tailored solution and comes with a subset of features compared to public
+cloud providers. Its main benefits
+are better security, control, scalability,
+and reliability. But since everything is hosted
+and managed by yourself, it can be costly to start with. Last is the hybrid cloud. It's a mixed cloud
+infrastructure where a part of it is hosted on a private cloud and some services are hosted
+on a public cloud. The public cloud
+remains connected to the private clouds so that the application can
+work correctly. The benefit of this type of
+cloud is that it can be less expensive than a
+private cloud because it also uses a public cloud. However, setting up a
+hybrid cloud can be very complex and may
+take a lot of time. In this video you learned about cloud computing and how it
+can help you to reduce costs. You also learned about
+public, private, and hybrid cloud infrastructures and their advantages
+and disadvantages.

@@ -1,0 +1,37 @@
+Congratulations on
+reaching the end of this APIs course and the
+back-end developer program. This course allows you to
+delve deeper into the process and concepts behind APIs
+and their infrastructure. You've worked hard to get here, learned a lot, and developed a lot of new skills
+during the course. You were able to demonstrate
+some of this learning and your practical API
+development skill set by creating your own
+book list API project, as well as a Little Lemon
+restaurant API project. In addition to this, following your completion of this course, you should now be able to, understand RESTful
+API development, use the Django REST framework to create APIs efficiently, serialize database models,
+convert and validate data, implement search, ordering,
+filtering and pagination, and control access
+to your APIs and put systems in place to ensure
+you maintain their health. What are the next steps? Well, this is the sixth course in the back-end
+developer program, and you have gained a
+valuable understanding of important concepts
+and practical skills. You probably realize that there's still more
+for you to learn. If you found this course helpful and wanted
+to discover more, then why not register for the next course on
+full-stack development. In this course, you will
+practice bringing together multiple skills to build
+a full-stack Django app. Throughout each of the
+courses in the program, you'll continue to
+expand your skill set, and in the final assessment, you will bring together
+all the skills you've learned to manage
+your own project. Once you've
+successfully completed all the courses in this
+back-end developer program, you'll receive a certificate. Certifications provide
+globally recognized and industry endorsed evidence of
+mastering technical skills. You've done a great job so far and you should be proud
+of your progress. The experience you
+gained so far will show potential employers
+that you are motivated, capable, and not afraid
+to learn new things. Again, congratulations
+on finishing this course and good luck with the rest of your
+educational journey.

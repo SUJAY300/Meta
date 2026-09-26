@@ -1,0 +1,56 @@
+In this video, you'll
+learn about how to apply the test-driven
+development methodology. In conventional testing, you follow the process
+of writing code and then writing test cases to ensure the integrity
+of that code. In test-driven
+development or TDD, the approach is the
+other way round, and test case is where you
+must begin your thinking. The steps involved
+are as follows. Write test cases with some
+functionality in mind. Write code in accordance with the test cases ensuring
+that they pass, and refactor code in
+case the tests fail. Let me demonstrate an example
+to design a test case that check students enrollment with data stored in a database. The test needs to check the integrity of
+the names entered. First, I'll demonstrate how
+to design the test case, and then write some code. Let's say I'm checking
+students enrollments for a class exam against the list of names that I already have. To keep things straight forward, I'm going to use a Python list with names instead
+of a database. I want to make sure
+that the names I enter are on the list. I also want to ensure
+data integrity, which means that I
+must be sure that the names are entered
+in the correct format. I've created two files. The first is test_findstring, which is my testing file, and the second findstring
+is my main file. I already have the pytest
+package installed, and because this is
+test-driven development, I'll write my test
+function first. I begin by importing a
+curses module that will help me check the A-S-C-I-I
+characters that are present. Then I import the pytest module, as well as the
+findstring module, which is my main file. I define a function
+named test_ is present, and I add an assert statement to check if the ispresent
+function works, because I'm going to use it
+to validate my data entry. Contrary to the conventional
+approach of writing code, I first write
+test_findstring.py, and then I add the test
+function named test_ispresent. In accordance with the test, I create another file
+named findstring.py, in which I'll write the
+ispresent function. I define the function
+named ispresent, and I pass an argument
+called person in it. Then I make a list of
+names written as values. After that, I create a
+simple if else condition to check if the passed arguments is present inside the list. The function called ispresent will check if the name passed
+is present in the list. Let me test my code. Note that the test has passed because the name
+Al is in the list. But this doesn't
+ensure the integrity of entries I may add. For example, I might not want numeric characters
+in the names. To address this issue, I write another function
+named test_nodigit. I'm going to update some of
+the code in my main program, findstring.py, in accordance
+with the newly added test. To do this, I create a function called no digit that
+matches my tests. Again, I create a simple
+if else condition. I run the code, and you'll note that one of the
+tests have passed, and the other one has failed. The name Al passed because
+it's on the list of names. But the value of N7 didn't pass because it contains
+a numeric character. I could also add more
+test cases and modify my code so that it's
+suitable for the test cases. I can repeat the cycle until
+I have no more failed tests. Congratulations. You've now explored the test-driven
+development methodology.

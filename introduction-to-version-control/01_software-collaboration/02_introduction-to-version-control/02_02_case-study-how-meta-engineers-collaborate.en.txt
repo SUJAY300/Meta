@@ -1,0 +1,75 @@
+An interesting fact about
+collaborating on projects that Meta is that engineers drive
+every project at Meta. They're in charge
+of coordinating with product data scientists, researchers on what we're building and the
+timelines for that. Whereas another company's
+product managers or leadership is often in
+charge of each project. I'm Laila Rizvi, I'm in back-end
+software engineer on Instagram calling
+in San Francisco. In this video, I
+hope you learn that effective collaboration
+is important for engineers' success at
+Meta and learning how to use version control at Meta
+is also very important. As a back-end engineer
+on Instagram calling, for my role I collaborate with
+other mobile engineers and my department on a
+daily basis so that we build the best
+products together. I also collaborate with
+Instagram messaging a lot because calling and
+messaging are closely tied. I also work with
+non-engineers like product and data scientists
+regularly as well. To collaborate effectively
+with my coworkers, we message each other on
+chat to unblock one another, but when something
+wants a meeting, we will schedule a meeting. Something wants a document, we collaborate
+together on a document with comments and leave
+notes for one another. Version control for Instagram
+is interesting because we have one giant
+monolithic repository for all of our
+code for back-end. That means that whenever
+I'm making a change, the code that I'm writing in is shared with every
+other Instagram team. It is risky in some ways, but it's also nice and others
+so I can reuse their code. The other thing
+that's interesting about version control at Meta is that any engineer
+can improve any change. At Meta, they're big on this saying that nothing at Meta
+is someone else's problem, so that means that
+any engineer can actually work on anytime
+that they want to work on. Version control at Meta
+is a little different than version control at
+a lot of other places while Meta has a giant
+monolithic repository for our code where we
+continuously release our code. Many other companies have smaller repository called
+micro-services for each team, so each team has
+their own code-base and only they work in it. They use branches so that
+they can take their code and merge it back with the master branch for their team or product. This is great for smaller
+teams in some ways, but it has its cons and that
+you might run into a lot of merge conflicts at Meta because we have so
+many engineers. They would be too many
+merge conflicts if we add branches for each
+team in the company. Some collaboration challenges
+for version control on my team is that because we
+use a monolithic repository, merge conflicts happen a lot. We try to write smaller changes so that we can
+easily revert them. We also try to add a lot
+of gatekeepers so that if we shift something to
+production on Instagram, we can easily turn it off without waiting
+for any rollback. We also share our code
+with Messenger calling. We also have to
+add a lot of tests so messenger doesn't break us. Git blame is a way
+for us to look at the revision history for files. It helps us so that
+if I'm looking at a line of code and I
+don't understand it, I can figure out who wrote that code and reach out to them. I can also figure out what
+they were trying to do. In that code, they write a message saying what
+the change is for. It's also great so
+that I can figure out what changes to revert if I'm
+trying to revert a change. I use it every single day when I need to understand
+what some code is doing, I'll reach out to the point of contact that wrote that code which is especially helpful at Meta where there's
+so many engineers, I often don't know the person
+I need to get a hold of, so seeing their code helps. In this video, I hope you
+learn that learning how to work together effectively
+and collaborating well, as well as learning how
+to use version control effectively is critical
+for success at Meta. Getting a diverse set of perspectives on what
+features you should build, who you should build for, what a feature might need or
+how it can improve is really helpful and the rewarding
+part is that your end result, your project ends
+up being better.

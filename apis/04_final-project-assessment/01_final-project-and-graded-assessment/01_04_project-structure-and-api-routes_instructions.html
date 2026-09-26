@@ -1,0 +1,1421 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2">
+  Introduction
+ </h2>
+ <p variant="body1">
+  This reading is an overview of the scope of the project, all the necessary endpoints, and notes that you will have to implement in the final project. This reading will help you to successfully complete the project so read it carefully and reference it while developing your API project to help you keep on track.
+ </p>
+ <h2 level="2">
+  Scope
+ </h2>
+ <p variant="body1">
+  You will create a fully functioning API project for the Little Lemon restaurant so that the client application developers can use the APIs to develop web and mobile applications. People with different roles will be able to browse, add and edit menu items, place orders, browse orders, assign delivery crew to orders and finally deliver the orders.
+ </p>
+ <p variant="body1">
+  The next section will walk you through the required endpoints with an authorization level and other helpful notes. Your task is to create these endpoints by following the instructions.
+ </p>
+ <h2 level="2">
+  Structure
+ </h2>
+ <p variant="body1">
+  You will create one single Django app called LittleLemonAPI and implement all API endpoints in it. Use pipenv to manage the dependencies in the virtual environment. Review the video about
+  <a href="https://www.coursera.org/teach/apis/g98MzcdAEeyduw6ktL3Xvw/content/item/lecture/sn2Ez/video-subtitles" title="">
+   Creating a Django Project using pipenv.
+  </a>
+ </p>
+ <h2 level="2">
+  Function or class-based views
+ </h2>
+ <p variant="body1">
+  You can use function- or class-based views or both in this project. Follow the proper API naming convention throughout the project. Review the video about
+  <a href="https://www.coursera.org/teach/apis/g98MzcdAEeyduw6ktL3Xvw/content/item/lecture/4BASB/video-subtitles" title="">
+   Function- and class-based views
+  </a>
+  as well as the video about
+  <a href="https://www.coursera.org/teach/apis/g98MzcdAEeyduw6ktL3Xvw/content/item/lecture/1jSCM/video-subtitles" title="">
+   Naming conventions
+  </a>
+  .
+ </p>
+ <h2 level="2">
+  User groups
+ </h2>
+ <p variant="body1">
+  Create the following two user groups and then create some random users and assign them to these groups from the Django admin panel.
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    Manager
+   </p>
+  </li>
+  <li>
+   <p>
+    Delivery crew
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  Users not assigned to a group will be considered customers. Review the video about
+  <a href="https://www.coursera.org/teach/apis/g98MzcdAEeyduw6ktL3Xvw/content/item/lecture/12F4H/video-subtitles" title="">
+   User roles
+  </a>
+  .
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Error check and proper status codes
+ </h2>
+ <p variant="body1">
+  You are required to display error messages with appropriate HTTP status codes for specific errors. These include when someone requests a non-existing item, makes unauthorized API requests, or sends invalid data in a
+  <var>
+   POST
+  </var>
+  ,
+  <var>
+   PUT
+  </var>
+  or
+  <var>
+   PATCH
+  </var>
+  request. Here is a full list.
+ </p>
+ <table columns="2" rows="7">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       HTTP Status code
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Reason
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      200 - Ok
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     For all successful
+     <var>
+      GET
+     </var>
+     ,
+     <var>
+      PUT
+     </var>
+     ,
+     <var>
+      PATCH
+     </var>
+     and
+     <var>
+      DELETE
+     </var>
+     calls
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      201 - Created
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     For all successful
+     <var>
+      POST
+     </var>
+     requests
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      403 - Unauthorized
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     If authorization fails for the current user token
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      401 – Forbidden
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     If user authentication fails
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      400 – Bad request
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     If validation fails for
+     <var>
+      POST
+     </var>
+     ,
+     <var>
+      PUT
+     </var>
+     ,
+     <var>
+      PATCH
+     </var>
+     and
+     <var>
+      DELETE
+     </var>
+     calls
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      404 – Not found
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     If the request was made for a non-existing resource
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2">
+  API endpoints
+ </h2>
+ <p variant="body1">
+  Here are all the required API routes for this project grouped into several categories.
+ </p>
+ <h3 level="3">
+  User registration and token generation endpoints
+ </h3>
+ <p variant="body1">
+  You can use Djoser in your project to automatically create the following endpoints and functionalities for you.
+ </p>
+ <table columns="4" rows="4">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Endpoint
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Role
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Purpose
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/users
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     No role required
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Creates a new user with name, email and password
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/users/users/me/
+     </var>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Anyone with a valid user token
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Displays only the current user
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /token/login/
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Anyone with a valid username and password
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Generates access tokens that can be used in other API calls in this project
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  When you include Djoser endpoints, Djoser will create other useful endpoints as discussed in the
+  <a href="https://www.coursera.org/learn/apis/lecture/bldmJ/introduction-to-djoser-library-for-better-authentication" title="Link to Introduction to Djoser library for better authentication video">
+   <u>
+    Introduction to Djoser library for better authentication
+   </u>
+  </a>
+  video.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Menu-items endpoints
+ </h2>
+ <table columns="4" rows="11">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Endpoint
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Role
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Purpose
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/menu-items
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer, delivery crew
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Lists all menu items. Return a
+     <var>
+      200 – Ok
+     </var>
+     HTTP status code
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/menu-items
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer, delivery crew
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+     ,
+     <var>
+      PUT
+     </var>
+     ,
+     <var>
+      PATCH
+     </var>
+     ,
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Denies access and returns
+     <var>
+      403 – Unauthorized
+     </var>
+     HTTP status code
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/menu-items/{menuItem}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer, delivery crew
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Lists single menu item
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/menu-items/{menuItem}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer, delivery crew
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+     ,
+     <var>
+      PUT
+     </var>
+     ,
+     <var>
+      PATCH
+     </var>
+     ,
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Returns
+     <var>
+      403 - Unauthorized
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/menu-items
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Lists all menu items
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/menu-items
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Creates a new menu item and returns
+     <var>
+      201 - Created
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/menu-items/{menuItem}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Lists single menu item
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/menu-items/{menuItem}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      PUT
+     </var>
+     ,
+     <var>
+      PATCH
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Updates single menu item
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/menu-items/{menuItem}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Deletes menu item
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  User group management endpoints
+ </h2>
+ <table columns="4" rows="7">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Endpoint
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Role
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Purpose
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/groups/manager/users
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Returns all managers
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/groups/manager/users
+     </var>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Assigns the user in the payload to the manager group and returns
+     <var>
+      201-Created
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/groups/manager/users/{userId}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Removes this particular user from the manager group and returns
+     <var>
+      200 – Success
+     </var>
+     if everything is okay.
+    </p>
+    <p>
+     If the user is not found, returns
+     <var>
+      404 – Not found
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/groups/delivery-crew/users
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Returns all delivery crew
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/groups/delivery-crew/users
+     </var>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Assigns the user in the payload to delivery crew group and returns
+     <var>
+      201-Created
+     </var>
+     HTTP
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/groups/delivery-crew/users/{userId}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Removes this user from the manager group and returns
+     <var>
+      200 – Success
+     </var>
+     if everything is okay.
+    </p>
+    <p>
+     If the user is not found, returns
+     <var>
+      404 – Not found
+     </var>
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Cart management endpoints
+ </h2>
+ <table columns="4" rows="4">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Endpoint
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Role
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Purpose
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/cart/menu-items
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Returns current items in the cart for the current user token
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/cart/menu-items
+     </var>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Adds the menu item to the cart. Sets the authenticated user as the user id for these cart items
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/cart/menu-items
+     </var>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Deletes all menu items created by the current user token
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Order management endpoints
+ </h2>
+ <table columns="4" rows="9">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Endpoint
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Role
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Purpose
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/orders
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Returns all orders with order items created by this user
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/orders
+     </var>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Creates a new order item for the current user. Gets current cart items from the cart endpoints and adds those items to the order items table. Then deletes all items from the cart for this user.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/orders/{orderId}
+     </var>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Returns all items for this order id. If the order ID doesn’t belong to the current user, it displays an appropriate HTTP error status code.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/orders
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Returns all orders with order items by all users
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/orders/{orderId}
+     </var>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Customer
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      PUT
+     </var>
+     ,
+     <var>
+      PATCH
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Updates the order. A manager can use this endpoint to set a delivery crew to this order, and also update the order status to 0 or 1.
+    </p>
+    <p>
+     If a delivery crew is assigned to this order and the
+     <var>
+      status = 0
+     </var>
+     , it means the order is out for delivery.
+    </p>
+    <p>
+     If a delivery crew is assigned to this order and the
+     <var>
+      status = 1
+     </var>
+     , it means the order has been delivered.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/orders/{orderId}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Deletes this order
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/orders
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Delivery crew
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Returns all orders with order items assigned to the delivery crew
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /api/orders/{orderId}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Delivery crew
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      PATCH
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     A delivery crew can use this endpoint to update the order status to 0 or 1. The delivery crew will not be able to update anything else in this order.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2">
+  Additional step
+ </h2>
+ <p variant="body1">
+  Implement proper filtering, pagination and sorting capabilities for
+  <var>
+   /api/menu-items
+  </var>
+  and
+  <var>
+   /api/orders
+  </var>
+  <var>
+   endpoints
+  </var>
+  . Review the videos about
+  <a href="https://www.coursera.org/teach/apis/g98MzcdAEeyduw6ktL3Xvw/content/item/lecture/h7QUx/video-subtitles" title="">
+   Filtering and searching
+  </a>
+  and
+  <a href="https://www.coursera.org/teach/apis/g98MzcdAEeyduw6ktL3Xvw/content/item/lecture/mEYFj/video-subtitles" title="">
+   Pagination
+  </a>
+  as well as the reading
+  <a href="https://www.coursera.org/teach/apis/g98MzcdAEeyduw6ktL3Xvw/content/item/supplement/oCL3M" title="">
+   More on filtering and pagination
+  </a>
+  .
+ </p>
+ <h2 level="2">
+  Throttling
+ </h2>
+ <p variant="body1">
+  Finally, apply some throttling for the authenticated users and anonymous or unauthenticated users. Review the video
+  <a href="https://www.coursera.org/teach/apis/g98MzcdAEeyduw6ktL3Xvw/content/item/lecture/rPE4B/video-subtitles" title="">
+   Setting up API throttling
+  </a>
+  and the reading
+  <a href="https://www.coursera.org/teach/apis/g98MzcdAEeyduw6ktL3Xvw/content/item/supplement/1h6WO" title="">
+   API throttling for class-based views
+  </a>
+  for guidance.
+ </p>
+ <h2 level="2">
+  Conclusion
+ </h2>
+ <p variant="body1">
+  Now that you have a better idea of the scope of this project with the essential API endpoints, it’s time to start coding. Good luck!
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

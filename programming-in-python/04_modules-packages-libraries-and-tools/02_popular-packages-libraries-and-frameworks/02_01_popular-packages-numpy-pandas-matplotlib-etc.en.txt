@@ -1,0 +1,62 @@
+Packages are bundled
+collections of modules in Python serving
+a specific purpose. In Python, there are currently tens of thousands of
+packages to choose from, and in this video, you will learn about some of
+the most popular. You can think of this
+collection of packages like a traditional
+real-world library. Each package is a
+book or magazine, and this library gets
+bigger every day. In programming, a package
+is a directory or folder, and in the same way, a module
+is a file or document. You import packages
+in the same way as a module using the
+import statements. Like with the import statements, it's important to remember
+that unless defined correctly, the import serves no purpose. For example, suppose you want to import a package named foo, the import statement on its own will not serve any purpose. It needs to be in a format
+like from foo import a, where foo is the
+package and a is the module containing
+the functions you want. Exploring the packages
+directory structure or referring to code blocks
+online can save time. To work with packages in Python, it's important to know that PIP is the default
+package manager, and Python Package Index, or PyPI is the package index where you can find
+unpublished packages. Python has an extensive
+collection of packages. As a developer starting out, it can be overwhelming, but it's important
+to understand what Python is most widely
+used for today. The major application areas
+for Python are data science, AI and machine learning, web frameworks,
+application development, automation, and
+hardware interfacing. With this in mind, packages can be grouped into categories. For example, built-in packages, data science, machine
+learning and AI, we and GUI development. Let's explore each
+of these briefly now starting with
+built-in packages. These are packages that
+don't need to be installed separately and can be used as soon as you've
+installed Python. Almost every project uses one or more of these
+built-in packages, so, it's worth getting
+to know them well. The most popular ones
+are OS, SYS, CSV, JSON, importlib, re, math, and intertools. In the world of data science, the most popular Python
+packages are NumPy, SciPy, NLTK, and Pandas. This's what we use for data
+exploration and manipulation. Other packages like Open CV and matplotlib are used for image processing and
+data visualization. Within the world of
+machine learning or ML and artificial
+intelligence or AI, the most popular
+packages are TensorFlow, PyTorch, and Keras. PyTorch and Keras are
+currently the most popular for deep learning and neural
+network implementation. There are other
+packages such SciPy, Scikit-learn, and Theano. Choosing which package to use will depend on the scale and scope of the project and how familiar you become with
+the packaging question. Let's move on to
+web development. Python today is
+primarily used for ML, AI, and web development. The most popular
+packages are flask, which is a lightweight
+micro-framework, and Django, which is a
+full-stack framework. Other popular web
+development packages include cherry pie, pyramid, beautiful
+soup, and selenium. There are also other
+packages for robotics, game development, and
+other specialized domains. For any domain you
+want to work in, you'll find several Python
+packages relevant to it. While no one package may be a perfect fit for your projects, the open source community of Python developers is working relentlessly to fill the gaps. As I begin a Python coder, most functions you need
+will be met by one package. To continue expanding your
+knowledge of Python packages, you should think of a
+project you'd like to create an experiment with the packages I've mentioned in this video. In this video, you learned
+about packages in Python. You covered built-in
+packages and some of the most popular
+packages in use today.

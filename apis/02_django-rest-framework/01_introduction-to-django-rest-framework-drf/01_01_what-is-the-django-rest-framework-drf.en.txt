@@ -1,0 +1,72 @@
+Django is a great framework
+for developing APIs, but there are always
+areas that can be improved to speed up
+development time. That's where Django Rest
+framework or DRF comes in. DRF is a toolkit built on top of the Django
+web framework. It comes with many helpful
+utility classes and objects that can help developers build robust APIs quickly. In this video, you
+will be introduced to the Django Rest Framework
+and you will learn the benefits of using
+DRF over plain Django. Let's examine how using DRF can save you time
+during development. DRF is a Django utility app that bridges your
+regular Django app, the Django framework, and the Object Relational
+Mapping or ORM Library, which communicates
+with the database. Although Django's built in templating system is great for developing web applications, DRF provides more
+functionalities. Because when it comes
+to API development, you need to be able to deal
+with other data types like JSON and XML and this is
+where DRF comes in handy. You will frequently need to retrieve data from the database, process it, and then represent it to your
+clients as mainly JSON. This conversion process
+is called serialization. One of the DRF's
+biggest benefits. With DRF, you don't
+have to worry about transforming your database
+models into a RESTful API. It takes care of
+that for you with its support for data
+conversion utility classes. Let's examine some benefits of using the Django Rest Framework. It's pretty straightforward
+to integrate DRF into your
+existing Django app. With just a few changes
+in the settings, you can have a fully
+functional Django app powered by DRF almost instantly. DRF comes with an
+API viewer that allows you to send
+different HTTP methods with data and
+evaluate the output without needing an external
+application like Insomnia. This API viewer has
+limited features, but it works when you want to quickly experiment
+with your APIs. DRF comes with its own
+request and response objects, which are wrappers of the
+regular Django HTTP response and HTTP request object, but offers more flexibility on processing data in and out. The status module has a list of human-readable
+HTTP Status codes. When you use the status
+module from DRF, you don't need to send
+status codes like 404 or 200 with your responses. Instead, you can use a readable representation
+like status, Status.HTTP_ 200_OK or
+Status.HTTP_404_NOT. FOUND. You can find
+a link to a list of all the status codes in the additional resources
+reading of this lesson, the Django Rest Framework's
+built-in view set classes, make it quick and easy to
+create a functional CRUD. You can extend the
+workflow if you need to. But for basic data manipulation, the view set from the
+Django Rest Framework works really well. You will have the
+full support for all the necessary HTTP
+methods out of the box. The DRF package comes
+with a number of built-in serializers to help with data conversion
+between models. Serializers also support converting other
+non-ORM objects. This can be a great time-saver. A serializers make it easy
+to convert complex data into native Python datatypes that can be quickly
+rendered into JSON, XML, or other content types. Serializers and DRF also provide a method called
+deserialization, which converts
+requested data and connects them back to
+the existing models. This deserialization
+process also validates the user input to
+ensure no data corruption. DRF also comes with
+great support for modern API
+authentication systems. Building an
+authentication layer is a complex process and
+usually takes time. But with DRF and some
+supporting packages, you can effortlessly develop an authentication system
+for your Django app. You can also enable social connection where your
+users can authenticate and authorize themselves using
+an external provider like Facebook and then
+consume the APIs. In this video, you have learned about the Django Rest Framework, also called DRF, and some of its
+benefits to help you quickly develop
+your API projects. Now it's time to
+get hands-on with installing and setting up DRF.

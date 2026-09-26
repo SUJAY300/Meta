@@ -1,0 +1,45 @@
+as a web developer you should try to
+ensure that everyone can access and enjoy the internet almost like
+an architect that needs to design a building with ramps and rails so
+that it is accessible by all. You need to build a website in
+a certain way to improve accessibility. When the Web Accessibility Initiative or WAI was launched in 1997. The creator of the World Wide Web. Sir, Tim Berners-Lee said the power of
+the Web is in its universality access by everyone regardless of
+disability is an essential aspect. Web accessibility aims
+to allow people with disabilities to understand navigate and
+interact with websites. A common misunderstanding is that it
+refers to visual disabilities but in fact it includes all disabilities
+that affect interaction with websites such as audio and
+visual disabilities, cognitive and neurological disabilities and
+physical and speech disabilities. The W3C. Web Accessibility Initiative
+developed specifications and supporting resources for accessibility. These are considered international
+standards for web accessibility. In fact web accessibility is becoming
+a requirement in many industries. In 2016. The European Union approved the web
+accessibility directive which requires websites and mobile applications of public
+sector bodies to be accessible to those with disabilities. Let's explore some examples of how
+accessibility is provided to those with different disabilities. People living with disabilities often use
+assistive technologies to aid them in browsing the web. Screen reader software
+can read the content of websites and everything that is
+happening on the device. Screen readers are used not only by
+blind and vision impaired users but also by those with reading or
+learning difficulties. Speech recognition software can turn
+spoken words into computer commands or dictate inputting text. This is useful for people who may
+not be able to use a mouse or keyboard due to physical or neurological
+disabilities. Subtitles and video scripts and videos provide assistance to
+those with audio and visual disabilities. There are many steps that you can
+take to improve accessibility. It is good practice to think of
+accessibility from the beginning of a project, it is a lot harder to rework
+the project to be accessible later on. If you use the correct html structure and
+appropriate elements as a foundation, it will greatly improve accessibility. In this
+course you will learn to structure your html properly and follow best practices
+to support assistive technologies for example having text that is not contained
+within proper tags like paragraph or heading tags makes it harder for assistive
+technologies to interact with the content. Similarly using multiple line
+breaks to break up text and add space also presents
+barriers to accessibility. These are just simple examples
+to improve web accessibility. However, in the future you'll probably
+develop very complex user interfaces and to make them accessible may
+not be as straightforward as just having correct html. Fortunately one of the tasks of the WAI
+is to define the accessible rich internet application or aria. Specification. The aria specification outlines different
+techniques to improve accessibility for complex web apps. Now, you know about different assistive
+technologies and that you should use the correct html structure and appropriate
+elements to improve accessibility.

@@ -1,0 +1,277 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p variant="body1">
+  Version control plays a crucial part in software development. As a developer, you will rarely work alone; you will collaborate with other developers to build and deliver software to customers. Whether you are working with a small team of two or spanning multiple large-scale projects, version control is the foundational tool that helps your team succeed.
+ </p>
+ <p variant="body1">
+  However, version control alone is not enough. It must be paired with clear workflows and automated procedures to ensure quality and efficiency. In this lesson, we will explore the common tools and strategies developers use alongside version control.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  The Software Development Pipeline
+ </h2>
+ <p variant="body1">
+  To understand how these tools work together, it is helpful to look at the simplest form of a professional software engineering pipeline.
+ </p>
+ <p variant="body1">
+  Typically, code moves through a specific lifecycle:
+ </p>
+ <p variant="body1">
+  <strong>
+   1. Write Code
+  </strong>
+  →
+  <strong>
+   2. Version Control (Merge)
+  </strong>
+  →
+  <strong>
+   3. Automated Tests
+  </strong>
+  →
+  <strong>
+   4. Staging (Review)
+  </strong>
+  →
+  <strong>
+   5. Live Production
+  </strong>
+ </p>
+ <p variant="body1">
+  The strategies below dictate how code moves through this pipeline.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Workflow
+ </h2>
+ <p variant="body1">
+  Using version control without a proper workflow is like multiple people trying to edit the exact same paragraph in a shared Wiki or Word document at the same time. Without a system in place, their changes will overwrite each other, causing chaos!
+ </p>
+ <p variant="body1">
+  For example, if you and a coworker edit the same file and submit it to the Version Control System (VCS) simultaneously, a conflict occurs. A good workflow establishes a clear process for resolving these conflicts so no work is lost.
+ </p>
+ <p variant="body1">
+  Workflows also act as a safety net. Imagine a junior developer joins your team. If your project runs a critical banking system, it is highly risky to allow them to submit code changes directly to the live product. To solve this, teams use
+  <strong>
+   peer-review workflows
+  </strong>
+  (often called Pull Requests), where a senior developer must review and approve the code before it is allowed to merge into the main project.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Continuous Integration (CI)
+ </h2>
+ <p variant="body1">
+  <strong>
+   Continuous Integration (CI)
+  </strong>
+  automates the process of merging code from multiple developers into a single, central repository.
+ </p>
+ <p variant="body1">
+  Instead of waiting weeks to combine their code, developers merge small changes frequently—often several times a day. Every time new code is merged, CI automatically compiles the project and runs automated tests. This ensures the new code does not break any existing features (preventing regressions) and keeps the software stable.
+ </p>
+ <h4 level="4">
+  <strong>
+   Continuous Delivery vs. Continuous Deployment
+  </strong>
+ </h4>
+ <p variant="body1">
+  Once code passes the CI testing phase, it needs to be delivered to the customer. This is where
+  <strong>
+   Continuous Delivery
+  </strong>
+  and
+  <strong>
+   Continuous Deployment
+  </strong>
+  come in. While they sound similar, there is one major difference:
+  <strong>
+   manual intervention vs. full automation.
+  </strong>
+ </p>
+ <p variant="body1">
+  <strong>
+   1. Continuous Delivery (Requires Manual Approval)
+  </strong>
+  Continuous Delivery is an approach where the code is automatically built, tested, and packaged so that it is
+  <em>
+   ready
+  </em>
+  for deployment at a moment's notice. It is often pushed to a "staging" environment for final checks. However,
+  <strong>
+   it does not go live automatically
+  </strong>
+  . A human (like a project manager or lead developer) must manually click a button to approve the release to the live production environment. This provides a high level of control and safety.
+ </p>
+ <p variant="body1">
+  <strong>
+   2. Continuous Deployment (100% Automated)
+  </strong>
+  Continuous Deployment takes the pipeline one step further. If a developer's code passes all the automated CI tests, it is
+  <strong>
+   automatically deployed to live production
+  </strong>
+  with zero human intervention. There is no manual approval step. This strategy is ideal for teams that prioritize high speed, frequent releases, and rapid feature delivery.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Comparison Summary
+ </h2>
+ <p variant="body1">
+  To easily remember the differences between these pipeline stages, use the table below:
+ </p>
+ <table columns="4" rows="4">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      Strategy
+     </p>
+    </th>
+    <th>
+     <p>
+      What does it do?
+     </p>
+    </th>
+    <th>
+     <p>
+      Human Intervention Required?
+     </p>
+    </th>
+    <th>
+     <p>
+      Final Destination
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <strong>
+      Continuous Integration (CI)
+     </strong>
+    </p>
+   </td>
+   <td>
+    <p>
+     Automatically tests and merges code into the main repository.
+    </p>
+   </td>
+   <td>
+    <p>
+     No
+    </p>
+   </td>
+   <td>
+    <p>
+     Main Code Repository
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <strong>
+      Continuous Delivery
+     </strong>
+    </p>
+   </td>
+   <td>
+    <p>
+     Prepares and packages code for release.
+    </p>
+   </td>
+   <td>
+    <p>
+     <strong>
+      Yes
+     </strong>
+     (Requires manual click to go live).
+    </p>
+   </td>
+   <td>
+    <p>
+     Staging Environment
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <strong>
+      Continuous Deployment
+     </strong>
+    </p>
+   </td>
+   <td>
+    <p>
+     Automatically releases the code to the customer.
+    </p>
+   </td>
+   <td>
+    <p>
+     <strong>
+      No
+     </strong>
+     (Deploys automatically if tests pass).
+    </p>
+   </td>
+   <td>
+    <p>
+     Live Production (Customers)
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Conclusion
+ </h2>
+ <p variant="body1">
+  By combining version control with CI/CD workflows, you can clearly see how code travels from a developer's local computer to a live product used by customers. While running a live software service involves many other steps, mastering these foundational workflows is the first step toward professional software engineering.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

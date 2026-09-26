@@ -1,0 +1,60 @@
+Let's try to solve a problem that may
+occur for managers or to restaurants, because the managers are busy
+running the restaurants, they have limited time to deal
+with the needs of employees. The current system for paying wages
+requires managers to update each other, every time an employee requests payment. Because this is cumbersome, they would
+like to implement an automated approach. So what can be done, fortunately there's a way to reduce
+the number of steps using instances. By the end of this video, you'll be able
+to explain what instance variables and methods are. You'll also know how to use them to
+change the state of an instant object. So let's write some code to help
+those busy restaurant managers. Let's start a new file
+called payment_info.py, in this file I'll create
+the class pay slips and initialize three variables in its
+called name, pay status and amount. I start by typing class pay slips, and
+then on the next line I call an init function with def double underscore init,
+and then select the triggered suggestion. For the variables I type each one in
+the format self.variable equals variable. Next I'll create two functions,
+one to display the status of the payment, another to update the status. The first function is written as
+death pay with self in parentheses, followed by self.payment
+equals yes on the next line. The second function is def status,
+and contains an if else statement. If self.payment doubly equals yes,
+return self.name plus is paid plus self.amount with
+str appended to the beginning. The second part of the statement is else
+return, self.name plus is not paid yet. Finally, let's create instances
+of this class for the employees. I'll call them Nathan and Roger. I typed the first instance Nathan
+equals pay slips and in parentheses, Nathan for name, no for
+payment and 1000 for amount. For roger I copy and
+paste this instance and set the values to Roger No and
+3000 respectively. I also need to make sure to pass these
+values inside the in its method, so I type name, payment and
+amount after self. Now I'm ready to call the instant
+method status to check the status of the payments. I write a print statement for
+Nathan.status parentheses and for Roger.status parentheses. When I run the code, the output all appears on one line
+which is not very presentable. I add a new line character between
+the items and the print statement, which is backslash n,
+this time the output is much cleaner. The output states that neither Nathan nor
+Roger have been paid, but let's say that one manager
+decides to pay Nathan. So I'll use the pay function
+to update the status. Remember that the pay function
+is set up to update the value of the payment variable,
+I type Nathan.pay parentheses and then copy and
+paste the last print statement. Above this line I type another print
+statement with the string after payment. I run the code once more and it now tells me that Nathan was paid 1000
+whereas Roger still has not been paid. That's a demonstration of
+instance methods in action. Now I'll describe the code
+to you in more detail. Now let's discuss what happened in
+that coding example in more detail. The two instance objects which are Nathan
+and Roger each have their own states. You may have noticed that when the
+instance method pay was called to change the state of Nathan,
+Roger was not affected. This is because the method inside
+the class is not affected. Rather it provides a separate
+blueprint to each instance, which can then be updated for
+that instance only. In the coding example I didn't print
+the variable values after calling the pay function, but if I did it would show
+that the payment instance variable for Nathan changed from no to yes,
+while Roger remained no. Now let's imagine that this code is
+a basis for an online payment system. It would allow either manager to click
+on the paid button for an employee, which then updates that employee status. No more back and
+forth calls, in this video, you learned how to use instance variables
+and methods to change the state of an instance object without
+affecting any other instances

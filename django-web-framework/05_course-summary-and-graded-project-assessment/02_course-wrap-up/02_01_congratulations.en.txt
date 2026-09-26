@@ -1,0 +1,28 @@
+You've reached the end of this Django
+course brought to you by Meta. You've worked hard to get here and developed a lot of new
+skills along the way. You're making great progress
+on your Django journey and you should now understand the principles
+of web application development with the Django framework. You were able to demonstrate some of this
+learning along with your practical Django skill set in the course assignment
+by creating a prototype for the Little Lemon website. Following your completion of this course,
+you should now be able to design a Django web application
+using Python, HTML and CSS. Evaluate interactive design
+using design methodologies and best practice principles. And describe and implement
+the HTTP request response cycle by creating views, routes and templates. You should also be able to describe and
+build a data model, to create database tables and
+dynamic web forms. Explore the Django template language
+to create dynamic web pages that display data stored in a database. And create, share and test your
+web application by using industry standard best practice and guidelines. The key skills measured in the graded
+assessment revealed your competency in those topics. So what are the next steps, this Django course has given you an
+initial introduction to several key areas. You probably realize that there's
+still more for you to learn. So if you found this course helpful and
+want to discover more, then why not register for the next course. Whether you're just starting out as
+a technical professional, a student or a business user, the course in projects
+proves your knowledge of the value and capabilities of the Django framework. The final assignment consolidates your
+abilities with the practical application of your skills in Django. But it also has another important benefit. It means that you'll have a real
+design that you can reference within your portfolio. This serves to demonstrate your
+skills to potential employers. And not only does it show employers that
+you are self-driven and innovative, but it also speaks volumes about you as an
+individual as well as your newly obtained knowledge. And once you've completed all the courses, you'll receive a Meta Backend
+developer certificate. Thank you, it's been a pleasure to embark
+on this journey of discovery with you. Best of luck in the future.

@@ -1,0 +1,30 @@
+The developer that wrote
+Python loved Monty Python's Flying Circus a TV show
+instead of the snake, the python, he thought the name Python was short and
+cryptic and he made it the language name. [MUSIC] Hi, I'm Layla Rizvi, I am a background software engineer on
+Instagram calling in San Francisco. I've been coding in Python for 10 years, it was the first programming
+language I learned. I use Python every single day,
+for my job at Meta, it's my favorite language to write in
+because it's so easy to use and simple. The first application I had to code
+in Python was to create a calculator. Since Python was the first language I
+learned my first application in python was a little tricky for me to build,
+learning how to indent right. How to do spacing, learning the syntax and
+learning what loops are, and all these core computer science concepts
+is very hard for me, but I tried for a while and it worked out. Some important ways that you have
+interacted with Python in your day to day activities likely include using Instagram
+using Facebook, using Google or Spotify. Python is such an ubiquitous
+language that you've likely used it, regardless of whether or
+not you know you've used it. Python is also used for TensorFlow, which is a machine learning framework
+that Airbnb uses to classify images, and some healthcare companies
+used to classify MRI data. At Meta, Python is used for
+the Instagram back end, it is used for ads machine learning algorithms. It is also used for production engineers
+who keep our services alive and running. You should go through the process of
+learning Python even though it might be challenging because it's
+an easier language to learn. It's simple,
+it has a lot of libraries that support it. So it also makes it
+easier to build more and more features because there's a lot
+of engineers that use it already. So it makes it easier to
+develop features quickly and you can see results a lot
+faster with Python. Thanks for
+watching the video with us today and good luck on your journey
+as a software engineer.

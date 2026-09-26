@@ -1,0 +1,33 @@
+You've made it to the end of the course. Why don't you take a moment
+to congratulate yourself. After all, you've learned a lot
+in this course, let's recap. In the very first week, you learned
+how APIs are used in the real world. Next up was a quick refresher all
+about http and https in which you covered http methods, requests,
+responses and status codes. You also learned how to set
+up visual studio code and how to use API clients like insomnia and
+tools like pipenv. After that, you learned about
+rest APIs best practices, key characteristics and benefits and
+the API request lifecycle. You then learned about access control and
+the difference between authentication and authorization. Authentication gives you access while
+authorization allows you to perform certain actions. Following this you created your own
+API and learned how to organize an API project by creating routes and
+using correct naming conventions. And you learned how to debug python
+scripts from VS code using the built in debugging tools as well as how to create
+mock APIs to develop your applications. You then learned how to install and
+set up Django REST Framework or DRF as well as how to create
+a basic API using DRF. You discovered how DRF can retrieve
+data from a database, process it and then present it as JSON, XML or
+other formats to your clients. Now that was important. And you learned more about the API view
+decorator and its benefits as well as how to use function and
+class based views to create API endpoints. Next, you learned more about
+the different types of serializers and how you can use them to convert and
+validate your data. In this section of the course,
+you also learned how to use the built in renderers in DRF to display API
+output in different formats. And in the third week you learned about
+access control and API maintenance as well as the concepts of filtering,
+ordering, searching and paginated. You also covered how to cache an API
+result in DRF as well as how to test and secure an API and DRF. Lastly, you learned more about
+token-based authentication in DRF and how to create user roles
+to ensure good security and how to use the Djoser library for
+the registration and sign in process. Now you're ready to tackle
+the graded assessment, The Little Lemon Restaurant API project. Good luck.

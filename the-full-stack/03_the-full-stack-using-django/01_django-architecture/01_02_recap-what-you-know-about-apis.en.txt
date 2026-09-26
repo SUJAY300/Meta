@@ -1,0 +1,86 @@
+Think about all the communication that
+happens between the different parts of an application. For example, making a booking
+on a restaurant website for a specific date and time. That communication is
+made possible by APIs. You completed a course on APIs, but a
+refresher will help you with the upcoming sections of this full-stack course. Let's begin. If you think back to
+the beginning of the API course, you'll remember that you started
+off with what HTTP and HTTPS are. And that HTTPS is better because data is
+encrypted on the client and server side. You also learned how HTTP communication
+requires a client requesting information and a server that responds
+to the request and serves the content. And you learned about the HTTP methods
+used to make API calls to instruct the back-end code how to deal with the
+resources as well as the HTTP status codes that give more information to
+the client about current HTTP requests. Following this,
+you learned about RESTfulness. Naming conventions and
+essential tools for API development. Remember, well-designed endpoint also
+conveys valuable information about its purpose which is helpful for developers
+and the project itself in the long run. Common naming conventions include
+use lowercase URI formatting, indicate hierarchical
+relationships with a forward slash, use nouns for resource names,
+and avoid file name extensions. You learned how to test
+your APIs with insomnia. A powerful rest API client that's
+free with cross-platform versions and a very user-friendly interface. Next, you cover the principles
+of API development. This included REST best practices,
+security, authentication, authorization, and access control. You also learned about how to organize
+your own projects as well as about XML and JSON response types. And by now you know that
+creating an API isn't enough. You also have to know how to debug it. And that's why you learned how to debug
+Python scripts from VS code using the built-in debugging tools. You also learned how to integrate the
+Django debugging toolbar in your project to debug your APIs. You learned that API mocking is a great
+way to imitate a real API endpoint. These mock APIs are used to test and
+develop applications because they provide you with a similar response
+you get from a real API endpoint. Next up was the Django Rest Framework and
+how you can use it to create APIs. Serialize your database models and
+convert, validate, and render data. DRF is a Django utility app that
+bridges your regular Django app, the Django framework, and
+the object-relational mapping or ORM library which communicates
+with the database. Just some of the DRF benefits are that you
+have a built-in API view at your disposal. You can use human-readable
+HTTP status codes and the most popular feature
+in DRF serializers. They are essential for
+converting objects and Django models into a more
+readable format like JSON or XML. And what's more, the serializers can also
+perform deserialization which you can use to convert user-supplied data into
+models to store them safely in a database. Like parsing JSON data and
+mapping it into an existing model. And you learned about different
+types of routers and DRF. How to auto-configure the URLs
+from class-based views and create function in class-based views. You learned about the advantages of
+class-based views like how you don't have to write as much code. That there's less code duplication and
+you can extend the classes and add features at any time. And you learned about the built-in
+renderer object in DRF, and how to use it to display
+different types of content. Next, you were introduced to the concept
+of filtering, ordering, searching, and paginating. This included learning that filtering
+is used to allow client applications to get access to specific
+data via APIs and that it is usually performed
+by passing query strings. And you learn how to order API
+results in both ascending and descending order as well as how
+to perform multiple ordering. Next, you learn how to paginate your
+restaurant menu items by specifying how many items you want to display per page. Developers use pagination
+to chunk results. Client applications can then
+decide the page number and how many records they want per page. Pagination helps the server to perform
+better by consuming less resources. You learned about caching too. Another way to optimize overall
+performance by serving saved results instead of creating a fresh one
+every time it is requested. You learned about data sanitation and
+that it is important from a security perspective because unsanitized
+data can cause vulnerabilities. You learn that API security is
+crucial because they give third-party clients access to your databases. You learned how to build
+token-based authentication in DRF by creating a simple registration and login API that use the generated
+tokens to authenticate API calls. But remember relying only on
+authentication checks will not be sufficient to protect your data. You must also create and check privileges
+like if the authenticated user has the authorization to perform this action. Access control is all about
+setting roles and privileges for users to make sure only the right
+users have access to data. And that's why you learned how to
+create different user roles in DRF. You also learned about the Djoser library
+and what the benefits are of using this library over DRFs built-in
+authentication system. You now know about new authentication
+endpoints introduced by the Djoser library for the registration and sign-in process. When it comes to security. Another way you can keep your API
+secure is to use a signed URL to limit access to a resource for
+a specific period of time. Another important topic that we covered
+is how to set up API throttling. Using the two throttling classes in DRF,
+you can control how often APIs can be accessed in a certain amount of time by
+unauthenticated and authenticated users. And that's it. Conceptually, APIs may only make
+up a small segment of full-stack, but it's like a bridge that connects
+the different components of an application together and
+integrates it into a single unit. And that's why it's important that
+your API knowledge is up to date. So if there's anything you
+think you should revise, please return to the API course material
+before proceeding with this course.

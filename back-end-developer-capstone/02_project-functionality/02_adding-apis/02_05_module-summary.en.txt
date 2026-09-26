@@ -1,0 +1,29 @@
+You've completed
+Module 2, great work. In this module, you revise
+several concepts related to models and stored
+procedures and adding APIs. With this revised knowledge, you are now able to
+connect the backend to the database and implement the menu and table booking APIs. This will all assist you in your design and development of the little lemon reserve a table functionality
+of the website. In the first lesson
+of this module, you revised how to work with
+models on stored procedures. You recapped the
+concepts of models, migrations, and object
+relational mapping. One practical example of their importance is that
+the programming language of the framework can
+manipulate the database without the need to write SQL to interact
+with the database. Next, you recap the configuration options for setting up a MySQL database, and completed an
+exercise setting up a MySQL database connection and testing that
+it's up and running. In the next lesson
+of the module, you revise how to
+work with APIs. You recapped the Django
+REST framework and its features for designing
+APIs for the project. DRF allows you to
+create APIs much more efficiently because it can retrieve data from the database, process it, and then represent it to your clients as JSON, XML or other data formats. Just some of the DRF
+benefits are that you have a built-in API viewer
+at your disposal. Throughout this module,
+you had an opportunity to complete some
+hands-on exercises. They included setting up
+the MySQL connection, setting up the models, querying the stored procedures, setting up the menu API, and setting up the
+table booking API. Now that the project
+functionality is covered, you're ready to move on. In the next module, you'll code some specific
+functionality to secure and test the little lemon
+web application. Great work.

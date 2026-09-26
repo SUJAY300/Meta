@@ -1,0 +1,84 @@
+Like the built-in
+token system in DRF, you can also use JSON
+Web Token or JWT. A popular token system
+for API authentication. In this video, you'll
+learn how to implement JWT in your DRF API project. To implement JWT
+based authentication for your API endpoints, you need the
+djangorestframework-simplejwt package. Activate the virtual
+environment of your project using pipnv shell. Now run the command
+pipnv install djangorestframework-simplejwt
+tilde equals 5.2.1. Go to your settings.py
+file and add rest_framework_simplejwt in
+the installed apps section. Next, go to the default
+authentication clusters in the rest framework
+session in your settings.py file and add the JWT authentication
+classes to this list. Then input some
+essential classes from the rest framework, simple JWT views module. The simple JWT package needs some API
+endpoints so that it can exit the username and password and generate
+the JWT token. To enable those endpoints, open the main URLs.py file and add these two lines in
+the URL patterns, array. Essentially token obtained pair view, generous the token. That's it. Your project is now ready for JWT
+authentication. It's time to move over to
+insomnia to create a JWT token. You do this by sending the
+username and password in an HTTP post call to the
+endpoint API4/token. Two tokens are returned
+as a response. Keep a note of these two tokens so you can use them
+later in this process. There are two essential
+tokens involved in JWT. One is an access token which the client will use to
+authenticate to the API calls. This access token expires
+after five minutes in simple JWT and the
+other is refresh token, to regenerate the access token. Refresh tokens will be discussed a bit
+later in this video. You can specify the
+period after which the access token expires
+in the settings.py file. But it's always a good idea to keep this expiry video short. When this access token expires, the API calls can no longer authenticate
+with the access token, but that doesn't mean that the client needs to login again. They can use the
+refresh token from the previous call to regenerate
+an access token again. Then you can use these regenerated
+access token to authenticate an API call again. This is a security measure
+involved with JWT. It's important
+because you cannot manually let an
+access token expire. If you need to prevent someone from regenerating
+the access token, you can blacklist the
+refresh token so that it cannot be used anymore.
+But more on this later. Let's copy this access
+token in insomnia, create a new HTTP request to the endpoint API4/secret and is authenticated class already
+protects this endpoint. Next, click on the "ALT" tab in insomnia and select "Bearer", paste this access token in the token field and
+send the request. Now, the secret message displays JWT authentication is
+working perfectly. Wait for five minutes and just hit the "Send"
+button again. DRF is telling you
+that this access token is expired and is
+no longer valid. Let's regenerate the access token using the refresh token. Create another HTTP
+post call in insomnia. This time, the endpoint should
+be API4/token4/refresh. Click on the "Body"
+tab and select "Form URL Encoded" type refresh as the key and paste the previously saved
+refresh token as value. Hit the "Send" button. A new access token
+has been generated. The client can now
+use this access token to make authenticated
+API calls again. Finally, let's explore
+how to blacklist a token. Remember, you cannot manually let a JWT access token expire. If you need to
+block a client from generating JWT access token, you can do this using a utility blacklisting app provided by the
+simple JWT package. This app will be used to
+blacklist the refresh token so that it cannot generate
+an access token anymore. First, add this line of code in the installed apps section in the settings.py file restframework_symbolJWT.token_blacklist. To use this token blacklist app, you need to run some migrations. Stop the web server and run
+this command in the terminal. Python manage.py, migrate. After the migration is done, rerun that web server again. Now go to the main
+URLs.py file and import token black list view class from the
+rest framework, simplejwt.views module, and add some code to the URL
+patterns path to enable this token
+blacklist API endpoint. Now create a new
+HTTP post request to the endpoint
+API4/token4/blacklist. Then click on the body
+tab and add refresh as the key and the previous
+refresh token as value. Hit the send button. DRF will return an empty
+response, but that's okay. Now this refresh token
+has been blacklisted. Next, try to
+regenerate this access token with this blacklisted
+refresh token. What happens? DRF now tells you
+that you cannot use this refresh token because
+it is blacklisted. That's everything you
+need to know about using JWT token for API authentication
+in your DRF projects. You'll learn about JSON
+Web Token or JWT in this video and how to use JWT tokens to
+authenticate API calls. You also learn how to
+regenerate access tokens using a refresh
+token and blacklist or refresh token if needed. With this knowledge,
+you are one step closer to creating secure
+APIs. Well done.

@@ -1,0 +1,278 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Overview
+  </strong>
+ </h2>
+ <p variant="body1">
+  Testing is the process of validating the result of an operation against an expected output. Django’s test framework internally uses Python’s unit test package.
+ </p>
+ <p variant="body1">
+  In this exercise, you will write the unit tests for satisfactory behavior of models and the views you have defined in the Menu API.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Scenario
+  </strong>
+ </h2>
+ <p variant="body1">
+  In your restaurant app, you already have built the
+  <var>
+   Menu API
+  </var>
+  and
+  <var>
+   Booking API
+  </var>
+  . You will write the model test in
+  <strong>
+   test_models.py
+  </strong>
+  and view test in
+  <strong>
+   test_views.py files
+  </strong>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 1
+  </strong>
+ </p>
+ <p variant="body1">
+  When you create the app, an empty
+  <strong>
+   test.py
+  </strong>
+  file is created in the app package folder. Go ahead and delete it.
+ </p>
+ <p variant="body1">
+  In the root folder of your Django project (the one that contains manage.py), create a new folder with the name
+  <var>
+   tests
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 2
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the definition of the
+  <var>
+   Menu
+  </var>
+  model class.
+ </p>
+ <p variant="body1">
+  Add a
+  <var>
+   __str__()
+  </var>
+  method that returns a string representation of the model instance.
+ </p>
+ <pre language="python">#add the following method in Menu class
+def __str__(self):
+        return f'{self.title} : {str(self.price)}'</pre>
+ <p variant="body1">
+  <strong>
+   Tip:
+  </strong>
+  As you have made changes to the model, you must run the migrations to sync the changes.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 3
+  </strong>
+ </p>
+ <p variant="body1">
+  Create a new file in the
+  <strong>
+   tests
+  </strong>
+  folder named
+  <strong>
+   test_models.py.
+  </strong>
+ </p>
+ <p variant="body1">
+  Import the
+  <var>
+   TestCase
+  </var>
+  class from the
+  <var>
+   django.test
+  </var>
+  module.
+ </p>
+ <p variant="body1">
+  Use it as a base and declare a test class, for example, MenuTest.
+ </p>
+ <p variant="body1">
+  Define an
+  <var>
+   instance
+  </var>
+  method that adds a new instance of the Menu model.
+ </p>
+ <p variant="body1">
+  Call the
+  <var>
+   assertEqual()
+  </var>
+  method of the test class to compare the string representation of the newly added object with the anticipated value.
+ </p>
+ <p variant="body1">
+  For example:
+ </p>
+ <pre language="python">from django.test import TestCase
+from .models import MenuItem
+
+# TestCase class
+class MenuItemTest(TestCase):
+    def test_get_item(self):
+        item = MenuItem.objects.create(title="IceCream", price=80, inventory=100)
+        self.assertEqual(str(item), "IceCream : 80")</pre>
+ <p variant="body1">
+  <strong>
+   Step 4
+  </strong>
+ </p>
+ <p variant="body1">
+  Open a command terminal in VS Code. While in the project container directory, run the test with the following command:
+ </p>
+ <pre language="python">python manage.py test</pre>
+ <p variant="body1">
+  Check the result of the test if it returns as
+  <var>
+   OK
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 5
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the
+  <strong>
+   test_views.py
+  </strong>
+  file in tests folder.
+ </p>
+ <p variant="body1">
+  Write a
+  <var>
+   MenuViewTest
+  </var>
+  class that subclasses the
+  <var>
+   TestCase
+  </var>
+  class.
+ </p>
+ <p variant="body1">
+  Use the
+  <var>
+   setup()
+  </var>
+  method to add a few test instances of the
+  <var>
+   Menu
+  </var>
+  model.
+ </p>
+ <p variant="body1">
+  Next, add another
+  <var>
+   test_getall()
+  </var>
+  instance method to retrieve all the
+  <var>
+   Menu
+  </var>
+  objects added for the test purpose.
+ </p>
+ <p variant="body1">
+  The retrieved objects must serialized, so make sure the method runs assertions to check if the serialized data equals the response.
+ </p>
+ <p variant="body1">
+  Run the test again with the command
+  <var>
+   python manage.py test
+  </var>
+  <strong>
+  </strong>
+  and verify if the test returns as
+  <var>
+   OK
+  </var>
+  .
+ </p>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Conclusion
+  </strong>
+ </h2>
+ <p variant="body1">
+  In this exercise, you created and ran the unit tests to test the model and view for the
+  <var>
+   Menu
+  </var>
+  API.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

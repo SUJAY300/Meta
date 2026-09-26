@@ -1,0 +1,107 @@
+It takes approximately 39 months
+to find software engineers and developers in tech hub cities in the US. The interviews that you will go through
+sometimes have skills that you don't normally use in your day to day job. It's not just about how well you can
+program, it's also about how well you're displaying a lot of interpersonal skills,
+how well you're able to drive projects, how well you're able to
+collaborate with others. You don't need to worry
+about showing up in a suit. You really can just kind of
+wear whatever be yourself, and focus on the technical
+aspects of the interview. [MUSIC] Hi, my name is Julie, and I am a software engineer on the IG
+shopping team at Meta New York. Hi my name is Moxxy Herrera. I use they/them pronouns, I'm a software
+engineer in the social impact award and Meta, and I work at the Menlo Park office. My name is Chanel Johnson. I work remotely in Maryland for
+Meta, and I'm a software engineer for the Facebook app core architecture team,
+where we work on infrastructure for the Facebook mobile app. My name is Mari Butilando,
+I am a software engineer for the Web3 Monetization team within Meta,
+and I work on different ways creators and influencers can make a living off
+of the Facebook platform using Web3 technologies like NFTs and
+Cryptocurrency. I think it can be broken
+up into three general areas. One is the application process,
+one is actual interviewing, and one is the calibration process when they
+discuss your packet and give you an offer. In terms of the actual interview process, it's broken up into technical
+architecture, and behavioral. For the application phase, its recruiters kind of screening
+your resume, your work experience. The recruiter then will meet
+with you and talk with you, or to get a better idea about your skills,
+your experiences, what you're looking for to make sure that you're a good fit for
+the role. Phase two is
+the technical aspect of it. There can be a range of 1 to 4 or
+5 or even more interviews there. So this could be things like a coder
+pad interview where you're on the phone or over a voice chat with a recruiter or a engineer to kind of go through
+some technical challenges. You'll have some behavioral interviews,
+where people are just going to engaging with what it's like to work with you,
+how do you solve problems. And then oftentimes their architecture
+interviews as well, where you build kind of an end to end products,
+discuss the full architecture for that. Phase three, the final phase is when
+everyone involved in the process kind of gets together and discusses how
+you did throughout the phases, and if they should extend an offer to you. If you decide to take on the offer,
+you go through what is called boot camp process, where you get to learn
+the ropes of how it is working at Meta. And also sit with the teams that you're
+interested in, so that you know what choice you end up making, and you get to
+choose ultimately what team you go in. If you are interviewing for a specific
+pipeline like IOS, android, or ML, or AI, you should expect some questions
+that deal with that specific domain. So, for example, in my case,
+I was interviewing for the IOS pipeline. So in addition to those algorithms and data structure questions that I got asked,
+I also got asked some IOS questions, or some questions that I deal with in my
+day to day work as an IOS engineer. So you can imagine similar things as
+if you were a an android engineer or if you're an AI or ML engineer. I think in the application phase is
+when a lot of candidates get screened out, what can really help there is crafting
+your resume and focusing on real experience, that will really help when
+it comes to software engineering roles. So, if you don't have job experience,
+totally fine, work on side projects and that will show both concrete experience
+and a drive that you're actually interested in working on the role
+that you're applying for. I will see the coding interview portion
+is where a lot of people get disqualified. There's going to be many reasons for
+it, but the biggest reason I see is that sometimes
+when you're writing out your code, the person being interviewed is not
+explaining their thought process, what's going on,
+they're not asking clarifying questions. Sometimes the interviewer gives
+them a hint they're not listening. So, communication skills is where
+I also see a lot of people getting disqualified in the coding
+interview portion. Some candidates I see do not
+have a structured process for answering problems they may
+not have heard or seen before. And they kind of just go cowboy coding and just start coding without even knowing
+what they're supposed to solve. So I think having a robust problem solving
+process for questions you may or may not have seen before, is very important
+doing well in in these coding interviews. One common problem is people
+get stuck and they get so wrapped up in it, that they're
+unable to kind of take feedback. What interviewers are looking for,
+isour holistic approach to the problem. So it's not just about solving the
+problem, it's about how you go about it, it's about collaboration
+with the interviewer. So that's a really important
+piece to remember. >> The biggest thing that I've
+learned is to really be myself. I found it much more successful and way less stressful to just be
+who I am unapologetically. But it also means whenever I
+come forward as a candidate, like I am presenting myself as I am and
+not trying to hide anything given that this is who I want to be at work,
+this is who I want to be in my life. And I think having that mentality
+has made it so much easier, regardless of the outcome of the process. Think really hard about what you want,
+and choose companies that
+resonate with what you value. There are other things other than
+compensation and just the prestige of a company that matters, and
+how happy you are with the company. So make sure you make a list of those, and consider that whenever
+you're choosing companies. My biggest piece of advice is just
+going through as much practice as possible. So, two main ways to do that, I think
+is one while you go through lead code problems or mock interviewing,
+doing the whole thing and to end. Even if you're unable to solve
+the problem, you get stuck, you don't know what to do, finishing
+it out as if it's a real interview. It'll give you really good practice for
+when you actually get to the interview. And then the second thing is apply
+to as many places as possible. It gives you the best chance
+of getting interviews, and then once you're in a real
+life interview situation, it's a lot easier if you've already
+had experience doing that before. It really helps calm the nerves, and
+it it helps you get more practice in. There's not all just only like one
+particular person we're looking for when it comes to tech. We want different backgrounds and
+different perspectives and experiences, because that's the only way we're
+going to make our products better. We need that, it's such a rewarding
+process to make an impact and actually for the better, and
+just meet with people and keep learning. You will never get bored at this job,
+never. >> As you start to interview,
+you will face many ups and downs, and these are all experiences
+you can learn from. If you keep pushing, keep learning,
+you will eventually get to a role where you can start an amazing
+career in technology. The amount of preparation
+you're going to do, is going to lead you to having a really
+big impact in the world because software is just everywhere and it's used by
+millions and billions of people. So, I think it's well worth
+the preparation, the amount of effort it takes to land a job at a very
+influential and impactful tech company.

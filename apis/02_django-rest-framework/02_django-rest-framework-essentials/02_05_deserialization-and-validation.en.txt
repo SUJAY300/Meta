@@ -1,0 +1,57 @@
+Deserialization is the opposite
+process of serialization. And it happens when the client sends
+some data to your api endpoints and DRF maps those data to an existing model. This video will teach you
+how to diserialize and validate the request data in your api. Let's start with a little lemon
+project where you left off. Open the project in VS code editor and head to the little lemon
+api views dot by file. Currently both the menu items and the single item functions only
+accept the http get call. Go to the menu items function and
+add post method support by adding get and post in the api view decorator function. You must check the request type
+before processing the request type. If it's a get request retrieve the
+records, otherwise create a new record and save it using the deserialization process. I will invent the current code
+inside an if else block one for the get request and
+one for the post request. To deserialize the rico's data you
+have to pass it to the serializer. So let's do that with her
+menu item serializer. The request data must include
+all the essential field data. If any of this information is
+missing it should raise an error so that client can send the request
+again correcting the payload. The data validator is built
+into the serializer and it can be invoked using easy valid method. If everything is okay,
+the good execution will continue. You can access the validated data
+using the validated data property of the serializer or you can save the record in the database by
+calling the safe method of the serializer. To save the record simply
+called the safe method. Using the data attribute of the serial
+measure you can access the record after saving it. Please be error that you cannot access
+this data attribute until the safe method is called. If you need to access the data before
+calling the safe method you can use the validated data attribute. Now visit the menu item standpoint and
+scroll down to the context area. You'll make a post call with the jets and
+payload. Click the post button but there is an error saying
+the category field is required. Why is that? Open the little lemon api
+serializer start by file and check the line where you
+included the category serializer. This category field should be read
+only because it is only needed to show the category
+details in the get call. To solve the problem you have two options,
+comment out this line which will hide this field from the get
+request but you do not want that. So let's rather go with the second option
+which is marking this field as read only. Now come back to the menu items and
+point and submit another post request
+with Jason bellowed. Excellent, everything is
+working fine this time but the records are stored in the database
+with category equals to 1. So what if you want to save a menu
+item with a different category id? To do this,
+open the serializer dot buy file and add this new category id field
+above the meta class and add category underscore id field to
+the field list in the middle class. Now if you revisit the menu items and point notice that both the category and
+category id fields are present. But something is off because the id
+of the category is already present in the category details and there is no
+need to display the category id again. So the question is how can you hide
+the category id field from only the get api calls in other words how
+do you make it a re write only field. Open the serializer dot by file and add a right only equals true
+argument to the category id field. Then make a post request with
+an optional category id and revisit the menu items endpoint. Now there is only one category field. Great, you now know how
+to use deserialization in your DRF project but
+here is a helpful tip. Instead of making one serializer
+to do everything, you can create multiple serializers and use them
+separately in your get and post calls. In this video you learn how to use the
+deseriaization to convert the http request body into a model instance, validate it
+and finally store it in the database. You also learn a helpful trick for hiding
+a specific field from a get request, which can come in handy over time.

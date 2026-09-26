@@ -1,0 +1,96 @@
+Testing is an
+essential component in quality assurance and
+ensures our software, applications, and websites
+work as expected. For example, suppose
+you've built your own website and it has a few 100 businesses every day. One day an article you've
+published goes viral, suddenly a million people visiting your site and
+the website crashes. Another scenario
+is online forms. We've all faced situations
+where we fill out a form and a prompt appears telling us that we have made a mistake. For example,
+accidentally entering letters in space provided for credit card
+numbers or missing special characters
+and passwords. This type of data validation
+is even more critical, especially in the domains
+of banking and finance. In this video, you'll
+learn about testing and it's important in the software
+development life cycle. But what exactly is testing? Well, software testing is a process of evaluating
+and verifying the various software
+applications and products in terms
+of performance, correctness, and completeness. It helps identify bugs, gaps in the product, defects, and missing requirements
+with set expectations. In the early days of computers, software developers relied
+heavily on debugging, a process for removing and
+detecting potential errors. After the 1980s
+software grew in size, several different testing
+types of products also grew in parallel depending
+on the requirements. Testing was primarily done in the later stages of the
+software lifecycle. Now it's evolved to be integrated at the
+early stages as well. The efficiency of
+any testing type is dependent on how
+well-written it is. The ideal testing
+scenario is to have the least tests written to find the largest
+number of defects. While software testing is
+important in any scenario, the real test of the products comes when it's
+launched the market, there, it's judged by
+stakeholders and users. We live in the Internet
+age, products with bugs, especially in the early
+stages make consumers lose interests very quickly as many alternatives are available. This is where testing
+plays an important role. Here are a few reasons
+why it can help. Testing helps detect
+poor designs, change inefficient
+flow or functionality, address scalability concerns, and find security
+vulnerabilities. Testing helps provide AB testing to find the best
+suitable options, address compatibility with
+platforms and devices, provide assurance
+to stake holders, and a better experience
+for end users. There are a few good
+practices that must be followed in testing to
+achieve optimal results. Test code allowing
+reusability of tests. Tests must be traceable
+to the requirements set. Tests written must
+be purpose-driven, efficient, and allow
+for repeatability. These testing techniques
+can then follow a procedural approach according to the type of testing used. The testing lifecycle
+in general can be broadly described
+as planning, preparation, execution,
+and reporting. The steps involved in
+achieving this can include writing scripts
+and test cases, compiling test results,
+correcting defects based on them, and generating reports
+from our test results. You've already learned
+about test cases. They are a general sets of
+actions containing steps, data, pre and post-conditions written for a specific purpose. This purpose can
+improve functionality, flow, and finding defects. A well-written test case eventually provides
+good coverage, reusability, better
+user experience, reduces costs, and increases
+overall satisfaction. As the tech industry
+is ever-growing, several test and
+categories, types, tools, and products have evolved, which are tailored to best meet the requirements of the
+software in question. For example, a webpage will have different testing needs
+than an Android-based game. Even among web pages, a social media page
+will differ from one, say, from financial management. Testing can be categorized by
+several different factors. For example, depending
+on the amount we know about the
+internal implementation, we can call it black box
+or white box testing. There are also many testing
+types using practice. These include
+compatibility, ad hoc, usability, and
+regression testing. Don't worry too much about
+these terms for the moment. You'll learn more
+about them later. For now, I just want you
+to know that with testing, there is no
+one-size-fits-all solution. When testing products, it's also important to understand
+when to stop. There is no application will
+ever be 100 percent perfect. Otherwise, a developer may feel the product is well-tested, but realize it's
+full of bugs and flaws as soon as it's
+released to the end-users. A few metrics can be
+established for this purpose, given that there are well-written
+test cases in place. These include a certain
+number of tests cycles, passing percentage
+of test cases, time deadlines,
+and time intervals between subsequent
+test failures. Testing in software
+development can be seen as the anchor of a ship or
+insurance for your vehicle. You can hope that everything
+operates smoothly, but often it does not and while you can
+aim for perfection, there is always potential
+for human error.

@@ -1,0 +1,224 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  Overview
+ </h2>
+ <p variant="body1">
+  In earlier exercises you already have the table booking API in the
+  <var>
+   Restaurant
+  </var>
+  app of your Django project with the name
+  <var>
+   LittleLemon
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  In this exercise, you will add token-based authentication to secure the Table booking API.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Scenario
+ </h2>
+ <p variant="body1">
+  When you enable token authentication feature in the app, a random hexadecimal string that is unique for each user can be generated from inside the admin panel as well as from within the app.
+ </p>
+ <p variant="body1">
+  The HTTP client passes this token in the request header. You can then restrict a view only for authenticated users.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 1
+  </strong>
+ </p>
+ <p variant="body1">
+  Add the
+  <var>
+   'rest_framework.authtoken'
+  </var>
+  app to the list of
+  <var>
+   INSTALLED_APPS
+  </var>
+  in the
+  <strong>
+   settings.py
+  </strong>
+  file
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 2
+  </strong>
+ </p>
+ <p variant="body1">
+  Import the
+  <var>
+   IsAuthenticated
+  </var>
+  class from the
+  <var>
+   rest_framework.permissions
+  </var>
+  module in the
+  <strong>
+   views.py
+  </strong>
+  file.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 3
+  </strong>
+ </p>
+ <p variant="body1">
+  You already have the
+  <var>
+   BookingViewSet
+  </var>
+  class in the
+  <strong>
+   views.py
+  </strong>
+  file. To secure this view, set the permission_classes property to a list containing
+  <var>
+   IsAuthenticated
+  </var>
+  .
+ </p>
+ <pre language="python">permission_classes = [IsAuthenticated]</pre>
+ <p variant="body1">
+  <strong>
+   Step 4
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the app's
+  <strong>
+   urls.py
+  </strong>
+  and import the following function:
+ </p>
+ <pre language="python">#import obtain_auth_token view
+from rest_framework.authtoken.views import obtain_auth_token</pre>
+ <p variant="body1">
+  In the same file add a new URL route to the
+  <var>
+   urlpatterns
+  </var>
+  list:
+ </p>
+ <pre language="python">#add following line in urlpatterns list
+path('api-token-auth/', obtain_auth_token)</pre>
+ <p variant="body1">
+  <strong>
+   Step 5
+  </strong>
+ </p>
+ <p variant="body1">
+  Run the server and visit the URL path
+  <var>
+   api-token-auth/
+  </var>
+  from the Insomnia client. You should select the POST method, and enter username and password in the body. When submitted, you get the token string as the response.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 6
+  </strong>
+ </p>
+ <p variant="body1">
+  To get the response from a secured URL, select the
+  <strong>
+   Auth
+  </strong>
+  tab in Insomnia, choose the
+  <strong>
+   Bearer
+  </strong>
+  token from the drop down, and enter the token generated in the previous step and then press the send button.
+ </p>
+ <p variant="body1">
+  <strong>
+   Tips:
+  </strong>
+ </p>
+ <p variant="body1">
+  To secure the view you need to set the
+  <var>
+   permission_classes
+  </var>
+  attribute. Follow the following example for the views in booking API.
+ </p>
+ <pre language="python">from rest_framework.decorators import permission_classes
+from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
+#set permission_classes attribute
+from .models import MenuItem
+class MenuItemsView(generics.ListCreateAPIView):
+   permission_classes = [IsAuthenticated]
+   queryset = MenuItem.objects.all()
+   serializer_class = MenuItemSerializer</pre>
+ <h2 level="2" variant="h2semibold">
+  Conclusion
+ </h2>
+ <p variant="body1">
+  In this exercise, you implemented the
+  <var>
+   TokenAutentication
+  </var>
+  feature of Django REST framework to secure table booking API.
+ </p>
+ <p variant="body1">
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

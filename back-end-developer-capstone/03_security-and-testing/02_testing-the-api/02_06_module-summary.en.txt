@@ -1,0 +1,27 @@
+You've completed
+Module 3, great work. In this module, you revised
+security and testing by revisiting the topics of user authentication
+and API testing. With this revised knowledge, you are now able to set
+up user registration and authentication and
+test the application with unit tests and insomnia. This will all assist you in
+your design and development of the little lemon
+reserver table functionality of the website. In the first lesson
+of this module, you revised how to work
+with user authentication. You recap the functionality of the different
+authentication schemes such as remote user
+authentication, session authentication, and
+token-based authentication. In this first lesson, you had an opportunity to complete some
+hands-on exercises. They included exercises to
+add the registration page, add the login page, add the logout functionality and secure the table booking API. In the second lesson
+of this module, you revise how to test the API. You recap the concept of testing using the unit test
+framework to test an API. Then you revise
+the code required, such as the code for the
+serializers.py file. Finally, you revised how to use the insomnia rest client to interact with the API
+and test the roots. You created and performed
+a unit test that run successfully and
+performed as expected. In this second lesson, you also had an opportunity to complete some
+hands-on exercises. They included exercises to add unit tests and testing
+the API using insomnia. Now that this module's
+topics are covered, you're ready to move on. In the final module, you will synthesize the
+skills from this course, take the project assessment
+and evaluate other learners. Great work and good luck.

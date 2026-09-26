@@ -1,0 +1,43 @@
+You've reached the end of this
+module on Python modules, packages, libraries,
+and tools, great work. During this module, you
+learned that Python is a powerful language that allows you to build amazing things. But it can gain even
+more functionality with the use of modules,
+libraries, and tools. You may remember that we started with modules and learned that they are the building blocks for adding functionality
+to your code. You don't need to
+continually redo everything. Next, we explored some of the commonly used
+Python libraries in data analysis
+and data science. Lastly, you discovered
+that testing as a tool is an essential component in quality assurance and
+ensures your software, applications and websites
+work as expected. It's now time to recap the key lessons you learned and the skills that you gained. With that in mind, let's summarize the key points
+you learned in this module. You should now be
+able to explain what modules are in Python
+and why they are used. Identify the different types of modules and explain
+where they can be found. Explain how to access built-in and
+user-defined modules from different locations, and use import statements to access modules from
+different directories. You should also
+be able to create packages from the Python
+Package Index using pip, write modules using
+import statements, and explain and use the
+reload function in Python. You have now learned
+that Python has an extensive collection
+of packages, and should be able to describe
+typical module use cases, differentiate between built-in and user-defined
+Python packages, list some popular
+Python packages, and list some common
+Python libraries using data analysis
+and data science. In the module, you
+also learned about libraries, frameworks
+and testing. You should therefore,
+also be able to recognize popular Python libraries using machine learning and
+artificial intelligence, explain big data and
+analysis with Python, define Python web frameworks, and list different types
+of web frameworks, describe testing and explain the different types of testing, list four main levels or
+categories of testing, describe testing packages
+in Python such as PyTests, Selenium, robot, and explore the importance
+of automated testing. You should now be able to explain test-driven development, TDD methodology, and list the features of
+test-driven development. This module was an
+introduction to Python modules,
+libraries, and tools. This knowledge enables you to extend the ability of
+your programming code.

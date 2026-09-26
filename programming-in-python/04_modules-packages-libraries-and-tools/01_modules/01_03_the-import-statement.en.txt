@@ -1,0 +1,57 @@
+In this video, you will learn
+how to use import statements for accessing modules from
+different directories. You will also learn how to create packages
+from the python package index using pip. Every python file,
+which means any file with a .py extension containing a script is
+effectively a module. The check imports file I am currently
+creating, is therefore a module for some of the files. The code that you are working with
+is generally called the main module. In this case check imports is the main
+module present in the current working directory. Also called the scope of the project, you can import any python file that
+is present in the current scope. For example, I can import the sample
+.py file by typing import, followed by the file name
+without the extension. I then click on, run in the top menu. The system returns a message in
+the terminal pin that the import was successful. If I try to import a file
+with a .txt extension, the import will not be successful. For example, if I tie import followed by
+sample text and click on run, the system will return an error message in the
+terminal pin, as it is not a python file. Python has a library of standard
+modules called built in modules. These modules are directly built
+into the python interpreter and don't have to be installed separately. I can import a module like
+Jason by typing import Jason. Once I execute the command,
+I can start using its functions directly. The list of built in modules can be
+found in the python standard library. You can think of packages as
+the structuring of python modules as a collection. Special files called init.py
+files are required for python to treat directories
+containing the file as packages. Python has a rich collection
+of community built packages that I could find on
+the python package index, or pyPI. Pyp or pyp3 is the default
+package installer for python, and helps with the installation
+of packages from pyPI. Since I have already installed numpy
+I can import it directly in python. I do this by typing import numpy,
+clearing my terminal and clicking run, if I try to import a package that is not
+installed, I will get an error message. For instance, if I type import seaborn and
+click run the message, module not found error is returned. If the package seaborne were installed, I could run the command again in
+python without any error messages. To do this,
+I would run pip install seaborn in the terminal to download
+the package from the pyPI index. I can also import files I have
+created in one of the folders within the current working directory. I have a folder called workplace
+containing a file called trial.py. The file consists of a list with the
+variable names and two entries inside it. I'm going to import this file and
+access its contents. I start by importing the sys module. Next I use a path function in
+sys by typing sys.path.insert. Now, I must enter the path name to
+my workplace package in the first index location. To do this, right click on the work
+place directory and select copy path. I entered this path name as
+the first index location, when passing the path as an argument. I must use single quotes and type
+the letter R in front of the path string. The sys.path list now has a new directory
+where it will look for modules. Now I must import my trial file
+here by typing import trial and pressing enter, a squiggly line
+appears below the word trial. This is because the IDE does not know
+about the path I've added inside sys.path. However, I can still proceed as
+the interpreter will know about this path. To print the output I type,
+print followed by trial.names and click the run button to execute. The values of Adrian and Maria from
+the names list variable, are printed. In this video, you learned how modules
+can be imported from anywhere within your system, inserting the path
+name can however, be very specific and
+often tricky and confusing. Don't worry about this too much for now. It is more important to focus on importing
+files from your current directory. It is nice to know that importing modules
+from other directories is an option if you need it. It is good practice though to move the
+required files into the directory that you are working in.

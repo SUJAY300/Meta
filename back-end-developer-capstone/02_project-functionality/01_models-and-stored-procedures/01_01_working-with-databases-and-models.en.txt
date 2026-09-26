@@ -1,0 +1,40 @@
+In this video, you will recap
+working with databases and models. Recall that Django uses the MVT
+architecture where the model represents the applications data layer. The model is at the core of
+Django Object Relation Mapping, or ORM. It is the single definitive source
+of information about your data, where each model maps to
+a single database table. The primary advantage of ORM is that
+it is possible to interact with the database in an object oriented
+manner rather than executing raw SQL queries from inside the view functions. Recall that a model is a Python class
+that sub classes the model class from the django.db.models.model. Generally the user defined model
+has one or more class attributes. The model class maps to
+a database table and the class attribute maps
+to a column in the table. You declare one or more model classes in a
+models.py file in the app package folder. It is important to remember that
+it is mandatory to add the app to the installed apps list defined
+in the project setting.pymodule. This allows the Django ORM to
+translate the model definitions into the corresponding tables. The translation of the models into tables
+in the back end database is performed using a process known as migrations. You use the command Python manage.py
+migrate to populate the database with the tables used by
+the preinstalled applications. For the models in the rest of the apps, you need to generate a migration
+script to create the table structure. You use the command make migrations
+from the manage.py located in the project's parent folder. Django stores the migration scripts inside
+a migration sub package in the app package folder. These migration scripts
+are incrementally auto numbered. After the make migrations command
+run the migrate command to execute, create table queries for
+building the tables. Every time you need to make changes in
+the structure of the model such as adding modifying or removing a field
+attribute of a model class, run the make migrations command to
+propagate the changes to the mapped table. Djangos migration mechanism
+also acts like version control. You can always fall back on the database
+state at any previous position with the help of a numbered migration script. You can interact with the model and
+with the table through the model, directly from inside the Django Shell. To open the Django Shell,
+run the command python3 manage.py shell. In this interactive shell,
+you can import the model you have defined. For example, suppose you have a menu
+model in the little lemon app, you use the import statement
+to import the model. The model class contains the methods
+to add, update and delete. And these methods are also
+inherited by the menu model class. You can also access the menu model
+from the Django Admin interface and to do this, you must register
+this model with the admin site. In this video, you had a recap
+about working with databases and models in the Django Framework.

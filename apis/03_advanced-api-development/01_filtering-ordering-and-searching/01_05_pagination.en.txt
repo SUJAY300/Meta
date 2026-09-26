@@ -1,0 +1,49 @@
+By now you know it's good practice to
+enable a PIS to send results in smaller chunks. Imagine a database with 1000 orders and
+the client visits the orders end point. If there is no pagination, the client
+will get 1000 orders every time when they actually only need the latest 10 orders. This unnecessary operation will put
+a huge load on the database server and waste the bandwidth developers
+use pagination to chunk results. Client applications can then
+decide the page number and how many records they want per page. Pagination is an essential
+technique that you need to learn to save server resources by
+serving a limited number of records. This video will demonstrate how to
+implement pagination in your DRFAPI project. For instance, if the client
+requests the 7th and 8th menu item, they can make a http get request
+using the normal endpoint. But after API comes
+forward slash menu items. Question mark. Per page equals two and
+percent page equals four. The first page contains records one and
+two. The second page will have
+records three and four. The third page will display
+records five and six. And the fourth page will present
+you with seven and eight. But here is a useful tip. You should limit the maximum number of
+records a client can request per page. This is a security measure to
+prevent abuse of your api endpoints. If you set the maximum limit to 10
+records per page from an api endpoint but the client needs 20 records
+ranging from 31 to 40. Then the client needs to make two calls
+to this api The first api call will request 10 per page from page three
+which will serve records 21 to 30. The second call will serve the next 10
+records which are 31 to 40 from page four. But say if a client requests 50 records
+in one single ap I call when the maximum limit is 10, you can send a 400
+bad request http status message. Let's implement pagination
+in your little lemon app. Open the views dot pi file and
+go to the menu items function. You will accept to query
+string parameters per page and page just after the ordering variable. Right?
+These two lines of code. If the client doesn't supply any value,
+the per page and pages value will be two and
+one respectively import pageant ator and empty page from Django
+dot org dot pageant ator. Now, just before the serialized items, add this code which will initialize
+the pageant later object. It means you are creating a paginated
+where the number of items per page equals per page. Now the items from a page can be retrieved
+using items equals paginated dot page. Open bracket number equals
+page closed bracket. But a client may request
+a page that doesn't exist which will generate an empty page error. This is why you need to wrap this
+line inside a try catch block. If the page exists,
+it will return the items from that page. Otherwise, it will be an empty array. Now visit the menu items
+endpoint with no query string. There are two menu items per page. Excellent. Your pageant ATor is working perfectly
+now call the menu items end point with the necessary query strings set. The value of per page equals three and
+page equals one. Now there are three menu items and
+that's it. You have successfully implemented
+pagination for your api project in this video, you learned the necessity
+of pagination in an API project. You also learned how to implement
+pagination using the corp agitator module of Django and
+how to deal with a non existing page. Good job.

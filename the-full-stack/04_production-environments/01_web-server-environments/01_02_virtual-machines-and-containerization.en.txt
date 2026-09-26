@@ -1,0 +1,93 @@
+Now that you have an idea of what application deployment is, let's dive deeper into virtual
+servers and containers. Both technologies
+are used to host your applications and run them
+isolated from each other, but they work very differently. First is hypervisors, which are software used for
+virtualization. As you learned in
+the previous video, a dedicated server can be split into multiple
+virtual servers, also called virtual machines or VMs using hypervisor technology. Each of the virtual servers runs separate operating systems and applications and each works like an
+individual computer. As such, they have dedicated IP addresses to communicate
+with each other. There are primarily two types of hypervisors involved in
+creating virtual machines. One is a Type 1 hypervisor
+or bare-metal hypervisor. The second one is a
+Type 2 hypervisor. The Type 1 hypervisors are a software layer that works directly with server hardware, and because of this, they are more efficient when it comes to resource management. Setting up a Type 1 hypervisor
+is a complex process, but applications running on a Type 1 hypervisor are usually faster because they have dedicated resources
+assigned to them. KVM is one of the most widely used Type 1 hypervisors and
+it's open source. On the other hand,
+a Type 2 hypervisor works mostly on top of an operating system and is usually slower than Type 1, but managing a Type 2
+hypervisor is simpler than a Type 1 hypervisor because they come with a simpler
+management console, and you don't have to
+directly deal with the hardware for
+Type 2 hypervisors. Oracle VirtualBox is one of the most popular and widely
+used Type 2 hypervisors. It's open-source software
+and available for free. Let's move on to
+resource sharing and how that works with
+virtual servers. Virtual machines can
+be configured to use dedicated computing
+resources or share them. For example, a dedicated server with three terabytes of storage, 12 gigabytes of RAM, and six processing
+cores can provide its resources entirely to whichever virtual
+machine might need it. Alternatively, it can
+be configured to split its resources equally between
+all virtual machines. If there are three
+virtual machines, each of them can use one
+terabyte of storage space, four gigabytes of RAM, and two processor cores. But take note, while dedicated resources
+ensure availability, they can also sit idle
+and lead to wastage. Say, for example, each virtual server gets a
+dedicated four gigabytes, but a smaller
+application hosted on one of them only
+requires one gigabyte. A considerable amount
+of memory remains idle, the same goes for
+the CPU and storage. Since these resources
+are dedicated, other virtual machines
+cannot access these resources even
+when they are free. On the other hand,
+what if you have a single dedicated machine, but you need more resources
+than it can offer? This is where shared
+virtual machines come in. They can use the resources
+assigned to them, and they can also use extra resources from shared
+machines when it's available. However, such usage is monitored and continuous
+over-usage is considered abuse
+and it can lead to termination of the server if it's happening with
+a public provider. Now, let's move on
+to containerization. It takes time to set up
+and configure whether a Type 1 or Type 2
+hypervisor is used, and you also need to install an operating system
+on a virtual machine. What if you can remove hardware and the
+operating system from the equation and focus only on your application
+and its dependencies? This undoubtably makes things easier and you can spend
+more time on development, that's what
+containerization is for. Containerization
+technologies help you pack your application and
+their dependencies into container image files. This enables you to run them as containers using a
+container engine, regardless of the operating
+systems or hardware. A container can pack single or multiple applications
+with all dependencies, or you can distribute your applications across
+multiple containers and configure them to correctly work together using a container
+engine like Docker. For efficient management, you
+should keep your containers lean and stick to one process or application
+per container. Since container engines abstract the operating system layer, and containers don't run
+their own operating system, they are smaller in size, run faster, and are more manageable than
+virtual machines. Containers are also very portable and you can
+deploy them quickly. Docker is one of
+the most popular and widely used
+container engines and it's available for free. There are a few terms you need to know about
+when dealing with containers like pod,
+cluster, and node. Let's explore the meaning
+of these and other terms. When a group of tightly
+coupled containers share the same resource and work together to solve a
+particular problem, it's called a pod, and the physical or virtual
+machine that runs one or multiple pods
+is called a node. Whereas multiple pods
+and multiple nodes, which could be
+related to each other or work completely
+independently, are called a cluster. Finally, there's the management,
+deployment, networking, and scaling of these containers known as container
+orchestration. Kubernetes or K8s is one of the most popular and widely used container
+orchestration solutions used by developers worldwide. Hosting your application
+can be challenging. In this video, you learned about technologies used to host your
+application in the Cloud. You learned about different
+virtualization tools to create virtual
+servers or machines. You also learned
+about containers, which can pack your application and all its
+dependencies together. Finally, you learned some key terms used in the
+world of containerization. You are now well placed to successfully host your
+applications in the Cloud.

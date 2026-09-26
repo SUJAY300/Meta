@@ -1,0 +1,32 @@
+Now you have the latest version of Python,
+Visual Studio Code and all the necessary extensions and Pipenv. Let's set up a Django project
+in a virtual environment. Let's create a new directory
+called LittleLemon. Go to the project directory
+in your terminal and type the common pipenv install django. You'll see a lot of information while
+pipenv is setting up Django and creating the virtual environment for you. Now get started on your Django
+project by activating this virtual environment created by pipenv
+with the command pipenv shell. This will open a new shell session in
+the virtual environment for your project. Then you can use Django admin to create
+a new Django project in this directory. To do so apply the command django-admin startproject Little Lemon and a dot. Now that you have a new
+Django project set up, go to the directory in your terminal. It's time to create a new Django Web for
+your APA project. Use the command, python manage.py startapp Little LemonAPI
+to create the app. You can see the Django Web has been
+created with all the necessary migrations and configurations. To run the Django server,
+write python manage.py runserver. This will run the server on
+port number 8000 by default and you can access the Django
+server at 127.0.0.1:8000. If you want to run it with
+a different port number, you can do it like python manage.py
+runserver and then port number. Now you learn how to use your new virtual
+environment from the integrated terminal in VS code. To quickly apply commons
+whenever necessary, open your project directory in VS code and access the command palette from the View
+menu or by pressing command Shift np. Select Python, select Interpreter and select the one that pipenv has created for
+you. You can see that with the name
+of your project directory, this is a very important step. So be sure not to skip it. Now, open the terminal in
+VS code from terminal menu. You can instantly see that VS code has
+activated the virtual environment created for your project by pipenv. Now you can run all
+the commands in this terminal like python manage.py
+runserver without any problem. You can also open as many terminal
+sessions as you want by clicking the plus icon and travel between
+them from this terminal tab. Now you're all set to start
+developing APIs with Django. With pipenv and Visual Studio Code, it was really easy to set up everything
+quickly in such a short period of time.

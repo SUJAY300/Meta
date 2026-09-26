@@ -1,0 +1,779 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Introduction
+ </h2>
+ <p variant="body1">
+  You already know that HTTP methods and status codes play an essential role in REST APIs. It is important to keep to the conventions for HTTP methods and status codes for two reasons. Firstly, if you follow conventions from the developing phase, it will be much easier to avoid bugs in your code and deploy the final project on the production server. Secondly, it makes it easier for other developers to use your APIs. This reading highlights the most important HTTP methods, status codes and API response types that you will use when working on API projects.
+ </p>
+ <h2 level="2">
+  HTTP methods
+ </h2>
+ <p variant="body1">
+  In the world of REST APIs, one endpoint can perform multiple tasks. It can deliver a resource, create a new resource, update or delete it. The endpoint remains the same while the action varies. When a client invokes an API, how does the API developer know which of the multiple actions should be performed?  This is where HTTP methods come in.
+ </p>
+ <p variant="body1">
+  HTTP methods or request types tell the API endpoint what it should do with the resources. It defines the action. The API developer makes decisions and manipulates resources appropriately based on the HTTP methods in an HTTP request. Here is a list of the most used HTTP methods and which action you should initiate for those calls.
+ </p>
+ <table columns="2" rows="6">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       HTTP method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Action
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Returns the requested resource. If not found, returns a
+     <var>
+      404 Not Found
+     </var>
+     status code.
+    </p>
+    <p>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Creates a record. The
+     <var>
+      POST
+     </var>
+     request always comes with an HTTP request body containing JSON or Form URL encoded data, which is also called a payload. If the data is valid, the API endpoint will create a new resource based on these data. Although you can create multiple resources with a single
+     <var>
+      POST
+     </var>
+     call, it is not considered a best practice to do so.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      PUT
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Instructs the API to replace a resource. Like a
+     <var>
+      POST
+     </var>
+     request, the
+     <var>
+      PUT
+     </var>
+     request also comes with data. A
+     <var>
+      PUT
+     </var>
+     request usually supplies all data for a particular resource so that the API developer can fully replace that resource with the provided data. A
+     <var>
+      PUT
+     </var>
+     request deals with a single resource.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      PATCH
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Tells the API to update a part of the resource. Note the difference between a
+     <var>
+      PUT
+     </var>
+     and a
+     <var>
+      PATCH
+     </var>
+     call. A
+     <var>
+      PUT
+     </var>
+     call replaces the complete resource, while the
+     <var>
+      PATCH
+     </var>
+     call only updates some parts. A
+     <var>
+      PATCH
+     </var>
+     request also deals with a single record.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Instructs the API to delete a resource.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Example calls
+ </h2>
+ <table columns="3" rows="6">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       HTTP method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Sample endpoints
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Query string / payload
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      /api/menu-items
+     </var>
+    </p>
+    <p>
+     <var>
+      /api/meu-items/1
+     </var>
+    </p>
+    <p>
+     <var>
+      /api/menu-items?category=appetizers
+     </var>
+    </p>
+    <p>
+     <var>
+      /api/menu-items?perpage=3&amp;page=2
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     A
+     <var>
+      GET
+     </var>
+     call doesn’t need a payload. However,
+     <var>
+      GET
+     </var>
+     calls can be accompanied by query string parameters and their values to filter the API output.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      /api/menu-items
+     </var>
+    </p>
+    <p>
+     <var>
+      /api/orders
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Here’s a sample JSON payload for the
+     <var>
+      /api/menu-items
+     </var>
+     endpoint to create a new resource:
+    </p>
+    <p>
+     <var>
+      {
+     </var>
+    </p>
+    <p>
+     <var>
+      "title":"Beef Steak",
+     </var>
+    </p>
+    <p>
+     <var>
+      "price": 5.50,
+     </var>
+    </p>
+    <p>
+     <var>
+      "category":"main",
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      PUT
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      /api/menu-items/1
+     </var>
+    </p>
+    <p>
+     <var>
+      /api/orders/1
+     </var>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Here's a sample JSON payload for this endpoint
+     <var>
+      /api/menu-items/1
+     </var>
+     to completely replace it. Note that you need to supply all data for a
+     <var>
+      PUT
+     </var>
+     request.
+    </p>
+    <p>
+     <var>
+      {
+     </var>
+    </p>
+    <p>
+     <var>
+      "title":"Chicken Steak",
+     </var>
+    </p>
+    <p>
+     <var>
+      "price": 2.50,
+     </var>
+    </p>
+    <p>
+     <var>
+      "category":"main",
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      PATCH
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      /api/menu-items/1
+     </var>
+    </p>
+    <p>
+     <var>
+      /api/orders/1
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Here’s a sample JSON payload for this endpoint
+     <var>
+      /api/menu-items/1
+     </var>
+     to partially update this resource
+    </p>
+    <p>
+     <var>
+      {
+     </var>
+    </p>
+    <p>
+     <var>
+      "price": 3.00
+     </var>
+    </p>
+    <p>
+     <var>
+      }
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      /api/menu-items
+     </var>
+    </p>
+    <p>
+     <var>
+      /api/menu-items/1
+     </var>
+    </p>
+    <p>
+     <var>
+      /api/orders
+     </var>
+    </p>
+    <p>
+     <var>
+      /api/orders/1
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     When the
+     <var>
+      DELETE
+     </var>
+     call is sent to a collection endpoint, like
+     <var>
+      /api/menu-items
+     </var>
+     the API developer should delete the entire collection. When it is sent to a particular resource, like this,
+     <var>
+      /api/menu-items/1
+     </var>
+     , then the API developer should delete only that resource.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Status codes
+ </h2>
+ <p variant="body1">
+  Sending appropriate status codes with every API response is essential. And as a developer, you should not just pick any code. Every status code has meaning, so you should choose the most appropriate one based on the situation. Here’s a list of the status code ranges and their purposes.
+ </p>
+ <table columns="2" rows="6">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Status code range
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Purpose
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      100-199
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     This range is mainly used to pass on some information. For example, sometimes an API needs time to process the request and it can’t instantly deliver the result. In such a case, the API developer can set it to keep returning
+     <var>
+      102 – Processing
+     </var>
+     until the result is ready. This way, the client understands that the result isn’t ready and should be checked again.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      200-299
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     These are the success codes. If the client requests something and the API acts successfully, it should deliver the output with one of these status codes.
+    </p>
+    <p>
+     For example, for a
+     <var>
+      PUT
+     </var>
+     ,
+     <var>
+      PATCH
+     </var>
+     , or
+     <var>
+      DELETE
+     </var>
+     call, you can return
+     <var>
+      200 – Successful
+     </var>
+     if the operation was successful. For a successful
+     <var>
+      POST
+     </var>
+     call, you can set it to return a
+     <var>
+      201 – Created
+     </var>
+     status code when the resource has been created successfully.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      300-399
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     These are the redirection codes. Suppose as an API developer, you changed the API endpoint from
+     <var>
+      /api/items to api/menu-items
+     </var>
+     . If the client makes an API call to
+     <var>
+      /api/items
+     </var>
+     , then you can redirect the client to this new endpoint
+     <var>
+      /api/menu-items
+     </var>
+     with a
+     <var>
+      301 – Permanently moved
+     </var>
+     status code so that the client can make new calls to that endpoint next time.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      400-499
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     4xx status codes are used in the following situation: if the client requests something that does not exist, sends an invalid payload with insufficient data, or wants to perform an action that the client is not authorized for.
+    </p>
+    <p>
+     For the above scenarios, the appropriate status codes will be:
+    </p>
+    <p>
+     ·
+     <var>
+      404 - Not Found
+     </var>
+     if the client requests something that doesn’t exist,
+    </p>
+    <p>
+     ·
+     <var>
+      400 - Bad Request
+     </var>
+     if a client sends an invalid payload with insufficient data,
+    </p>
+    <p>
+     ·
+     <var>
+      401 - Unauthorized
+     </var>
+     ,
+    </p>
+    <p>
+     ·
+     <var>
+      403 - Forbidden
+     </var>
+     if the client tries to perform an action it's not authorized for.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      500-599
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     These alarming status codes are usually automatically generated on the server side if something goes wrong in the code, and the API developer doesn't write code to deal with those errors. For example, a client requests a non-existing resource, and the API developer tries to display that resource without adequately checking if that resource exists in the database. Or if the API developer didn't validate the incoming data and attempted to create a new resource with invalid or insufficient data. You, as an API developer, should always avoid 5xx errors.
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2">
+  Response types
+ </h2>
+ <p variant="body1">
+  These days, the most common response types involved with REST APIs are JSON, XML, plain text, and sometimes YAML. Frameworks like DRF come with built-in renderer classes that can convert the data into an appropriate format and display it correctly.
+ </p>
+ <p variant="body1">
+  There are also third-party renderers available for this job. While making an API call, the client can specify its desired response format with the
+  <var>
+   Accept
+  </var>
+  HTTP header. And that header should be considered to deliver the result in that format using the render classes. Here’s a list of HTTP headers for different response types.
+ </p>
+ <table columns="2" rows="5">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Response type
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Request header
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     HTML
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      Accept: text/html
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     JSON and JSONP
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      Accept: application/json
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     XML
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      Accept: application/xml
+     </var>
+    </p>
+    <p>
+     <var>
+      Accept: text/xml
+     </var>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     YAML
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      Accept: application/yaml
+     </var>
+    </p>
+    <p>
+     <var>
+      Accept: application/x-yaml
+     </var>
+    </p>
+    <p>
+     <var>
+      Accept: text/yaml
+     </var>
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Conclusion
+ </h2>
+ <p variant="body1">
+  In this reading, you learned about different types of HTTP methods, status codes, and API response types.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

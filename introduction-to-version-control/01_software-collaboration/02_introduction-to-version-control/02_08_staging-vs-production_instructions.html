@@ -1,0 +1,181 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p variant="body1">
+  Before releasing a new feature, a development team must verify that their code will not introduce bugs or break the application for the end user. To achieve this, software does not go straight from a developer's laptop to the public. Instead, it moves through a series of distinct phases known as
+  <strong>
+   development environments
+  </strong>
+  .
+ </p>
+ <p variant="body1">
+  A standard pipeline includes the following environments:
+ </p>
+ <ol bullettype="numbers">
+  <li>
+   <p>
+    <strong>
+     Development Environment:
+    </strong>
+    Where the developers write and initially test the code.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     QA / UAT Environments:
+    </strong>
+    <strong>
+     Quality Assurance (QA)
+    </strong>
+    is where dedicated testers look for bugs.
+    <strong>
+     User Acceptance Testing (UAT)
+    </strong>
+    is where stakeholders or a small group of real users verify that the software behaves as expected.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     Staging Environment:
+    </strong>
+    The final "dress rehearsal" before the code goes live.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     Production Environment:
+    </strong>
+    The live application that customers actually use.
+   </p>
+  </li>
+ </ol>
+ <p variant="body1">
+  The goal of this multi-environment flow is simple: the more ways you test the code, the less likely bugs will reach the customer. Let's look closer at the two most critical environments: Staging and Production.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  The Staging Environment
+ </h2>
+ <p variant="body1">
+  The staging environment is designed to be an exact (or near-exact) replica of your live production environment. It serves as your team's safety net and final line of defense.
+ </p>
+ <p variant="body1">
+  Because staging mirrors the live setup—including the database architecture and server configurations—it allows teams to spot potential issues right before they reach the customer. This environment is highly valuable for a few key reasons:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    <strong>
+     Safe Feature Testing:
+    </strong>
+    When developers submit new features, they can safely turn them on in staging to ensure they don't interfere with existing functionality. Other teams, like QA or management stakeholders, can also use staging as a pre-trial to verify the feature looks and acts correctly.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     Risk-Free Migrations &amp; Configurations:
+    </strong>
+    Updating server configurations or migrating large amounts of database data is extremely risky. In staging, teams can take a snapshot of the live database and run their migration scripts. If the script fails, they simply roll it back and fix it. If that same failure happened in production, data could be permanently lost.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     Deep Performance Testing:
+    </strong>
+    Staging is a great place to run integration and performance tests.
+    <em>
+     Note: While staging aims to mimic production, an exact 1:1 replica is sometimes too expensive. For example, if production uses ten virtual machines to handle global traffic, staging might only use four. The underlying architecture is the same, but the overall performance scale is adjusted to save costs.
+    </em>
+   </p>
+  </li>
+ </ul>
+ <h2 level="2" variant="h2semibold">
+  The Production Environment
+ </h2>
+ <p variant="body1">
+  Production is live. It is out there in the real world for people to interact with. By the time code is deployed to production, it should have been rigorously tested and verified in the staging environment.
+ </p>
+ <p variant="body1">
+  The stakes in the production environment are incredibly high. When bugs slip through staging and make it into production, they carry real-world consequences:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    <strong>
+     Downtime and Revenue Loss:
+    </strong>
+    If a buggy update causes a customer-facing service to crash, it directly impacts revenue. For example, if an e-commerce company releases a new feature that accidentally breaks their shopping cart, customers cannot buy goods, and the company immediately loses money.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     Cyber-Security Vulnerabilities:
+    </strong>
+    Production environments must be highly secure. Pushing untested software updates (or failing to apply critical security patches) can expose the live application to cyber-attacks and data breaches.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     Brand Reputation:
+    </strong>
+    Frequent downtime or broken features are highly damaging to a company's reputation. It does not instill confidence in the end users and can cause a business to lose its customer base to competitors.
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  Ultimately, maintaining strict staging environments is the best way a team can protect the security, integrity, and reputation of their live production environment.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

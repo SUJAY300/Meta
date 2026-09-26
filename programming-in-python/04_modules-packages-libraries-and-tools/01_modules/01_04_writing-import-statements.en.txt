@@ -1,0 +1,65 @@
+Let's explore how to use modules with the
+import statement. I've already created a
+file called imports.py. I'll now import the
+built-in math module by typing import math. Just to make sure
+that this code works, I'll use a print statement. I do this by typing print, importing the math module. After, this, I'll run the code. The print statement
+has executed. Most of the modules that
+you will come across, especially the built-in modules, will not have any
+print statements, and they will simply be
+loaded by the interpreter. Now that I've imported
+the math module, I want to use a
+function inside of it. Let's choose the square
+root function, sqrt. To do this, I type
+the words math.sqrt. When I type the word math, followed by the dot, a list of functions appears in a drop-down menu and you can
+select sqrt from this list. I passed nine as the argument
+to the math.sqrt function. Assign this to a variable called root, and then I print it. The number 3, the square root of nine has been printed
+to the terminal, which is the correct answer. Instead of importing the entire math module as we did above, there is a better way to handle this by directly importing the square root function inside
+the scope of the project. This will prevent overloading the interpreter by importing
+the entire math module. To do this, I type
+from math import sqrt. When I run this, it
+displays an error. Now I remove the word math from the variable declaration
+and I run the code again. This time it works. Next, let's discuss
+something called an alias, which is an excellent way of
+importing different modules. Here I sign an alias called
+m to the math module. I do this by typing
+import math as m. Then I type cosine equals
+m. I then select cos, C-O-S from the
+list of functions, after which I add the
+number 0 in parentheses. On the next line, I'll print cosine, and then I run the code. The result is the cosine
+value of zero, which is one. This is possible because
+I used the alias called m. If I tried writing math.cos, it wouldn't work
+because the math module is now recognized as m, instead. Let me remove this code from the screen and clear the
+terminal before we continue. An alias can also be used for
+a function that's imported. For example, I can type from math import factorial as f to alias the
+factorial function. Now I sine f of 10, typed as f opening parenthesis, the number 10 and a closing parenthesis to a variable
+called factorial_10. I'll print the variable
+and see if it works. When we run the code, we see that it works just fine. Using an alias in
+this way reduces the effort of typing
+factorial every time. After I remove the alias, I can import as many functions as I'd like from a given module. I'm going to import
+log and sqrt. I create a variable using
+the log function to find the value of
+log base 10 of 50. I do this by typing
+x equals log 10, opening parenthesis 50,
+and closing parenthesis. Again, I print the
+variable on the next line. When I click "Run", I'll see whether
+or not it worked. Once again, it worked just fine. Now, what if I want to import all the functions
+inside a given module? I can remove the functions I added earlier and replace
+them with a star. This basically translates to import all from the math module. When I run the code again, let's see if it
+works, and it does. However, this practice of using a star is not the best
+approach in certain cases. For example, this is a
+small file and I know that the log 10 function is present
+inside the math module. But when you work with
+a large code base, it could be difficult
+to track where the log 10 function came from. Additionally, when you're
+importing other modules, it may get confusing. Importing packages is very similar to importing
+modules in Python. Just like you can have
+imported functions, you could also import variables and classes from a given module. Now, I replace the star with a variable
+called some_variable, which may be present
+inside the given module. Let me try to run
+the code again. Since the math module doesn't
+have such a variable, it throws an error
+when I print it. The interpreter is
+not able to import some variable from math. In this video, you explored different methods that can
+be used to import modules in Python using keywords like 'import from' 'star', and 'as'. This enables you to use
+the modular structure of Python in object-oriented
+programming in general.

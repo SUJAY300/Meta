@@ -1,0 +1,70 @@
+Designing an API is pretty
+much an art form in itself. There's a lot of craft
+and thoughtfulness in how we design things that
+we present to an end-user. I'm Celina, a software
+engineer at Meta, working on Instagram reels. I first got into
+software engineering, I think around the time when
+I was in middle school. I really fell in love
+with the process of web development
+and web design, which I actually learned just
+by myself out of curiosity. I would dissect websites and see how they were functioning
+under the hood. I would follow
+tutorials by myself. I really fell in love with this process of
+creating something tangible out of something
+seemingly abstract, like an idea or like blobs and lines of
+code in this case. APIs are essentially the bread and butter of end-to-end full-stack
+developments. I say bread and butter just because they're so
+crucial in terms of describing how
+software components interact with each other. Whenever you pull up
+your Instagram app, you are interacting with
+APIs all over the place. There's a specific set of
+APIs that renders things like stories and photos and
+videos in your home feed. There's another API that
+does the same thing, but on your explore page. There's another
+API that registers things like
+double-taps on a post, as likes on the back end, and that tells your
+device to render that little heart icon
+in the red color. You can think of APIs as essentially an
+intermediary between an end-user and a
+back-end service. Say you can describe an
+API as a bank teller, and the data the
+back-end services host as the money in the bank. When you are a
+customer wanting to withdraw or deposit
+money from the bank, you're not necessarily
+interacting with the money directly. Instead, you go
+to a bank teller, in this case, an API, which handles things
+like communications between the end user and
+the back-end services, and also tells you
+how much money or data you're able to access. APIs at Meta are designed with
+specific purpose in mind. Say the goal is to design API for a user-facing
+product or feature. Typically, we have a designer
+that creates the mocks, and we work with a product designer that essentially provides
+information on, here are the high level
+objectives of what this end product or
+service could look like. Then typically, the
+actual API design is a handshake agreement
+between several engineers. Typically, back-end and
+front end engineers agree on the API structure. They also agree on things like what the request
+structure could look like and what the response
+could look like as well. In thinking about
+designing an API, I think it's really important to consider who
+your end user is. Another thing to
+consider is also who are the people
+who are going to be accessing the data, and also your API and services. You want to make sure
+that you add a layer of security in the form of credentials to your request in order to preserve
+that integrity as well. My advice for aspiring
+developers is, come at API design
+with an open mind. Remember that it's going be a collaborative process between several engineers and potentially also product
+managers and designers, folks who are going to
+be really invested in the outcome of the API in
+the form of a product, or an app, or a service even. When you're building an API, you really have to think about components as part
+of a larger piece. There is beauty in
+having an output that is reflective of things that you see in application
+in the real world. Have fun with it,
+brainstorm with engineers, and get a sense of what the target architecture
+for an API could be. I hope that you have a better
+sense of what APIs are, and how they fit in the software
+development life cycle. I know that you have a
+lot of work ahead of you, but keep checking at it just
+because it's so worth it to know how all these
+different components interact with each other.

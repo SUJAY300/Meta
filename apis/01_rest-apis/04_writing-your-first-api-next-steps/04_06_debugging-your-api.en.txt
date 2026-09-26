@@ -1,0 +1,63 @@
+As a developer it can be fun to code
+something new and exciting, but if you make a mistake you have to spend a lot of
+time trying to find and fix the issue. During this process, most of your time
+goes to finding what is causing the error, and reproducing it in
+a controlled environment. Debugging allows you to find and
+fix errors in your code efficiently, and helps you better understand
+how your program works. In this video, you will learn how to use
+the built in debugger of visual studio code and debug your code. Let's get to it, open the terminal and activate the virtual environment for
+your project by typing pipenv shell. Now open the current project directory
+in VS code, and select the python interpreter from the command palette,
+as shown in the previous video. Create a new Django app and
+open the project in VS code. You can find the d bugger
+icon on the left sidebar, click on this icon and
+it will open a debug panel. When you open it for the first time,
+there will be a create a launch.json file link at the top of this panel
+along with the debugger icon. Click on this, create a launch
+file link which will open a debug configuration list with
+many available options. Select Django from this list and
+you are ready for debugging. There are two options in the run menu. Start debugging and run without debugging. When you start the debugger it will
+automatically activate your virtual environment in a terminal session,
+and starts the web server. So, you don't need to manually
+start the web server anymore. Now let's get familiar with a few
+important terms related to debugging. The first one is breakpoint. A breakpoint is a position where
+you intentionally want to pause the execution of your code. When the execution is paused you can
+examine the variables value up to that point. You can add or remove breakpoints by clicking on the red
+dot beside every line number in VS code. The second one is watch. You can add variables to the watch
+list by clicking on the plus icon and examining their values
+whenever they change. Using the break points and the watch list,
+you can continuously monitor how and when the values of those variables change. Now let's move on to the debug toolbar. The debug toolbar will be visible when the
+code execution reaches a breakpoint and is paused. There are six buttons,
+let's go through them. The first button is continue or
+pause and it lets you execute code on the current line, and it continues
+until the next breakpoint is reached. Step over, lets you continue
+the execution to the next line and pause. If you use a function call and
+you need to go to that function and pause the code execution
+you'll use the step into. And step out, lets you go back to the line where it
+was called from inside a function. Restart means that you restart
+the debugging session and stop ends the debugging session and
+stops the web server. Now it's time to put
+the debugger to the test, open the views.pi file in your app and
+add this code. This code is supposed to present some
+even numbers to you, create a route so that this function can be accessed
+by browsing the numbers end point. But when you visit the endpoint,
+nothing displays in the browser, and that is an indication that there
+might be an error in the code. Set a breakpoint on line number nine and
+start the debugger. Now revisit that endpoint. The debugger didn't pause code
+execution on line number nine. This means that the value of
+the remainder was never set to zero, which is why line number
+nine didn't execute. Next, let's add this remainder
+variable to your watch list by clicking the plus
+icon on the watch tab. Set a new breakpoint on line number
+eight and restart the debugging session. This time the debugger
+paused the code execution. Step over a few more times and notice how
+the remainder's value increases by 0.5. Something is wrong here,
+the remainder should be either 0 or 1. So, let's examine line
+number seven closely. Notice that I used the division
+operator instead of modulo. So, let's fix the code and
+replace the division operator with modulo. Now remove all the breakpoints,
+restart the debugging session, and revisit the end point. And everything is working fine now. Notice how it displays
+only the even numbers. And that's how to debug your code using
+the built in debugger in VS code. In this video,
+you learned some important terms, and you learned how debugging works. You will most likely use this knowledge
+in all of your future API projects.

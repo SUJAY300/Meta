@@ -1,0 +1,39 @@
+Congratulations on
+reaching the end of this introduction to
+databases course. You've worked hard to
+get here and developed a lot of new skills
+during the course. You're off to a great start with your database learning and you should now have a
+thorough understanding of databases and data. You were able to demonstrate some of this learning along with your practical
+database skill set by creating and querying a
+database in the project lab. Following your completion
+of this course, you should now be able to; demonstrate knowledge of
+different database schema, explain relational
+database design and table normalization, perform database operations
+such as create, read, update, and delete,
+and demonstrate SQL commands by sorting
+and filtering data. In this course, you learned
+about databases, so, if you found this course helpful and wants to discover more, then why not register
+for the next course. You'll continue to
+develop your skill set during each of the back-end
+developer courses. In the final lab, you'll apply everything
+you've learned to create your own fully functional
+database system. Whether you're just starting out as a technical professional, a student or a business user, the course and projects
+prove your knowledge of the value and capabilities
+of database systems. The lab consolidates
+your abilities with the practical application
+of your skills. But the lab also has
+another important benefit. It means that you'll have a
+fully operational database that you can reference
+within your portfolio. This serves to demonstrate your skills to
+potential employers. Not only does it
+show employers that you are self-driven
+and innovative, but it also speaks
+volumes about you as an individual as well as your
+newly obtained knowledge. You will soon receive your
+professional certificate in back-end development. The certification
+can also be used as a progression to other
+role-based certifications. Depending on your goals, you may choose to go deep with advanced role-based
+certifications or take other fundamental courses once you earn this
+certification. Masters certifications provide globally recognized and
+industry-endorsed evidence of your technical skills. Thank you. It's been a
+pleasure to embark on this journey of discovery with you. Best of luck in the future.

@@ -1,0 +1,204 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p variant="body1">
+  Git works on all operating system platforms, including Windows, Mac, and Linux. The majority of developers will use Git via the command line because its syntax is standard and easy to follow. Git also integrates seamlessly into code editors and other Graphical User Interfaces (GUIs).
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Step 1: Check if Git is already installed
+ </h2>
+ <p variant="body1">
+  Macs often have Git installed by default. Before downloading any new software, you should check if it is already on your computer.
+ </p>
+ <p variant="body1">
+  Open your
+  <strong>
+   Terminal
+  </strong>
+  application (you can find it by searching "Terminal" in Spotlight) and type the following command exactly as it appears:
+ </p>
+ <p variant="body1">
+  <var>
+   git --version
+  </var>
+ </p>
+ <p variant="body1">
+  Press
+  <strong>
+   Enter
+  </strong>
+  .
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    If the terminal returns a version number (e.g.,
+    <var>
+     git version 2.30.1 (Apple Git-130)
+    </var>
+    ,
+    <strong>
+     Git is already installed!
+    </strong>
+    You do not need to do anything else and can skip to the Configuration step at the bottom of this page.
+   </p>
+  </li>
+  <li>
+   <p>
+    If the terminal returns "command not found" (or prompts you to install developer tools), proceed to Step 2.
+   </p>
+  </li>
+ </ul>
+ <h2 level="2" variant="h2semibold">
+  Step 2: Install Git (Choose one method)
+ </h2>
+ <p variant="body1">
+  If you need to install Git, there are a few ways to do it on a Mac. We recommend using
+  <strong>
+   Method A
+  </strong>
+  , as it is the fastest and easiest.
+ </p>
+ <p variant="body1">
+  <strong>
+   Method A: Install via Xcode Command Line Tools (Recommended)
+  </strong>
+  You do not need to download the massive, full Xcode application to get Git. Apple provides a lightweight package specifically for terminal users.
+ </p>
+ <ol bullettype="numbers">
+  <li>
+   <p>
+    In your terminal, type the following command and press Enter:
+    <var>
+     xcode-select --install
+    </var>
+   </p>
+  </li>
+  <li>
+   <p>
+    A pop-up window will appear asking if you want to install the command line developer tools. Click
+    <strong>
+     Install
+    </strong>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    Once the installation finishes, run the
+    <var>
+     git --version
+    </var>
+    command again to verify it was successful.
+   </p>
+  </li>
+ </ol>
+ <p variant="body1">
+  <strong>
+   Method B: Install via Homebrew (Alternative)
+  </strong>
+  Homebrew is a highly popular package manager for Macs. It makes it incredibly simple to install new software via the terminal.
+ </p>
+ <ol bullettype="numbers">
+  <li>
+   <p>
+    First, you need to install Homebrew. Go to
+    <a href="https://brew.sh/" title="">
+     https://brew.sh/
+    </a>
+    , copy the install command provided on their homepage, and run it in your terminal.
+   </p>
+  </li>
+  <li>
+   <p>
+    Once Homebrew is fully installed, type the following command to install Git:
+    <var>
+     brew install git
+    </var>
+   </p>
+  </li>
+  <li>
+   <p>
+    Once installed, run the
+    <var>
+     git --version
+    </var>
+    command to verify the installation is complete.
+   </p>
+  </li>
+ </ol>
+ <p variant="body1">
+  <em>
+   (Note: You can also get Git by downloading the full Xcode application from the Mac App Store. However, because Xcode is a very large application designed for iOS development, it uses a lot of memory space. Methods A and B are much better alternatives for general web developers).
+  </em>
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Step 3: Configure Your Git Account
+ </h2>
+ <p variant="body1">
+  Once Git is successfully installed on your Mac, you need to configure your user information. Git attaches this information to every code save (commit) you make.
+ </p>
+ <p variant="body1">
+  Run the following two commands in your terminal, replacing the placeholder text inside the quotes with your actual name and email address:
+ </p>
+ <p>
+  <var>
+   git config --global user.name "Your Name"
+  </var>
+ </p>
+ <p variant="body1">
+  <var>
+   git config --global user.email "your.email@example.com"
+  </var>
+ </p>
+ <p variant="body1">
+  You are now fully set up and ready to use Git!
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

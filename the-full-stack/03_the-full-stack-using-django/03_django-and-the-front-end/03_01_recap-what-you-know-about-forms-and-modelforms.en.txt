@@ -1,0 +1,90 @@
+Forms may appear to be simple
+components of Web development and therefore an aspiring developer
+like yourself might not be so interested in learning more about them. However, forms are in reality the primary
+elements of user interactivity on the Web. It is the backbone of data exchange. For example, the comments you make on social media
+platforms are effectively done via forms. So our reviews users
+give on restaurant apps. By now, you should know that
+the front-end component of full-stack applications generally involves HTML,
+CSS, and JavaScript. However, Django provides alternatives
+to this conventional approach to creating forms. Other than templates,
+Django provides an easy way to generate forms using a form API and
+model form class. This video will give you a quick overview
+of what you've learned about forms, ModelForms, and how they can be
+generated using the Django framework. Developers use the form class and Django to automatically generate
+HTML form elements from classes. In Django, the most common form
+submission is a POST request which will send the data via the POST body. The server-side code handles
+the incoming request and processes the data on the back end. In comparison with
+creating forms using HTML, Django makes it much easier to work
+with forms, especially large forms. Let's explore an example. Suppose you create a basic form
+using HTML to submit a name. You can use a label to display text
+describing what the input should be. The input set to the type, text,
+accepts input from the end user. In this example,
+the input stores the name. The second input of the submit type, is a
+button that displays the text, send name. When the button is pressed, the action
+will be triggered to make a POST request to be processed by the order view. And this is all defined in the form
+action and form method attributes. While this process works well,
+the code can become tedious and complex when dealing with large forms. For example, forms can have many different ways of
+gathering data with conditional flows. Also designing forms in this way can lead
+to a errors because each form elements, name, or ID attribute needs to match
+with the back-end code expects. To assist developers with
+form creation and processing, Django uses a form class, in this class, you can define all the expected attributes
+that will be passed down in the request. This means you can use a form class to
+represent the expected attributes and render the form elements in HTML. For example, the submit name form can
+be represented by creating a class. Let's step through this code line by line. First, you create a class called NameForm
+which accepts a parameter of forms.form. This is essentially what is
+being passed in the form itself. Next, you create a variable
+called your name, which is a sign forms.charField to
+represent the HTML input element. Notice that you also can set some
+validation by setting the attribute max length value to 100. Finally, when the name
+form classes rendered, it's rendered to a view
+containing the HTML form code. For developers, the advantage of creating
+forms in this way is that it's much easier to manage any changes to the form. Instead of worrying about the names of
+inputs matching with the server-side code, this is handled entirely
+by the form class. Let's explore another type of form used
+in Django, which is the ModelForm. ModelForm goes one step further by
+providing a way to store data too. Sending data to the back
+end using the POST method requires you to
+persist the data somehow. A model in your application will represent
+the table to store this information. So, the model itself can then directly
+be converted into a Django form. The process of creating a ModelForm,
+a special class in Django, is similar to that of separately
+creating a model and a form. ModelForm provides the means to save
+received data as a response directly to the database. There are three main processes
+involved when creating a ModelForm. Creating a model, creating a ModelForm,
+and configuring the view for processing form data. Let's take an example,
+say you want to create a logging form for the employees of the Little Lemon
+restaurant to log their work hours. Let's say you created
+a model called Logger and passed the models.model argument to it. The class will consist
+of three attributes. First name and last name that have
+form fields set to charField. And a third attribute called time log,
+which has TimeField as its form field. Each of these attributes corresponds
+to an HTML element in the form. By convention, the user-defined
+form classes are stored in a forms.pifile in the apps package folder. Inside the form, the form class,
+its attributes, and methods in the Django.forms module are used as
+a base for a user-defined form design. Let's examine the form closer. The Logger model is converted into
+a form by the Django model form class. You import the model you
+want to bind with your form. Next, you create an instance of that form passing the models.model
+form as an argument. Finally, you add implementation
+details for using a metaclass. Note that instead of having separate
+classes for form and model, you have just one that inherits
+the ModelForm and implements it. Since data exchange via a form involves
+sending form data back as a response, you also need to add some implementation
+details about the POST method inside the view. Let's now examine how you can do this. In the view called form view, an instance called form of
+the LogForm class is created. When a POST request with
+values passes validation, these values are saved to the log form. Overall, once the migrations
+are performed and you run the server, the form input data gets processed by
+the view and updated in the database. The attributes of a form
+are field class objects. These fields correspond to the HTML
+elements that eventually render on the user's Browser. For example, the forms.charField is
+translated to HTML text input tag. Out of the many available form field
+types, some of the most frequently used are charField which translates
+to the HTML text input type. IntegerField which is
+similar to a charField but is customized to accept
+only integer numbers. And floatField, which is a text input field that validates
+if the input is a valid float number. There is also the fileField which is
+like the file upload input type on the HTML form. The emailField is a charField that
+validates if the text entered is a valid email ID. And lastly, the choiceField is used to
+emulate an HTML form select element. While building forms may be
+a relatively simple process, there are several different options in coding
+languages that can be used to create them. Selecting the appropriate type of form is
+important for both the user experience and efficient data processing.

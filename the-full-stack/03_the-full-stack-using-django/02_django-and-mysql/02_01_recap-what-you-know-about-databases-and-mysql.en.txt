@@ -1,0 +1,101 @@
+Databases are a central component
+of any web application. The ability to provide
+persistent data is the key for
+applications to perform, create, read, update,
+and delete operations. While building a full
+stack application, the databases can either be
+relational or non-relational. However, relational databases
+such as PostgreSQL, and MySQL are more commonly
+used than non-relational databases such as
+MongoDB and Neo4j, as they provide something
+called a referential identity. In other words, they ensure consistency and accuracy
+of data with the help of keys present for
+records in a table and constraints that define
+the rules for them. In this video, you will
+briefly review what you know about databases, and
+specifically MySQL. Django supports the use of many databases with
+minimal configuration. These include PostgreSQL, MariaDB, MySQL,
+Oracle, and SQLite. Among these PostgreSQL and MySQL are the most
+commonly used. Django has features to
+support each database that make it easy to
+connect and work with. It provides a generic way to access the different
+types of databases. A connection to a database is established by knowing
+the type of database. When creating a Django project, the default configuration uses a SQLite database that requires no additional
+installation. It is automatically set
+inside the settings.py file. This means that you
+can directly start working with the
+database immediately. SQLite is known as a user friendly, zero
+configuration database. There are many
+advantages to using it. You don't need to install
+anything to support the database as it doesn't
+run as a server process. This means the database does
+not need to be started or stopped and it doesn't require additional
+configuration files. As a result, this type
+of database is suitable for small projects or
+rapid prototyping. But there may be occasions
+where a more scalable, robust database is needed. For example, when moving from a development to a
+production environment, the SQLite database has
+a lot of limitations. It is serverless and doesn't have a user management system. MySQL, on the other hand, can be an alternative to SQLite. MySQL has advantages such as being an open
+source database. It also has a lot of
+other advantages over SQLite such as scalability
+and authentication. To connect to a MySQL database, you need to provide the address where the database is running, the port number, and the database name
+you wish to connect to. There are a few
+steps that should be followed for using
+MySQL with Django. These include setting up
+MySQL on a local machine, installing the MySQL
+DB API driver, updating MySQL settings inside Django and setting
+up database tables. Let's briefly
+explore these steps. To install the MySQL server, download the
+installer appropriate for your operating system. The download link
+can be found in the additional resources
+at the end of this lesson. Start the MySQL
+command line client with the following command, MySQL-u route-p. Hyphen u is the flag for
+the username root, and hyphen p is the
+flag for password. You will then be
+prompted to enter the password set at the
+time of installation. In the command terminal, you will get the MySQL prompt. You can now enter any
+SQL statement in it. Start by creating a database
+with the following command , create database my_database. Then enter the next command, show databases, which will show the list of currently
+available databases. Next, you also need
+a database driver, which is responsible for
+mapping all the models and translating Python queries into SQL instructions via the model. There are a number of Python
+drivers available for MySQL. Django recommends that the
+MySQL API driver package, MySQL client is used. To use MySQL, the driver or connector, MySQL client needs
+to be installed. When you connect to a database, the connection opens
+on each request and it's kept open for a
+specified amount of time. The connection is controlled by the CONN_MAX_AGE parameter and represents a
+certain time before the connection is
+automatically closed. To establish a connection
+with the Django project, you must configure
+parameters under the databases option of
+the settings.py file. By default, the
+configuration is for SQLite. You can also use an
+options file for MySQL to store the database
+connection credentials. You will learn more about
+it later in this lesson. The credentials can include
+the database name, username, and password, and are stored in a separate
+configuration file. Inside the settings.py file, the MySQL connection
+reference looks for the connection file in
+the directory, etc/MySQL. Notice that this is not
+within the Django project. This is a deliberate
+security measure. You should note that the
+settings can also be updated directly in a Django
+settings.py file, but it is not recommended to be done in the production
+environment. While Django creates
+all the tables based on the models you have from
+the migration scripts, the initial setup requires you to manually
+create the database. Creating a database requires
+a connection to the database itself and sufficient
+permissions for authentication
+and authorization. It's important to
+remember that you must keep the database secure by assigning security roles and using strong usernames
+and passwords. As a developer, you need to be aware of potential
+security risks. One significant risk is the security of the
+credentials of your database. Allowing someone to know
+or access the username and password of your database
+can have major consequences. You might find it hard to gauge the advanced
+functionalities available in Django while using databases. However, the use of
+Django with MySQL in a full stack application is a well accepted
+industry standard. The ease of scalability and configuration options
+available make it a good match while building robust and secure
+applications in full stack.

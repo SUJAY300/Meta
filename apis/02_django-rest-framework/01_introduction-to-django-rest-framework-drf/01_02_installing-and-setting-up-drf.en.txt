@@ -1,0 +1,79 @@
+By now, you know that DRF is a great toolkit to help you
+write APIs very quickly. In this video, you'll learn
+how to install and configure the Django Rest Framework or DRF in a Django project
+with minimal effort. Now the question is, are you
+going to use pip or pipenv. If you're eating just pip, you'll need to manage
+all those dependencies and keep track of
+those packages. You will also need to set up
+the virtual environment and configure it to
+function correctly. However, is in pipenv, which works on top of pip, makes everything easier with a lot of work going
+on behind the scenes. Creates and manages the
+virtual environment. You don't have to manually configure so many
+things to make it work. In this video, you'll set up a new Django project
+using pipenv and then install DRF using both pip and pipenv and
+configure it properly. Let's begin. Open the
+terminal and go to your project directory and apply the command pipenv
+install django. Now, apply the
+command pipenv shell to activate the
+virtual environment and it'll be ready to work. Let's create a
+Django project and app using the following
+commands in your terminal. Django-admin startproject
+BookList. Now, python manage.py
+startapp BookListAPI. Great. Now you can use pip or pipenv to install the DRF
+using the following commands. Pip or pip3 install
+djangorestframework, or pipenv install
+djangorestframework. Now to configure the DRF, which is relatively
+straightforward. Open the settings.py in your
+project directory and find the installed apps section where all the installed
+apps are listed. Now add rest_framework at the end of this list
+and you're done. DRF is now configured
+and ready to use. We also need to include the
+BookListAPI app in this list. Now let's create
+an API endpoint, for example, /books, which you can access
+by making an HTTP get request to
+http://127.0.0.1/books. Open the views.pyfile from your BookListAPI app and add
+the following code in it. DRF comes with an
+improved version of the default HD versus
+class called response. In DRF, you will also need
+to wrap the methods with the decorator
+@api_view brackets. This is so you can use the
+response class properly. This decorator will be
+discussed later in this course. For now, let's just
+keep it as it is. To map this method to an API endpoint create
+a new file called urls.py inside your
+BookList API directory and add the following
+code in it. Finally, you need to
+include the urls.py file in our project's
+main urls.py file. Open the urls.py file in the booklets
+directory and import the include function from
+the same django.urls module. Let's link the newly
+created books endpoint under the API for
+our sketchbook. Add the following line to
+the URL patterns section. Now run the web server using
+Python manage.py run server. The books endpoint can be accessed as
+http:127.0.0.1:8000/api/books. Now it's time to taste this
+endpoint using insomnia. Open insomnia and create a new request which
+the HTTP GET method. Write the following
+URL in the URL field, http://127.0.0.1:8000/api/books. Now click the "Send button". You'll notice that
+the texts list of the books returned
+from the API. Nice. Let's make a post call
+to this book's endpoint, open insomnia, and change
+the method from GET to POST and click
+the "Send button". Note that DRF is not accepting
+an HTTP post call to this end point and
+it's returning a message saying method
+post not allowed. This is happening because
+you did not instruct DRF to accept any other
+HTTP methods than GET, which is the default one. If your API endpoints need to accept other HTTP
+methods like POST, PUT, or DELETE you need to define them in the
+API view decorator. Let's go back to our
+view file and edit the API view decorator
+function add square bracket, single quotation, POST
+single quotation, close, square bracket, close inside the API view decorator
+function and you are done. Now send the post request
+again and check the output. DRF is now exiting HTTP post request to
+this API endpoint. Similarly, you can add, PUT and DELETE if your API endpoint deals
+with those HTTP methods. In this video, you'll
+learn how to set up and configure the Django rest
+framework in a Django project. You have also learned
+how to accept different types of HTTP request to an API in DRF. Well done.

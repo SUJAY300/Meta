@@ -1,0 +1,72 @@
+Load balancers help scale
+your application by evenly distributing loads
+on multiple nodes in a round-robin fashion, or based on node health. You can use various
+load-balancing techniques to reduce the pressure on your
+application infrastructure. In this video, you
+will learn about them. Let's start with load
+balancing the web server. Your web server plays
+a vital role in accepting all HTTP requests, sending them to the
+backend scripts, getting the response, and delivering it to the client. The web server also receives requests to serve static HTML, CSS, and JavaScript files. Many Cloud providers offer
+load-balancing services. Using these, you can create
+multiple web servers with the same application code and link them to
+the load balancer. The load balancer then accepts all HTTP requests and sends
+them to the web servers. This load distribution
+can happen in two styles, round-robin and health based. In the round-robin style, the load balancer distributes the load equally on
+all web servers. But there is a problem. Not every request is the same. Some requests take
+a fraction of a second to finish and
+some take longer. In a round-robin load
+distribution model, if a web server is already
+working on a request, it may receive
+subsequent requests, and then take a long time
+to process those requests. There's a better way to
+deal with this problem. Some load balancers
+are configured in a way that can monitor the
+load on these web servers and then distribute
+the load only on those nodes which are available
+and not already loaded. This is called health-based load balancing and works
+better than round-robin style. You can use a reverse proxy
+to perform load balancing. The web server serves everything including
+application URLs, API calls, and static files. A reverse proxy can
+be configured in such a way as to serve the
+static files by itself, and forward the applications specific URLs and API
+calls to the web server. Static files includes HTML, CSS, JS, text files, and images. This technique is widely used and improves
+the performance of your web server by
+reducing the number of requests the web
+server has to handle. Similar to serving
+the static assets using a reverse proxy, you can completely
+offload them to an external content
+delivery network or CDN. This can speed up your
+applications page rendering time, because CDN services
+create multiple copies of these static files and serve them from the client's
+nearest data center. The database is one of the most crucial parts of
+every web application. A well-tuned database server
+can handle a huge load. Scaling a database is more complex than scaling
+a web server. Sometimes vertical
+scaling helps, but horizontal scaling has
+better sustainability. There are two popular techniques for scaling databases
+horizontally. The first one is sharding. This is when a large
+database is split into multiple chunks and one database
+server holds one chunk. One extra database is needed to keep track of these
+chunks for better lookup. With the master-slave
+replication approach, the whole database is
+replicated on multiple servers. One works as a master server where the data
+modifications happen. As soon as something changes, the master server writes those
+changes on other servers, which are called
+the slave servers. All the read requests are evenly distributed to these
+slave servers. This way, multiple
+slave servers can handle more SQL queries
+and still remain healthy. Most Cloud providers offer managed database servers where
+they internally balanced the loads and process
+a massive amount of data without creating
+trouble or going down. Using this managed
+database service, the developer remains worry-free and focuses on development and business growth instead of tedious infrastructure
+management and DevOps processes. The load balancing techniques discussed are considered
+public load balancing, because they are
+directly dealing with the external client requests. Private load balancing is
+sometimes necessary where heavily loaded internal
+non-public applications, or microservices
+are communicating with each other over
+private IP addresses. In this video, you learned
+about load balancing. You learned about different public load-balancing techniques for the web server
+and databases, and about private
+load-balancing.

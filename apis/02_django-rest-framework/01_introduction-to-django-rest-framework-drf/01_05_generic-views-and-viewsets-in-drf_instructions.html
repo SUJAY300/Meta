@@ -1,0 +1,815 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  Introduction
+ </h2>
+ <p variant="body1">
+  DRF comes with many generic views and
+  <var>
+   ViewSet
+  </var>
+  to speed up API development. When you use these classes, you don’t need to start from scratch and using them will reduce the code in your API project. In this reading, you will learn about different types of generic views and
+  <var>
+   ViewSet
+  </var>
+  as well as their purposes and benefits.
+ </p>
+ <h2 level="2">
+  ViewSets
+ </h2>
+ <p variant="body1">
+  <var>
+   ViewSets
+  </var>
+  are simple class-based views, but they come with benefits. There are a few
+  <var>
+   ViewSets
+  </var>
+  classes available in DRF that you can use to quickly scaffold a functioning API CRUD project. You can also provide permission classes and throttle classes to allow authenticated API calls and rate limiting.
+ </p>
+ <p variant="body1">
+  To use these classes, you must import the
+  <var>
+   viewsets
+  </var>
+  module from the
+  <var>
+   rest_framework
+  </var>
+  :
+ </p>
+ <pre language="python">from rest_framework import viewsets</pre>
+ <h3 level="3">
+  ViewSet
+ </h3>
+ <p variant="body1">
+  There are a few
+  <var>
+   ViewSet
+  </var>
+  classes but the foundation is
+  <var>
+   ViewSet
+  </var>
+  and it extends the
+  <var>
+   APIView
+  </var>
+  . When your class-based views extend a
+  <var>
+   ViewSet
+  </var>
+  you get browsable API views out of the box. Except for that, every
+  <var>
+   ViewSet
+  </var>
+  comes with a method naming convention for easier one-line routing that saves a lot of time.
+ </p>
+ <p variant="body1">
+  When a
+  <var>
+   ViewSet
+  </var>
+  is used to deal with a collection of resources, you can write your business logic in
+  <var>
+   list()
+  </var>
+  and
+  <var>
+   create()
+  </var>
+  methods inside this class.
+ </p>
+ <table columns="3" rows="3">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Class method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Supported HTTP method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Purpose
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      list()
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Display resource collection
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      create()
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Create new resource
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  You can use the following methods to write the business logic when a
+  <var>
+   ViewSet
+  </var>
+  deals with a single resource.
+ </p>
+ <table columns="3" rows="5">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Class method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Supported HTTP method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Purpose
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      retrieve()
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Display a single resource
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      update()
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      PUT
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Completely replace a single resource with new data
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      partial_update()
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      PATCH
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Partially update a single resource
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      destroy
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Delete a single resource
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p>
+  When you extend a
+  <var>
+   ViewSet
+  </var>
+  , you will have to manually write code to perform the database operations. But there are two more
+  <var>
+   ViewSet
+  </var>
+  classes that can automatically do that for you. This is how you extend a
+  <var>
+   ViewSet
+  </var>
+  class.
+ </p>
+ <pre language="python">class MenuItemViewSet (viewsets.ViewSet)</pre>
+ <h3 level="3">
+  ModelViewSet
+ </h3>
+ <p variant="body1">
+  If the class-based view extends a
+  <var>
+   ModelViewSet
+  </var>
+  , it can automatically handle CRUD operations for you. All you must do is give this class a
+  <var>
+   queryset
+  </var>
+  and a serializer, and everything else will be done automatically.  You don’t need to write code for all those database operations anymore. Later in this course, you will see a practical example of using
+  <var>
+   ModelViewSet
+  </var>
+  to write a functioning CRUD API project with only a few lines of code. Here’s an example of how to extend this
+  <var>
+   ViewSet
+  </var>
+  .
+ </p>
+ <pre language="python">class MenuItemView (viewsets.ModelViewSet)</pre>
+ <h3 level="3">
+  ReadOnlyModelViewSet
+ </h3>
+ <p variant="body1">
+  As the name suggests, when your class-based views extend a
+  <var>
+   ReadOnlyModelViewSet
+  </var>
+  , it can only display a single resource and resource collection. No write-operation is allowed by such views, so it doesn’t handle
+  <var>
+   POST
+  </var>
+  ,
+  <var>
+   PUT
+  </var>
+  ,
+  <var>
+   PATCH
+  </var>
+  or
+  <var>
+   DELETE
+  </var>
+  methods.  Here’s an example of extending a
+  <var>
+   ReadOnlyModelViewSet
+  </var>
+  .
+ </p>
+ <pre language="python">class ReadOnlyMenuItemView (viewsets.ReadOnlyModelViewSet)</pre>
+ <h2 level="2">
+  Generic views
+ </h2>
+ <p variant="body1">
+  Generic views are another way of quickly writing class-based views to scaffold fully functional CRUD API projects. There are several generic views that offer a particular functionality, like displaying resources or creating a new resource and so on. All you must do is extend these generic views to make your API endpoints work.
+ </p>
+ <p variant="body1">
+  To use these generic view classes, you must import the generics module from the
+  <var>
+   rest_framework
+  </var>
+  .
+ </p>
+ <pre language="python">from rest_framework import generics</pre>
+ <p variant="body1">
+  All generic view classes require a
+  <var>
+   queryset
+  </var>
+  and a serializer to work properly.
+ </p>
+ <p variant="body1">
+  Here is a list of generic views in DRF and their purposes.
+ </p>
+ <table columns="3" rows="10">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       Generic view class
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Supported method
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Purpose
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      CreateAPIView
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Create a new resource
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      ListAPIView
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Display resource collection
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      RetrieveAPIView
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Display a single resource
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      DestroyAPIView
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Delete a single resource
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      UpdateAPIView
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      PUT
+     </var>
+     and
+     <var>
+      PATCH
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Replace or partially update a single resource
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      ListCreateAPIView
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+     ,
+     <var>
+      POST
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Display resource collection and create a new resource
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      RetrieveUpdateAPIView
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+     ,
+     <var>
+      PUT
+     </var>
+     ,
+     <var>
+      PATCH
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Display a single resource and replace or partially update it
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      RetrieveDestroyAPIView
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+     ,
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Display a single resource and delete it
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      RetrieveUpdateDestroyAPIView
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     <var>
+      GET
+     </var>
+     ,
+     <var>
+      PUT
+     </var>
+     ,
+     <var>
+      PATCH
+     </var>
+     ,
+     <var>
+      DELETE
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Display, replace or update and delete a single resource
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h3 level="3">
+  Example code
+ </h3>
+ <p variant="body1">
+  If you want API endpoints to be capable of displaying resource collection and creating a new resource, you have to extend both
+  <var>
+   ListAPIView
+  </var>
+  and
+  <var>
+   CreateAPIView
+  </var>
+  , or just
+  <var>
+   ListCreateAPIView
+  </var>
+  . Both of the following lines of code do the same job.
+ </p>
+ <pre language="python">class MenuItemView (generics.ListAPIView, generics.CreateAPIView)</pre>
+ <p variant="body1">
+  And
+ </p>
+ <pre language="python">class MenuItemView (generics.ListCreateAPIView)</pre>
+ <p variant="body1">
+  Just like
+  <var>
+   ModelViewSet
+  </var>
+  , you must give these generic view classes a
+  <var>
+   queryset
+  </var>
+  and a serializer and you don’t need to manually write code to perform these database operations.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Authentication and selective authentication
+ </h2>
+ <p variant="body1">
+  If you want all API calls to be authenticated in a class-based view that extends the generic views, you can add the
+  <var>
+   permission_classes
+  </var>
+  public attribute in the class.
+ </p>
+ <pre language="python">Permission_classes = [IsAuthenticated]</pre>
+ <p variant="body1">
+  If you want to selectively enable authentication for some calls, like
+  <var>
+   POST
+  </var>
+  ,
+  <var>
+   PUT
+  </var>
+  ,
+  <var>
+   PATCH
+  </var>
+  and
+  <var>
+   DELETE
+  </var>
+  then you need to override the
+  <var>
+   get_permission
+  </var>
+  method in your class-based view like this.
+ </p>
+ <pre language="python">def get_permissions(self):
+        permission_classes = []
+        if self.request.method != 'GET':
+            permission_classes = [IsAuthenticated]
+            
+        return [permission() for permission in permission_classes]</pre>
+ <p variant="body1">
+  This way, anyone will be able to make
+  <var>
+   GET
+  </var>
+  call, but other HTTP methods like
+  <var>
+   POST
+  </var>
+  ,
+  <var>
+   PUT
+  </var>
+  ,
+  <var>
+   PATCH
+  </var>
+  and
+  <var>
+   DELETE
+  </var>
+  will require authentication or a valid user token.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Return items for the authenticated user only
+ </h2>
+ <p variant="body1">
+  Sometimes in a class-based view that extends a generic view, you may want to return resources created by the authenticated users only. In that case, you need to override the
+  <var>
+   get_queryset
+  </var>
+  method. The following code in a class-based view returns only those orders created by the authenticated user.
+ </p>
+ <pre language="python">class OrderView(generics.ListCreateAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+    permission_classes = [IsAuthenticated]
+    def get_queryset(self):
+        return Order.objects.all().filter(user=self.request.user)</pre>
+ <h2 level="2" variant="h2semibold">
+  Override default behavior
+ </h2>
+ <p variant="body1">
+  Though generic views automate everything, you still have full scope to change the default behavior by overriding any of the default methods. Here is an example that returns a simple static response instead of the resources.
+ </p>
+ <pre language="python">class OrderView(generics.ListCreateAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer  
+    def get(self, request, *args, **kwargs):
+        return Response(‘new response’)</pre>
+ <p variant="body1">
+  The other methods you can override are
+  <var>
+   post()
+  </var>
+  ,
+  <var>
+   put()
+  </var>
+  ,
+  <var>
+   patch()
+  </var>
+  and
+  <var>
+   delete()
+  </var>
+  .
+ </p>
+ <h2 level="2">
+  Conclusion
+ </h2>
+ <p variant="body1">
+  In this reading, you explored the
+  <var>
+   ViewSet
+  </var>
+  classes and generic view classes which can help you to scaffold a fully functional CRUD API project in a very short time.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

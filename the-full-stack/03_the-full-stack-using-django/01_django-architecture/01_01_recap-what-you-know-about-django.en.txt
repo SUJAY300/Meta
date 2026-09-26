@@ -1,0 +1,97 @@
+Well done. You've come really far with all the courses
+you've completed. But sometimes it can be difficult
+to remember everything. In this course, you
+will be returning to some key concepts of Django, so let's recap what
+you've learned in the Django course
+to make sure that you're prepared for the
+rest of this course. First, you learned how Django
+is used in the real world. For example, the
+developers can create a back-end framework with Django that can connect to a
+front-end framework, and you learned about
+projects and applications, admin and structures, as well
+as what are web frameworks. Django encourages
+dry principles, or don't repeat yourself. In other words, write it
+once but use it many times. You learned about django-admin
+and manage.py commands as options for command line utility to perform administration tasks, and you learned how they're used in the creation of
+projects and apps. Furthermore, you now know that frameworks are designed
+to support you in building web applications
+because they provide you with a clean,
+ordered structure. Also recall the benefits of
+using the Django framework, which include: speed, feature-rich classes,
+security, and scalability. You also learned how Django
+implements the model, view, and template
+or MVT architecture, and that splitting the data, logic, and display into M, V, and T rapidly creates large-scale data-driven
+web applications. You then progressed
+to learn about the model part of
+the MVT framework. You learned about the concept
+of migrations and how to apply them using a
+best-practice approach. You also explored how to use the QuerySet API to
+interact with the database. After that, you
+learned how to create a form and use the Form API to bind data to objects and build model forms as well
+as HTML forms. Then, you learned how to use the Django Admin
+panel to add and control the permissions
+of users and groups, and you explored how to set up an external MySQL database
+for your Django app. Next, you moved
+on to learn about the view part of
+the MVT framework. You learned how to
+create views and view logic that can process
+basic HTTP requests. You now know that
+the view handles web requests and
+returns web responses, and you learned how to create a view function and
+map it to a URL with a process called routing so that you can make the
+request-response work. In addition, you
+should be able to perform other programming
+logic inside of View functions such as processing and retrieving
+data from a database, transforming data, and
+rendering templates. You also explored the
+URL configuration file urls.py and learned
+why it exists. You know that the urls.py
+file is already present at the project level
+and configuration can also be added
+at the app level. You learned about the HTTP
+request object and should be able to demonstrate how it
+can be used to map to URLs, map to common crud operations, and get information by
+calling the client. Next, you unpacked URL
+name-spacing and views, which is how URLs can be mapped to a name and
+its subsequent view. You also practiced URL
+parameters and query parameters. Then you learned about
+the different operations for using parameters
+in a web application. You should be able to demonstrate
+how it relates to get, put, post, and
+delete operations. You also learned about
+regular expressions in URLs. Following this, you explored how to handle errors
+such as dealing with HTTP status responses and dealing with error
+responses from the server. You also explored how
+developers can simplify their views by using
+object-oriented techniques, such as the concept of
+inheritance to create views from inherited classes by using class-based views that can
+be reused across a project. You were introduced to the
+Django template language or DTL for short, which consists of constructs
+such as variables, tags, filters, and comments. While working with templates, you also explored
+variable interpolation. You should now be able to
+create dynamic templates in Django and map model
+objects to the template. Next, you explored
+template inheritance, where you learned how
+to split out content into individual components
+and reuse the segments. You learned that template
+inheritance uses two main tags, the include and the extends tag, which allows you to replace blocks or content from
+a parent template. Finally, you learned about
+debugging and testing. You learned that
+debugging is about removing an application's
+errors and bugs, and testing considers
+metrics for quality, reliability,
+and performance. You now know that Django has a distinct debugger that appears in the form of a
+yellow page error, we call it DEBUG
+equals True flag. You also know that every
+language and framework have many testing options that
+work well in Django. A popular method is unit testing which you can use to
+isolate a function, class, or method, and only
+test that piece of code. Finally, in Django, the unit test module uses a class-based approach
+where you add the tests inside a class
+that inherits the class called test case from
+the Django test package. You really worked hard in the Django course and
+covered a lot of ground. If there's anything in the recap that you feel unsure about, please review the
+relevant material from the Django course
+so that you feel confident and ready for
+the activities that come later when you use
+your Django coding skills.

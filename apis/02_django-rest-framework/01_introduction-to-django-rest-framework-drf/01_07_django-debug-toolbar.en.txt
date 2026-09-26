@@ -1,0 +1,57 @@
+You can save a lot of time using
+smart debugging tools and utilities. And one such tool is the Django
+debug toolbar which is necessary for every Django developers tool built. In this video, you'll learn how to integrate this
+debug toolbar in your Django projects. You can install the Django debug
+toolbar with pip or pipenv. Open the project directory
+in a terminal window and activate the virtual
+environment with pipenv shell. Now, install the Django debug toolbar
+using pipenv install Django debug toolbar. The next step is to add the debug
+toolbar in the installed apps section. Open the settings.py file and add debug
+toolbar in the installed apps array. Now, you need to add a special URL pattern
+to your project to map the debug toolbar. Next, include a middleware called debug
+toolbar.middleware.DebugToolbarMiddleware in the middle or
+section in the settings.py file. You can find this section just
+below the installed apps section. Finally, include the local
+host IP address which is 127.0.0.1 in a new
+section called internal IP's. This section is not in
+the settings.py file by default. So you must create it. Excellent. Now, you're done installing
+the Django debug toolbar, let's visit any of the endpoints. For example, place four slash API for slash books at the end
+of the localhost URL. Now, you should notice the debug toolbar
+on the right side of the screen, it contains information about
+your current project set up, the current requests and
+the database queries. If the toolbar is open, you can hide it by clicking on the hide
+link at the top of the debug toolbar. You can also enable and
+disable any section of the debug toolbar using the checkboxes
+beside each of them. The Django debug toolbar
+has many sections. Let's explore some of the important ones. The settings section displays all the
+settings you have in your settings.py file and other settings used throughout
+the project and the installed apps. If you want to override a setting,
+copy its name and value from here and then add it in the settings.py
+file with the new value. Let's move on to the header section. This section includes all the header
+information sent to this request and those generated in the response. The skills section is one of the most
+useful sections in the Django debug toolbar. It shows the list of the SQL queries
+executed for this end point. This is a place where you often check for
+performance tuning and optimization. From here, you can easily detect if more
+than required SQL queries are running and then take the necessary steps to fix them. The static file section displays
+all the static files loaded for the current request and
+those used by the installed apps. Developers usually do not serve
+static files from API requests. Still, you should know about this. The Cache section displays
+applications that use the Cache. By now, you should know that Cache
+helps to reduce the several load for a great extent. You learn more about Cache
+later in this course. The last section I want to
+highlight is profiling. This is unchecked by default and you can
+enable it using the checkbox next to it. The profiling section displays
+the complete call stack. When you make a request, a file in
+your project intercepts the call. Then it invokes another function, that function calls another one and
+it goes on and on like this. It then comes to your function or
+class based views and thereafter, jumps to another file to generate
+the response and display it. So, the profiling section contains
+this full code execution flow. Please note that the Django debug
+toolbar will only be visible during development time when
+you use the browser API. It will not show when you're making
+the API call in the production view or when it returns data as the client
+apps are consuming the APIs. In this video, you learn about
+an important tool called Django debug toolbar which can help you to debug and
+optimize your API project. You should now be able to
+include it in your project and use some important
+sections in the toolbar.

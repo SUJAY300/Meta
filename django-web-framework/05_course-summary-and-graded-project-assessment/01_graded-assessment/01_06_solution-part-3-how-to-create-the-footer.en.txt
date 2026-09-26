@@ -1,0 +1,20 @@
+First, open the file _footer.html and paste the code that was supplied to you. Then replace the code inside the angled
+brackets of the image tag with the appropriate template code. Next, make sure to remove the angled
+brackets and save the file. The final step is to open
+the file base.html and locate the common footer content. On the line underneath, add the include
+tag with the relative path of the footer.html file, save the file and
+refresh the web page in the browser. Notice that the footer content now
+displays on the Little Lemon website. Now it's time to move to the final
+part of the project and test the form. On the Little Lemon website navigation,
+click Book. In the form that displays,
+enter the details such as your initials as the first and last name,
+the number of guests and a comment. Press on the Submit button
+to send the form data. Next, back in VS Code,
+right-click on the database db.sqlite3 and select Open Database. Notice that the SQLite Explorer
+option will be generated at the bottom of the Explorer
+panel in VS Code. Click on the arrow next to
+SQLite Explorer to expand its contents. Scroll down to the table
+restaurant_booking and click on the show table icon. Notice that the reservation form data you
+sent is stored in the database table. And there you have it. This concludes the video of
+the solution to the assessment. Congratulations, welcome
+to Little Lemon Restaurant.

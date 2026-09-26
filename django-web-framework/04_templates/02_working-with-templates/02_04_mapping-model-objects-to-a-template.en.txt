@@ -1,0 +1,70 @@
+One of the reasons Django is
+so popular is that it allows developers to create dynamic
+website content quickly. With just a few steps, you can take data that's
+stored in a database, write some logic for it, and then display it to the
+end user in the browser. Previously you learned how
+to display dynamic data on a web page using objects that
+were passed to a template. In this video, you
+will learn how to create a dynamic menu for little lemon by passing a model object to a
+template from a view. You will also explore how to loop over an
+object and display its content using a for-loop with the Django
+template language. I'm in VS Code and I have
+the models.py file open. Previously you learned how
+to create a model named menu with attributes
+for name and price. Notice that name is set to a char field and the price
+to an integer field. I've also created a dunder
+string method that will render a string for the objects
+with the name attribute. Recall that this just
+helps with visualization and identification and
+Django administration. If open Django administration
+in the browser, recall that this model contains data like the menu
+items for hummus, falafel and so on. My code is now set up and I'm ready to create
+the view function. Inside the views.py file, I create another view
+function called menu by ID. Just like an earlier videos, I pass in the request object, but there are a couple of
+different steps I need to take. First, I import the menu
+from the models.py file. Next inside the function, I need to create an
+object containing all the values present
+inside the menu model. To do this, I use the method menu.objects.all and assign this to a variable named new menu. The next step is to create a dictionary using similar logic represented in the code above that you learned
+about previously. Inside the curly braces, I create a key called menu. Then the value will be
+the variable new menu. This will be assigned
+to another variable called new menu_dict. The last step is to return a render function that
+takes three parameters. The request object, the name of the template file,
+and the dictionary. There's a lot of code on
+the screen so let me just comment out the view
+function I created earlier. This will also ensure no
+regular expression conflicts as some of the names and the
+two functions are similar. I save this file and
+now I need to check the mapping in the urls.py file. Notice that the URL
+inside the path is set to menu_card as the URL
+resource location. For the final part, I need to create an HTML file with the same name that I typed inside the render
+function, menu_card.html. Inside the file I pass the
+menu key from the dictionary. Let me check that I've
+saved all my files. I open the browser
+and navigate to the URL menu_cards
+and press "Enter." Notice that the query set object is displayed on the web page. I want the page to only display
+the items of the object, so I need to modify my code. Back in the HTML file, I need to use the Django
+template language with a conditional statement. I start by adding
+single curly braces with the percentage symbol. Next, I create an if
+condition by typing, if menu to check if items
+are inside the menu. If this condition is true, I use a for-loop to iterate
+over the items in the menu. On the following line, I add item.name and item.price. Then I need to make
+sure I end the for-loop by typing endfor. Finally, I will add one
+more piece of logic and else condition that displays some task if the menu
+object is empty. I end the endif condition. My code looks good. I save the file and refresh the
+web page in the browser. Notice that only
+the objects, names, and prices are now
+dynamically displayed. It's important to understand that this data was taken from a database and stored in a
+model object using the model. Then I looped over the object to display each value
+for name and price. My code is working, but I can
+take this further by adding one final step to wrap the dynamic output with
+HTML paragraph tags. If I saved the file and
+refresh the web page, notice that each item now
+displays on a new line. Finally, to demonstrate
+this dynamic web-page tax, let me add another item to the database using
+Django administration. I add the item Baklava
+with a price of 10. I save the item and switch to
+the menu page and refresh. Notice that the content updates automatically and
+displays the new item. In this video, you learned
+how to create a dynamic menu by passing a model object
+to a template from a view. You also explored how to loop
+over an object and display its contents using a for-loop with a Django template language.

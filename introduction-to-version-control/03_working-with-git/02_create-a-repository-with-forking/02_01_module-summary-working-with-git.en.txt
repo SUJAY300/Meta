@@ -1,0 +1,18 @@
+You've reached the final video in this
+lesson on creating a repository with forking and the end of the Git module. Let's take a few moments to
+recap on what you've learned. You now know how to explain
+the principles of get and utilize a GitHub repository including
+branching and merging code, perform a local install of GIT
+on a Windows operating system, create a new repository in GitHub and
+clone it to a local machine. Explain the fundamentals of Git and
+outline the Git workflow and identify the differences between remote
+and local repositories in GitHub. Explain what they get add and
+commit commands do and describe how they work push content to
+remote repositories with Git push and retrieve content from remote
+servers using Git pull. Keep lines in your workflow, clear and
+stable with the use of branches. And explain how head is used in Git to
+identify the current branch you're working on, compare changes across files, commits
+and branches using diff commands, examine changes to files and identify their
+author with the use of blame commands. And create a repository
+with the use of forking. You're now familiar with GitHub and
+creating repositories with forking. Great work.

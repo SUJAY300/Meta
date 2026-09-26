@@ -1,0 +1,75 @@
+In this video,
+you will learn about binary numbers, what they are and how computers use
+them to represent human language. You will learn how positional encoding
+can turn a limited set of numbers into an infinity size representation of values. Lastly, you will learn how computing
+the power of a number can be applied to determine how many states this
+simple representation can hold. Traditionally, you count using ten
+different digits, zero to nine, this stems from the early
+development of maths. It was a natural progression resulting
+from humans having ten fingers and ten toes, counting with the use of ten
+digits is referred to as base ten. Base ten means you have ten different
+numbers to use before you have to add another digit and reuse numbers. Each time you've exhaust the range,
+you reset the number on the left and add a zero to the right, this new digit has to be ten times
+greater than the digit to its right. The number on the right is the reset and
+the count begins again, the use of the position of the number
+to denote a progressive increase in value is called positional notation. When you consider it, It is an early
+implementation of an algorithm to allow for the recording of
+an infinite number of values, simple in implementation but
+very powerful in effect. Binary works using the same
+positional notation approach, it is another common counting
+approach that employs base two. This means that all of the values
+are represented with either a one or a zero,
+computers store information as bytes, each byte is made up of eight bits
+that can either be one or zero. As you have now learned, in decimal,
+the count would come to nine and you would add another digit and reset,
+in binary the same thing happens, but in this case only two digits are used. To progress the count,
+you move the number left, move the one to the left until
+all configurations of ones and zeros have been used, at which point
+you add another zero to the end. At this stage, all the numbers are reset to zero apart
+from a single one at the beginning. Let's explore it step by step,
+start to count with a zero then add one, to get to three,
+start back at zero again but add a one on the left,
+as soon as all the ones are full, start back at zero again and
+add one to the number on the left. But that number is already at one,
+so it also goes back to zero and one is added to the next
+position on the left. Binary has many uses in computing,
+it is a very convenient way of translating electricity
+into computer code, if a signal is present, a one is
+displayed otherwise, zero is used. The binary counting system allows
+these base two signals to amount to a significant amount of information,
+transportation and storage, this is the same way
+as Boolean numbers are stored. A Boolean value is either one for true,
+and zero for false, some powerful applications can be built using this
+simple information representation. The ASCII, American standard code for
+information interchange, is a map of binary to character encoding
+or a mapping from binary to text. There is a binary number reserved for
+each digit and character as well as for a number of
+special characters, like a question mark, brackets, full stop and
+even the space bar. It was already mentioned that
+a byte is made up of eight bits, each bit can take the value of zero or
+one. So that raises the question, how many different values can
+be represented in each byte, here we would use exponentiation or
+counting the power of a number. An example would be two
+to the power of three, that is two multiplied by two
+multiplied by two, which equals eight. Now consider that you have a lock with
+four different digits, each digit can be a zero or a one, how many potential
+pass numbers can you have for the lock? The answer is two to the power of four or
+two times two times two times two equals 16,
+you're working with a binary lock therefore,
+each digit can only be either zero or one. So you can take four digits and
+multiply them by two every time and the total is 16. Each time you add a potential digit,
+you increase the possible permutations, so the same lock with five digits
+would have two to the power of five or 32 different combinations. Now, coming back to our original question, how many different representations
+can there be in a bite? It was already mentioned that
+a bite is made up of eight bits, which can be either a zero or
+a one, eight bits would have two to the power of eight or
+256 different combinations. In this video, you learned about binary
+numbers, the language of computers, while at first glance,
+it seemed quite limited to on or off, you learned that through
+the use of positional encoding, it could be used to represent
+a much larger number set. You learned how computers can use
+electricity to store and read numbers and how exponentiation or counting the power of a number
+relates to counting unique states. And how to use it to count
+the number of possible combinations A number lock could have. Binary is the language of computers,
+understanding how it is used to store information will give you a greater
+understanding when discussing data and the structures that hold it.

@@ -1,0 +1,38 @@
+You've come to the end of another module
+and you've done a great job so far. A lot of the content in this module was
+to review knowledge and skills you have already covered in other courses to
+help you be successful in this one. Let's go through the main
+points from this module. You started off the module with
+a recap of what you know about Django. After all, this module is about
+the full stack using Django. Then there was another recap,
+this time for APIs, which was also important since
+you'll be working on an API project. Next, you learned about
+doing an environment check. This included learning about the tools
+you need to create your API project using Django and DRF. Furthermore, you also learned
+about the virtual versus global environments using pipenv, installing
+mysqlclient library with pipenv, as well as testing a mySQL connection. After this, you had another recap,
+this time about databases and mySQL, to prepare you for
+setting up mySQL database on a Mac. Here, you learned how to use homebrew
+to install a mySQL client and server on Mac OS, and how to connect
+to mySQL from the command line. Following this, there was another recap,
+this one about models and migrations. This recap included
+important information like, why you need models in Django, how to
+create models in Django, how to create database tables using migrations and
+how to update tables using migrations. After this, you learned how to configure
+Django to connect to mySQL, and you had the opportunity to
+practice it in the lab. At the start of the final
+lesson of the module, you reviewed what you know about forms and
+modelforms. This is an important topic, since forms
+are the backbone of data exchange. And you can create both forms and
+model forms using the Django framework. In fact, Django makes it easy with a form
+class to create and process forms. And what's more? Modelform provides a way
+to store data too. Remember that there are three processes
+involved when creating a modelform, creating a model, creating a modelform and
+configuring the view for processing form data. In the video, fetching data using
+JavaScript, you learned how to use native JavaScript functionalities to update
+a form inside a Django project. JavaScript helps you process simple
+forms and takes care of the preliminary requirements in templating with the help
+of libraries, such as Bootstrap. It also performs functionalities,
+such as input validation and form reset. Lastly, you practiced submitting
+a form with JavaScript. And that was the end of the module
+about the full stack using Django, hope you're excited for the next one.

@@ -1,0 +1,173 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2">
+  Introduction
+ </h2>
+ <p variant="body1">
+  Generally, a software product is developed in collaboration by a group of developers, each of whom is responsible for certain functionality of the product.
+ </p>
+ <p variant="body1">
+  Everyone modifies the source code accordingly. However, suppose some change in the code results in a particular bug in the product. In that case, there must be a way to track the cause of the problem and seamlessly restore the state of the product to its previously working position.
+ </p>
+ <h2 level="2">
+  A Version Control System
+ </h2>
+ <p variant="body1">
+  A Version Control System (VCS) records changes to one or more files over time, so you can fall back to any specific version if required. Different types of version control mechanisms are employed.
+ </p>
+ <p variant="body1">
+  A manual way is to store each version of source code files in separate folders, preferably with a time stamp, so that one can restore the state to the desired version. This approach can be very cumbersome and unsuitable for a collaborative development environment.
+ </p>
+ <h2 level="2">
+  Centralized version control system
+ </h2>
+ <p variant="body1">
+  In comparison, a centralized version control system works well. A single server stores the various versions of the source code. The administrator of the server controls the activity of the other collaborators.
+ </p>
+ <p variant="body1">
+  However, if the server encounters any issues, there is a risk of losing all the work done.
+ </p>
+ <p variant="body1">
+  Distributed version control system
+ </p>
+ <p variant="body1">
+  The distributed version control system is far more reliable and efficient. In this system, each user has a local copy of the code called a repository.
+ </p>
+ <p variant="body1">
+  During the development, developers make changes to the working copy of the repository and commit those changes to the local repository.
+ </p>
+ <p variant="body1">
+  The changes in the local repository updated are then pushed to the central repository.
+ </p>
+ <p variant="body1">
+  Changes from two or more independent branches and subsequently merged.
+ </p>
+ <p variant="body1">
+  The merging or integration operation reconciles the multiple changes to a version-controlled file collection.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Git
+ </h2>
+ <p variant="body1">
+  Git is a popular distributed version control system (DVCS). It's free and open-source software designed to manage all source code history.
+ </p>
+ <p variant="body1">
+  You can keep a history of commits, revert to previous versions, and share code.
+ </p>
+ <p variant="body1">
+  To collaborate with it, download and install Git on your machine from
+  <a href="https://git-scm.com/downloads" title="">
+   https://git-scm.com/downloads
+  </a>
+  .
+ </p>
+ <p variant="body1">
+  For example, open the Git terminal on your machine and initialize a local repository for the Little Lemon project.
+ </p>
+ <pre language="sh">$ git init littlelemon</pre>
+ <p variant="body1">
+  <strong>
+   Add the project files to the folder and check the status
+  </strong>
+ </p>
+ <pre language="sh">$ cd littlelemon
+$ git status
+On branch master
+ 
+No commits yet</pre>
+ <p variant="body1">
+  <strong>
+   Add the files to the staging area of the repository
+  </strong>
+ </p>
+ <pre language="sh">$ git add .</pre>
+ <p variant="body1">
+  <strong>
+   Configure the repository with relevant credentials
+  </strong>
+ </p>
+ <pre language="sh">$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
+</pre>
+ <p variant="body1">
+  <strong>
+   Commit the files that have been added to the staging area
+  </strong>
+ </p>
+ <pre language="sh">$ git commit -m "first commit"</pre>
+ <h2 level="2" variant="h2semibold">
+  GitHub
+ </h2>
+ <p variant="body1">
+  Usually, you store Git repositories on GitHub. It has the source control management (SCM) features of Git and some other features such as project management, support ticket management, and bug tracking.
+ </p>
+ <p variant="body1">
+  Developers use GitHub to share their repositories, access other developers' repositories, and store remote copies of repositories to serve as backups.
+ </p>
+ <p variant="body1">
+  Sign up to
+  <a href="https://github.com/" title="">
+   https://github.com/
+  </a>
+  and create a new repository on it.
+ </p>
+ <p variant="body1">
+  Go back to the Git terminal and push the local repository to the GitHub repository.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Summary
+ </h2>
+ <p variant="body1">
+  In this Reading, you learned what version control and Git is. You also learned how to create and push a local repository on GitHub.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

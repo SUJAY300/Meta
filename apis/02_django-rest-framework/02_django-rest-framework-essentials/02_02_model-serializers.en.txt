@@ -1,0 +1,38 @@
+In the previous video, you learned how to
+use serializers in DRF to convert query set with single or
+multiple records from the database to JSON. There is an easier
+way to do this, using a special kind of serializer called
+model serializer. This time, you're going to learn how to write less code and easily convert Django model
+instances to JSON object. Let's open the main way to
+model from the models.py file. There are three fields called title, price, and inventory. I open serial ledgers.py
+in my Django app. This is where I wrote the serial ledger in
+the previous video, I will comment out
+everything and write a new menu items
+serilizer class. Now, open the menu
+items endpoint. Everything is working
+without any issues. You don't need to change any
+code in the views.py file. Let's visit the
+single item endpoint. Everything is working
+perfectly here too. Back to the ModelSerializer. If you want to change
+the name of a field, for example, inventory to stock, you can easily do that here. I'm going to remove
+the inventory field from the fields array and add a new line above the Meta class so that the
+final code looks like this. Did you notice how I
+created a new field in this serializer but linked it to an existing field with
+the source argument. Remember to include this new
+field in the metal glass. Otherwise, you
+will see an error. You can also use a
+calculated field in the serial ledgers
+and model serializers. Let's introduce a new field
+called price after texts, which will be an extra 10
+percent of the product price. Add a new method in the menu items serializer
+class like this. Then input the decimal
+from the decimal module. Now, let's link this method as a new field in
+the serializer. Add the following line above the Meta class and include
+it in the fields array. This is the final code, and when you revisit
+the endpoints, everything is working
+fine without the changes. In this video, you'll learn how to use model serializers in the Django rest
+framework to convert model instances quickly
+and easily to JSON. You have also learned
+how to change the name of a field in output of an API, and how to use calculator
+fields in a serializer. In the next video, I'll demonstrate how to
+serialize relationships.

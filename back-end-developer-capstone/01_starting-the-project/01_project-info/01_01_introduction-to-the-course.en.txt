@@ -1,0 +1,46 @@
+Welcome to the capstone
+project course of the back-end developer
+specialization. The capstone project for
+this course is based on a scenario involving the
+Little Lemon restaurant. In particular, the owners
+of Little Lemon want to extend the reserve a
+table functionality on the Little Lemon website. This is where you come in. In this course, you will
+learn how to build a web API. In doing so, you
+will demonstrate a wide range of skills by composing an API that allows users to reserve a table for
+the Little Lemon restaurant. This course will
+guide you through the process of
+building the app by combining all the skills and technologies you've learned throughout this specialization. Now, you may be wondering how
+this course is structured. Well, the course consists
+of four modules. Starting the project,
+project functionality, security and testing,
+and project assessment. In the first module, starting the project,
+you'll do exactly that. Get started with the
+capstone project. This will include a brief
+recap of and links to content in the Django course
+you have already completed. You'll start by setting
+up a coding environment, a Django project and a Git repository for
+the project on GitHub, so you are ready to proceed with the development phase
+of the project. You'll also briefly recap the concepts of URLs and routes, and set up the static
+routes to serve static content using HTML, CSS, and JavaScript. Module 2 is all about the functionality of
+the capstone project. Based on the database schema for the table booking system, you will code the models and API using the Django rest framework. The front end will
+query and interact with the table reservation
+API to send and retrieve data from
+a MySQL database. You will consolidate your
+knowledge about databases and models to work with
+the MySQL database. Then using the Django
+rest framework, you will implement
+the menu API to return a list of
+food menu items. Next is Module 3 which
+covers security and testing. In this module,
+you will practice your skills in setting
+up user authentication. The user requirements are
+a user registration page, a user login page, and a logout button. You must also set up security, so the user must be logged
+in to book a table. In the final module, you'll have the
+chance to reflect on all you have learned and
+your accomplishments, then you will complete the final project for the
+Little Lemon website. Once the project is complete, you'll have the opportunity
+to perform a self-review of your project and a peer review of other learners projects. You will assess the app's
+ability to reserve a table, assessing the projects in terms
+of back-end architecture, functionality, design and code. With all of this to
+look forward to, I'm sure you are eager to begin. Let's get started
+with your project.

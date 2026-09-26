@@ -1,0 +1,57 @@
+Computers and their programs are
+integrated into our lives at a scale we could not have imagined. Over the past 20 years, we have seen
+dramatic jumps in technological gains in areas of distributed computing,
+Cloud computing and AI improvements such as voice and
+face recognition and self driving cars. In the next few minutes, let me give
+you a brief overview of the history of programming and you will also learn
+the basics of how programming works. Computing dates quite
+far back in our history. Charles Babbage in 1822, while studying
+at Cambridge University in Britain was working on bettering calculating
+devices such as navigation charts and astronomical tables, which at the time
+were used by many ships at sea. Babbage came to the realization that
+all these calculating devices contained various amounts of human error and he
+wondered if there was a better solution. His solution was the difference engine. The difference engine used mechanical
+gears with numbers 0 to 9 etched onto their gaps separated by gear's teeth. Its key function was to carry
+out one operation that was computed by manually moving hand cranks
+until the final answer was revealed. After building a working prototype, Babbage spent many years working on
+further improving his designs and constructing improved versions
+of the original idea. He created another device called
+a different engine two, but ultimately produced a new and better
+concept called the analytical engine. The analytical engine is widely accepted
+as being the basics of modern day computing. Babbage's friend, Ada Lovelace published
+a document describing how the analytical engine could perform
+a sequence of calculations, which is essentially what
+a computer program does. However, the analytical engine
+was never completed and Babbage, like a lot of developers did not
+invest in good documentation. With the historical
+side of things covered, let's now delve into understanding
+what programming is. Before I explain programming, it's helpful to understand how computers
+work at the most fundamental level. Computers only understand binary code,
+which consists of two digits 0 and 1. This may seem quite strange at first,
+but with a little explanation, it will all make sense. 0 and 1 relate to different electrical
+states similar to a light switch, 0 is equal to off and 1 is equal to on. For example, in programming when
+you calculate numbers, cost or any arithmetic,
+you've mostly used decimal numbers. Every program written needs to be
+converted to binary code or machine code. An example of decibel
+to binary conversion is Decimal one is binary one
+decimal two is binary 10, Decimal three is binary 1, 1 and so on. Computer represents the binary code by
+using tiny electrical conductors called transistors. These transistors are housed inside
+the central processing unit. CPU, which is essentially
+the brain of the computer. When a program is written using any type
+of language it needs to be compiled or interpreted. The outcome is to turn
+readable programming code for us into readable programming code for
+the computer. It's essentially extremely hard for
+humans to read and understand binary and
+therefore using it is error prone. It's far easier for us to read and
+write programming languages. So what is programming programming is
+the ability to provide a computer with a set of instructions in a particular
+language that it can understand and perform those operations or tasks. In other words, you need to tell the
+computer what you wanted to do in a format and language it can understand
+programming is a skill. The more you practice and
+learn, the better you become. At first. It can take quite a while to write
+straightforward programs as you progress, you'll become more familiar
+with the language and how the logic in conditions
+should be applied. Programming is also a creative skill. That's because you can write computer
+program to solve problems in many different ways. And that brings us to
+the end of this video. You now know the brief
+history of programming and how typical computer programming works.

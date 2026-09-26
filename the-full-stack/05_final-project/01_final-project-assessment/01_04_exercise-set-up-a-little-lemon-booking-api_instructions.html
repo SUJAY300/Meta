@@ -1,0 +1,1057 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2">
+  <strong>
+   Lab assets
+  </strong>
+ </h2>
+ <p variant="body1">
+  You are provided with a basic setup for the Django environment for the project and app inside the zip file below.
+ </p>
+ <asset assettype="generic" extension="zip" id="B-VRtLgrQViscbPCArFZjA" name="Set up the Little Lemon booking API">
+ </asset>
+ <p variant="body1">
+  The zip file contains an updated template to be used along with supportive files to run the lab.
+ </p>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  <em>
+   The virtual environment using
+  </em>
+  <em>
+   <strong>
+    pipenv
+   </strong>
+  </em>
+  <em>
+   has been added as a part of the zip file. You must activate the virtual environment and ensure dependencies are installed.
+  </em>
+ </p>
+ <p variant="body1">
+  Your goal is to set up an API endpoint to send form data to a MySQL database and return a JSON object to be displayed on the web page.
+ </p>
+ <h3 level="3">
+  <strong>
+   Objectives
+  </strong>
+ </h3>
+ <p variant="body1">
+  Create a view to process form data entered in a Django template
+ </p>
+ <p variant="body1">
+  Convert form data received from a
+  <var>
+   POST
+  </var>
+  method into a JSON object and return to a web page
+ </p>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Introduction
+  </strong>
+ </h2>
+ <p variant="body1">
+  Part one of the assessment included setting up a MySQL database which is far more secure and scalable than the SQLite which was used earlier. Now, in the part two of the final assessment, you have to integrate the booking feature into the existing website.
+ </p>
+ <h2 level="2">
+  <strong>
+   Initial lab instructions
+  </strong>
+ </h2>
+ <p variant="body1">
+  This lab will require you to modify the following files:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    <strong>
+     views.py
+    </strong>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <strong>
+     forms.py
+    </strong>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <strong>
+     urls.py (app-level)
+    </strong>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <strong>
+     templates/bookings.html
+    </strong>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <strong>
+     templates/book.html
+    </strong>
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  Starter code has already been added to the following files:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    <strong>
+     settings.py
+    </strong>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <strong>
+     models.py
+    </strong>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <strong>
+     urls.py
+    </strong>
+    (app-level)
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <strong>
+     urls.py
+    </strong>
+    (project-level)
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <strong>
+     views.py
+    </strong>
+    (partially complete)
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  <em>
+   Once you set up the project, make sure you review the contents of all the files and follow the steps accordingly. The zip file added here may contain some additional stylesheets and formatting, so you must use the attached file as the starter code instead of building on your existing project from part one.
+  </em>
+ </p>
+ <p variant="body1">
+  You have already built the project named
+  <strong>
+   littlelemon
+  </strong>
+  and added an app inside the project called
+  <strong>
+   restaurant
+  </strong>
+  .
+ </p>
+ <p variant="body1">
+  Follow the instructions below and ensure you check the output at every step.
+ </p>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  <em>
+   Make sure you have installed MySQL on your local machine and set up the admin user. In this exercise, to keep it simple, you are going to begin with the root user with credentials. The root user by default has the password which is either
+  </em>
+  <em>
+   <strong>
+    password
+   </strong>
+  </em>
+  <em>
+   or
+  </em>
+  <em>
+   <strong>
+    &lt;blank&gt;
+   </strong>
+  </em>
+  <em>
+   . In case of a blank password, simply press
+  </em>
+  <em>
+   <strong>
+    Enter
+   </strong>
+  </em>
+  <em>
+   . The password will not be visible on screen as it’s being typed.
+  </em>
+ </p>
+ <p variant="body1">
+  This is part two of the final assessment and it deals with utilizing the Django framework without any JavaScript. You will first create a model form from the model you created earlier and then update the form with some data. You will then process the form data and send it to the front-end as a JSON object.
+ </p>
+ <h1 level="1">
+  Steps
+ </h1>
+ <p variant="body1">
+  <strong>
+   Step 1:
+  </strong>
+ </p>
+ <p variant="body1">
+  Run the following command to activate the virtual environment:
+ </p>
+ <p variant="body1">
+  <var>
+   pipenv shell
+  </var>
+ </p>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  <em>
+   Make sure you run the command in the main working directory containing the
+  </em>
+  <em>
+   <strong>
+    manage.py
+   </strong>
+  </em>
+  <em>
+   file.
+  </em>
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 2:
+  </strong>
+ </p>
+ <p variant="body1">
+  To make sure you have the necessary dependencies in place, run the following commands inside pipenv:
+ </p>
+ <p variant="body1">
+  <var>
+   pipenv install django
+  </var>
+ </p>
+ <p variant="body1">
+  <var>
+   pipenv install mysqlclient
+  </var>
+ </p>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  <em>
+   If you are
+  </em>
+  <em>
+   <strong>
+   </strong>
+  </em>
+  <em>
+   facing problems with using the virtual environment, you can try running the project without using
+  </em>
+  <em>
+   <strong>
+    pipenv
+   </strong>
+  </em>
+  <em>
+   .
+  </em>
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 3:
+  </strong>
+ </p>
+ <p variant="body1">
+  Create a file in the
+  <strong>
+   restaurant
+  </strong>
+  directory called
+  <strong>
+   forms.py
+  </strong>
+  and import the following:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    The
+    <var>
+     Booking
+    </var>
+    model from the file
+    <strong>
+     models.py
+    </strong>
+    .
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    The module
+    <var>
+     forms
+    </var>
+    from the package
+    <var>
+     django
+    </var>
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  <strong>
+   Step 4:
+  </strong>
+ </p>
+ <p variant="body1">
+  Still inside the
+  <strong>
+   forms.py
+  </strong>
+  file, create a class called
+  <var>
+   BookingForm
+  </var>
+  and pass the
+  <var>
+   forms.ModelForm
+  </var>
+  as an argument to it.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 5:
+  </strong>
+ </p>
+ <p variant="body1">
+  Inside the class
+  <var>
+   BookingForm
+  </var>
+  , create another class called
+  <var>
+   Meta
+  </var>
+  and declare the following attributes inside it:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    <strong>
+     Model
+    </strong>
+    with the value
+    <var>
+     Booking
+    </var>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <strong>
+     Field
+    </strong>
+    with the value
+    <var>
+     "__all__"
+    </var>
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  <strong>
+   Step 6:
+  </strong>
+ </p>
+ <p variant="body1">
+  In the terminal run both commands to perform the migrations.
+ </p>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  <em>
+   Make sure you have created the correct MySQL user, assigned privileges, and configured the same database before you perform the migrations.
+  </em>
+ </p>
+ <p variant="body1">
+  Run the necessary commands to make sure the user is created and can access the database.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 7:
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the file
+  <strong>
+   views.py
+  </strong>
+  and observe the code present inside it for the different views on the Little Lemon website. This was part of the functionality that was added using just the Django framework.
+ </p>
+ <p variant="body1">
+  Remove the comments for the
+  <var>
+   book()
+  </var>
+  view function.
+ </p>
+ <p variant="body1">
+  Also remove the commenting for the import statement below:
+ </p>
+ <p variant="body1">
+  <var>
+   # from .forms import BookingForm
+  </var>
+ </p>
+ <p variant="body1">
+  Observe the
+  <var>
+   book()
+  </var>
+  function that contains the functionality to accept the values added inside the form rendered on the page
+  <strong>
+   book.html
+  </strong>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  <em>
+   The necessary imports are already added inside the
+  </em>
+  <em>
+   <strong>
+    views.py
+   </strong>
+  </em>
+  <em>
+   file.
+  </em>
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 8:
+  </strong>
+ </p>
+ <p variant="body1">
+  Create a view function called
+  <var>
+   bookings()
+  </var>
+  and pass the request object to it as an argument. Follow the pseudo code below to add the necessary code for processing the form data.
+ </p>
+ <p variant="body1">
+  Inside the
+  <strong>
+   bookings()
+  </strong>
+  view function, add the following pseudo code:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    Create a variable called
+    <var>
+     date
+    </var>
+    and assign it the following value:
+   </p>
+   <ul bullettype="bullets">
+    <li>
+     <p variant="body1">
+      <var>
+       request.GET.get('date',datetime.today().date())
+      </var>
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p variant="body1">
+    Create a variable called
+    <var>
+     bookings
+    </var>
+    and assign it the following value:
+   </p>
+   <ul bullettype="bullets">
+    <li>
+     <p variant="body1">
+      Call
+      <var>
+       objects.all()
+      </var>
+      on the
+      <var>
+       Booking
+      </var>
+      class object.
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p variant="body1">
+    Create a variable called
+    <var>
+     booking_json
+    </var>
+    <strong>
+    </strong>
+    and assign it the following value:
+   </p>
+   <ul bullettype="bullets">
+    <li>
+     <p variant="body1">
+      <var>
+       serialize()
+      </var>
+      function called over
+      <var>
+       serializers
+      </var>
+      . Pass the following arguments to the
+      <var>
+       serialize()
+      </var>
+      function
+     </p>
+     <ul bullettype="bullets">
+      <li>
+       <p variant="body1">
+        <var>
+         ‘json’
+        </var>
+       </p>
+      </li>
+      <li>
+       <p variant="body1">
+        <var>
+         bookings
+        </var>
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p variant="body1">
+    Return the
+    <var>
+     render()
+    </var>
+    <strong>
+    </strong>
+    function and pass the following arguments to it:
+   </p>
+   <ul bullettype="bullets">
+    <li>
+     <p variant="body1">
+      <var>
+       request
+      </var>
+     </p>
+    </li>
+    <li>
+     <p variant="body1">
+      <var>
+       "bookings.html"
+      </var>
+      as a string
+     </p>
+    </li>
+    <li>
+     <p variant="body1">
+      dictionary containing following key-value pairs:
+     </p>
+     <ul bullettype="bullets">
+      <li>
+       <p variant="body1">
+        Key:
+        <var>
+         “bookings”
+        </var>
+       </p>
+      </li>
+      <li>
+       <p variant="body1">
+        Value:
+        <var>
+         booking_json
+        </var>
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p variant="body1">
+  Save the
+  <strong>
+   views.py
+  </strong>
+  file and ensure the code has no errors.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 9:
+  </strong>
+ </p>
+ <p variant="body1">
+  Go to the app-level
+  <strong>
+   urls.py
+  </strong>
+  file and remove the comment for the URL configuration of the view functions below:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    <var>
+     bookings
+    </var>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <var>
+     book
+    </var>
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  <strong>
+   Step 10:
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the file
+  <strong>
+   book.html
+  </strong>
+  file present inside the templates folder and update the code as per the instructions below.
+ </p>
+ <p variant="body1">
+  Add a heading using the
+  <var>
+   &lt;h1&gt;
+  </var>
+  tag that says,
+  <var>
+   Make a reservation
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 11:
+  </strong>
+ </p>
+ <p variant="body1">
+  Now step inside the
+  <strong>
+  </strong>
+  <var>
+   &lt;script&gt;
+  </var>
+  <strong>
+  </strong>
+  tags and add the following pseudo code to update the
+  <strong>
+   book.html
+  </strong>
+  file.
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    Call the log() function on
+    <strong>
+     console
+    </strong>
+    and pass the argument
+    <var>
+     “Hello”
+    </var>
+    inside it
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    Call the function
+    <var>
+     getElementById()
+    </var>
+    on the
+    <strong>
+     document
+    </strong>
+    and pass the string
+    <var>
+     "id_reservation_date"
+    </var>
+    <strong>
+    </strong>
+    to it as an argument.
+   </p>
+   <ul bullettype="bullets">
+    <li>
+     <p variant="body1">
+      Suffix the code by adding a filter
+      <var>
+       type="date"
+      </var>
+      using a dot operator.
+     </p>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p variant="body1">
+  <strong>
+   Step 12:
+  </strong>
+ </p>
+ <p variant="body1">
+  Now open the
+  <strong>
+   bookings.html
+  </strong>
+  file present inside the templates folder and update the code as per the instructions below.
+ </p>
+ <p variant="body1">
+  Add a heading using the
+  <var>
+   &lt;h1&gt;
+  </var>
+  tag that says
+  <var>
+   All Reservations
+  </var>
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 13:
+  </strong>
+ </p>
+ <p variant="body1">
+  Now step inside the
+  <strong>
+  </strong>
+  <var>
+   &lt;script&gt;
+  </var>
+  <strong>
+  </strong>
+  tags and add the following pseudo code to update the
+  <strong>
+   bookings.html
+  </strong>
+  file.
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    Create a constant called
+    <var>
+     bookings
+    </var>
+    and assign it the value of
+    <var>
+     parse()
+    </var>
+    function called over
+    <var>
+     JSON
+    </var>
+    . Pass the following argument inside the
+    <var>
+     parse()
+    </var>
+    function:
+   </p>
+   <ul bullettype="bullets">
+    <li>
+     <p variant="body1">
+      <var>
+       '{{ bookings|safe }}'
+      </var>
+     </p>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <p variant="body1">
+    Call the
+    <var>
+     log()
+    </var>
+    function on console and pass
+    <var>
+     bookings
+    </var>
+    to it as an argument.
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    Create a constant called
+    <var>
+     pretty_json
+    </var>
+    and assign it the value of:
+   </p>
+   <ul bullettype="bullets">
+    <li>
+     <p variant="body1">
+      <var>
+       stringify()
+      </var>
+      function called over JSON and pass the following arguments to it:
+     </p>
+     <ul bullettype="bullets">
+      <li>
+       <p variant="body1">
+        <var>
+         bookings
+        </var>
+       </p>
+      </li>
+      <li>
+       <p variant="body1">
+        <var>
+         null
+        </var>
+       </p>
+      </li>
+      <li>
+       <p variant="body1">
+        <var>
+         2
+        </var>
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  <em>
+   Observe the code added inside the file
+  </em>
+  <em>
+   <strong>
+    bookings.html
+   </strong>
+  </em>
+  <em>
+   and save the file. Make sure there are no errors present in your code.
+  </em>
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 14:
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the file
+  <strong>
+   index.html
+  </strong>
+  and look for the comment:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    <var>
+     &lt;!-- Add code here for book  --&gt;
+    </var>
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  Replace the comment with the following code:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    <var>
+     &lt;a href="{% url 'book' %}"&gt;Book your table now&lt;/a&gt;
+    </var>
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  <var>
+   Step 15:
+  </var>
+ </p>
+ <p variant="body1">
+  Open the
+  <strong>
+   file _header.html
+  </strong>
+  inside the templates or partials folder and look for the comments:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    <var>
+     &lt;!-- Add code here for the book template --&gt;
+    </var>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <var>
+     &lt;!-- Add code here for the reservations template --&gt;
+    </var>
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  Replace the comment with the following code:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    <var>
+     &lt;li&gt;&lt;a href="{% url 'book' %}"&gt;Book&lt;/a&gt;&lt;/li&gt;
+    </var>
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    <var>
+     &lt;li&gt;&lt;a href="{% url 'bookings' %}"&gt;Reservations&lt;/a&gt;&lt;/li&gt;
+    </var>
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  <strong>
+   Step 16:
+  </strong>
+ </p>
+ <p variant="body1">
+  Add a command to run the server and go to the localhost URL.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 17:
+  </strong>
+ </p>
+ <p variant="body1">
+  Go to the tab
+  <strong>
+   Book
+  </strong>
+  and add three entries inside the form.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 18:
+  </strong>
+ </p>
+ <p variant="body1">
+  Once the entries are updated, go to the
+  <strong>
+   Reservations
+  </strong>
+  tab that you see in the menu bar. You will be able to observe the entries are updated.
+ </p>
+ <p variant="body1">
+  <strong>
+   Note:
+  </strong>
+  <em>
+   This is the same data that has been updated in the database of the Little Lemon website and can be verified in the database.
+  </em>
+ </p>
+ <h2 level="2">
+  <strong>
+   Conclusion
+  </strong>
+ </h2>
+ <p variant="body1">
+  This completes part two of the final assessment. You learned how simple form processing can be done with Django and model data can be added and modified. This data can then be converted into a JSON object which is a more web-friendly data format. In Part 3, you will be using this to implement functionalities of JavaScript to create a richer experience in creating a form that accepts reservations for the Little Lemon website.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

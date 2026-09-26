@@ -1,0 +1,115 @@
+Now you should be fairly
+familiar with how modules work. Let's look at another
+related concept in Python, namespaces and scopes. The official Python
+documentation defines namespace as mapping
+from names to objects, and scope is the
+textual region of a Python program where the namespace is
+directly accessible. At this point, the dictionary
+with its key value pairs serves as the ideal
+data structure for the mapping of
+names and objects. You have also learned how every Python file
+can be a module. You can view the same module as a place where Python
+creates a module object. A module object
+contains the names of different attributes
+defined inside it. In this way, modules are
+a type of namespace. Namespaces and scopes
+can become very confusing very
+quickly and so it is important to get as much
+practice of scopes as possible to ensure a
+standard of quality. There are four main
+types of scopes that can be defined in Python: local, enclosed, global and built-in. The practice of trying
+to determine in which scope a certain
+variable belongs is known as scope resolution. Scope resolution
+follows what is known commonly as the LEGB rule. Let's explore these. Local, this is where the first search for a variable
+is in the local scope. Enclosed, this is defined inside an enclosing
+or nested functions. Global is defined at the uppermost level or
+simply outside functions, and built-in, which is the keywords present in
+the built-in module. In simpler terms, a variable declared inside a
+function is local, and the ones outside
+the scope of any function
+generally are global. Here is an example, the outputs for the code onscreen shows the
+same variable name, Greek, in different scopes. There are three possible
+declarations of the variable. At the global level, inside the function b or
+inside the nested function c, which is called from within b. The id function is used here
+in the print statements, which returns the
+identity of the objects. You can make some
+observations from the output. The id for the global
+variable alpha remains same as defined after the
+code is completely executed. The id for the local
+variable beta inside the function b remains
+unchanged before and after the execution of nested
+function c. The id for Gamma is assigned only within the scope of
+the nested function. The id for all
+three variables is different even if they all
+have the same variable name. Variables in Python are implicitly declared
+when you define them. That means, unlike other
+programming languages, there is no special
+declaration made in Python for the variable which
+specifies its datatype. What it also implies is that
+a given variable is local, not global when it is declared
+unless stated otherwise. This contrasts with most
+other programming languages where variables are
+global by default. When a variable is declared
+in a global space, it is also local to that space. This can be understood
+with a simple example. If you look at the content of
+both of these dictionaries, you can see how the value for the key country is different
+in both the cases. You have also used two special built-in
+functions called locals and globals that list
+the contents of the dictionary inside
+both of these scopes. Here you can see the output. In this example, you can see the global variable declared
+remained unchanged. While global variables
+are acceptable, they're discouraged for
+a number of reasons. When you are working
+with production code, the project structure
+can get complex, and working with global
+variables can be hard to diagnose which lead to what
+is called the spaghetti code. Other paradigms such
+as access modifiers, concurrency, and
+memory allocation are better handled
+with local variables. While you were just beginning
+our journey using Python, it is always a good idea to integrate good
+practices in your code. There are two key words
+that can be used to change the scope of the variables,
+global and non-local. The global keyword
+helps us access the global variables from
+within the function. Nonlocal is a special
+type of scope defined in Python
+that is used within the nested functions
+only in the condition that it has been defined earlier in the
+enclosed functions. Now you can write a piece of
+code that will better help you understand the idea of
+scope for an attribute. You have already created a
+file called animalfarm.py. You will be defining
+a function called d inside which you will be creating another
+nested function, e. Let's write the
+rest of the code. You can start by defining
+a couple of variables, both of which will
+be called animal. The first one inside the d function and the second
+one inside the e function. Note how you have
+to first declare the variable inside the
+e function as nonlocal. You will now add a few
+more print statements for clarification from when
+you see the outputs. Finally, you have called
+the e function here, and you can add one
+more variable animal outside the d function. This will be a global variable. You can add a call
+for the d function and a print statement
+for the global variable. You can save this file
+and run the code. First, the global
+animal variable gets assigned to camel. Then call this function, and once inside it, assign elephant to
+the local animal. Then declare the
+inner function e and proceed by printing before calling functions animal
+where the value of animal will be the local
+value which is elephant. Once you are inside
+the inner function e, you use the nonlocal keyword to declare that you are going to use the animal variable and you change the
+value to giraffe, and here you can see that the print statement will
+give inside nested function. The value is giraffe, which stays consistent even after you get out of
+the inner function. When you print after
+nested function, the value still remains giraffe. Once the function
+is fully executed, come out to see
+that the value of global animal will be camel which you had
+assigned at the beginning. So you can see the changes
+that you've made inside are not going to affect the value
+of the global variable. Let's look at one last thing. If you comment the
+local variable out, this will throw an error. You can see there is
+no binding present of a nonlocal animal present inside the d function which
+was required here.

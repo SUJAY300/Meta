@@ -1,0 +1,67 @@
+When you develop an application, it has different parts. There's the UI, backend, business logic, and database. These parts need to properly communicate with each other
+to make an application work. In this video, you
+will learn about some common architectures used in modern application
+development. Let's start with
+layers and tiers. In application development, you often hear the terms layers and tiers being used interchangeably but there's a difference
+between them. As you learned earlier
+in the course, an application can
+have multiple parts, like the presentation part, the core of the
+application where the business logic
+stays, and the database. When these parts are in different places in the
+application infrastructure, like on different servers, but they still communicate
+with each other and function correctly
+they are called tiers. Thus, layers are
+virtual separations of different parts
+of an application. Tiers are also different parts of an application but they're physically separated in the
+application infrastructure. Now, let's discuss N-tier
+architecture in two types, 3-tier and 4-tier architecture. In modern application
+development, there can be any
+number of tiers. When an applications
+architecture is split into multiple tiers, it's called an
+N-tier application. These days, 3-tier
+architecture is the most commonly used
+N-tier architecture. Some developers also use a 4-tier architecture
+when required. Let's say you developed a web application and the
+application is split into two distinct parts: the code
+with business logic that processes the data and the
+database to store the data. You host the application code on one server and the
+database on another. Since they are physically separated into two
+different servers, you can call them tiers. In this example,
+there are two tiers. So where's the third one? The third tier is the
+client computer or mobile, which is used to browse a web application
+or access the APIs. These clients are completely
+separate physical machines. Together, the client machine, your application server, and the database server makeup
+a 3-tier architecture. In a 3-tier architecture, the client tier is called
+a presentation tier. Client machines are
+also called thin clients because they
+don't run business logic. They only communicate with your application and
+present the data. The tier that holds the
+application code or business logic is called
+the application tier. Finally, the tier that deals with data is called
+the data tier. The 3-tiers are presentation, application and data tiers. Let's move on to the
+4-tier architecture. In a web application with
+a 4-tier architecture, a fourth tier is included
+called the delivery tier. This delivery tier
+deals with caching and delivering the front-end
+assets to the client. For example, like a Content
+Delivery Network or CDN. CDN providers have many servers across the world for
+better content delivery. They store your web
+applications, HTML, CSS, JavaScript, and
+images, and deliver them to the client from
+the nearest server. Because CDN servers
+are physically separated from your
+application and data tiers, they're seen as another
+tier, the delivery tier. This is just one example of
+a 4-tier web application. These applications can be very different from one another
+depending on their purpose, for example, financial or
+enterprise applications that have different needs. There are several benefits
+to an N-tier architecture. Let's examine some of them now. When the application is
+divided into multiple tiers, it becomes easier to secure
+and scale the application. Fixing problems or adding
+new features becomes more manageable because each tier is separate and works
+independently. Thus, the application
+development process becomes more efficient when you use an N-tier architecture
+for your application. In this video, you learned about the difference between
+layers and tiers. You also learned about the popular N-tier
+architecture and how to use it to create a 3 or
+4-tier architecture for your web applications.

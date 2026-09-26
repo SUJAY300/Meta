@@ -1,0 +1,54 @@
+Data conversion is an essential
+process in API development and the serializers in DRF make it easy. By now you should know
+about serializers but this video will explain how you
+can use them in your API projects. Let's recap the function of serializers. You can pull data from the database
+using Django models and then represent this data to your clients. You can also convert user supplied data
+into models to store them safely in a database. And before storing this data
+you can use serializers to ensure the integrity of the data and
+avoid data corruption. Serializers are the most
+popular feature in DRF. They are essential for
+converting objects and Django models into a more
+readable format like JSON or XML. They can also parse the JSON data and
+map them onto an existing model. This is the opposite of serialization and
+it is called deserialization. Serializers can also validate data
+during this deserialization process, ensuring that your data is clean and
+consistent. Now for a practical
+demonstration of serializers and how to use them effectively
+in your project. Creating a new file called serializers.pi will help to put all of the serializers
+specific code in one place. This will be located in
+the Django app directory. Let's quickly go to the menu item
+model in the models.pi file. This model has three fields title,
+price and inventory. Before adding a serializer, let's create a method to fetch
+all menu items in your views.pi, name it menu underscore items and
+write the following code in it. If you visit the menu items endpoint,
+all menu items are displayed as JSON data. The DRF will automatically take care
+of converting a query set object and display every field of the menu items. If there is a sensitive field you
+don't want to expose to the public, you cannot hide it without
+the help of a serializer. Now open the serializers.pi file
+in your Django application and write the following code. The serializer fields are similar
+to the fields in a model. You can add all the fields you want
+to display in the API result or hide them from here. Let's use this serializer in the views
+file, add the following line. Note you are passing an argument
+called many equals true. This argument is essential when you
+are converting a list to JSON data. Now browse the same menu items and
+note how the result has changed. The title and inventory fields
+are not in the result anymore. To bring them in, you can add price and
+inventory fields to your serializer. Let's refresh this endpoint in the browser
+to test how the result has changed. Now I'm going to use this serializer for
+a single record, create a new method and
+add the following code to it. Did you notice that I'm not using the many
+equals True argument this time that's because it's not required
+to convert a single object. You can map this single item
+method in your applications, URLs.pi fields like this. Now browse the menu items endpoint and
+note the output. Make sure that you have records with this
+idea in your database before visiting this endpoint. What happens when you visit this
+endpoint with a non existing ID? You will get server errors,
+but you can convert it to a friendly error message using
+the get object or 404 method. Now let's change the single item
+method a little bit and you are done. If you visit this end point
+with a non existing ID, you will receive a JSON error
+message saying not found. In this video you have learned how to use
+the serializers in Django Rest Framework to quickly convert multiple or
+single database records to JSON data. And save a lot of time by not
+doing everything manually. In a coming video, you will learn how to
+make these serializers even easier by converting them to model serializers.

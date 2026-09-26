@@ -1,0 +1,61 @@
+Congratulations, you've
+completed this module on an introduction to Django. In this module, you were
+given a course introduction. Then you learned about
+projects and apps, admin and structures, and
+finally about web frameworks. It's now time to recap
+the key points and concepts you learned and
+the skills you gained. You began the module by
+exploring what Django is. You can now identify the
+problems that Django solves, especially for
+building projects that require high volumes
+of text content, media files, and heavy traffic. You can also provide examples of where Django is used
+in the real-world. For example, developers can create a backend framework with Django that can connect to a frontend framework via an API. Next, you were then introduced to the project creation process. You can now create a project in VS Code using Windows or Linux. Secondly, you learned
+about projects and apps. You should now be able to explain the core concepts
+of projects and apps, emphasize the importance
+of structuring a project to make your
+development process easier, and get a default web
+project up and running. You also learned about following best practices to develop
+projects in a structured way. This includes the don't repeat yourself,
+DRY, principles. Write it once, but
+use it many times. Thirdly, you explored
+admin and structures. In this section, you
+learned to discuss both Django admin and
+manage.py commands as options for command
+line utility to perform administration tasks and how they are used in the creation
+of projects and apps. You can unpack the key
+differences between projects and apps
+and how they can be used together
+and you learned how to create an app inside
+an existing project. Lastly, you focused
+on web frameworks. You now know that
+frameworks are designed to support you in building
+web applications. It helps the development team
+to follow best practices. You understand that
+a framework is a solid foundation upon which you build
+your applications. The purpose of a web
+framework is to make application development
+easier and to provide the developer with a clean
+structure that keeps things in order and allows for
+changes and modifications. Frameworks also allow for code reusability facilitated
+by existing code. You've learned about the
+different pieces and components that exist when
+building web applications, and that modern
+applications are usually built using the
+three-tier architecture. You explored Django
+structures that take care of many web
+development tasks. These structures
+allow you to focus on writing your app without
+needing to reinvent the wheel. Recall the benefits of
+using the Django framework, including speed, features,
+security, and scalability. You also learned how Django implements the model
+view and templates or MVT architecture and
+that's splitting the data, logic and display into M, V, and T rapidly creates large-scale data-driven
+web applications. Now, you can show the M, V, T pattern while prioritizing
+the reusability of code. You learn to create an app inside an existing
+Django project, whereby the app
+contains a view to output texts to the homepage
+of the web application. What a great start to your
+Django development journey. You are now familiar
+with the differences between project
+structure and apps. The Django admin and manage.py commands the MVT framework and creating an app inside an existing project using the correct
+structure. Well done.

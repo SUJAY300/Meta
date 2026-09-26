@@ -1,0 +1,94 @@
+You have reached the end of this module about
+production environments. It's now time to reflect on the key concepts and
+elements you learned about. Let's get started. First, you learned about
+web server environments. You learned that the process of uploading code and
+data to servers is called deployment and that it
+can be manual or automated. Two essential terms
+you should remember are continuous
+integration or CI, which imitates the production environment and runs tests, and continuous deployment or CD, which is the uploading process. You also learned that hosting applications can be either
+server or serverless. With the server approach, a dedicated server or virtual servers provide
+access to idle resources, but it has to be
+managed manually. With serverless, you don't
+have to configure anything, as everything is provided and managed by the
+serverless provider. Next, you learned about virtual machines and
+containerization. There are two types
+of hypervisors, type 1 and type 2, that can split a
+dedicated server into multiple virtual ones. Type 1 works directly with the
+hardware and it runs fast, but it's complex to set up. Type 2 works on top of
+an operating system, which makes it slower, but you don't have to
+deal with any hardware. You also learned about
+resource sharing, where you can either use the dedicated server that's
+potentially wasteful, or virtual machines, where there are shared resources and therefore no wastage. There's also the concept
+of containerization, which allows you to pack applications and
+dependencies and container image
+files that can run anywhere regardless of
+operating system or hardware. There are some key
+terms related to containerization that
+you should remember. A group of connected
+containers sharing the same resource to solve
+a problem is called a pod. Multiple pods related or working independently
+are called a node. Container orchestration
+is the management, deployment, networking, and
+scaling of the containers. Following this, you
+learned about PaaS, which is a Platform as
+a Service that gives you everything you need
+to run an application, much like cloud
+service providers. You also learned about SaaS, which is Software as
+a Service that solves a particular problem and
+provides an API to use it. DBaas is a Database as a Service and provides
+only database solutions. Lastly, you learned
+about IaaS or Infrastructure as a Service for creating an infrastructure
+with servers. Self-hosted means
+that everything is hosted on your server. You create the infrastructure
+and networks and they have to be managed
+by you or your team. Next up was a lesson about cloud computing where
+you learned that there are three
+different types of cloud infrastructure: public, private, and hybrid cloud. All three offer you access
+to high-powered machines. A key element of cloud
+computing is a computing unit, which is virtual
+machines that are available for
+on-demand deployment. You also need to buy storage and you have
+the option to buy gigabytes or terabytes or
+you can use object storage, which is when an API uploads
+and downloads your files. Cloud providers offer
+fully-managed database solutions that scale automatically, freeing up your time
+and saving you effort. Another key element of cloud computing is
+machine learning, which requires a lot
+of computing power. It's cheaper with
+cloud computing because you don't have to
+buy physical hardware. Then you learned about
+networking in the cloud, where you can use either
+public networking or private networking, where cloud units are not
+public facing and only communicate with other units
+in the same application. Following this, you had a lesson about scaling in the
+cloud where you learned that there are two types of scaling, vertical
+and horizontal. With vertical
+scaling, you add RAM, CPU, or storage to a
+physical or virtual machine. But there's a limit to
+how much you can add. Physical hardware is expensive. Horizontal scaling,
+on the other hand, adds nodes or virtual servers as the load goes up and removes
+nodes when they go down. This means you're not
+limited like you are with vertical scaling and
+cost can be kept down. Cloud providers
+offer auto-scaling, which saves you a
+lot of time because no manual intervention or
+extra configuration is needed. You also learned
+about load balancing, which includes load
+balancing the web server, the data server, and the cloud. With the cloud, cloud
+providers offer services where they
+internally balanced loads. Whereas you have
+several options to load balance your data server
+by horizontal scaling, either by using clustering
+or master-slave replication. When it comes to load
+balancing the web server, you can use either a
+round-robin approach or a health-based one. Another option is to use a reverse proxy to
+perform load balancing. Lastly, you learned about how content delivery networks or CDNs can improve
+scaling by caching and serving static
+assets in the cloud and how CDNs can determine the
+nearest point of presence, which is a server where
+static assets are stored. You covered a lot of
+ground in this module, so some congratulations
+are in order. You should reward
+yourself with a break before you dive into
+the last module. That's all about
+the final project.

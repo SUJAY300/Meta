@@ -1,0 +1,179 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p variant="body1">
+  As you know by now, version control is a system that records changes to a file or set of files over time so that you can access specific versions later. In software development, Version Control Systems (VCS) allow developers to manage changes to their code and track who made each change. But how did these systems come about?
+ </p>
+ <p variant="body1">
+  Version control has a long history, with its earliest foundations beginning in the 1970s alongside the birth of modern computing. Over the decades, version control has evolved through two major architectural phases:
+  <strong>
+   Centralized
+  </strong>
+  and
+  <strong>
+   Distributed
+  </strong>
+  systems.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  The Era of Centralized Version Control
+ </h2>
+ <p variant="body1">
+  Early version control systems relied on a centralized model. This means that all file operations and version histories were stored on a single central server. If developers wanted to work on a file, they had to "check it out" from this central location.
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    <strong>
+     RCS and CVS:
+    </strong>
+    In 1982, Walter F. Tichy created the Revision Control System (RCS). A few years later, in 1986, Dick Grune developed the
+    <strong>
+     Concurrent Versions System (CVS)
+    </strong>
+    to build upon RCS's foundation. CVS stored information about every file in a folder structure, including its location, who last modified it, and when. While popular for many years, CVS had significant design flaws. It lacked integrity checks, meaning network errors could result in corrupted files being accepted into the system. It was also designed primarily for text files, making it poor at handling binary files like images or videos.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     Subversion (SVN):
+    </strong>
+    To solve the glaring issues in CVS, CollabNet developed
+    <strong>
+     Subversion (SVN)
+    </strong>
+    in 2000. SVN introduced vital data integrity checks and vastly improved the versioning of binary files. SVN became highly popular in the open-source community, with Google and SourceForge offering free hosting. However, SVN was still a
+    <em>
+     centralized
+    </em>
+    system. If the central server went down or the network was slow, development was completely blocked.
+   </p>
+  </li>
+ </ul>
+ <h2 level="2" variant="h2semibold">
+  The Rise of Distributed Version Control
+ </h2>
+ <p variant="body1">
+  To solve the bottleneck of centralized servers,
+  <strong>
+   Distributed Version Control Systems (DVCS)
+  </strong>
+  were created. In a distributed system, every developer downloads (clones) the
+  <em>
+   entire
+  </em>
+  history of the project directly to their local computer, meaning they can work offline and independently without relying on a single central server.
+ </p>
+ <p variant="body1">
+  The shift to distributed systems was largely driven by the development of the Linux kernel:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    <strong>
+     BitKeeper:
+    </strong>
+    Initially released in 2000, BitKeeper was a proprietary (paid) distributed VCS used by the Linux kernel team. In 2005, the company behind BitKeeper revoked the free license it had provided to Linux creator Linus Torvalds. This controversy sparked the immediate creation of two new, free open-source alternatives: Mercurial and Git.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     Mercurial:
+    </strong>
+    Created in 2005 by Olivia Mackall, Mercurial was designed as a high-performance distributed VCS. It featured a small learning curve, making it incredibly popular for former SVN users looking to transition to a distributed system.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     Git:
+    </strong>
+    Also created in 2005, Git was developed directly by Linus Torvalds specifically to host the massive Linux kernel source code. Git is renowned for its speed, branching capabilities, and distributed design.
+   </p>
+  </li>
+ </ul>
+ <h2 level="2" variant="h2semibold">
+  Understanding the Difference: Git vs. GitHub
+ </h2>
+ <p variant="body1">
+  Today, Git is the undisputed industry standard for open-source and proprietary software projects. However, people often confuse "Git" with "GitHub." It is vital to understand the difference:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    <strong>
+     Git
+    </strong>
+    is the actual software system/command-line tool installed on your local computer that tracks your code changes.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     GitHub
+    </strong>
+    (along with alternatives like
+    <strong>
+     GitLab
+    </strong>
+    and
+    <strong>
+     Bitbucket
+    </strong>
+    ) is a cloud-based hosting company that allows you to store your Git repositories online so you can easily collaborate with other developers.
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  In short: Git is the tool; GitHub is the hosting service.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

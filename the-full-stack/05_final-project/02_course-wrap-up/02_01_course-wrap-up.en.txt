@@ -1,0 +1,39 @@
+Wow, you've made
+it to the end of the full stack
+course, well done. You had to work hard to bring
+together the skills and knowledge you learned in
+all of the courses so far, so you should be
+proud of yourself. Bringing together
+multiple skills to build a full stack Django app is
+definitely an achievement. Let's do a quick review of what you learned
+in the course. After completing the course, you were able to
+show that you can connect an app's
+back-end to MySQL, set up a booking API, and let the app display
+available booking times. In addition to
+this demonstration of your skills and knowledge, following your completion
+of the course, you should now be able to describe the architecture
+of the full stack, use semantic HTML to
+create web pages, create basic forms and use
+CSS to create layouts, update an HTML document
+using JavaScript, populate Django models
+from a MySQL database, query an API and update an HTML document
+with the result, identify the different
+hosting solutions for web applications, recognize the key components of a cloud computing
+environment, and describe the challenges
+of scaling web applications. Now you may be wondering what comes next in your
+learning journey. This is the seventh course in the back-end
+developer program, and you are close to
+completing the full program. You have come so far, and learned so much, but there's yet more to learn. Like in the next course on cloud computing, in this course, you will learn about, the different tools and systems involved in cloud
+computing in DevOps. You'll explore popular
+Cloud solutions, and the benefits to
+cloud computing, along with core Cloud architecture concepts
+and approaches. Throughout the next two
+courses in this program, you'll continue to
+expand your skill set, and then you'll have the
+opportunity to bring everything together in the back end
+developer capstone project. The final course is coding interview preparation that will help you to be ready
+for an interview. Once you've completed
+all the courses in the back-end
+developer program, you will receive a certificate. Now that you know
+what lies ahead, you can prepare yourself for the next steps in your
+learning journey. Good luck.

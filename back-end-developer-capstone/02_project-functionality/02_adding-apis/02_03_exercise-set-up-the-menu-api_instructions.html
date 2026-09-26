@@ -1,0 +1,275 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Overview
+  </strong>
+ </h2>
+ <p variant="body1">
+  In previous exercises, you have already set up a LittleLemon project that includes the Restaurant app. You have also declared the Menu and Booking models, migrated to the MySQL database.
+ </p>
+ <p variant="body1">
+  In this exercise, you will build a REST API to perform CREATE, READ, UPDATE AND DELETE operations on the Menu model
+ </p>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Scenario
+  </strong>
+ </h2>
+ <p variant="body1">
+  You will use Django REST Framework to build the APIs in the restaurant app. You will also create the views using DRF's generic views.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 1
+  </strong>
+ </p>
+ <p variant="body1">
+  Install the 'rest_framework' with PIP utility while remaining in the Django virtual environment directory.
+ </p>
+ <p variant="body1">
+  Open the command prompt in the
+  <strong>
+   LittleLemon
+  </strong>
+  directory and start VS Code.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 2
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the
+  <strong>
+   settings.py
+  </strong>
+  file and add
+  <var>
+   'rest_framework'
+  </var>
+  in the
+  <strong>
+   LittleLemon
+  </strong>
+  project's
+  <var>
+   INSTALLED_APPS
+  </var>
+  list.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 3
+  </strong>
+ </p>
+ <p variant="body1">
+  The
+  <var>
+   Serializer
+  </var>
+  in Django REST Framework converts compound data types into JSON or XML format.
+  <var>
+   ModelSerializer
+  </var>
+  is a special type of serializer that quickly creates a serializer class from the Django model fields.
+ </p>
+ <p variant="body1">
+  The
+  <var>
+   ModelSerializer
+  </var>
+  class is declared in the
+  <var>
+   rest_framework.serializers
+  </var>
+  module.
+ </p>
+ <p variant="body1">
+  In the app package folder, create a new file called
+  <strong>
+   serializers.py
+  </strong>
+  and declare the
+  <var>
+   MenuSerializer
+  </var>
+  class that subclasses
+  <var>
+   ModelSerializer
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 4
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the
+  <strong>
+   views.py
+  </strong>
+  module in the restaurant app package folder.
+ </p>
+ <p variant="body1">
+  Declare two classes:
+ </p>
+ <ol bullettype="numbers">
+  <li>
+   <p variant="body1">
+    MenuItemView – inheriting the
+    <var>
+     rest_framework.generics.ListCreateView
+    </var>
+    class. It handles the POST and GET method calls.
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    SingleMenuItemView – inherits the
+    <var>
+     RetrieveUpdateAPIView and DestroyAPIView
+    </var>
+    classes both imported from the
+    <var>
+     rest_framework.generics
+    </var>
+    module. This class is responsible for processing GET, PUT and DELETE method calls.
+   </p>
+  </li>
+ </ol>
+ <p variant="body1">
+  <strong>
+   Step 5
+  </strong>
+ </p>
+ <p variant="body1">
+  Define URL routes for the restaurant app's menu views in the
+  <strong>
+   urls.py
+  </strong>
+  file.
+ </p>
+ <pre language="python">#add following lines to urlpatterns list 
+path('menu/', views.MenuItemsView.as_view()),
+path('menu/&lt;int:pk&gt;', views.SingleMenuItemView.as_view()),</pre>
+ <p variant="body1">
+  Include app URLs in the
+  <var>
+   LittleLemon
+  </var>
+  project's
+  <strong>
+   urls.py
+  </strong>
+  module.
+ </p>
+ <pre language="python">#add following line to urlpatterns list 
+path('restaurant/menu/',include(restaurant.urls'))  </pre>
+ <p variant="body1">
+  <strong>
+   Step 6
+  </strong>
+ </p>
+ <p variant="body1">
+  Run Django server, and open the URL
+  <var>
+   http://localhost:8000/restaurant/menu/items
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  This is the URL of the browsable API. Perform POST operations to add menu items. With the GET request, fetch the list of items.
+ </p>
+ <p variant="body1">
+  <strong>
+   Tips
+  </strong>
+ </p>
+ <p variant="body1">
+  Use the following code snippet to declare the serializer class:
+ </p>
+ <pre language="python">#define Serializer class for User model
+from django.contrib.auth.models import User 
+from rest_framework import serializers 
+
+class UserSerializer(serializers.ModelSerializer): 
+
+    class Meta: 
+        model = User 
+        fields = ['url', 'username', 'email', 'groups']</pre>
+ <p variant="body1">
+  You can use the following code snippet to define views:
+ </p>
+ <pre language="python">from rest_framework.decorators import api_view
+from .models import MenuItem
+from .serializers import MenuItemSerializer
+
+# Create your views here. 
+class MenuItemsView(generics.ListCreateAPIView): 
+queryset = MenuItem.objects.all() 
+serializer_class = MenuItemSerializer
+
+class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):     
+queryset = MenuItem.objects.all() 
+serializer_class = MenuItemSerializer</pre>
+ <h2 level="2" variant="h2semibold">
+  <strong>
+   Conclusion
+  </strong>
+ </h2>
+ <p variant="body1">
+  In this exercise, you have used Django REST framework to set up the Menu API for the Restaurant app.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

@@ -1,0 +1,58 @@
+MySQL is one of the world's most popular and widely used database engines. It's open-source,
+very performant, and works with both small and larger scale web applications. In this video, you'll
+learn how to use MySQL as the back end database engine
+for your Django project. Open the terminal and come to your Django project directory. If you're using pipenv, activate the virtual environment
+using the pipenv shell. To avoid dependency conflicts, you should always use
+a virtual environment for your Django projects. Pipenv is a great tool to manage your dependencies and the
+virtual environment easily. Django needs a package called MySQL client to communicate
+with the MySQL database. To install this package, apply the following command in the terminal inside
+your project directory. Pipenv install MySQL client. If you're not using pipenv or configured your virtual
+environment manually, use pip or pip3 or your preferred
+package manager to install the MySQL
+client package. For example, pip install MySQL client or pip3
+install MySQL client. Now connect to the MySQL server from the terminal
+using this command, MySQL-u root -p. If MySQL is running on a different
+port number than 3306, for example 3307, you need to specify it
+as well, like MySQL, -u root -p 3307 -p. By default, the host name for
+MySQL is local host. If it is different in
+your computer or server, you can specify it with
+a h switch like this. MySQL-u root -h 127.0.0.1 -p. Now create a database called little lemon in the MySQL Shell using a create database command. Create database, little lemon. You can apply the command, show databases to see if the database was
+created properly. This command will display
+all the databases available in your
+current MySQL setup. You're done here, exit the MySQL Shell
+using exit command. Now, return to your Django project
+directory and open the settings.py file. There's a section
+named databases, which is currently
+configured to use the sqlite database that comes
+with every Django project. In this line where
+it is mentioning sqlite3 to use as
+the database engine, replace sqlite3 with MySQL. Write the database
+name as little lemon. You need four extra settings to connect to the MySQL engine. These are host, user,
+password and port. For host, write local host or the host name your
+MySQL setup is using. For example, 127.0.0.1. The default username for
+every MySQL setup is root. Use that as the user. If you created a different
+username for your database, then use that username. Just note, never use the root user and the
+production server because root user has full access to every database in
+MySQL settings. Any misuse could
+cause serious damage. For the password, write the password of this
+database username. Finally, if the MySQL engine is running at the default
+port number 3306, you don't need to specify it. But if it's running on a
+different port, for example, 3307, you can write it
+like this and you're done. It is really simple. Now it's time to check if everything is working perfectly. Return to the terminal. Inside your project directory, make migrations using Python
+managed.py make migration, and then run the migrations using Python managed.py migrate. If the MySQL setting is
+correct in the settings.py, you can see the migration
+is running successfully. Congratulations, you
+have successfully connected your Django
+project to MySQL. Now let's connect to the MySQL Shell one
+more time to check if Django migration really created those tables in the
+MySQL database. Select the database you created previously using this command. Use little lemon. Now lists the table
+is created by migrations using this
+command, show tables. Excellent. Now you
+can see the list of the tables created by
+Django migrations. In this video, you learned
+how to successfully connect to the MySQL database
+in your Django project. You learned how to
+use the MySQL Shell. You also learned how to
+change the settings in the settings.py file to make
+a successful connection, if your MySQL setup runs with a different host name
+and port number.

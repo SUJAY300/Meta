@@ -1,0 +1,41 @@
+In this video,
+you will learn about tuples and how that can be used to store
+different types of data. They're used as data structures and help
+to create solid, well performing code. To declare a tuple,
+I declare a simple variable. I'll name it my underscore tuple. And then I do the assignment
+operator of equals, then to declare the tuple itself,
+I use parentheses. A tuple can accept any mix of data types. And it can range from integers like one,
+to strings, to a double,
+such as 4.5 to a boolean like true. To access any of the items
+within the tuple. I can use methods similar to those used
+with the list by referring to an index. So in my underscore tuple, if I want to get access to the string
+which I know is going to be on index one. I just print out the value. So I write,
+Print My _ Triple Brackets, one. Remember Index always starts with zero. I click on run and I find that
+it returns the value of strings. If I want to determine
+the type of the tuple, I can use the type function
+that python provides. I click on run and I get a class tuple. We could also declare a tuple
+without using the parentheses. It has the same effect and
+will still be classed as a tuple. However, it's best practice
+to use the parentheses. Tuples also provide different
+methods of count and index. I can do my underscore tuple dot count and
+passing the value of strings. I click on run and
+I get back to count of one. What it does is it looks for the number of occurrences of
+that value within the tuple. Before I move on, I'll type clear into my
+terminal to clear the previous output. So we could start fresh and
+see what's going to happen next. The other method is index, which would give me back the index of
+where the value lies in the tuple. I'll change the print statement to
+look up the index of the double 4.5. When I click on run, I get back two. This means that the double 4.5
+is at Index two in the Tuple. I can also do a loop manageable. That is iterate through the values and
+print them out. I can write a loop for X in my underscore
+tuple and then print out the value of X. I click on run and I get back one,
+strings 4.5 and true. So all the values of the tuple itself. The one key difference of a tuple over
+a list is that tuple values are what's called immutable. And this just means that
+they cannot be changed. So I'll prove this and
+demonstrate how this works. Let's say that I want to change the value
+with the very first item in the tuple being the value one. I'll use zero to access
+it based on the index. And let's say that I want
+to change it to be five. If I run this, I'll get back an error. And it gives me the error
+saying type error, tuple object does not
+support item assignment. That's because anything that is
+declared in a tuple is immutable. In this video, you learned about tuples,
+including how to declare them and work with their contents.

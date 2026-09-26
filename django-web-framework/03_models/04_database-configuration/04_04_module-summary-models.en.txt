@@ -1,0 +1,56 @@
+Congratulations, you've reached the end of this
+module on models. In this module, you've
+learned to create models, apply migrations to
+appropriate use cases using best practice principles
+and learned to use the query set API to
+interact with the database. Next, you discovered how
+to create a form and use the form API to
+bind data to objects. You learned how to use
+the Django admin panel to add and control the permissions
+of users and groups. Finally, unpacked how to set up a MySQL database for
+your Django app. It's now time to recap the key points and the
+skills you've gained. You began the module with
+models and migrations. Here, you explored models, fields, attributes, and keys. You are now able to describe
+the relationship and similarities between models
+and databases with tables, and demonstrate how to
+create models in Django, focusing on the
+different attributes. Furthermore, you can now summarize the concept
+of migrations and how they are beneficial in web applications
+through best practices, dealing with issues
+and rolling back. You can discuss how migrations
+can save a lot of time for development teams by separating the SQL away from the coding. There is no need to create SQL queries directly
+against the database, or where to store these files so that other
+developers can run them. Next, you explored Object
+Relational Mapping, ORM, and how jangle uses it to create SQL queries against
+the database. You also discovered the
+query set API and how developers use it to save and retrieve data in the database. Following models and migrations, you learned about
+models and forums. You were introduced to Django's
+rich framework for forms and how to manipulate form data to extract
+and send information. You are now able to showcase
+setting up a model with different data types and how they are mapped from a
+standard body request. You also exercised
+creating forms by using the forum API and some of
+its inbuilt datatypes. Next, you focused on admin. This section introduced you to the Django admin and some
+of its core features. You can demonstrate how to create and manage
+users and groups directly from the admin panel to provide access to the
+web applications. You also learned how
+permissions work at the view, model, and controller
+levels, and how they can be added using the
+Django admin view. Lastly, you can set up users and add or
+revoke permissions. Finally, you explore
+database configuration. You are now able to showcase the different database
+options that are available in Django with MySQLite and
+MySQL as the main focus. You practice the steps
+needed to set up the database configuration and SQLite database for
+local development. Then you learned about
+the configuration options for setting up a
+MySQL database and exercised session of a
+MySQL database connection and testing that
+it's up and running. You're now familiar with models. More specifically, you can create models and
+apply migrations. You can also use the query search API to
+interact with the database and create forums by leveraging the form API to bind
+data to objects. You familiarize yourself with the Django admin panel to add and control the permissions
+of users and groups. Finally, you concluded
+by setting up a MySQL database for
+your Django app. Well done. You're making excellent progress through
+your Django development.

@@ -1,0 +1,56 @@
+Organizing your code in a clean and easy to use manner is essential
+when working on a project. As the project grows,
+keeping code organized and well structured can be a challenge for
+developers. To help overcome these challenges,
+developers often use frameworks and design patterns such as MVT. For example, with the Django framework, you can use views to present
+data to the end users. You have already learned that you can
+respond to a web request in Django by creating a view function to return
+data using the HTTP response object. In the background,
+the framework passes that HTTP request to your function expecting
+the HTTP response back. While this works for some use cases,
+developers often need a more robust solution for implementing more
+complicated application logic in a view. To help with this, Django provides
+something called a class based view. In this video, you will learn about
+the concept of class based views. You will also explore how developers
+can simplify their views by using object oriented techniques, such as the concept of inheritance to
+create views from inherited classes. Let's begin by exploring some of
+the features of class based views. Class based views allow you
+to use views as objects and offer an alternative to
+function based views. Remember that a view is callable
+in that it can take a request and return a response. This process works great for
+the HTTP protocol. When dealing with HTTP,
+you use specific methods for the different types of requests. Such as get, post, put and delete and these are the core CRUD operations for
+any web page. If you use a function based view,
+you need to perform some conditional logic on the request method,
+like an if else statement. But class based views, uses a different
+approach than function based views. Instead of using conditional branching,
+such as if else statements. Class based views respond to HTTP
+requests using class instance methods. Instance methods
+are default python methods, defined in classes that can access
+objects or instances of a class. In a class based view,
+this can be simplified by adding different instance methods for
+the get and post requests. And these methods will implement
+the view logic independently. Class based views,
+respond with different class instance methods to HTTP requests in place
+of writing conditional branches, such as using if else,
+statements inside the same function. The advantage of using a class based view
+in this scenario, is that it allows you to remove the conditional logic to check the
+incoming request for the type of method. This simplifies the code and separates
+the logic, making it easy to understand. Another helpful aspect is the ability to
+have object oriented techniques, such as mixins or multiple inheritance, which
+factor code into reusable components. In Django, you can extend the functionality
+of class based views using mixins. Mixins are class based generic
+views that are flexible compared to their function based view equivalent. It can help to think of a mixin as
+a form of multiple inheritance, recall that inheritance as one of the core
+concepts of object oriented design or OOP. It allows you to derive
+one class from another for a hierarchy of classes
+with similar attributes. For example,
+suppose you have a class called food. Other classes that can inherit from
+this class could be appetizers, entree and desserts. They are all types of food and
+would share a lot of common attributes. Some common mixins developers use are
+create, list, retrieve, update and delete. Let's explore these briefly now. Use create to create a model instance. Use list to list a query set. Use retrieve to retrieve a model instance. Use update to update a model instance and use delete to delete a model instance. It's important to note that when using
+mixins, they can't be all used together. And in some cases it can make
+your code harder to read. So, it's best to use them wisely. In this video, you learned about
+the concept of class based views. You also explored how developers can
+simplify their views by using object oriented techniques. Such as the concept of inheritance to
+create views from inherited classes.

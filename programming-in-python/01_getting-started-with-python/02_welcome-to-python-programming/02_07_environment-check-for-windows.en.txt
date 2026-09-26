@@ -1,0 +1,47 @@
+When you start using Python, it's important to make
+sure that it works correctly on your
+operating system with your chosen Integrated
+Development Environment or IDE, in this case, Visual
+Studio code or VS Code. An essential step in using this software is to make
+sure that the right version of Python is used as the interpreter when
+running VS Code. In this video, I'll demonstrate
+how to set up VS code on Windows and make sure that it points to the correct
+Python interpreter. I start by opening
+the VS Code Editor. To do this, I click on the
+Windows icon in the taskbar, which brings up a menu. I then type Visual Studio
+Code in the search bar. The best match for the search is the Visual Studio Code app, which I click on to open. VS Code is now open. Next, I select, 'Get started with
+Python Development'. This is a useful
+guide to setting up Python on the VS Code IDE. The first step in the guide
+is to install Python. I already have Python installed
+and I can verify it by typing python dash dash
+version in the terminal. To open the terminal, select the terminal tab on the top menu and
+choose 'New terminal'. After I press 'Enter', it displays Python version
+3.10, which is correct. The second step in the guide
+is to create a Python file. I do this by clicking
+on the 'Create a Python File' option
+in the guide menu, and then clicking on the 'Create Python file' button
+that appears. Next, I put in a print statement by typing print Hello World. I will explain what a
+print is at a later stage. But for now, you just need
+to know that it's for printing on a value within
+the terminal itself. Now I see this as
+a Python file and my root level directory
+by clicking on 'File', 'Save As' and then entering
+the file name hello_world.py. Py is the file extension I have to use when
+saving a Python file. The next step in the guide is to select a Python interpreter. I click on this
+option in the menu. Then I click on
+the select Python interpreter button that appears, which brings up all the versions of Python I have installed. I do this because I want to make sure that when I run
+the Python script, it will choose the
+correct interpreter. The version that comes
+up is Python version 3.10 and I set this as the interpreter because it
+is the most recent version. To test and verify that
+everything is working correctly, I have to run the Python file. In the top right of the screen you'll notice a play button. I closed the guides so
+that it displays better. The Play button has a drop-down
+menu that has the option for running the Python file
+or running it in debug. I'll click on the 'Run
+Python file' option. Note in the terminal
+window that it has run the file using Python 3.10 as the interpreter and I get the output
+of hello world. That means that I'm now set
+up to use Python directly in the IDE so I can run
+and debug my scripts. You now know how to create and save a Python
+file and how to select the correct
+Python interpreter to run your files in VS Code.

@@ -1,0 +1,595 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  Note: ‘|’ stands for alternatives or OR.
+ </p>
+ <h1 level="1" variant="h1semibold">
+  Grid
+ </h1>
+ <p>
+  The syntax for creating a grid:
+ </p>
+ <pre language="css">selector{
+    display: grid; /* or inline-grid */
+}</pre>
+ <p>
+  Grid shorthand consists of the following properties with default values:
+ </p>
+ <p>
+  <var>
+   grid
+  </var>
+ </p>
+ <p>
+  A grid will allow you organize the various elements on your page.
+ </p>
+ <p>
+  <var>
+   grid-template-rows: none
+  </var>
+ </p>
+ <p>
+  This feature allows you configure your elements so that they are organized similarly to rows on a table.
+ </p>
+ <p>
+  <var>
+   grid-template-columns: none
+  </var>
+ </p>
+ <p>
+  This feature allows you configure your elements but with this setting the elements are organized like columns on a table.
+ </p>
+ <p>
+  <var>
+   grid-template-areas: none
+  </var>
+ </p>
+ <p>
+  This feature allows you configure the names of a grid and how they sit in relation to one another.
+ </p>
+ <p>
+  <var>
+   grid-auto-rows: auto
+  </var>
+ </p>
+ <p>
+  Default setting for all row sizes that have not been explicitly configured.
+ </p>
+ <p>
+  <var>
+   grid-auto-columns: auto
+  </var>
+ </p>
+ <p>
+  Default setting for all column sizes that have not been explicitly configured.
+ </p>
+ <p>
+  <var>
+   grid-auto-flow: row
+  </var>
+ </p>
+ <p>
+  Default location for rows that are not explicitly allocated.
+ </p>
+ <p>
+  <var>
+   column-gap: normal
+  </var>
+ </p>
+ <p>
+  This sets the gap between the columns
+ </p>
+ <p>
+  <var>
+   row-gap: normal
+  </var>
+ </p>
+ <p>
+  This sets the gap between the rows
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Grid properties for container
+ </h2>
+ <p>
+  <var>
+   grid-template-columns: measurement units | % units |repeat()
+  </var>
+ </p>
+ <p>
+  Defines the line names, and maintains a constant size of column items. Can accept a range of different measurement sizes.
+ </p>
+ <p>
+  <var>
+   grid-template-rows: measurement units | % units |repeat()
+  </var>
+ </p>
+ <p>
+  Defines the line names, and maintains a constant size of rows. Can accept a range of different measurement sizes.
+ </p>
+ <p>
+  <var>
+   grid-auto-columns: measurement unit (fixed value for all columns)
+  </var>
+ </p>
+ <p>
+  Determines the default size for columns that have not been explicitly configured.
+ </p>
+ <p>
+  <var>
+   grid-auto-rows: measurement unit (fixed value for all rows)
+  </var>
+ </p>
+ <p>
+  Determines the default size for rows that have not been explicitly configured.
+ </p>
+ <p>
+  <var>
+   grid-template: “header header” auto
+  </var>
+ </p>
+ <p>
+  This allows you define and maintain named cells on a grid
+ </p>
+ <p>
+  <var>
+   “main right” 75vh
+  </var>
+ </p>
+ <p>
+  This defines two cells named main and right, that have a sizing of 75% of the viewport height.
+ </p>
+ <p>
+  <var>
+   “footer footer” 20rem
+  </var>
+ </p>
+ <p>
+  This defines two cells named footer and footer, that have a sizing of 20 root em (rem). This defines the size in relation to the html font size.
+ </p>
+ <h3 level="3" variant="h3bold">
+  Gap
+ </h3>
+ <p>
+  <var>
+   grid-gap: measurement units
+  </var>
+ </p>
+ <p>
+  Determines the gap between rows and columns
+ </p>
+ <p>
+  <var>
+   grid-column-gap: measurement units
+  </var>
+ </p>
+ <p>
+  Determines the gap between columns
+ </p>
+ <p>
+  <var>
+   grid-row-gap: m-unit-1  m-unit-2
+  </var>
+ </p>
+ <p>
+  Determines the gap between columns
+ </p>
+ <h3 level="3" variant="h3bold">
+  Alignment
+ </h3>
+ <p>
+  <var>
+   justify-items: start | center | end | stretch
+  </var>
+ </p>
+ <p>
+  Defines the default space that is allot to each item on the grid
+ </p>
+ <p>
+  <var>
+   align-items: start | center | end | stretch
+  </var>
+ </p>
+ <p>
+  Defines the default space related to an item along the grid’s block axis
+ </p>
+ <p>
+  <var>
+   place-items: start | stretch /* shorthand for two properties above */
+  </var>
+ </p>
+ <p>
+  This feature allows you align items with  the block and inline directions.
+ </p>
+ <h3 level="3" variant="h3bold">
+  Justification
+ </h3>
+ <p>
+  <var>
+   justify-content: start | center | end | stretch | space-between | space-evenly | space-around
+  </var>
+ </p>
+ <p>
+  Defines browser allocation of space to content items in relation to the main-axis
+ </p>
+ <p>
+  <var>
+   align-content: start | center | end | stretch | space-between | space-evenly | space-around
+  </var>
+ </p>
+ <p>
+  Defines browser allocation of space to content items in relation to cross axis and block axis
+ </p>
+ <p>
+  <var>
+   place-content: center | start
+  </var>
+ </p>
+ <p>
+  This feature allows you align items with  the block and inline directions.
+ </p>
+ <h3 level="3" variant="h3bold">
+  Positioning
+ </h3>
+ <p>
+  <var>
+   grid-auto-flow: row | column | dense
+  </var>
+ </p>
+ <p>
+  This relates to how the items are placed automatically within the grid
+ </p>
+ <p>
+  <var>
+   grid-auto-columns: measurement units
+  </var>
+ </p>
+ <p>
+  This relates to the size for columns created without specific size specifications
+ </p>
+ <p>
+  <var>
+   grid-auto-rows: measurement units
+  </var>
+ </p>
+ <p>
+  This relates to the size for rows created without specific size specifications
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Grid properties for items (child)
+ </h2>
+ <p>
+  <var>
+   grid-column: column position /* E.g. 1/2  */
+  </var>
+ </p>
+ <p>
+  Allows for specifying where on the grid the column is to start.
+ </p>
+ <p>
+  <var>
+   grid-column-start: column start position
+  </var>
+ </p>
+ <p>
+  This property determines the starting column position an item is placed on a grid.
+ </p>
+ <p>
+  <var>
+   grid-column-end: column end position
+  </var>
+ </p>
+ <p>
+  This property determines the end column position an item is placed on a grid.
+ </p>
+ <p>
+  <var>
+   grid-row: row position /* E.g. 1/2  */
+  </var>
+ </p>
+ <p>
+  Allows for specifying where on the grid the row is to start.
+ </p>
+ <p>
+  <var>
+   grid-row-start: row start position
+  </var>
+ </p>
+ <p>
+  This property determines the starting row position an item is placed on a grid.
+ </p>
+ <p>
+  <var>
+   grid-row-end: row end position
+  </var>
+ </p>
+ <p>
+  This property determines the end row position an item is placed on a grid.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Justification and alignment
+ </h2>
+ <p>
+  <var>
+   justify-self: start | center | end | stretch
+  </var>
+ </p>
+ <p>
+  Determines how  an item is positioned inside its aligned container in relation to the appropriate axis.
+ </p>
+ <p>
+  <var>
+   align-self: start | center | end | stretch
+  </var>
+ </p>
+ <p>
+  Aligns an item within a grid area.
+ </p>
+ <p>
+  <var>
+   place-self: start | stretch /* shorthand for two properties above */
+  </var>
+ </p>
+ <p>
+  This setting lets one align and justify an item within a block.
+ </p>
+ <h1 level="1" variant="h1semibold">
+  Flexbox
+ </h1>
+ <p>
+  The syntax for creating a flexbox:
+ </p>
+ <pre language="css">selector{
+    display: flex | inline-flex
+}
+</pre>
+ <p variant="body1">
+  Here the selector can refer to any of the following flex attributes
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p variant="body1">
+    Attribute selector
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    Class Selector
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    ID Selector
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    Type Selectors
+   </p>
+  </li>
+  <li>
+   <p variant="body1">
+    Universal Selectors
+   </p>
+  </li>
+ </ul>
+ <p variant="body1">
+  The display relates to how you want the selector to be shown. Setting display to flex makes the given selector a flex box. Setting display to
+  <var>
+   inline-flex
+  </var>
+  makes the selector a flex box container while will be inline.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Properties for flexbox container
+ </h2>
+ <p>
+  <var>
+   flex-direction: row | row-reverse | column | column-reverse
+  </var>
+ </p>
+ <p>
+  It is possible to specify the direction your elements will follow. Traditionally text goes from left to right which is flex’s default setting however it can be set from right to left or even top to bottom. The four flex-direction are:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    row : organized from left to right
+   </p>
+  </li>
+  <li>
+   <p>
+    row-reverse: organized from right to left
+   </p>
+  </li>
+  <li>
+   <p>
+    column: organized from top to bottom
+   </p>
+  </li>
+  <li>
+   <p>
+    column-reverse: organized from bottom to top.
+   </p>
+  </li>
+ </ul>
+ <p>
+  <var>
+   flex-wrap: wrap | nowrap
+  </var>
+ </p>
+ <p>
+  The standard layout is to plot the elements from left to right in a straight line. The wrap feature allows you customize this to match the size of the window displaying the page.
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    wrap: Automatically wrap the items with as the window space gets smaller.
+   </p>
+  </li>
+  <li>
+   <p>
+    Nowrap: Default setting, items remain rigid and don’t respond  to adjustments made to the window size.
+   </p>
+  </li>
+ </ul>
+ <p>
+  <var>
+   align-items: flex-start | flex-end | center |Stretch
+  </var>
+ </p>
+ <p>
+  This determines how the flex items are to be positioned on the page. Items can be aligned in a variety of ways
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    Flex-start: Similar to standard writing, items start at the top left-hand corner and are positioned from left to right
+   </p>
+  </li>
+  <li>
+   <p>
+    Flex-end: Position begins in the bottom right hand corner.
+   </p>
+  </li>
+  <li>
+   <p>
+    Center: Item is positioned from the center.
+   </p>
+  </li>
+  <li>
+   <p>
+    Stretch: item expands to fill the container.
+   </p>
+  </li>
+ </ul>
+ <p>
+  <var>
+   justify-content: flex-start | flex-end | center | space-between | space-evenly
+  </var>
+ </p>
+ <p>
+ </p>
+ <p>
+  Justify-content determines the alignment of the flex items.
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    Flex-start: goes from right to left along the main axis.
+   </p>
+  </li>
+  <li>
+   <p>
+    Flex-end: goes from left to right along the main axis.
+   </p>
+  </li>
+  <li>
+   <p>
+    Center: Starting at the middle, alignments expands from there.
+   </p>
+  </li>
+  <li>
+   <p>
+    Space-between: first and last item are flush with the left and right wall respectively, every other item is evenly spaced.
+   </p>
+  </li>
+  <li>
+   <p>
+    Space-evenly: each item is equidistant from each other and the boundary wall
+   </p>
+  </li>
+ </ul>
+ <h2 level="2" variant="h2semibold">
+  Properties for flexbox items (child)
+ </h2>
+ <p>
+  <var>
+   flex-grow: factor of flex’s main size
+  </var>
+ </p>
+ <p>
+  This attribute enables the flex container to grow proportionally to the other containers present.
+ </p>
+ <p>
+  <var>
+   flex-shrink: factor of flex’s main size
+  </var>
+ </p>
+ <p>
+  This allows elements to shrink in relation to items around it.
+ </p>
+ <p>
+  <var>
+   flex-basis: auto | factor of main’s size | measurement unit
+  </var>
+ </p>
+ <p>
+  The sets the initial main size of an item. It can be overridden if other stylized elements are configured.
+ </p>
+ <p>
+  <var>
+   order:position in flex /* Set ascending by default */
+  </var>
+ </p>
+ <p>
+  The standard positioning of items is by source order, however this feature will enable you to configure where the items appear on the page.
+ </p>
+ <p>
+  <var>
+   align-self:  start | center | end | stretch
+  </var>
+ </p>
+ <p>
+  This determines where on the page the child items will be positioned. Similar to the main flex attributes, start is to the left and end is to the right.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

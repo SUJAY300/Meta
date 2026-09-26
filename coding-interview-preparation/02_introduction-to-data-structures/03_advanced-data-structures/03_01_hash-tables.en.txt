@@ -1,0 +1,102 @@
+At this point of the course, you have been introduced to several different
+data structures. You've discovered
+that there's not a perfect way of
+storing information. Instead, there is a wide
+variety of approaches, each of which is an
+appropriate solution depending on the problem. In this video, you will learn
+about what a hash table is, its structure and inherent
+features and how it works. You will also explore some
+of the advantages of using hash tables and discover what is meant by
+collisions in hashing. A hash table contains
+several slots or buckets to hold key value pairs. It requires a hashing
+function to determine the correct bucket to
+place the data into. A hashing function is any
+algorithm, or formula, that is applied to a key to
+generate a unique number. Each data item to be stored
+must have a key and a value. The key is taken and the hashing function
+is applied to it, such that it is reduced
+to a fixed size value. There are a variety of hashing
+functions one could apply. You may be familiar with them
+in relation to compression. When you want to send
+information over the Internet, you might first
+compress the size of it to a manageable
+number of bytes, send it over the Internet and then decompress it
+on the other side. This is an example of
+how hashing works. It reduces the key to a small, manageable size, which then
+acts as the index indicator. What information is
+used to generate the index is dependent
+on the application. It might be the data itself
+if it is small enough, or it might be the last four digits of
+an employee ID number, or it might be a key
+in a dictionary. Most programming
+languages have built-in hashing functions like MD5, SHA, or CRC32, so implementing a
+hashing function is a straightforward job. When discussing Big O notation, the idea that speed
+and space are often at odds with one
+another, was introduced. This means that you can reduce the time taken to
+retrieve an item, but in doing so, you add
+overhead to your application. Hash tables
+prioritize speed over space and can retrieve an
+item in O of one time. Recall the discussion on arrays. When you want to check
+if a value exists, a search must be executed
+that checks each element of the list and makes a comparison
+with a target value. Worst-case scenario, this
+will take O of n time, or in other words, if the element was at
+the end of the array, it must make n checks. Hash tables offer an
+alternative approach to storing and searching data. This is done through
+use of an index. To achieve this, you must implement an
+algorithm that takes in a key and maps it to a value which is
+stored in an index. Then when a new
+key is presented, the algorithm need only
+run the same function and determine where in
+the index the value lies. Much like an index in a book, this will drastically speed
+up the time it takes to identify the location
+of some data. You are likely to find hash
+tables used in caches, dictionaries, database
+indexes and sets. Consider a scenario where you
+have an array of 10 keys, which are numbers 0-9. You would like to employ
+a hashing function to decide where in memory
+to store these numbers. You opt for a
+simplistic approach of applying the modulus
+of 20 to the numbers. For each key from 0-9, you apply your hashing function. Start with 0 mod 20 equals 0, 1 mod 20 equals 1, 2 mod 20 equals 2, 3 mod 20 equals 3 and so forth. In this way, you would generate nine unique values which are used to represent in memory, where the data associated
+with those keys is placed. This example is simplistic, but illustrates the mechanism
+behind creating HashMaps. The issue arises
+when the number of keys to be stored
+grows beyond 20. Remember 1 mod 20 equals 1, but 20 mod 21 also equals 1. Let's move on to
+collisions in hash tables. What are collisions
+in hash tables? A hashing function will
+apply a clever algorithm that will reduce the size of the key to a manageable size. Some approaches are more
+intricate than others. What happens if the result
+of two hashings is the same? To expand on this idea, it is worth pondering on Von
+Mises' birthday paradox. Due to probability, sometimes an event is more likely to occur than
+we believe it to. In this case, if you survey a random group of
+just 23 people, there is actually about a 50-50 chance that two of them will have
+the same birthday. This is known as the
+birthday paradox. Say there are 24 employees in a company and a clever
+hashing function has been applied that takes
+the date and month of their birthday and
+uses this as an index. With only 24 employees
+and a hash table of 365 index slots to hold
+a reference to them, you may think the probability of any two employees sharing
+a birthday is unlikely. In fact, it has
+been shown that it is over 50 percent
+likely to occur. Next time you're at a party, be sure to check if any two attendees have the same birthday to
+check for yourself. What this illustrates, is that there will be duplicate
+hashes generated when the hashing function
+is applied to the key and that allowances
+must be made for it. There are a few
+solutions to the issue. One solution is to grow the table every time
+a collision occurs, then increase the complexity
+of the hashing approach, redistributing the
+values to new addresses. In this way, a table will grow organically to match the
+size of the data required. Another is to create a
+linked list at the point of collision and simply store
+the additional values. In the event of a collision, instead of storing a value, you would instead store
+a linked list of values. In this video, you discovered
+what hash tables are, the structure and features
+and how they work. You have also learned that hashing is a very
+clever approach to generate O of one time searches using a hashing
+function and an index. You've explored collisions
+and how they can be used to inform the size of the
+table and you even learned, that if you are at a party
+with more than 24 guests, it is more likely than not, that at least two will
+share the same birthday.

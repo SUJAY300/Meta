@@ -1,0 +1,66 @@
+Up to this point, you've explored class relationships
+that were relatively straight forward. But what happens when things get complex? How will you know which classes
+inherit from which, fortunately method resolution order or MRO provides rules
+that can help make sense of that. By the end of this video,
+you'll know how to explain the basic rules of method order, resolution and
+how they apply to inheritance classes. Explain the concept of code
+linearization with respect and multiple inheritance and deploy method
+order, resolution functions in python. You've likely encountered some examples
+of single inheritance where a child class only inherits from a single parent class. But it's important to know that
+python has many types of inheritance. The categorization types are based
+on the number of parents and child classes as well as the hierarchical
+order, including simple inheritance. There are broadly four
+types of inheritance. The first type is called
+a simple inheritance, which you've already dealt with. There is also multiple inheritance,
+which involves a child class inheriting from more than one parent
+next is multi level inheritance, which is inheritance taking
+place on several levels. Then you have hierarchical inheritance, which concerns how several sub
+classes inherit from a common parent. And finally, you could say that there is
+fifth type called hybrid inheritance, which mixes characteristics of the others. As these inheritance types demonstrate
+inheritance becomes increasingly complex as the number of classes in a project
+grow and become more interdependent. So how did developers solve
+this issue with the use of MRO determines the order
+in which a given method. Or attributes is passed through in
+a search of the hierarchy of classes for its resolution or in other words,
+from where it belongs, the order of the resolution is
+called linearization of a class. And MRO defines the rules that's follows. The default order in python is
+bottom to top, left to right when imagining the inheritance of these
+python classes in a tree structure. Let's take the simplest
+example of single inheritance. The object is first searched in
+the class of that object and then in its super class. What about in an example where classes
+is inheriting from two classes, let's say Z is inheriting
+from classes X and Y. In this instance,
+the MRO will be Z, Y, and then X. In other words, the MRO works its way
+bottom to top and then from left to right. But things become much more complicated
+when more levels are added to the hierarchy. So developers rely on
+algorithms to build MROs. Old style classes used in depth,
+first search algorithm or DFS from python version three onwards,
+python versions have moved to the new style of classes that rely
+on the C three linearization algorithm. The implementation of the C three
+linearization algorithm is complex and beyond the scope of this lesson,
+but for now, here's an overview of a few
+rules that it follows. The algorithm follows monotonicity,
+which broadly means that an inherited property cannot
+skip over direct parent classes. It also follows the inheritance
+graph of the class and the super class is visited only after
+visiting the methods of the local classes. >> This logic will make more sense
+later when you explore more complex class relationships in a future lesson. Next let's take a moment to explore some
+methods of finding the MRO of a class. First, I'll begin with the demonstration
+of the MRO attributes or function. Let's take a multilevel
+inheritance example comprised of three classes ,class A,
+class B and class C. Class A is the parent class with B and
+C the respective child classes. In other words, be inherits from A and
+C inherits from B. When I print the return for
+calling the MRO function over class Ce the output indeed confirms
+that this is the order that is followed. So why is this important? Well, imagine the class A has
+a variable num with value of five and then Class B also has a number variable
+with a value of nine Here, the morrow function tells you quickly that class C
+will inherit the nine value from class B. Finally, let's examine one more
+function which is the help function. If I take the code from earlier and replace the MRO function in the print
+statement with the help function. It provides a much more detailed output
+with MRO information at the top. It also contains information
+about the data descriptors and types used inside the code. In this video, you received a brief
+introduction to method resolution order and how it affects inheritance
+in different scenarios. These are both very broad topics, but
+hopefully it helps you understand the complexity of code that
+is possible in python.

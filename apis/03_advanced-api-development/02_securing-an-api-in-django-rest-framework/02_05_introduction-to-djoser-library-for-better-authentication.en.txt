@@ -1,0 +1,75 @@
+Authentication and
+authorization are two of the most crucial parts
+of every application. If done wrong, it can lead to data breaches or
+data corruption. Knowing how the
+authentication system works in Django and DRF is essential, but it can be tedious and time-consuming to do everything
+from scratch every time. Wouldn't it be much
+better if you could use a simple authentication library, configure it with just a
+few lines of code and get a fully functional
+authentication layer for your DRF project? That's what Djoser
+enables you to do. In this video, you will
+learn about Djoser, an easy to use authentication
+package for DRF. Let's start with installing the Djoser package in your
+project using Pip envy. Makes sure that
+you have activated your virtual environment
+using Pip envy shell first. Now run the command Pip
+envy install Djoser, this will install
+Djoser in your project, but you're not done yet. You need to configure
+a few things first. Open your settings.py file and add the Djoser app in the
+installed app section. Remember, it's
+important that you keep Djoser after the
+rest_framework app. Create a new section
+called Djoser and add user ID field
+and username to it, this is how you
+specify which field in your user model will
+act as the primary key. Sometimes, people prefer to use the email address
+as the username, which you can change using the login underscore
+field option. Let's go with the default
+settings for now. Remember, you added the token
+authentication class in the default
+authentication class or section and the rest framework
+earlier in this course. If you want to use the
+Django admin login simultaneously with a
+browsable API view of Djoser, you need to add this session
+authentication class too. Don't worry, you
+can remove it later at anytime before
+going into production. Now, in your main URLs.py file, you need to enable
+Djoser endpoints. Open this file and add these two lines in the
+URL patterns section. Djoser offers a few
+handy endpoints. Here is a list of them. Some of them support only the getMethod and
+some of them support POST, PUT, PATCH and DELETE methods. You can access these
+endpoints by adding HTTP://127.0.0.1:8000/auth in front of each one of them. You can access
+these endpoints by adding them to the end
+of the localhost URL. If you visit the
+auth users endpoint and wants to add new users, then you need to login as a superuser in the
+Django admin first. Then you can visit these
+browsable API endpoints. There is a new button
+called Extra actions added beside the options and GET button in the
+browsable API view. Click on that to quickly perform the common operations related to the endpoint that
+you are visiting. Click on the "Options"
+button while visiting any of these endpoints in
+the browsable API view, and you'll notice
+full information like what parameters or HTTP methods
+these end points accept. Let me guide you through
+some of these endpoints. The users endpoint lists all the users and you can make a post call to create a new one. If you want to create
+a new user from an API client like insomnia, you don't need to pass
+any token to this API. You can also create
+tokens for a user from the authtoken login endpoint. You can use insomnia to make an HTTP post call with username and password
+and receive the token, or you can use the
+browsable API view. There is a form with
+username and password fields that you can use to
+generate user tokens, and the final one is the
+auth users me end point, make it get call with any user's token to this end point, and it will provide the details of the
+authenticated user. This endpoint also supports a put call to update the
+email address of this user. With this Djoser library and a few lines
+of configuration, you get some handy API
+endpoints to deal with users and token-based
+authentication in your DRF project. Djoser library also offers a different type of
+token-based authentication, which is called JSON
+Web Token or JWT, and you will learn about
+it later in this course. In this video, you learned about an authentication
+package called Djoser. You learned how to install Djoser and configure
+it correctly in your DRF API project to deal with users and
+token-based authentication. You also learned about
+the handy endpoints and their functions offered
+by the Djoser library.

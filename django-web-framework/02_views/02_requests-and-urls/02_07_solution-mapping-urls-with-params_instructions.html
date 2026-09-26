@@ -1,0 +1,86 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  Here is the completed solution code for the
+  <strong>
+   urls.py - App-level
+  </strong>
+  file:
+ </p>
+ <pre language="python">from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('drinks/&lt;str:drink_name&gt;/', views.drinks, name='drink_name'),
+]</pre>
+ <p>
+  <strong>
+   views.py
+  </strong>
+ </p>
+ <pre language="python">from django.http import HttpResponse
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+
+def drinks(request, drink_name):
+    drink = {
+        'mocha' : 'type of coffee',
+        'tea' : 'type of hot beverage',
+        'lemonade': 'type of refreshment'
+    }
+    choice_of_drink = drink[drink_name]
+    return HttpResponse(f"&lt;h2&gt;{drink_name}&lt;/h2&gt; " + choice_of_drink)</pre>
+ <p>
+  Emphasize that the URL passes the captured parameter to the view argument, and the view returns an HttpResponse based on it.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

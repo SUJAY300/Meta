@@ -1,0 +1,80 @@
+Well done. You've reached the end of this
+module about front-end technologies. You will certainly use this knowledge
+in your full-stack development career. Let's take a few moments to
+review what you've learned. You started by learning how HTML and
+CSS are used in the real world. HTML is a markup language used to create
+web pages whereas CSS is a style sheet language that is used to describe the look
+and layout of a document written in HTML. In essence, the combination of HTML and
+CSS allows websites to adapt their design and layout based on
+the devices on which they're viewed. You also learned about semantic tags and how important it is to follow a structured
+approach to create a well-formed web page like the basic structure of an HTML
+page which includes the head and body. For a typical HTML page, the structure
+can be semantically described using the header, main, and
+footer semantic HTML tags. After semantic tags, you moved on to form
+submissions, and how to use the get and post methods with specific action
+attributes to submit a form. You learned that form validation is a
+process that ensures that the data entered by users in a form is valid and conforms
+to the rules defined by the developer. And you now know that most
+websites use both client-side and server-side validation to provide
+immediate feedback to users, but also to protect against malicious data
+submissions and to ensure data integrity. You also learned about the different
+input types that are validated by the web browser on the client side and how to
+decide what type best suits your use case. After learning about HTML,
+you took a deep dive into CSS layouts, grids, and flexboxes in the next lesson. You started by learning about CSS
+web layout and units of measurement. Layouts are fundamental to designing
+a good web page because they divide a page into different sections, thereby
+making the view port more presentable. You explored how to set up a basic
+flexbox and grid layout, and applied what you learned by creating a custom
+layout using grids in an ungraded lab. Well done, remember there is no strict
+rule on choosing which layout to use. But in general, flexboxes are more
+suitable when you want to create flexible elements in smaller spaces while grids
+are more suitable to large-scale layouts. The lesson also covered how to work
+with CSS selectors, pseudo-classes, and pseudo-elements. Ultimately, you should now know how to use
+CSS selectors like attribute selectors to apply rules to different HTML elements
+with varying degrees of specificity. Remember, pseudo-classes, are state-based
+selectors which means that they allow you to select elements based on their
+state for example, the hover state whereas pseudo-elements help you
+style a specific part of an element. For example, you can apply styling to only
+the first word or line in a given element. You also learn that you can
+combine more than one selector, so you can apply rules to elements based
+on their relationship with one another. And with pseudo-class selectors, you can
+improve the interactivity of your web pages without having to add
+overly advanced styling. You also now know that pseudo-elements
+help you style a specific part of an element, but keep in mind that the lesson on CSS
+covered the fundamental selectors. But there are many other selectors
+that are worth exploring. Next, you learned about JavaScript, the language that builds
+interactivity into web pages. Almost every website runs
+JavaScript in some form or another. Using JavaScript updates are displayed
+in real-time on user's devices. Examples include interactive maps or adding an item to a shopping
+cart when you click a button. You learned why developers use
+variables and how to declare them. Remember, variables allow you to make
+the exact same code produce different results making your programs versatile. Next, you learned about the different
+data types and their specifics, and that it's important to choose
+the appropriate type for every use case. Like the number data type which has
+a very wide range in JavaScript and is usually enough for most common use
+cases, and the string data type that practically has an unlimited number
+of combinations of characters. But to use variables you need operators. You learn that operators perform
+operations on variables and values to manipulate individual
+data items in return or result. You then moved on to JavaScript
+interactivity, selectors, and event handling. And this is all part of one of
+the most powerful JavaScript features, DOM manipulation. You now know how to interact with
+the document object model or dom of a web page to make changes to it. For instance, by using the elements tab inside the
+browser dev tools you can interact with the dom of the currently active web page
+using a graphical user interface or GUI. And you learn that event handling is
+the function in JavaScript that listens to events such as a user
+clicking on the cart button. You should now be able to
+capture user input and process it to manipulate what
+is displayed to the user. To do this,
+you learned how to locate the objects in your HTML document using
+JavaScript selectors. After completing the lesson
+about JavaScript interactivity, you should be able to identify
+the JavaScript selectors, event handling, API call, and
+dom manipulation in this code snippet. Lastly, you learned about the front-end
+libraries and frameworks that you can use in your developer career
+to streamline your coding. Congratulations. You now completed the front-end
+component of full-stack development. You are now ready to
+take on the module quiz. Remember that this module was just
+an introduction to front-end development. There is a lot more that you can learn
+a bout HTML CSS, and JavaScript. Check out the front-end
+developer program from meta for courses that cover these
+languages in more depth

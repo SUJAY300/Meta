@@ -1,0 +1,74 @@
+Welcome to this course on
+full-stack development. You've come a long way
+with all the other courses you've completed in the
+back-end developer series. Like in the previous
+course about APIs, you delve deeper into
+the processes and concepts behind APIs and
+their infrastructure. Now you probably
+want to know what lies ahead with this course. Let's begin. Full-stack is about end-to-end application
+software development. That means that as a
+full-stack developer, you will be involved in
+every step of a project. Take for example, the
+little lemon restaurant that you've been working
+with throughout the courses. The restaurant has a homepage
+with menu items that customers can browse and order by adding
+items to their cart. This process requires a
+front-end infrastructure and some business logic
+written in the back-end. The back-end also connects the application to other
+services like databases. As a full-stack developer, you will be able to implement
+every part of this project. Now, let's move on to
+the content the course will cover to make sure you're ready for such an endeavor. Module 1 offers an
+introduction to the full-stack and what a
+full-stack developer does. This entails learning
+about the roles and responsibilities of a
+full-stack developer, as well as making sure you understand
+N-tier architecture. Module 2 is all about
+front-end technologies like HTML, CSS, and JavaScript. Some of the key concepts
+you'll learn about are semantic HTML and basic forms, CSS and responsive layouts, and how to update an HTML
+document using JavaScript. Then you'll move
+on to learn how to use Django with the full-stack. You'll get an
+opportunity to build a full-stack application
+using Django. That sounds like
+valuable knowledge. You'll discover how to populate Django model for
+a MySQL database, query an API, and update an HTML
+document with the result. In Module 4, you will learn about
+production environments, for example, you will explore the different environments that web applications
+are deployed to. You'll learn about the
+different hosting solutions available for your
+web applications. Very importantly,
+you'll also learn about the Cloud computing
+environment that can make your life easier
+in several ways. Lastly, you will cover the challenges of scaling
+web applications. After all of this, you will be ready for the final project, which consists of several
+labs that will help you put together the skills
+you learned in the course, and implement your code
+in the full-stack. The labs include connecting the little lemon restaurant
+back-end to MySQL, setting up a booking
+API for the restaurant. Lastly, displaying little lemons available
+booking times. After this hands-on learning, you will have to complete
+one final graded assessment. But be assured that
+everything you need to do for the assessment will be
+covered during your learning, with each lesson made up of video content,
+readings and quizzes. There are many videos
+in the course that will gradually guide you towards your goal of becoming
+a developer. Watch, pause, rewind, and re-watch the videos until you are confident
+in your skills. Then consolidate your knowledge by consulting the
+course readings and putting your skills into practice during the
+course exercises. Along the way, you'll
+encounter several knowledge quizzes where you
+can self check your progress. Remember, you're not alone in considering a career
+as a developer, which is why you also
+work with course discussion prompts that help you to connect with
+your classmates. It's a great way to share
+your knowledge, disgust, difficulties, and grow a network of contacts in the
+development world. To be successful in this course, it's helpful to commit to a regular and disciplined
+approach to learning. Although this is an
+online self-paced course, you need to be serious
+about your studies, and if possible, map out
+a steady schedule with dates and times that you can devote to attending the course. In summary, this course
+provides you with a complete introduction to
+full-stack development. You'll have the
+opportunity to build a new application using
+your developer skills. This will set you
+on your way towards a career and full-stack
+development. Looking forward to accompanying you on your learning journey.

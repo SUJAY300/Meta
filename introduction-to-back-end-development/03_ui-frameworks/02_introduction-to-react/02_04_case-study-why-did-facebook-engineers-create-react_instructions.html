@@ -1,0 +1,212 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  There are a lot of JavaScript Model-View-Controller (MVC) frameworks out there. Why did we build React and why would you want to use it?
+ </p>
+ <h2 level="2" variant="h2semibold">
+  React isn’t an MVC framework.
+ </h2>
+ <p>
+  React is a library for building composable user interfaces. It encourages the creation of reusable UI components which present data that changes over time.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  React doesn’t use templates.
+ </h2>
+ <p>
+  Traditionally, web application UIs are built using templates or HTML directives. These templates dictate the full set of abstractions that you are allowed to use to build your UI.
+ </p>
+ <p>
+  React approaches building user interfaces differently by breaking them into
+  <strong>
+   components
+  </strong>
+  . This means React uses a real, full-featured programming language to render views, which we see as an advantage over templates for a few reasons:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    <strong>
+     JavaScript is a flexible, powerful programming language
+    </strong>
+    with the ability to build abstractions. This is incredibly important in large applications.
+   </p>
+  </li>
+  <li>
+   <p>
+    By unifying your markup with its corresponding view logic, React can actually make views
+    <strong>
+     easier to extend and maintain
+    </strong>
+    .
+   </p>
+  </li>
+  <li>
+   <p>
+    By baking an understanding of markup and content into JavaScript, there’s
+    <strong>
+     no manual string concatenation
+    </strong>
+    and therefore less surface area for XSS vulnerabilities.
+   </p>
+  </li>
+ </ul>
+ <p>
+  We’ve also created
+  <a href="https://react.dev/learn/writing-markup-with-jsx" title="">
+   JSX
+  </a>
+  , an optional syntax extension, in case you prefer the readability of HTML to raw JavaScript.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  React updates are dead simple.
+ </h2>
+ <p>
+  React really shines when your data changes over time.
+ </p>
+ <p>
+  In a traditional JavaScript application, you need to look at what data changed and imperatively make changes to the DOM to keep it up-to-date. Even AngularJS, which provides a declarative interface via directives and data binding
+  <a href="https://code.angularjs.org/1.0.8/docs/guide/directive#reasonsbehindthecompilelinkseparation" title="">
+   requires a linking function to manually update DOM nodes
+  </a>
+  .
+ </p>
+ <p>
+  React takes a different approach.
+ </p>
+ <p>
+  When your component is first initialized, the
+  <var>
+   render
+  </var>
+  method is called, generating a lightweight representation of your view. From that representation, a string of markup is produced and injected into the document. When your data changes, the
+  <var>
+   render
+  </var>
+  method is called again. In order to perform updates as efficiently as possible, we diff the return value from the previous call to
+  <var>
+   render
+  </var>
+  with the new one and generate a minimal set of changes to be applied to the DOM.
+ </p>
+ <p>
+  The data returned from
+  <var>
+   render
+  </var>
+  is neither a string nor a DOM node — it’s a lightweight description of what the DOM should look like.
+ </p>
+ <p>
+  We call this process
+  <strong>
+   reconciliation
+  </strong>
+  . Check out
+  <a href="https://jsfiddle.net/uf3sr8L7/" title="">
+   this jsFiddle
+  </a>
+  to see an example of reconciliation in action.
+ </p>
+ <p>
+  Because this re-render is so fast (around 1ms for TodoMVC), the developer doesn’t need to explicitly specify data bindings. We’ve found this approach makes it easier to build apps.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  HTML is just the beginning.
+ </h2>
+ <p>
+  Because React has its own lightweight representation of the document, we can do some pretty cool things with it:
+ </p>
+ <ul bullettype="bullets">
+  <li>
+   <p>
+    Facebook has dynamic charts that render to
+    <var>
+     &lt;canvas&gt;
+    </var>
+    instead of HTML.
+   </p>
+  </li>
+  <li>
+   <p>
+    Instagram is a “single page” web app built entirely with React and
+    <var>
+     Backbone.Router
+    </var>
+    . Designers regularly contribute React code with JSX.
+   </p>
+  </li>
+  <li>
+   <p>
+    We’ve built internal prototypes that run React apps in a web worker and use React to drive
+    <strong>
+     native iOS views
+    </strong>
+    via an Objective-C bridge.
+   </p>
+  </li>
+  <li>
+   <p>
+    You can run React on the server for SEO, performance, code sharing and overall flexibility.
+   </p>
+  </li>
+  <li>
+   <p>
+    Events behave in a consistent, standards-compliant way in all browsers (including IE8) and automatically use event delegation.
+   </p>
+  </li>
+ </ul>
+ <p>
+  Head on over to
+  <a href="https://reactjs.org/" title="">
+   https://reactjs.org
+  </a>
+  to check out what we have built.
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

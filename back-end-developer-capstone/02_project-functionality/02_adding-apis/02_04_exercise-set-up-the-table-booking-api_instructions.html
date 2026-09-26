@@ -1,0 +1,233 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2" variant="h2semibold">
+  Overview
+ </h2>
+ <p variant="body1">
+  So far, you have built a Menu API in the Restaurant app of your Django project with the name
+  <var>
+   LittleLemon
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  In this exercise, you will add a Table booking API in the restaurant app. The booking model is already declared and migrated.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Scenario
+ </h2>
+ <p variant="body1">
+  While building the table booking API, you will define a class-based view with Django REST Framework's
+  <var>
+   ModelViewSet
+  </var>
+  class. Declare the view class as
+  <var>
+   BookingViewSet
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  You will also use the
+  <var>
+   DefaultRouter
+  </var>
+  class to register the URL routes.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Steps
+ </h2>
+ <p variant="body1">
+  <strong>
+   Step 1
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the project in VS Code. Ensure that
+  <var>
+   'rest_framework'
+  </var>
+  is added in the
+  <var>
+   INSTALLED_APPS
+  </var>
+  list.
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 2
+  </strong>
+ </p>
+ <p variant="body1">
+  In the
+  <strong>
+   serializers.py
+  </strong>
+  file present in the app folder, declare the
+  <var>
+   BookingSerializer
+  </var>
+  class. Use the
+  <var>
+   ModelSerializer
+  </var>
+  as its base. Set the model attribute to booking, and fields to
+  <var>
+   __all__
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 3
+  </strong>
+ </p>
+ <p variant="body1">
+  In the app's views module, declare the
+  <var>
+   BookingViewSet
+  </var>
+  class, inheriting the
+  <var>
+   rest_framework.viewsets.ModelViewSet
+  </var>
+  class.
+ </p>
+ <p variant="body1">
+  Fetch all the objects from the
+  <var>
+   booking
+  </var>
+  model. Set the
+  <var>
+   serializer_class
+  </var>
+  attribute to
+  <var>
+   BookingSerializer
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  <strong>
+   Step 4
+  </strong>
+ </p>
+ <p variant="body1">
+  Open the
+  <strong>
+   urls.py
+  </strong>
+  file in the
+  <strong>
+   LittleLemon
+  </strong>
+  project package (not the restaurant app package folder).
+ </p>
+ <p variant="body1">
+  Import the
+  <var>
+   rest_framework.routers.DefaultRouter
+  </var>
+  class. Call its register method to wire up the
+  <var>
+   'booking'
+  </var>
+  URL route with the
+  <var>
+   BookingViewSet
+  </var>
+  class.
+ </p>
+ <pre language="python">router.register(r'tables', views.BookingViewSet)</pre>
+ <p variant="body1">
+  Add this router in the project's URL patterns.
+ </p>
+ <pre language="python">urlpatterns = [
+path('restaurant/booking/', include(router.urls)),
+]</pre>
+ <p variant="body1">
+  <strong>
+   Step 5
+  </strong>
+ </p>
+ <p variant="body1">
+  Visit the browsable API URL
+  <var>
+   http://localhost:8000/restaurant/booking/tables
+  </var>
+  . You can perform table booking operations in the browser window.
+ </p>
+ <p variant="body1">
+  <strong>
+   Tips:
+  </strong>
+ </p>
+ <p variant="body1">
+  To declare the
+  <var>
+   ViewSet
+  </var>
+  class, you can use the following example:
+ </p>
+ <pre language="python">class UserViewSet(viewsets.ModelViewSet):
+   queryset = User.objects.all() 
+   serializer_class = UserSerializer
+   permission_classes = [permissions.IsAuthenticated] </pre>
+ <h2 level="2" variant="h2semibold">
+  Conclusion
+ </h2>
+ <p variant="body1">
+  In this exercise session, you built a table booking API with Django REST Framework.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

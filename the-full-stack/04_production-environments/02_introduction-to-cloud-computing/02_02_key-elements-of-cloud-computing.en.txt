@@ -1,0 +1,73 @@
+Now that you're familiar
+with cloud computing, let's examine some key elements
+and services offered by public Cloud providers and how they can benefit
+your applications. First up are computing units. This is one of the
+most popular services offered by public
+Cloud providers. Computing units are
+virtual machines available for
+on-demand deployment. They are used to host a web application or run a
+program to solve problems. You can pick
+computing units from mainly two groups,
+cores and memories. The cloud computing
+units can be resized, which means you can upgrade
+or downgrade the number of processing cores or
+memory as needed. For complex programs like data analysis or
+machine-learning, most Cloud providers offer a variety of processor
+cores and memories. Some even offer use of GPUs. Since you're charged
+only for what you use, you can deploy a powerful computing unit when you need it. Let it run as long as required, and then delete it. What's more, you can install your preferred
+operating system and applications in these
+Cloud computing units. Some of these computing units
+come with volatile storage, which means everything
+you store in it will be gone when
+the machine reboots. In such cases, you must
+always equipped you're computing unit with a
+permanent storage solution. This will be covered
+later in the course. Next is storage. As significant benefit of
+using Cloud computing. You can purchase storage, keep your data as
+long as you want, and then delete it
+whenever necessary. Cloud computing providers offer storage solutions in a few ways. You can purchase
+gigabytes or terabytes to store your application
+files or personal data. It works just like a
+regular hard disk, but the risk of data loss due to hardware fault is nearly zero. This is because Cloud providers automatically backup your
+data in redundant storage. Another storage
+solution offered by public Cloud providers is
+called object storage. In object storage
+you get an API to upload and download your
+files, and that's all. You can store small or massive
+files and object storage. What's more? You can also
+make these files available to anyone for a certain amount of time with a timestamp signature. Cloud providers give you a unique URL to
+access your file, and that link
+automatically expires after the duration you
+specified in the signature. Now let's move on to databases. Most public cloud
+providers offer SQl, NoSQL or Time-series databases to store your application data. Examples of SQL or
+MySQL, MariaDB, and PostgreSQL, and examples of NoSQL are MongoDB,
+Cassandra and DynamoDB. Whereas examples of Time-series are Influx dB and Prometheu. Tuning a database can be
+tricky and scaling it can be tedious and requires a lot of effort and
+careful supervision. With cloud computing,
+these issues disappear. Cloud providers offer fully
+managed database solutions compliant with popular
+database engines like MySQL, MariaDB, or PostgreSQL, so no change in the
+application code is necessary. Since these are
+managed solutions, you can allow these databases to scale automatically as they grow and they'll be
+able to withstand substantial traffic loads
+without extra effort. Some Cloud providers also offer in-memory
+database solutions, which are great for caching or super-fast data operations. Cloud providers can also offer specialized solutions
+to deal with huge amounts of
+data or big data. With Cloud computing, you can deploy a single database node or multiple ones and
+just a few seconds and link them to
+your applications. Finally, there's
+machine-learning which requires powerful computing units and GPU for data modeling
+and training. But this can be very exciting, expensive if you purchase
+physical hardware. However, with cloud computing and its on-demand pricing model, you can start using machine
+learning at a cheaper cost. Cloud providers offer the latest hardware
+and software solutions that are efficient
+for machine learning, natural language processing,
+voice processing, and so on. For machine-learning, Cloud Computing is a perfect
+and affordable solution. Cloud Computing is an
+excellent solution that allows you to
+spend more time on application
+development instead of managing hardware
+and infrastructure. In this video, you learned about some essential
+services offered by Cloud computing
+providers and how they can help your application
+development life cycle.

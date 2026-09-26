@@ -1,0 +1,1252 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h2 level="2">
+  Introduction
+ </h2>
+ <p variant="body1">
+  Naming your API properly is the first step in designing a good API. When the API name follows a convention, it provides lots of information about the API and its purpose. To create a meaningful API endpoint, you need to follow some simple guidelines and rules.
+ </p>
+ <p variant="body1">
+  In this reading, you will learn about API naming conventions and familiarize yourself with good API endpoints vs. bad API endpoints, or good and bad routes.
+ </p>
+ <h2 level="2" variant="h2semibold">
+  Rule 01: Everything in lowercase, with hyphens and not abridged
+ </h2>
+ <p variant="body1">
+  The URI of your API should always be in lowercase. Do not use camelCase, PascalCase or Title case when you design your API. Also, separate multiple words using hyphens, not underscores. Do not keep abridged, or shortened, words in your URI; always use the full and meaningful form.
+ </p>
+ <p variant="body1">
+  If your API accepts a variable, you should always represent it in camelCase, and wrap it inside a set of curly braces
+  <var>
+   {}
+  </var>
+  .
+ </p>
+ <p variant="body1">
+  Let’s examine the following examples.
+ </p>
+ <table columns="3" rows="12">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Why
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /customers
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Plural and lowercase
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /customers/16/phone-number
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Lowercase and hyphen used to separate words
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /customers/16/address/home
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Lowercase, no trailing slash, displays the hierarchical relationship with forward slashes.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/{userId}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Variable in camelCase, and no hyphen in the variable name
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /Customers
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Title case
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /generalMembers
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     camelCase, no hyphens to separate words
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /MenuItems
+     </var>
+    </p>
+    <p>
+     <var>
+      /GeneralMembers
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Pascal case
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /customers/16/tel-no
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Abbreviation
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /customers/16/phone_number
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Underscores
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /customers/16/phonenumber
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     No separation of words
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/{user-id}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Variable should be in camelCase, and hyphen between words
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2">
+  Rule 02: Use a forward slash to indicate a hierarchical relationship
+ </h2>
+ <p variant="body1">
+  In your API URI, always use the forward slash to indicate a hierarchical relationship. To understand this rule, consider the following scenarios and the relationship from the API endpoints.
+ </p>
+ <p variant="body1">
+  A store can have customers who have placed many orders and each of these orders can have delivery addresses, menu items and bills.
+ </p>
+ <table columns="2" rows="4">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /store/customers/{customerId}/orders
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /store/orders/{orderId}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /store/orders/{orderId}/menu-items
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  Similarly, a library can have books from many authors. Each of these books has an ISBN number.
+ </p>
+ <table columns="2" rows="3">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /library/authors/books
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /library/book/{bookId}/isbn
+     </var>
+    </p>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2">
+  Rule 03: Use nouns for resource names, not verbs
+ </h2>
+ <p variant="body1">
+  One of the most prominent features of REST APIs is that it uses nouns to indicate resources, not verbs. And you should always stick to this rule when designing your API. You should also use plural nouns to indicate a collection.
+ </p>
+ <table columns="4" rows="6">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Expects
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Why
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /orders
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Collection
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Uses a noun, not a verb
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/{userId}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Single user
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Uses a noun and proper hierarchical relationship and naming convention
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /order
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Collection
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Uses plural nouns for collections
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /getOrder
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Single resource
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Uses a verb, camelCase
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /getUser/{userId}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Single user
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Uses a verb, camelCase
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2">
+  Rule 04: Avoid special characters
+ </h2>
+ <p variant="body1">
+  You should always avoid special characters in your API endpoints. They can be confusing and technically complex for your users. Consider the following bad examples.
+ </p>
+ <table columns="3" rows="3">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Why
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/12|23|23/address
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Special character |
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /orders/16/menu^items
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Special character ^
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  If your API can accept multiple user ids, then they should be separated using a comma, as demonstrated below.
+ </p>
+ <table columns="3" rows="2">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Why
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/12,23,23/address
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Uses a comma for separation
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2">
+  Rule 05: Avoid file extensions in URI
+ </h2>
+ <p variant="body1">
+  You should always avoid file extensions in your API names. For example, if your API can deliver an output in both JSON and XML format, it should never look like this.
+ </p>
+ <table columns="3" rows="3">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Why
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /sports/basketball/teams/{teamId}.json
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     File extension at the end
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /sports/basketball/teams/{teamId}.xml
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     File extension at the end
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  Instead, your client should be able to indicate its expected format in a query string, just like this.
+ </p>
+ <table columns="3" rows="3">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Why
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /sports/basketball/teams/{teamId}?format=json
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     No file extension
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /sports/basketball/teams/{teamId}?format=xml
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     No file extension
+    </p>
+   </td>
+  </tr>
+ </table>
+ <p variant="body1">
+  Similarly, if your API is serving a static file, for example, CSS or JavaScript files, you should use endpoints like the following to deliver the minified and original source file. You can also use a query string to get the minified or original version.  Some API developers use the output format like file extension at the end of the regular API endpoints, which is also bad practice.
+ </p>
+ <table columns="3" rows="7">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Why
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /assets/js/jquery/3.12/min
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     No file extension
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /assets/js/jquery/3.12/source
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     No file extension
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /assets/js/jquery/3.12/?format=min
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     No file extension
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /assets/js/jquery/3.12/?format=source
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     No file extension
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /menu-items?format=json
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Perfectly named endpoint with expected output format in a query string
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /menu-items.json
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Uses the expected output format as the file extension
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2" variant="h2semibold">
+  Rule 06: Use query parameters to filter when necessary
+ </h2>
+ <p variant="body1">
+  When designing your API, you should always perform data filtering using a query string. This is the same when you expect some extra parameters, like the number of items per page and page number.
+ </p>
+ <p variant="body1">
+  Consider this example of a travel site. You want to find which locations a particular user has traveled to. And then you want to know which locations in the USA the user has already seen.
+ </p>
+ <table columns="3" rows="6">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Why
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/{userId}/locations
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Hierarchical
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/{userId}/locations?country=USA
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     camelCase, no separation of words
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /articles?per-page=10&amp;page=2
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     Proper use of query string
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/{userId}/locations/USA
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Doesn't use a query string to filter data
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /articles/page/2/items-per-page/10
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Redundant and obscure
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2">
+  Rule 07: No trailing slash
+ </h2>
+ <p variant="body1">
+  When sharing your API endpoint with others in your team, or in public, avoid using a trailing slash at the end of your API endpoints. Consider the following examples.
+ </p>
+ <table columns="3" rows="5">
+  <thead>
+   <tr>
+    <th>
+     <p>
+      <strong>
+       URI
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Status
+      </strong>
+     </p>
+    </th>
+    <th>
+     <p>
+      <strong>
+       Why
+      </strong>
+     </p>
+    </th>
+   </tr>
+  </thead>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/{userId}
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     No trailing slash
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /articles/{articleId}/author
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Good
+    </p>
+   </td>
+   <td>
+    <p>
+     No trailing slash
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /users/{userId}/
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Trailing slash
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <var>
+      /articles/{articleId}/author/
+     </var>
+    </p>
+   </td>
+   <td>
+    <p>
+     Bad
+    </p>
+   </td>
+   <td>
+    <p>
+     Trailing slash
+    </p>
+   </td>
+  </tr>
+ </table>
+ <h2 level="2">
+  Conclusion
+ </h2>
+ <p variant="body1">
+  Now you understand how to create REST API endpoints with good names. Remember, a consistent naming strategy for your API is one of the most important design decisions for the whole project!
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

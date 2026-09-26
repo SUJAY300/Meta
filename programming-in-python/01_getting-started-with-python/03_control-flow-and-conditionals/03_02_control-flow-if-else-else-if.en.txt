@@ -1,0 +1,107 @@
+In programming, it's important
+to understand how to control the order in which
+your code is executed. For example, suppose you're
+invited to an event, you have to consider
+whether you need to dress formally or informally. Another example
+of a control flow is to consider a light switch. The flow is represented
+by the electrical current and the control
+is the switch itself, with the two states
+of on and off. The order in which you
+make decisions matters, and the same applies to
+writing effective programs. In this video, you
+will learn how to use conditional statements to control flow in Python programs. What is control flow? Control flow refers
+to the order in which the instructions in a
+program are executed. All programs have decisions
+that need to be made. As a result of this, the program will take different
+actions or directions. In Python, there are two
+types of control flows. First, you can use conditional
+statements such as if, else, and elif or else if. Second, you can use loops such as the for loop and
+the while loop. Let's explore these a
+little further now. The if keyword states that if the condition proves to be true, a function is performed. The else keyword
+catches anything which isn't caught by the
+preceding conditions. The elif or else if
+keyword is Python's way of saying if the previous
+conditions were not true, then try this condition. The for loop checks for
+specific conditions and then repeatedly executes a block of code as long as those
+conditions are met. The while loop repeats
+a specific block of code an unknown number of times
+until a condition is met. Let's explore conditional
+statements in more detail with some practical
+examples using the if, else, and elif. I'll now write some code for
+a restaurant that wants to apply different discounts based on the amount its
+customer spend. To start off, I define a variable for the
+customer's bill. I'll call it bill_total and
+assign a value of 114 to it. Now, I apply condition
+with an if statement. If bill_total is
+greater than 100, print the statement bill
+is greater than 100. Next, to apply a
+discount to bill_total, I need to create a
+second variable. I'll do this above the
+if statement in my code, call it discount1 and
+assign a value of 10 to it. The condition also
+has to change. Inside the if statement, I add bill_total equals
+bill_total minus discount1. At the very end of
+the code snippet, outside the if statement, I'm going to print out what the value of the total bill is. To do this, I type a
+print statement that says total bill and
+then a plus sign. To add the value of
+bill_total here, I need to convert the
+integer to a string. I use the str typecasting
+function to do this. Let's click on "Run", great. In the terminal, two
+strings are printed, bill is greater than 100
+and the total bill is 104. But what happens if the
+bill is less than 100? I change the value of bill_total
+to 95 and press "Run". Notice that this time because the if
+condition is not met, it only prints the
+statement total bill is 95. But I'd like to print
+a statement that says the bill is less than 100. To do this, I add an else statement below
+the if statement. I type else: and in
+the next line I print the statement bill is less
+than 100. Let's run the code. The output in the
+terminal now says bill is less than 100 and
+total bill is 95. Up to this point, you've
+learned how to use the if and else
+statements to control the order in which values
+are assigned and printed. You're now ready to take
+program flow one step further. Say this restaurant wants to add another discount
+for bills over 200. How would you do
+that? Once again, I first need to create a new variable above
+the conditions that I name discount2
+which I set equal to 20. If I run the code now, it will still print
+out the same output because I haven't changed any of the conditions or values yet. Let's change the
+value of bill total to 210 and click "Run". Notice that both statements are printed but discount1
+is still applied. It's clear that the if
+statement is still executed. Since the value is 210, the condition is still met. To change the program
+flow for values over 200, I need to add an and condition
+to the if statement. I change the statement to
+if a bill total is greater than 100 and bill total
+is less than 200. Let's run the code
+and see what happens. Now, the discount
+wasn't applied. The output just says
+bill total is 210. Why? Because the
+condition is not met. Now, this is where it
+gets really interesting. To add a second condition
+for bills above 200, I'll use an else if statement. In between the if
+and else statements, I type elif which
+stands for else if, and then bill total
+is greater than 200. Print the statement bill
+is greater than 200. In the next line, I
+apply the new discount. I type bill total equal to
+bill total minus discount2. First, let me clear my screen so you can focus
+just on the results. Now I press "Run". Notice how the program
+flow has changed. The first condition was not met, so the code went to the
+second condition where the value of bill total
+was compared to 200. Since it was greater than 200, the statement bill is greater
+than 200 was printed. The code then proceeded past the else condition because the previous elif
+condition was true. Remember the else condition only execute if none of the
+preceding conditions are true. Finally, it printed
+the statements at the end of the code snippets, namely total bill is 190. This proves that
+discount2 was applied. Congratulations, you now know how to control
+program flow with if, else, and else if. Once you become proficient in using conditional statements, programming becomes
+a lots of fun. I encourage you to test it out. In this video, you
+learned how to use conditional
+statements in Python. Writing conditional statements
+is an essential part of programming and I encourage you to practice
+them in your code. The next time you need
+to make a decision, think about the conditions
+involved and how they can be represented if you
+were to code them in Python.

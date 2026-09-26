@@ -1,0 +1,56 @@
+I think one of the biggest shockers with
+people is that the stereotypical engineer is someone you know in a dark
+room with a computer Hans Tober, typing on the keyboard. But when you go into software engineering,
+especially in corporate setting, there's a lot more communication,
+collaboration, talking to people. Being able to figure out
+what you have to build and do it with people is just so
+much more bigger than people think. [MUSIC] [LAUGH] My name is Dez,
+I'm a software engineer and I work in the Meta office in DC and
+the integrity organization. You obviously have to build
+software since that's the job. But because of Metas bottoms up
+culture a lot of times you see you have to align with various
+teams across the company. So we spend a lot of time in actually
+writing out what you have to build, design documents and sharing with
+other teams and getting feedback. So that we build stuff that everyone
+is sort of on the same page with. So you always have to make sure that
+everyone is aligned with the same objective when you do good work,
+people have to know you do good work. So a lot of time is spent
+on written communication. So you have to usually write notes and
+stories about what you're doing. So that other people can know what you and your team are doing as you
+work on those projects. The programming language I work
+with mostly is called hack. Unlike other languages, we don't expect anyone that joins
+the company to know it already. So we have that ability for
+you to learn and get up to speak, almost a good thing that
+no one else uses hack. Because everyone that joins the company is
+on the same equal for the investors like something else that someone else
+may know already before they join. So we have to be able to move fast but also balance that with our
+existing user-based on products. And what ends up happening is that there's
+just a ton of overhead in terms of communication that you have to do to make
+sure that everyone is on the same page. And you don't have do anything
+that may have a negative impact. So it's good because you get to interact
+with a lot of different people and learn a lot, but it causes
+challenges just because like I said, there's a lot of extra stuff you
+have to do for every little change. So just trying to balance that risk and
+still be nimble and fast is something that I
+think it's a big challenge. Being able to look at problems and
+break them down and then break them down into something
+that is more manageable and solvable. Is one of the things that
+I have to do day to day, something else that is to scale yourself. So a lot of times, problems are too big
+for one person and we have to learn how we can sort of work together with people
+in our teams and an external teams. To basically achieve these bigger
+problems in an efficient way. And that's something that I think for our engineers to definitely value
+in terms of what they can do. I would say every software engineer
+is expected to grow into a leader. One of the things you see in Meta is we
+have sort of like a career progression for engineers and
+I think most companies do also. But the idea is that when you graduated
+from college, you started at the first level and when you started initially,
+you're doing more task-based work. Whereas people give you tasks and you get
+it done and as you grow in your career, you begin to have more initiative and
+have to drive more projects. So you go from, hey, do this task to,
+I'm going to find work to do and create tasks and do them myself. And then you go to, I'm going to find work
+to do and give task to other people and help them grow in their career. I hope that you take away that being
+an engineer is something that can be very fulfilling. So I would say, even though it feels
+difficult initially, I would say to stick with it and see how things go at the end,
+versus like giving up too early. Because the sort of like end result could
+be something that you wouldn't even imagine. Good luck for the rest of the chorus, and hopefully I'll see you in
+the industry someday in the future.

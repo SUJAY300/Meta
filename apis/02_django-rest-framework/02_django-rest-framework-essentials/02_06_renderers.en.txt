@@ -1,0 +1,64 @@
+By now you know plenty about how to
+optimize APIs and retrieve send and convert data. But in the end,
+you need a way to display this data so that users can make sense of it. While JSON is the most popular
+data format for APIs these days, it's not the only format
+client applications use. Some of these clients prefer XML and
+some of them may want the output in YAML. So, the more support you add for your
+API output, the more usable it becomes. Renderers are responsible for
+displaying the output of your APIs. Some of these renderers
+display the JSON content, some XML and
+some are responsible for the HTML. Besides the built-in renderers, there are many third-party
+renderers available to use. Commonly used renderers are the built-in
+JSON renderers that displays JSON data, the browsable API renderer which
+is another built-in renderer and shows the browsable API view, the XML renderer is a third-party
+renderer and displays XML data. Another third-party renderer is the YAML
+renderer and it displays YAML data. Lastly, there is the JSONP renderer, also a commonly used third-party
+renderer that displays JASONP data. In this video, you will learn how to take advantage
+of some of these renderers in DRF. Renderers are everywhere in DRF and
+you've been using them all along. It's just been happening
+behind the scenes. One of the most popular views, the browsable API view is rendered
+using the browsable API renderer. In DRF,
+you can change the renderers any time. You can use a particular one or
+multiple renderers so that one from this list will respond to the API depending
+on the type of content requested. So, where can you set the type of
+content you want from the API? You do this by setting a header in
+the HTTP request which is called Accept. Type accept:application/Json. By default, DRF uses two renderers,
+one is the JSON renderer for JSON output and the other one is
+called the browsable API renderer. Say you want to turn off
+the browsable API renderer and only want to include
+the JSON content every time. To do this, open the settings.PIEfile and
+add a new section called REST_FRAMEWORK if it's
+not already present there. DRF uses this setting to
+initialize the renderers. Add the following lines of code. Now comment out the browser API renderer. Next, visit the menu
+items endpoint by adding, /api/menu items to the end
+of the local host URL. The output now comes in plain JSON
+because the browsable API interface does not work this time. Let's bring it back by removing
+that comment in the settings file. The browsable API view works only when
+the Accept header is set to text/html. And this is the header that
+browser sent by default. But if this header is not set,
+DRF returns only the JSON output. You can test it further in Insomnia. Open Insomnia and
+create a new HTTP request to the endpoint/api/menu items,
+click the send button. Only the JSON output displays, right? It happened because you did not
+exclusively send an Accept header. So, DRF used the default renderer,
+the JSON renderer, and sent JSON data in the response. Now, let's fix this. From the header tab,
+add a new header called Accept and set its value to text/html,
+and send the request again. Is the response different this time? Yes. Insomnia is now using the browsable
+API interface instead of JSON. So far, you know how to use the JSON and
+browsable API renderer. Next, let's add support for
+a new content type XML. You will be using a package
+called Django REST framework XML. Open the terminal and make sure you are in the virtual environment by
+using the Pipenv shell command. Install this package using pipenv
+install djangorestframework-xml. Now, let's go back to
+the settings.PIEfile and add a line of code in
+the default renderer classes in the rest framework section that is
+similar to the ones you added earlier. Type rest framework
+xml.renderers.XML Renderer. Move back to Insomnia,
+set the Accept header to application/xml, and send the request again
+to the menu items endpoint. The output now comes in
+XML instead of JSON. In contrast, you will receive
+the JSON output if you send the Accept header with the value,
+application/json. Well done. Now you understand how to use
+different types of renderers in DRF. In this video, you learned that the renderers in DRF play
+a crucial role in displaying API output. You should now be able to turn off the
+browsable API renderer whenever you want. And display JASON and XML content
+using the appropriate renderer.

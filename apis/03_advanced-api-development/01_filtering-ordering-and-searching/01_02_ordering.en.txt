@@ -1,0 +1,69 @@
+You already learn how to filter query set in
+the previous video. This video will
+demonstrate something else important called
+ordering or sorting. You learn how to sort
+the APA result in ascending or descending
+order based on query string. There is a DRF package
+called django-filters, which offers advanced filtering,
+sorting, and searching. But that package is mostly
+used with class-based views. Since you are using function based views with
+API view decorator, you can take advantage of django's native sorting methods. After the
+implementation is done, menu items can be sorted
+using this query string with the menu items endpoint, http://127.0.0.1:8000/
+api/menu-items? ordering equals price or http://127.0.0.1:8000/api/menu-items?ordering equals price,inventory. Let's open the menu
+items function. You need to exit a new
+query string parameter called ordering at this line, just after the search. Ordering equals request dot
+query underscore params, dot get, open bracket, single quotation mark ordering, single quotation
+mark, closed bracket. Now, just before
+the line where you created the serialized
+items, add these lines. With this line, you are
+sorting the query set by the value supplied with
+the ordering query string. Now, visit the menu
+items endpoint with ordering set to price.
+What do you notice? The menu items are
+now properly sorted by price in an
+ascending fashion, which means the items with
+lowest prices go at the top. How can you change
+the sorting order from ascending to descending so that the item with the
+highest price goes at the top. Do you need to make any
+changes to the code? Surprisingly, no code
+change is required just visit the menu items with ordering set to
+minus sign price, and you'll notice
+the expected result in a browsable APA view. Now, you learn how to implement sorting or ordering for your APA result with just
+a few lines of code. But there is still
+room for improvements. What if the client wants to sort the result by two fields, price and inventory
+just like this. You use your normal
+endpoint but at the end it reads menu
+items question mark, ordering equals price
+comma inventory. This way, items will
+be sorted by price first and then buy inventory
+in ascending fashion. This means that
+if two menu items have the same price but
+different inventory values, the one with the lower
+value will go at the top. How can you do this? You need to split the
+ordering field with a comma and call the order by ID
+method with that list, you don't need any
+for-loop for this. Remove this line, you add it before the serialized items and split the value of the ordering query string
+by a comma with this line. Ordering underscore fields
+equals ordering dot split, open bracket, double
+quotation mark, coma, double quotation
+mark, close bracket. Now you can call order by
+on the items query set for all those fields in the
+ordering field array with this line passing the
+list as arguments. That's it you are done. Let's visit the
+menu items endpoint with a query string like this ordering equals
+price comma inventory. The result is sorted
+exactly as it should be. What if you want to sort
+by price in ascending order and then by inventory
+in descending order. Simply pass this query string
+to the menu items endpoint ordering equals price,
+minus sign inventory. Notice specifically
+the minus sign before inventory and the result
+changes as expected. Now you'll learn how to sort
+the result of your API by multiple fields in both
+ascending and descending order. In this video, you'll learn how to sort the query set using djando built-in order by method in ascending
+and descending order. You will also learn how to
+accept multiple fields in the query string and sort
+according to them and finally, you'll learn about the
+django-filters class, which is powerful, but mainly works with
+class based views.

@@ -1,0 +1,64 @@
+In no time at all, you have finished
+the second week of this course. Great job. Now it's time to review what you learned
+about using the Django rest framework to create APIs, serialize your database
+models, and convert, validate, and render data. In the first lesson you were introduced
+to the Django Rest framework or DRF. As you now know, DRF is a toolkit built
+on top of the Django web framework and you can create APIs with
+it much more efficiently. This is because it can retrieve
+data from the database, process it, and then represented to your clients
+as JSON, XML, or other formats of data. Just some of the DRF benefits, are that you have a built in
+API viewer at your disposal. You can use human readable
+HTTP status codes, and the built in serialize ear's
+help with data conversion. And what's more the serialize can also
+perform deserialization, which you can use to convert user supplied data into
+models to store them safely in a database. Next, you learned how to install and
+configure DRF, so you could observe a working server. And you learned about the benefits
+of using pipenv over pip. When you use pip, you have to still manage
+all the dependencies and keep track of those packages, and you'd also have to set
+up and configure the virtual environment. But pipenv works on top of pip,
+and it does several things for you automatically like manage
+the virtual environment. After learning about installing and
+configuring DRF, you learned more about the API view
+decorator and its benefits, like for example how adding API decorators in
+DRF can help you to quickly prototype, inspect, and test APIs, because you
+can work directly in the browser. You also learned about different
+types of routers in DRF, and how they are used to auto configure
+the URLs from class based views. This means that you don't need to
+create individual URL patterns for each class method. Following this, you learned how to create
+function and class based views and link them to roots in DRF. And you learned about the advantages
+of class based views like how you don't have to write as much code,
+there's less code duplication, and you can extend the classes and
+add features at any time. And that's not all,
+you can also write specific methods for each type of HTTP request. You also learned how to integrate the
+Django debug toolbar in your project to debug your APIS. You explored important sections like the
+SQL section which shows the list of SQL queries executed for this end point. This is the place where you often check
+for performance tuning and optimization. Next, you created a restaurant
+menu API project with DRF, That can create, list, edit,
+delete, and select menu items. And at the end of the first lesson, you tested your new skills by converting
+your book list API project to DRF. In lesson two, you learned about
+Django rest framework essentials. Here you learned even more about
+serializers, and explored a practical demonstration of serializers, and
+how to use them in your project. After this, you learned about
+relationships serializers and how you can use them to display related
+data of connected models in the output of your API. Next, you learned more about
+deserialization techniques, and how it helps you to validate
+the HTTP request body, and map it to an existing model where
+after you can save it to the database. Following this, you learned about
+the built in render object in DRF, and how to use it to display
+different types of content. Renderers are responsible for
+displaying the output of your APIs. Some of these renderers displayed
+JSON content, some XML, and some are responsible for the HTML. Besides the built in renderers, there are many third-party
+renderers available to use. Finally, you completed an ungraded lab
+centered on a restaurant menu API, in which you used serialization,
+validation, and deserialization to display API
+data in JSON and XML format, and you created HTML forms to add and
+modify menu items. Overall, after completing this week,
+you should be able to install and setup Django rest framework,
+use function and class based views to create
+API endpoints efficiently. Create a basic API using DRF
+serialized database models using model serializers, convert and
+validate data using serialization, map user input to data based
+models using deserialization and use throttling and
+cashing to optimize and protect your API. You should be proud of all
+the hard work you've done, and now you're ready to
+tackle the module quiz. Good luck.

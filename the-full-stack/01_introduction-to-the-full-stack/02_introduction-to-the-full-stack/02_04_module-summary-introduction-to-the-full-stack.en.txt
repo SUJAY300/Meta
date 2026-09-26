@@ -1,0 +1,39 @@
+You've reached the end of module one, that gave you an introduction
+to the full stack. It's now time to review what
+you've learned in these lessons. You began this module by exploring
+how full stack development works in the real world. Meta software engineer manager, walked you through a day in
+the life of a full stack developer. After this, you reflected on what you
+hope to learn from this course and you familiarized yourself with the course
+syllabus to orientate yourself. You also read some suggestions on
+how to be successful in this course. This included tips like setting daily
+goals, scheduling time to study and making sure that you remember
+to take regular breaks. The last one might seem like
+the least important, but to be able to focus and
+work to the best of your abilities, you need to make sure that you're
+well rested and energized. After this reflective first part of the
+course, you explored the different stacks, namely the front-end,
+back-end and data stacks. You learned about the programs and
+tools used in these stacks, such as python Django and DRF, which
+are used for developing the back-end. You now know that the full stack
+contains everything you need to create an application's core, or
+the back-end, process the data and present it via APIs on web or
+mobile applications. And you learned that the full stack is
+an end to end solution for an application, and that a full stack developer is equally
+skilled in the back-end, front-end and database stacks. Furthermore, you learned about
+typical full stack developer tasks, such as developing the back-end
+of applications, storing, processing and
+retrieving data from the database. And creating servers and managing them for
+development, staging and production access. Next you learned about
+N-tier architecture, this is when an application
+architecture is so into multiple tiers. The benefits of N-tier architecture are
+that it's easier to secure and scale and application and fix problems or
+add new features. Fixing and adding features are more
+manageable because each tier is separate and works independently. You learned about the two
+types of N-tier architecture, namely 3-tier and 4-tier architecture. You learned that in a 3-tier architecture,
+the 3 tiers are, presentation, application and data tiers. Whereas, in 4-tier architecture,
+a 4th tier, named the delivery tier, deals with cashing and delivering
+the front end assets to the client. Lastly, you reviewed what you know
+about client server architecture. For example, you reviewed the components
+of a client server architecture as well as the roles of the client and the server. Congratulations, you've now covered
+the introduction module of this course, and you are ready to complete the quiz. In the next module,
+you'll learn about front-end technologies, including, HTML, CSS and JavaScript.

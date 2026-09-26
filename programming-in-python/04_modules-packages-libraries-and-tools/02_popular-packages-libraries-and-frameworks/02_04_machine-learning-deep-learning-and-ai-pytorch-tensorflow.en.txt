@@ -1,0 +1,36 @@
+Artificial Intelligence or AI, is broadly
+about making machines think like humans. Data science primarily focuses on
+the management and exploration of data which may include media such
+as text, audio, images and video. Machine learning or Ml is a subsection
+of AI and deals with algorithms for training and
+generating insights from data. Many fields utilize machine learning. Some of the most widely used areas
+are natural language processing, deep learning, sentiment analysis,
+recommended engines, computer vision and speech recognition. With the amount of text, image and
+video data available today, data science and AI in particular
+are in greater demand than ever. Python is one of the most popular
+languages used in these domains. The reasons are, seeing tactical
+efficiency and readability, flexibility with different languages,
+frameworks and operating systems welcoming and
+large community of developers. Ability to build ML models without
+having to understand the intricacies. Use a friendly debug and
+testing tools and modular structure. These will promote the development of
+many primarily open source libraries and frameworks. It's important not to get confused
+with the terms, packages, library and frameworks. A package is a collection of modules and
+both library and framework are often used
+interchangeably with packages. Libraries can also be a collection of
+packages with specific purpose, whereas the term framework is usually used where
+certain flow and architecture is involved. It's important to remember that all of
+these pieces of python code are used with the help of import statements. Some of the most popular Ml libraries
+in use today are in the areas of deep learning and neural networks. Computer vision and image recognition. Natural language processing,
+data visualization and web scraping. It's important to understand that
+these are broad categorizations. Most of the libraries associated with them
+are not restricted to a particular field. Every project is unique and
+should be treated as such. The right selection of the library
+can save precious time when coding. In this video, you learned about
+machine learning libraries. Many fields use machine learning and
+those fields like deep learning and neural networks rely on open source
+machine learning libraries that make developers work easier. These libraries are collections
+of packages and the selection of the right library
+can save you time when coding. So in the future, think carefully about
+which library you should pick for a project to make sure
+that it suits your needs.

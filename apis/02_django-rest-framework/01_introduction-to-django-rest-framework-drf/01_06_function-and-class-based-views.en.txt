@@ -1,0 +1,81 @@
+By now, you should know how to create function-based views. Function-based views are
+just the regular functions inside your views file. In this video, you will
+learn how to create class-based views and leverage the benefits of
+API views and DRF. Function-based and
+class-based views each come with their
+own advantages. Function-based views
+are easy to implement, offer better readability, it's easier to use
+decorators with them, and you can quickly write a once-off solution using
+function-based views. With class-based views, you don't need to
+write as much code. There's less code duplication, and you can extend the classes and add features at any time. Plus, you can write
+specific methods for each type of HTTP request. Let's get started so you can observe class-based
+views in action. Open the views.py file from the same booklist
+project you worked on before. You will create your first
+class-based view in this file. Class-based views help you to keep your code clean
+and less cluttered, and you can avoid writing extra code by reusing the
+common functionalities. To create a class-based
+view in a DRF project, you must extend the
+API view class. Let's import it first from
+the rest framework module. You also need to import
+the response class. Let's create a class called booklist that extends
+the API view class. When adding methods
+in a class name, you should name them the
+same as the HTTP verbs. For example, get and post. Now, let's return a simple
+message from this method. It's time to map this
+class-based view in the booklist API
+apps urls.py file. Open the booklist API
+forward/url.py file, remove the old mapping
+and add this line to the URL patterns array to map
+the whole class as a view. You don't need to map each
+class method separately. Now you can visit the endpoint
+forward/API forward/books. This endpoint will not accept a HTTP post request
+because there is no post method in this
+booklist class. Let's add one. The post method also accepts three or four arguments
+like the GET method. Remember, you are using
+the browsable API view. This means you can test this post method right
+from your browser. Visit the books endpoint and scroll to the
+bottom where you can add request parameters
+in the content text box. For now, just click on the post button and
+test the output. Now come back to the GET method. What if the API client wants to list the books by
+a specific author? How can you accept the
+query string parameter from the following request, forward/API, forward/books, question mark, author
+equals Hemingway? You can accept this
+query string parameters using the request argument. The author parameter can be accessed using request.get.get, and then author inside quotation marks and a
+set of parentheses. Let's change the GET method
+to display the author's name. If the author is
+passed to the URL, it shows only that
+author's book. Otherwise, it will
+show all books. Next, visit the URL forward/API forward/books
+question mark author equals Hemingway and
+check the result. You can accept JSON or form
+URL encoded data elements in a post method using
+request.data.get, open and closed brackets. Now visit the books
+endpoint in the browser, scroll to the bottom, and
+in the content text box, add this JSON data. This is called a payload. Payload is a common
+term used for any JSON data or form URL encoded data that
+you send to an API and modify the post method to return the title
+from the payload. Click on the post button
+and check the result. Now I will demonstrate
+how to accept the primary key in the methods
+of the class-based views. To do that, create a
+new class called book. This class will manipulate
+the single book item. This time, add a GET method
+with an extra parameter, the primary key denoted as PK. Open the urls.py file and map this new book class to
+the URL patterns array. Now visit the endpoint, forward/API forward/books
+forward/one. Note the ID of the book
+in the API result. The PUT method, however,
+is a little different. You must add the extra
+argument PK and you can access the request parameters
+using request.data.get, open and closed parenthesis, just like the previously
+created post method. Visit the following URL
+and send a JSON payload. The URL is the local URL host and then API forward/books
+forward/one. Click the Put button
+and note the output. Like the API view decorator, you can use throttling and
+authentication policies. You will learn about these
+later in the course. In this video, you
+learned how to create class-based views and use
+them in your DRF projects. You also learned
+how to deal with different HTTP methods in these class-based
+views and how to accept the query
+string parameters and primary keys or PK
+inside the view methods.

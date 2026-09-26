@@ -1,0 +1,41 @@
+The Django framework
+is an ideal tool for building web
+applications if required, it's templating system renders a HTML response by inserting dynamic content in
+the template webpage. An API returns either a
+JSON or XML response. The Django REST framework or DRF acts as a wrapper around
+the core Django package. DRF converts the model
+instances into JSON format, serializes them,
+and renders it to the client as the response
+of the view function. In this video, you will
+explore the steps to build REST APIs for performing CRUD operations on the menu
+and the booking models. Let's step through
+the process now. First, you must install the Django REST framework
+using pip command. Next, add rest_framework to the list of installed apps in the projects settings.py file. Notice that the app named restaurant is also
+added to the list. The next step is
+to make sure that the menu model and
+booking model classes are declared in the models.py file and that they have been
+migrated to the database. You may recall that
+serializing the model data to JSON is an essential
+step in the process. Import the model serializer
+class and declare its subclass corresponding
+to the models in the app. Similarly, you can create a
+booking serializer class. Save these classes in
+the serializers.py file. Once the code to handle
+serialization is set up, you can develop
+views for the API. This scenario will demonstrate the principle of
+class based views but it's important to
+note that this can be achieved using
+function based views. First, create a
+booking view class that subclasses the
+API view class. The GET method is called
+when the client visits the forward slash menu route
+with the HTTP GET method. It returns all the menu
+items in JSON format. To process the post request, add the post method in
+the menu view class. Finally, ensure that you update the URL configuration of the
+app as well as the project. In the restaurant
+apps URLs.py file merge the URL conf of the app
+with that of the project. Once all these
+steps are complete, run the server and
+test the API with a HTTP clients such as Postman
+or HTTPie or Insomnia. In this video, you explored
+the steps to build REST APIs for performing CRUD operations on the menu and booking models.

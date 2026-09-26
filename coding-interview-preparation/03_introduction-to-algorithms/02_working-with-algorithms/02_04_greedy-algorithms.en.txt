@@ -1,0 +1,70 @@
+In this video, you will learn how you
+can implement this paradigm to solve complex problems by
+using greedy algorithms. There is a philosophical
+principle called Occam's razor. It states that the simplest solution
+is almost always the best one. This problem solving principle argues that
+simplicity is better than complexity. In our case, the greedy algorithm
+is the simple solution. This is an alternative approach
+to dynamic programming as this approach seeks to present
+an immediate solution for a task and favors local optimization over
+a more holistic global approach. When engaging with a problem
+subdivided into segments, utilizing a dynamic programming approach
+would find a globally optimal solution so that each sub problem is solved and the
+best subset is selected and implemented. A greedy approach would instead
+look at the list of solutions and implement a local optimization. Usually, the current most
+rewarding option is chosen. To make this more clear, let's take an instance of a CPU that
+has a list of tasks to be completed. Applying the dynamic programming approach
+would entail selecting a subset of activities that could be completed within
+a given time and executing these tasks. With the knapsack analogy,
+this would involve determining what subset of items to pack that would maximize the
+value in the process of filling the bag. A greedy algorithm approach
+to this would be always to select the most valuable item and
+place this in the bag, giving no thought to what other items
+this would exclude from the process. Thus, in our CPU example, a greedy
+approach would involve selecting first the shortest running program and
+then the next shortest program and so on. While this might not lead to
+a globally optimized solution, it will reduce any overhead in calculating
+the most efficient subset of items. To better understand how these
+two approaches would differ, let us consider the problem
+of the shortest path. The image shows a map with
+nine different nodes, A, B, C, D, E, F, G, H and S. Each node is connected to
+another node by a weighted path. This weight reflects the cost that would
+be incurred by selecting this path. Thus, in our CPU example, a greedy
+approach would involve selecting first the shortest running program and
+then the next shortest program and so on. While this might not lead to
+a globally optimized solution, it will reduce any overhead in calculating
+the most efficient subset of items. You are now faced with making
+a journey from E to F, and want to plot the most effective route. A dynamic programming approach
+would involve creating a table, and calculating each potential node from E. From there, it would introduce
+the next set of nodes and calculate the accumulated cost. This approach would undoubtedly arrive
+at the most efficient solution. Using memoization after the initial
+calculations were made, they would be saved and subsequent journeys would
+benefit from a quicker computed time. This is a bottom up global
+approach to the problem. A greedy approach would
+differ in its methodology. Instead of trying to find an optimal
+subset of connected routes, it would instead begin at node E and
+look at each available connection. Thus, it would have a selection
+of weights namely 5, 3, 2, 4 and 12 which correspond to node C,
+B, D, G and H. The lowest value in that array is 2,
+which corresponds to node D. Following the greedy principle,
+it would make this selection and progress to the next node. Assuming that the data
+structure was a directed graph, it would be presented with
+a further three nodes, A, F and G that have the values of 75 and
+6 respectively. Since F is the final location,
+it would select F and arrive at its destination happily
+having amassed a total penalty of 7 for travel time from E to D and then to F,
+that carries a weight of 2 + 5. Visually, you can see that this is the
+most efficient approach, and it was come upon without creating an exhaustive table
+of combinations and computing all routes. However, had the node between G and
+F had a penalty of 2, then it would have selected
+a less optimal solution. This is a trade off when choosing
+a greedy approach over a dynamic one. While the overhead for
+a greedy algorithm is low and coding a solution is
+quite straightforward, it will not always guarantee that
+the best option is returned. You now have a greater understanding
+of the greedy algorithm approach. In addition, you have seen how it compares
+with the dynamic solution and thus deepened your grasp of the strengths and
+weaknesses of this alternative approach. Next time you are plotting
+a route in Google Maps, consider the selection of
+routes that are offered and think about how these roots
+might have been calculated.
